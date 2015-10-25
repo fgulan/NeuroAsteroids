@@ -20,6 +20,8 @@ Icon
 # Eclipse files
 .project
 .classpath
+.settings/
+.target/
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -40,3 +42,4 @@ Temporary Items
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/bin/
