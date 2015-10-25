@@ -17,6 +17,10 @@ Icon
 .Trashes
 .VolumeIcon.icns
 
+# Eclipse files
+.project
+.classpath
+
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
