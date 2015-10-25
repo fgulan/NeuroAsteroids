@@ -21,7 +21,7 @@ Icon
 .project
 .classpath
 .settings/
-.target/
+target/
 
 # Directories potentially created on remote AFP share
 .AppleDB
