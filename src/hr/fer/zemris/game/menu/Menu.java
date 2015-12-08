@@ -34,7 +34,9 @@ public abstract class Menu extends BorderPane {
         public void handle(ActionEvent event) {
             Stage stage = getGameParent().getStage();
             Scene scene = stage.getScene();
-            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), 20);
+            KeyboardController controller = new KeyboardController(scene);
+            controller.register();
+            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), 20, controller);
 
             world.registerGameOverListener(() -> {
                 EffectsSoundManager.getInstance().playShipExploded();
@@ -53,7 +55,6 @@ public abstract class Menu extends BorderPane {
                 EffectsSoundManager.getInstance().playExplosion();
             });
             world.initialize();
-            KeyboardController.register(world, scene);
             Pane gameSurface = new Pane(world.getGameSurface());
             scene.setRoot(gameSurface);
             scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_WORLD_STYLE_PATH).toExternalForm());

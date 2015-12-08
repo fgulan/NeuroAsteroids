@@ -8,7 +8,7 @@ import javafx.scene.shape.Polygon;
 public class Ship extends Sprite {
 
     public enum Direction {
-        CLOCKWISE, COUNTER_CLOCKWISE, NEITHER
+        CLOCKWISE, COUNTER_CLOCKWISE
     }
 
     private final static int TWO_PI_DEGREES = 360;
@@ -21,7 +21,6 @@ public class Ship extends Sprite {
     
     private float currentAngle = 0;
     private boolean move = false;
-    private Direction turnDirection = Direction.NEITHER;
 
     public Ship() {
         super();
@@ -36,14 +35,6 @@ public class Ship extends Sprite {
 
     @Override
     public void update() {
-        if (turnDirection == Direction.CLOCKWISE) {
-            currentAngle += UNIT_ANGLE_PER_FRAME;
-            bounds.setRotate(currentAngle);
-        } else if (turnDirection == Direction.COUNTER_CLOCKWISE) {
-            currentAngle -= UNIT_ANGLE_PER_FRAME;
-            bounds.setRotate(currentAngle);
-        }
-        currentAngle %= 360;
         if (move) {
             IVector velocityDirection = getSpeed(currentAngle);
             if (shipSpeed < 0) {
@@ -53,6 +44,7 @@ public class Ship extends Sprite {
                 shipSpeed += ACCELERATION_STEP;
             }
             velocity = velocityDirection.scalarMultiply(shipSpeed);
+            move = false;
         } else {
             if (shipSpeed > 0) {
                 shipSpeed -= 0.15*ACCELERATION_STEP;
@@ -70,11 +62,17 @@ public class Ship extends Sprite {
     }
 
     public void rotate(Direction direction) {
-        turnDirection = direction;
+        if (direction == Direction.CLOCKWISE) {
+            currentAngle += UNIT_ANGLE_PER_FRAME;
+        } else if (direction == Direction.COUNTER_CLOCKWISE) {
+            currentAngle -= UNIT_ANGLE_PER_FRAME;
+        }
+        currentAngle %= 360;
+        bounds.setRotate(currentAngle);
     }
 
-    public void move(boolean move) {
-        this.move = move;
+    public void move() {
+        this.move = true;
     }
 
     private IVector getSpeed(double angle) {

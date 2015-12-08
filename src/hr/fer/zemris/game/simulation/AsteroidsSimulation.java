@@ -7,7 +7,6 @@ public class AsteroidsSimulation {
     private static SimulationWorld gameWorld;
 
     public static void main(String[] args) {
-        gameWorld = new SimulationWorld(8000, 6000, 15);
         gameWorld.initialize();
         long startTime = System.currentTimeMillis();
         gameWorld.play();

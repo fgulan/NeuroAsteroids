@@ -1,13 +1,14 @@
 package hr.fer.zemris.game.world;
 
+import hr.fer.zemris.game.controllers.IController;
 import hr.fer.zemris.game.models.Asteroid;
 import hr.fer.zemris.game.models.Missile;
 import hr.fer.zemris.game.models.Sprite;
 
 public class SimulationWorld extends GameWorld {
 
-    public SimulationWorld(int width, int height, int numberOfCommets) {
-        super(width, height, numberOfCommets);
+    public SimulationWorld(int width, int height, int numberOfCommets, IController controller) {
+        super(width, height, numberOfCommets, controller);
     }
 
     @Override

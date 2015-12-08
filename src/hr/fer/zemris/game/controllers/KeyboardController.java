@@ -1,69 +1,83 @@
 package hr.fer.zemris.game.controllers;
 
-import hr.fer.zemris.game.world.GameWorld;
+import java.util.ArrayList;
+import java.util.List;
+
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
-public class KeyboardController {
-    
-    private static GameWorld gameWorld;
-    private static Scene scene;
+public class KeyboardController implements IController {
 
-    public static void register(GameWorld gameWorld, Scene gameScene) {
-        KeyboardController.gameWorld = gameWorld;
-        setupInput(gameScene);
+    private Scene gameScene;
+    private EventHandler<KeyEvent> pressHandler;
+    private EventHandler<KeyEvent> releaseHandler;
+    
+    private boolean fire;
+    private boolean left;
+    private boolean right;
+    private boolean move;
+
+    public KeyboardController(Scene gameScene) {
+        super();
+        this.gameScene = gameScene;
+    }
+
+    public void register() {
+        if (gameScene != null) {
+            pressHandler = new EventHandler<KeyEvent>() {
+                @Override
+                public void handle(KeyEvent event) {
+                    if (KeyCode.SPACE == event.getCode()) {
+                        fire = true;
+                    }
+                    if (KeyCode.LEFT == event.getCode()) {
+                        left = true;
+                    }
+                    if (KeyCode.RIGHT == event.getCode()) {
+                        right = true;
+                    }
+                    if (KeyCode.UP == event.getCode()) {
+                        move = true;
+                    }
+                }
+            };
+
+            releaseHandler = new EventHandler<KeyEvent>() {
+                @Override
+                public void handle(KeyEvent event) {
+                    if (KeyCode.SPACE == event.getCode()) {
+                        fire = false;
+                    }
+                    if (KeyCode.LEFT == event.getCode()) {
+                        left = false;
+                    }
+                    if (KeyCode.RIGHT == event.getCode()) {
+                        right = false;
+                    }
+                    if (KeyCode.UP == event.getCode()) {
+                        move = false;
+                    }
+                }
+            };
+            gameScene.addEventHandler(KeyEvent.KEY_PRESSED, pressHandler);
+            gameScene.addEventHandler(KeyEvent.KEY_RELEASED, releaseHandler);
+        }
+    }
+
+    public void deRegister() {
+        gameScene.removeEventHandler(KeyEvent.KEY_PRESSED, pressHandler);
+        gameScene.removeEventHandler(KeyEvent.KEY_RELEASED, releaseHandler);
     }
     
-    private static void setupInput(Scene scene) {
-        scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (event.getCode() == KeyCode.SPACE) {
-                gameWorld.fire(true);
-            }
-        });
-        scene.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
-            if (event.getCode() == KeyCode.SPACE) {
-                gameWorld.fire(false);
-            }
-        });
-
-        scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (event.getCode() == KeyCode.UP || event.getCode() == KeyCode.KP_UP) {
-                gameWorld.move(true);
-            }
-        });
-        scene.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
-            if (event.getCode() == KeyCode.UP || event.getCode() == KeyCode.KP_UP) {
-                gameWorld.move(false);
-            }
-        });
-
-        scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.KP_LEFT) {
-                gameWorld.turnLeft(true);
-            }
-        });
-        scene.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
-            if (event.getCode() == KeyCode.LEFT || event.getCode() == KeyCode.KP_LEFT) {
-                gameWorld.turnLeft(false);
-            }
-        });
-
-        scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (event.getCode() == KeyCode.RIGHT || event.getCode() == KeyCode.KP_RIGHT) {
-                gameWorld.turnRight(true);
-            }
-        });
-        scene.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
-            if (event.getCode() == KeyCode.RIGHT || event.getCode() == KeyCode.KP_RIGHT) {
-                gameWorld.turnRight(false);
-            }
-        });
-        
-        scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (event.getCode() == KeyCode.P) {
-                gameWorld.pause();
-            }
-        });
+    @Override
+    public List<Input> getInput() {
+        List<Input> inputs = new ArrayList<>();
+        if (fire) inputs.add(Input.FIRE);
+        if (move) inputs.add(Input.MOVE);
+        if (left) inputs.add(Input.LEFT);
+        if (right) inputs.add(Input.RIGHT);
+        return inputs;
     }
 }

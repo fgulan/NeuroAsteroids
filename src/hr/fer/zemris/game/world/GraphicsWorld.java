@@ -1,5 +1,6 @@
 package hr.fer.zemris.game.world;
 
+import hr.fer.zemris.game.controllers.IController;
 import hr.fer.zemris.game.models.Asteroid;
 import hr.fer.zemris.game.models.Missile;
 import hr.fer.zemris.game.models.Sprite;
@@ -17,7 +18,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
-import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
 
@@ -32,8 +32,8 @@ public class GraphicsWorld extends GameWorld {
     private Map<Sprite, GameNode> nodes;
     private Timeline gameLoop;
 
-    public GraphicsWorld(int fps, int width, int height, int numberOfCommets) {
-        super(width, height, numberOfCommets);
+    public GraphicsWorld(int fps, int width, int height, int numberOfCommets, IController controller) {
+        super(width, height, numberOfCommets, controller);
         this.fps = fps;
         this.nodes = new HashMap<>();
         buildGameLoop();

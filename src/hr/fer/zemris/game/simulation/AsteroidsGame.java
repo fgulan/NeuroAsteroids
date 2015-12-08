@@ -15,7 +15,7 @@ public class AsteroidsGame extends Application implements GameOverListener {
     private static int WIDTH = 800;
     private static int HEIGHT = 600;
 
-    GraphicsWorld gameWorld = new GraphicsWorld(60, WIDTH, HEIGHT, 6);
+    GraphicsWorld gameWorld;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -24,8 +24,8 @@ public class AsteroidsGame extends Application implements GameOverListener {
         Group gameSurface = gameWorld.getGameSurface();
         Scene game = new Scene(gameSurface, WIDTH, HEIGHT);
         primaryStage.setScene(game);
+        KeyboardController controller = new KeyboardController(game);
         primaryStage.show();
-        KeyboardController.register(gameWorld, game);
         gameWorld.registerGameOverListener(this);
         gameWorld.play();
     }

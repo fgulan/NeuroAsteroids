@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Random;
 import java.util.TreeMap;
 
+import hr.fer.zemris.game.controllers.IController;
+import hr.fer.zemris.game.controllers.Input;
 import hr.fer.zemris.game.managers.SpriteManager;
 import hr.fer.zemris.game.models.Asteroid;
 import hr.fer.zemris.game.models.Missile;
@@ -22,6 +24,7 @@ import javafx.scene.shape.Circle;
 public abstract class GameWorld {
 
     protected SpriteManager spriteManager;
+
     protected boolean paused;
     protected Ship ship;
     protected int width;
@@ -30,23 +33,19 @@ public abstract class GameWorld {
     protected boolean gameOver = false;
     protected int destroyedAsteroids = 0;
     public boolean bounceAsteroids = true;
-    
+
     private final static float MISSILE_SPEED = 7.5f;
     private final static int MISSILE_CHARGE_TIME = 38;
     private final static int MISSILE_CHARE_DELTA = 2;
     private int missileCharge = MISSILE_CHARGE_TIME;
-    
+
     protected List<GameOverListener> gameOverListeners;
     protected List<FireListener> fireListeners;
     protected List<ExplosionListener> explosionListeners;
 
+    private IController controller;
 
-    private boolean fire = false;
-    private boolean move = false;
-    private boolean left = false;
-    private boolean right = false;
-
-    public GameWorld(int width, int height, int numberOfCommets) {
+    public GameWorld(int width, int height, int numberOfCommets, IController controller) {
         super();
         this.width = width;
         this.height = height;
@@ -55,6 +54,7 @@ public abstract class GameWorld {
         gameOverListeners = new ArrayList<>();
         explosionListeners = new ArrayList<>();
         fireListeners = new ArrayList<>();
+        this.controller = controller;
     }
 
     public void initialize() {
@@ -129,7 +129,8 @@ public abstract class GameWorld {
         } else if (sprite instanceof Asteroid) {
             handleWalls(sprite);
         }
-        //System.out.println(sprite.getClass() + " : " + sprite.getBounds().getTranslateX() + " - " + sprite.getBounds().getTranslateY());
+        // System.out.println(sprite.getClass() + " : " + sprite.getBounds().getTranslateX() + " - " +
+        // sprite.getBounds().getTranslateY());
         sprite.update();
         handleGraphicUpdate(sprite);
     }
@@ -169,23 +170,30 @@ public abstract class GameWorld {
         }
     }
 
+
     private void handleInput() {
         if (gameOver) {
             return;
         }
-        
-        if (fire && missileCharge >= MISSILE_CHARGE_TIME) {
-            fireMissile();
-            missileCharge = 0;
-        }
 
-        ship.move(move);
-        if (left) {
-            ship.rotate(Direction.COUNTER_CLOCKWISE);
-        } else if (right) {
-            ship.rotate(Direction.CLOCKWISE);
-        } else {
-            ship.rotate(Direction.NEITHER);
+        for (Input input : controller.getInput()) {
+            switch (input) {
+            case MOVE:
+                ship.move();
+                break;
+            case FIRE:
+                if (missileCharge >= MISSILE_CHARGE_TIME) {
+                    fireMissile();
+                    missileCharge = 0;
+                }
+                break;
+            case LEFT:
+                ship.rotate(Direction.COUNTER_CLOCKWISE);
+                break;
+            case RIGHT:
+                ship.rotate(Direction.CLOCKWISE);
+                break;
+            }
         }
     }
 
@@ -196,15 +204,15 @@ public abstract class GameWorld {
 
         spriteManager.addMissileSprites(missile);
         handleMissileGraphics(missile);
-        for(FireListener fl : fireListeners) {
-            fl.fired();
+        for (FireListener fireListener : fireListeners) {
+            fireListener.fired();
         }
     }
 
     protected void checkCollisions() {
         List<Sprite> sprites = spriteManager.getAllSprites();
         int size = sprites.size();
-        
+
         for (int i = 0; i < size - 1; i++) {
             Sprite first = sprites.get(i);
             for (int j = i + 1; j < size; j++) {
@@ -221,7 +229,7 @@ public abstract class GameWorld {
         if (spriteA instanceof Asteroid && spriteB instanceof Asteroid) {
             Asteroid first = (Asteroid) spriteA;
             Asteroid second = (Asteroid) spriteB;
-            if(bounceAsteroids) {
+            if (bounceAsteroids) {
                 first.bounceOf(second);
             }
         } else if ((spriteA instanceof Missile && spriteB instanceof Asteroid)
@@ -229,7 +237,7 @@ public abstract class GameWorld {
             spriteManager.addSpritesToBeRemoved(spriteA, spriteB);
             destroyedAsteroids++;
             asteroidDestroyed();
-            
+
         } else if ((spriteA instanceof Ship && spriteB instanceof Asteroid)
                 || (spriteB instanceof Ship && spriteA instanceof Asteroid)) {
             spriteManager.addSpritesToBeRemoved(ship);
@@ -239,43 +247,29 @@ public abstract class GameWorld {
     }
 
     protected abstract void cleanupSprites();
+
     protected abstract void asteroidDestroyed();
+
     protected abstract void handleMissileGraphics(Missile missile);
 
     public abstract void play();
 
     public abstract void pause();
 
-    public void fire(boolean fire) {
-        this.fire = fire;
-    }
-
-    public void move(boolean move) {
-        this.move = move;
-    }
-
-    public void turnLeft(boolean left) {
-        this.left = left;
-    }
-
-    public void turnRight(boolean right) {
-        this.right = right;
-    }
-
     private void notifyListeners() {
         for (GameOverListener gameOverListener : gameOverListeners) {
             gameOverListener.gameOver();
         }
     }
-    
+
     public boolean registerGameOverListener(GameOverListener listener) {
         return gameOverListeners.add(listener);
     }
-    
+
     public IVector getShipPosition() {
         return new Vector(ship.getCollisionBounds().getCenterX(), ship.getCollisionBounds().getCenterY());
     }
-    
+
     public Map<Double, AsteroidStats> getNearestAsteroidsToShip() {
         Map<Double, AsteroidStats> asteroidsDistance = new TreeMap<>();
         for (Asteroid asteroid : spriteManager.getAsteroids()) {
@@ -285,11 +279,11 @@ public abstract class GameWorld {
         }
         return asteroidsDistance;
     }
-    
+
     private Double distance(Sprite first, Sprite second) {
         double dx = first.getCenter().get(0) - second.getCenter().get(0);
         double dy = first.getCenter().get(1) - second.getCenter().get(1);
-        return Math.sqrt(dx*dx + dy*dy);
+        return Math.sqrt(dx * dx + dy * dy);
     }
 
     public void registerFireListener(FireListener fl) {
@@ -300,4 +294,7 @@ public abstract class GameWorld {
         explosionListeners.add(el);
     }
 
+    public void setController(IController controller) {
+        this.controller = controller;
+    }
 }

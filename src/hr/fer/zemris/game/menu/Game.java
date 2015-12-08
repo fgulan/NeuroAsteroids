@@ -153,10 +153,6 @@ public class Game extends Application {
         return pauseMenu;
     }
 
-    public Pane getGame() {
-        return null;
-    }
-
     public static void main(String[] args) {
         Application.launch(args);
     }
