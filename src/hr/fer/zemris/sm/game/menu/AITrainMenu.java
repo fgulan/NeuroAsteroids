@@ -1,5 +1,16 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.evolution.EPListener;
+import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
+import hr.fer.zemris.sm.evolution.EvolutionaryState;
+import hr.fer.zemris.sm.evolution.IEvolutionaryProcess;
+import hr.fer.zemris.sm.evolution.algorithms.IAlgorithm;
+import hr.fer.zemris.sm.evolution.algorithms.SpeciesAlgorithm;
+import hr.fer.zemris.sm.evolution.demo.AsteroidesEvaluator;
+import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
+import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
+import hr.fer.zemris.sm.evolution.termination.*;
+import hr.fer.zemris.sm.game.Utils.EvolutionObjectDataUtility;
 import hr.fer.zemris.sm.game.nodes.IntegerNumberInput;
 import hr.fer.zemris.sm.game.nodes.RealNumberInput;
 import hr.fer.zemris.sm.game.Constants;
@@ -11,6 +22,8 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
+import java.io.Serializable;
+
 /**
  *
  * Created by doctor on 04.12.15..
@@ -20,6 +33,8 @@ public class AITrainMenu extends Menu {
     private NumberAxis x;
 
     private XYChart.Series<Number, Number> series;
+
+    private EvolutionaryProcess process;
 
     private int added;
 
@@ -52,17 +67,82 @@ public class AITrainMenu extends Menu {
         Node inputPane = createInputPane();
         inputPane.setId(Constants.AITRAIN_ACCORDION);
 
-        VBox buttonPane = new VBox();
-        buttonPane.setId(Constants.AITRAIN_BUTTON_PANE);
-        Button play = new KeyEventButton(Constants.AITRAIN_START_BUTTON);
-        Button pause= new KeyEventButton(Constants.AITRAIN_PAUSE_BUTTON);
-        Button reset= new KeyEventButton(Constants.AITRAIN_RESET_BUTTON);
-        Button save = new KeyEventButton(Constants.AITRAIN_SAVE_BUTTON);
-        buttonPane.getChildren().addAll(play, pause, reset, save);
+        VBox buttonPane = createProcessButtons();
 
         pane.setCenter(inputPane);
         pane.setBottom(buttonPane);
         return pane;
+    }
+
+    private VBox createProcessButtons() {
+        VBox buttonPane = new VBox();
+        buttonPane.setId(Constants.AITRAIN_BUTTON_PANE);
+        Button play = new KeyEventButton(Constants.AITRAIN_START_BUTTON);
+        play.setOnAction(e -> {
+            if(process == null) {
+                createProcess();
+            }
+            process.start();
+        });
+
+
+        Button pause= new KeyEventButton(Constants.AITRAIN_PAUSE_BUTTON);
+        Button reset= new KeyEventButton(Constants.AITRAIN_RESET_BUTTON);
+        Button save = new KeyEventButton(Constants.AITRAIN_SAVE_BUTTON);
+        save.setOnAction(e -> {
+            if(process != null) {
+                EPListener listener = createSaveListener();
+                process.addListener(listener, EvolutionaryState.FINISHED);
+            }
+        });
+        buttonPane.getChildren().addAll(play, pause, reset, save);
+
+        return buttonPane;
+    }
+
+    private EPListener createSaveListener() {
+        EPListener listener = new EPListener() {
+            @Override
+            public void listen(IEvolutionaryProcess process) {
+                IPhenotype phenotype = process.getAlgorithm().getBestPhenotype();
+
+                EvolutionObjectDataUtility util = EvolutionObjectDataUtility.getInstance();
+
+                String name = "Network_" + util.getNeuralObjects().size();
+                String comment = "Network_from_" + process.getIterationCount() + "_iteration.";
+                double fitness = phenotype.getGenotype().getFitness();
+                util.saveObject((Serializable) phenotype, name, fitness, comment);
+                util.flush();
+            }
+        };
+
+        return listener;
+    }
+
+    private void createProcess() {
+        IEvaluator eval = new AsteroidesEvaluator();
+        IAlgorithm alg = new SpeciesAlgorithm(eval);
+
+        CompositTerminatorOperator composit = new CompositTerminatorOperator();
+        if(maxIterInput.getText() != null && !maxIterInput.getText().isEmpty()) {
+            composit.addOperator(new MaxTerminationCount(Integer.parseInt(maxIterInput.getText())));
+        }
+        if(maxFitness.getText() != null && !maxFitness.getText().isEmpty()) {
+            composit.addOperator(new FittnessTerminationOperator(Double.parseDouble(maxFitness.getText())));
+        }
+        if(maxTime.getText() != null && !maxTime.getText().isEmpty()) {
+            composit.addOperator(new ConstantTimeTermination(Integer.parseInt(maxTime.getText())));
+        }
+
+        process = new EvolutionaryProcess(alg, composit, eval);
+
+
+        process.addListener((p) -> {
+            if(p.getIterationCount() % 1 == 0) {
+                series.getData().add(new XYChart.Data<>(p.getIterationCount(), p.getAlgorithm().getBestGenotype().getFitness()));
+            }
+        },EvolutionaryState.EPOH_OVER);
+
     }
 
     private Node createInputPane() {
@@ -104,7 +184,7 @@ public class AITrainMenu extends Menu {
         addSeparator(pane, 4);
 
         Label maxT = new Label("Max time");
-        maxTime = new RealNumberInput();
+        maxTime = new IntegerNumberInput();
         maxTime.setPromptText("Enter maximal time (in seconds)");
         pane.addRow(5, maxT, maxTime);
 
@@ -168,10 +248,7 @@ public class AITrainMenu extends Menu {
 
         series = new XYChart.Series<>();
         series.setName(Constants.EVOLUTION_SERIES);
-        series.getData().add(new XYChart.Data(0, 10));
-        series.getData().add(new XYChart.Data(50, 23));
-
-        added = 12;
+        series.getData().add(new XYChart.Data<>(0,0));
         lineChart.getData().add(series);
 
         return lineChart;

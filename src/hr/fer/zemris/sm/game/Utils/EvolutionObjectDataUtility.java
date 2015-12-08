@@ -46,6 +46,7 @@ public class EvolutionObjectDataUtility {
 			si.close();
 		} catch (Exception e) {
 			//xxx.ser file not found, still not saved
+			e.printStackTrace();
 			net = saveMap.get(id+".ser");
 		}
 		return net;

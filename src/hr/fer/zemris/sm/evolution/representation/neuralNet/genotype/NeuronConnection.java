@@ -1,6 +1,8 @@
 package hr.fer.zemris.sm.evolution.representation.neuralNet.genotype;
 
-public class NeuronConnection implements Comparable<NeuronConnection>
+import java.io.Serializable;
+
+public class NeuronConnection implements Comparable<NeuronConnection>, Serializable
 {
     private int inNeuron;
     private int outNeuron;

@@ -1,6 +1,8 @@
 package hr.fer.zemris.sm.evolution.representation.neuralNet.genotype;
 
-public abstract class Genotype implements Comparable<Genotype>, Iterable<NeuronConnection>{
+import java.io.Serializable;
+
+public abstract class Genotype implements Comparable<Genotype>, Iterable<NeuronConnection>, Serializable {
     private double fitness;
 
     @Override
