@@ -8,6 +8,7 @@ import javafx.scene.input.KeyEvent;
 public class KeyboardController {
     
     private static GameWorld gameWorld;
+    private static Scene scene;
 
     public static void register(GameWorld gameWorld, Scene gameScene) {
         KeyboardController.gameWorld = gameWorld;
@@ -61,7 +62,7 @@ public class KeyboardController {
         
         scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.P) {
-                gameWorld.pause();;
+                gameWorld.pause();
             }
         });
     }

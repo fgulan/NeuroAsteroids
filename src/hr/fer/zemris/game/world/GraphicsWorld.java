@@ -1,16 +1,10 @@
 package hr.fer.zemris.game.world;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import hr.fer.zemris.game.models.Asteroid;
 import hr.fer.zemris.game.models.Missile;
 import hr.fer.zemris.game.models.Sprite;
-import hr.fer.zemris.game.nodes.AsteroidNode;
-import hr.fer.zemris.game.nodes.ExplosionHandler;
-import hr.fer.zemris.game.nodes.GameNode;
-import hr.fer.zemris.game.nodes.MissileNode;
-import hr.fer.zemris.game.nodes.ShipNode;
+import hr.fer.zemris.game.nodes.*;
+import hr.fer.zemris.game.world.Listeners.ExplosionListener;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -19,25 +13,29 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
-import javafx.stage.Screen;
+import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class GraphicsWorld extends GameWorld {
 
     private int fps;
     private Group sceneNodes;
     private Label scoreLabel;
-    private Map<Sprite, GameNode> nodes = new HashMap<>();
+    private Map<Sprite, GameNode> nodes;
     private Timeline gameLoop;
 
     public GraphicsWorld(int fps, int width, int height, int numberOfCommets) {
         super(width, height, numberOfCommets);
         this.fps = fps;
+        this.nodes = new HashMap<>();
         buildGameLoop();
     }
 
@@ -93,7 +91,7 @@ public class GraphicsWorld extends GameWorld {
         nodes.put(ship, shipNode);
         shipNode.getSprite().getBounds().setFill(Color.RED);
         //sceneNodes.getChildren().add(shipNode.getSprite().getBounds());
-        
+
         scoreLabel = new Label();
         scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(destroyedAsteroids));
         scoreLabel.setFont(Font.font("Cambria", FontWeight.EXTRA_LIGHT, FontPosture.ITALIC, 25));
@@ -149,5 +147,8 @@ public class GraphicsWorld extends GameWorld {
     @Override
     protected void asteroidDestroyed() {
         scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(destroyedAsteroids));
+        for(ExplosionListener el : explosionListeners) {
+            el.exploded();
+        }
     }
 }

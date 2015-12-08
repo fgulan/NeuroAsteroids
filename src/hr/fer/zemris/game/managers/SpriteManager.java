@@ -20,11 +20,11 @@ public class SpriteManager {
     /**
      * List of all game objects currently on scene.
      */
-    private final static List<Sprite> GAME_OBJECTS = new ArrayList<>();
+    private List<Sprite> GAME_OBJECTS = new ArrayList<>();
     
-    private final static List<Asteroid> ASTEROIDS = new ArrayList<>();
+    private List<Asteroid> ASTEROIDS = new ArrayList<>();
 
-    private final static List<Missile> MISSILES = new ArrayList<>();
+    private List<Missile> MISSILES = new ArrayList<>();
 
     private static Ship ship;
     

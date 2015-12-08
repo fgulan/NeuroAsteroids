@@ -1,6 +1,7 @@
 package hr.fer.zemris.game.menu;
 
 import hr.fer.zemris.game.sound.BackgroundSoundManager;
+import hr.fer.zemris.game.sound.EffectsSoundManager;
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.TranslateTransition;
@@ -41,14 +42,12 @@ public class Game extends Application {
     private Stage stage;
     private StackPane root;
 
-    private EventHandler<KeyEvent> startPauseMenuListener;
-
-    private EventHandler<KeyEvent> exitPauseMenuListener;
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         BackgroundSoundManager.getInstance().loopBackground();
-        BackgroundSoundManager.getInstance().setVolume(0.1);
+        BackgroundSoundManager.getInstance().setVolume(INIT_BACKGROUND_SOUND_VOLUME);
+
+        EffectsSoundManager.getInstance().setVolume(INIT_EFFECT_SOUND_VOLUME);
 
         createMenus();
 
@@ -66,20 +65,6 @@ public class Game extends Application {
 
         Image gameIcon = new Image(ClassLoader.getSystemResourceAsStream("res/Meteor-icon.png"));
         stage.getIcons().add(gameIcon);
-
-        startPauseMenuListener = e -> {
-            if(e.getCode().equals(KeyCode.P)) {
-                root.getChildren().add(pauseMenu);
-                scene.setOnKeyReleased(exitPauseMenuListener);
-            }
-        };
-
-        exitPauseMenuListener = e -> {
-            if(e.getCode().equals(KeyCode.ESCAPE)) {
-                root.getChildren().remove(pauseMenu);
-                scene.setOnKeyReleased(startPauseMenuListener);
-            }
-        };
 
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         stage.setFullScreen(true);
@@ -134,14 +119,6 @@ public class Game extends Application {
 
     public void closeGame() {
         Platform.exit();
-    }
-
-    public void listenForPause() {
-        stage.getScene().setOnKeyReleased(startPauseMenuListener);
-    }
-
-    public void doNotListenForPause() {
-        stage.getScene().setOnKeyReleased(null);
     }
 
     public Pane getStartMenu() {

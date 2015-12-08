@@ -34,7 +34,6 @@ public class PauseMenu extends Menu {
         exit.setId(PAUSE_MENU_EXIT_BUTTON);
         exit.setOnAction( e -> {
             parent.getRoot().getChildren().remove(parent.getPauseMenu());
-            getGameParent().doNotListenForPause();
         });
 
         setCenter(pausePane);
@@ -49,7 +48,6 @@ public class PauseMenu extends Menu {
         resume.setOnAction( e -> {
             Game parent = getGameParent();
             parent.getRoot().getChildren().remove(parent.getPauseMenu());
-            parent.listenForPause();
             //TODO: continue game
         });
 
@@ -58,7 +56,7 @@ public class PauseMenu extends Menu {
         restart.setOnAction( e -> {
             Game parent = getGameParent();
             parent.getRoot().getChildren().remove(parent.getPauseMenu());
-            parent.listenForPause();
+
             //TODO: restart a game
         });
 

@@ -113,11 +113,12 @@ public class OptionsMenu extends Menu {
 
         Label effectSoundLabel = new Label(EFFECT_SOUND_LABEL_TEXT);
         effectSoundSlider = new Slider();
+        effectSoundSlider.setValue(EffectsSoundManager.getInstance().getVolume());
         effectSoundSlider.setMin(0);
         effectSoundSlider.setMax(1);
 
         effectSoundSlider.valueProperty().addListener( e ->  {
-            EffectsSoundManager.getInstance().setVolume( effectSoundSlider.getValue() );
+            EffectsSoundManager.getInstance().setVolume(effectSoundSlider.getValue());
         });
 
         grid.addRow(2, effectSoundLabel, effectSoundSlider);

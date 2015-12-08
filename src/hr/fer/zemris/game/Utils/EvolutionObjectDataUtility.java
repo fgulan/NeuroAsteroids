@@ -25,7 +25,7 @@ public class EvolutionObjectDataUtility {
 		try {
 			List<String> data = Files.readAllLines(Paths.get(EVOLUTION_ELEMENTS_LIST_FILE));
 			//Curtsy of IntelliJ IDEA
-			elements.addAll(data.stream().map(EvolutionElement::parse).collect(Collectors.toList()));
+			elements = data.stream().map(EvolutionElement::parse).collect(Collectors.toList());
 		} catch (IOException e) {
 			//elements.txt file not found
 		}

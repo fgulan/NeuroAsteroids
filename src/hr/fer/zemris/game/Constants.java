@@ -5,11 +5,14 @@ package hr.fer.zemris.game;
  */
 public class Constants {
 
+
+
     public static final String GAME_TITLE = "NeuroAsteroids";
     public static final String GAME_TITLE_LABEL = "titleLabel";
 
     public static final String GAME_STYLE_PATH = "res/style.css";
     public static final String CURSOR_IMG_PATH = "res/aimCursorWhite.png";
+    public static final String GAME_WORLD_STYLE_PATH = "res/gameStyle.css";
 
     public static final String BACK_BUTTON_TEXT = "Back";
 
@@ -22,7 +25,6 @@ public class Constants {
     public static final String EVOLUTION_ELEMENTS_FILES_DIR= "res/saved/";
     public static final String CREDITS_PATH = "res/credits.txt";
 
-
     public static final double OUT_TRANSITION_DURNATION = 0.25;
     public static final double IN_TRANSITION_DURNATION  = 0.25;
 
@@ -31,10 +33,13 @@ public class Constants {
     //*************************************//
     //               Audio                 //
     //*************************************//
+    public static final double INIT_BACKGROUND_SOUND_VOLUME = 0.1;
+    public static final double INIT_EFFECT_SOUND_VOLUME = 0.1;
+
     public static final String BACKGROUND_MUSIC = "res/audio/background_music.mp3";
     public static final String EXPLOSION_CLIP = "res/audio/bomb-03.wav";
     public static final String FIRE_CLIP = "res/audio/fireSound.wav";
-
+    public static final String SHIP_EXPLODED_CLIP = "res/audio/alah.mp3";
 
 
     //*************************************//

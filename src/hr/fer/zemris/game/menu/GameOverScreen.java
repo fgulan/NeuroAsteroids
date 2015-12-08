@@ -1,10 +1,17 @@
 package hr.fer.zemris.game.menu;
 
+import hr.fer.zemris.game.controllers.KeyboardController;
+import hr.fer.zemris.game.sound.EffectsSoundManager;
+import hr.fer.zemris.game.world.GraphicsWorld;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import static hr.fer.zemris.game.Constants.*;
 
@@ -28,15 +35,20 @@ public class GameOverScreen extends Menu {
         Button restart = new KeyEventButton(GAME_OVER_RESET_BUTTON_TEXT);
         restart.setId(GAME_OVER_RESET_BUTTON);
         restart.setOnAction(e -> {
-            //TODO: Reset game!
+            new GameStart().handle(null);
         });
 
         Button toMenu = new KeyEventButton(GAME_OVER_TO_MENU_BUTTON_TEXT);
         toMenu.setId(GAME_OVER_TO_MENU_BUTTON);
         toMenu.setOnAction(e -> {
-            //TODO: remove game from root!!
-            parent.getRoot().getChildren().remove(this);
-            parent.getRoot().getChildren().add(parent.getPlayMenu());
+            //TODO: deregister key listener
+            Pane root = parent.getRoot();
+            root.getChildren().clear();
+            root.getChildren().add(parent.getPlayMenu());
+            Scene scene = parent.getStage().getScene();
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
+            scene.setRoot(root);
         });
 
         buttons.getChildren().addAll(restart, toMenu);

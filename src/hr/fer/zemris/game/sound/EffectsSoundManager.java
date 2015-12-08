@@ -12,6 +12,7 @@ public class EffectsSoundManager {
 
     AudioClip explosion;
     AudioClip fire;
+    AudioClip shipExploded;
 
     public static EffectsSoundManager getInstance() {
         if(instance == null) {
@@ -26,11 +27,19 @@ public class EffectsSoundManager {
 
         String fireAudioClip = ClassLoader.getSystemResource(FIRE_CLIP).toExternalForm();
         fire = new AudioClip(fireAudioClip);
+
+        String shipExplodedAudioClip = ClassLoader.getSystemResource(SHIP_EXPLODED_CLIP).toExternalForm();
+        shipExploded = new AudioClip(shipExplodedAudioClip);
     }
 
     public void setVolume(double volume) {
         explosion.setVolume(volume);
         fire.setVolume(volume);
+        shipExploded.setVolume(volume);
+    }
+
+    public double getVolume() {
+        return fire.getVolume();
     }
 
     public void playExplosion() {
@@ -39,5 +48,9 @@ public class EffectsSoundManager {
 
     public void playFire() {
         fire.play();
+    }
+
+    public void playShipExploded() {
+        shipExploded.play();
     }
 }

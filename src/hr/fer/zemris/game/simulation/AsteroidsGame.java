@@ -1,7 +1,7 @@
 package hr.fer.zemris.game.simulation;
 
 import hr.fer.zemris.game.controllers.KeyboardController;
-import hr.fer.zemris.game.world.GameOverListener;
+import hr.fer.zemris.game.world.Listeners.GameOverListener;
 import hr.fer.zemris.game.world.GraphicsWorld;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -26,7 +26,7 @@ public class AsteroidsGame extends Application implements GameOverListener {
         primaryStage.setScene(game);
         primaryStage.show();
         KeyboardController.register(gameWorld, game);
-        gameWorld.addListener(this);
+        gameWorld.registerGameOverListener(this);
         gameWorld.play();
     }
 

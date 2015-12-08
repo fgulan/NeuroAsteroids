@@ -14,6 +14,9 @@ import hr.fer.zemris.game.models.Sprite;
 import hr.fer.zemris.game.models.Ship.Direction;
 import hr.fer.zemris.game.physics.IVector;
 import hr.fer.zemris.game.physics.Vector;
+import hr.fer.zemris.game.world.Listeners.ExplosionListener;
+import hr.fer.zemris.game.world.Listeners.FireListener;
+import hr.fer.zemris.game.world.Listeners.GameOverListener;
 import javafx.scene.shape.Circle;
 
 public abstract class GameWorld {
@@ -33,7 +36,10 @@ public abstract class GameWorld {
     private final static int MISSILE_CHARE_DELTA = 2;
     private int missileCharge = MISSILE_CHARGE_TIME;
     
-    private List<GameOverListener> listeners;
+    protected List<GameOverListener> gameOverListeners;
+    protected List<FireListener> fireListeners;
+    protected List<ExplosionListener> explosionListeners;
+
 
     private boolean fire = false;
     private boolean move = false;
@@ -46,7 +52,9 @@ public abstract class GameWorld {
         this.height = height;
         this.numberOfCommets = numberOfCommets;
         this.spriteManager = new SpriteManager();
-        listeners = new ArrayList<>();
+        gameOverListeners = new ArrayList<>();
+        explosionListeners = new ArrayList<>();
+        fireListeners = new ArrayList<>();
     }
 
     public void initialize() {
@@ -188,6 +196,9 @@ public abstract class GameWorld {
 
         spriteManager.addMissileSprites(missile);
         handleMissileGraphics(missile);
+        for(FireListener fl : fireListeners) {
+            fl.fired();
+        }
     }
 
     protected void checkCollisions() {
@@ -252,13 +263,13 @@ public abstract class GameWorld {
     }
 
     private void notifyListeners() {
-        for (GameOverListener gameOverListener : listeners) {
+        for (GameOverListener gameOverListener : gameOverListeners) {
             gameOverListener.gameOver();
         }
     }
     
-    public boolean addListener(GameOverListener listener) {
-        return listeners.add(listener);
+    public boolean registerGameOverListener(GameOverListener listener) {
+        return gameOverListeners.add(listener);
     }
     
     public IVector getShipPosition() {
@@ -280,4 +291,13 @@ public abstract class GameWorld {
         double dy = first.getCenter().get(1) - second.getCenter().get(1);
         return Math.sqrt(dx*dx + dy*dy);
     }
+
+    public void registerFireListener(FireListener fl) {
+        fireListeners.add(fl);
+    }
+
+    public void registerExplosionListener(ExplosionListener el) {
+        explosionListeners.add(el);
+    }
+
 }
