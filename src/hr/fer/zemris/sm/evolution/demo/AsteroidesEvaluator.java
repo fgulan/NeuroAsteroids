@@ -34,12 +34,13 @@ public class AsteroidesEvaluator implements IEvaluator {
         world.registerFireListener(fc);
         world.play();
 
-        int acc = 0;
+        double acc = 0;
         if(fc.count != 0)  {
-            acc = world.getDestroyedAsteroids() / fc.count;
+            acc = world.getDestroyedAsteroids() / (double)fc.count;
         }
+        System.out.println("acc:" + acc + " fcCount" + fc.count + " destroyed" + world.getDestroyedAsteroids() + " fitness " + controller.fittness);
 
-        return acc;
+        return acc * 10 * world.getDestroyedAsteroids() + controller.fittness;
     }
 
     @Override

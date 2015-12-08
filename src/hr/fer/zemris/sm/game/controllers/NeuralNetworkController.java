@@ -18,7 +18,11 @@ public class NeuralNetworkController implements IController {
 
         private IPhenotype phenotype;
 
-        private double fittness = 0;
+        public double fittness = 0;
+
+        public int moveCounter = 0;
+
+        public double lastAlpha = 0;
 
         private GameWorld world;
 
@@ -54,10 +58,31 @@ public class NeuralNetworkController implements IController {
             double[] output = phenotype.work(new double[] {aplha1, d1, aplha2, d2});
 
             List<Input> inputs = new ArrayList<>();
-            if(output[0] > 0.5) inputs.add(Input.MOVE);
-            if(output[1] > 0.5) inputs.add(Input.LEFT);
-            if(output[2] > 0.5) inputs.add(Input.RIGHT);
-            if(output[3] > 0.5) inputs.add(Input.FIRE);
+            if(output[0] > 0.5) {
+                inputs.add(Input.MOVE);
+                if(d1 < 60 ) fittness += 5;
+                else fittness-=2;
+                if(d2 < 60 ) fittness += 2;
+                else fittness-=1;
+            }
+            if(output[1] > 0.5)  {
+                inputs.add(Input.LEFT);
+                if(aplha1 < 60) fittness += 0.5;
+                else fittness -= 0.25;
+                if(aplha1 > 60) fittness -= 0.25;
+                else fittness -= 0.1;
+            }
+            if(output[2] > 0.5)  {
+                inputs.add(Input.RIGHT);
+                if(aplha1 > 320) fittness += 0.5;
+                else fittness -= 0.1;
+                if(aplha1 < 320) fittness -= 0.25;
+                else fittness -= 0.1;
+            }
+            if(output[3] > 0.5) {
+                inputs.add(Input.FIRE);
+                fittness--;
+            }
 
             return inputs;
         }
@@ -74,7 +99,6 @@ public class NeuralNetworkController implements IController {
         }
 
         private double getBeta(Ship ship, AsteroidDistance asteroidDistance) {
-
             return 0;
         }
 
