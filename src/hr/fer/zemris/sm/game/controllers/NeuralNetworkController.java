@@ -69,7 +69,8 @@ public class NeuralNetworkController implements IController {
             ac.sub(sc);
             double a = Math.atan2(ac.get(1), ac.get(0)); //kut izmedu centra broda i asteroida
 
-            return ship.getCurrentAngle() - a;
+            double alpha = ship.getCurrentAngle() - a;
+            return alpha;
         }
 
         private double getBeta(Ship ship, AsteroidDistance asteroidDistance) {

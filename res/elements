@@ -1,3 +1,6 @@
 Network 0.0 30.0
 Network 1.0 262.0
 Network_2 270.0 Network_from_30_iteration.
+Network_3 119.06 Network_from_50_iteration.
+Network_4 0.0 Network_from_50_iteration.
+Network_5 2.0 Network_from_100_iteration.

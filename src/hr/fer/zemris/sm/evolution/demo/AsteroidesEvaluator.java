@@ -3,6 +3,7 @@ package hr.fer.zemris.sm.evolution.demo;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.controllers.NeuralNetworkController;
+import hr.fer.zemris.sm.game.world.Listeners.FireListener;
 import hr.fer.zemris.sm.game.world.SimulationWorld;
 
 /**
@@ -28,11 +29,17 @@ public class AsteroidesEvaluator implements IEvaluator {
         NeuralNetworkController controller = new NeuralNetworkController(phenotype, world);
         world.setController(controller);
         world.initialize();
+
+        FireCounter fc = new FireCounter();
+        world.registerFireListener(fc);
         world.play();
 
+        int acc = 0;
+        if(fc.count != 0)  {
+            acc = world.getDestroyedAsteroids() / fc.count;
+        }
 
-
-        return world.getDestroyedAsteroids(); //* 100 + world.getFrameCount()*0.01;
+        return acc;
     }
 
     @Override
@@ -40,5 +47,15 @@ public class AsteroidesEvaluator implements IEvaluator {
         return 0;
     }
 
+
+    private class FireCounter implements FireListener {
+
+        int count = 0;
+
+        @Override
+        public void fired() {
+            count++;
+        }
+    }
 
 }
