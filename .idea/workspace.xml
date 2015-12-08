@@ -2,62 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77464c1b-33c1-4ac7-9291-c28ee804c947" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/Constants.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/Utils/EvolutionElement.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Utils/EvolutionElement.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/Utils/EvolutionObjectDataUtility.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Utils/EvolutionObjectDataUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/Utils/HSDataUtility.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Utils/HSDataUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/Utils/ScoreElement.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Utils/ScoreElement.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/animations/Animations.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/animations/Animations.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/animations/SpriteAnimator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/animations/SpriteAnimator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/controllers/IController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/controllers/Input.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/controllers/KeyboardController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/KeyboardController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/managers/SpriteManager.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/managers/SpriteManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/AIChooserMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/AITrainMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AITrainMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/CreditsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/Game.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/GameOverScreen.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/KeyEventButton.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/KeyEventButton.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/Menu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/OptionsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/PauseMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PauseMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/PlayMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/ScoreMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/menu/StartMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/models/Asteroid.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Asteroid.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/models/Missile.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Missile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/models/Ship.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Ship.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/models/Sprite.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Sprite.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/models/SpriteManager.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/SpriteManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/nodes/AsteroidNode.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/AsteroidNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/nodes/ExplosionHandler.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/ExplosionHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/nodes/GameNode.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/GameNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/nodes/IntegerNumberInput.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/IntegerNumberInput.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/nodes/MissileNode.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/MissileNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/nodes/RealNumberInput.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/RealNumberInput.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/nodes/ShipNode.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/ShipNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/physics/AbstractVector.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/physics/AbstractVector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/physics/IVector.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/physics/IVector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/physics/Vector.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/physics/Vector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/simulation/AsteroidsGame.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/simulation/AsteroidsGame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/simulation/AsteroidsSimulation.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/simulation/AsteroidsSimulation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/sound/BackgroundSoundManager.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/sound/BackgroundSoundManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/sound/EffectsSoundManager.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/sound/EffectsSoundManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/world/AsteroidStats.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/AsteroidStats.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/world/GameWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/world/GraphicsWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/world/Listeners/ExplosionListener.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/Listeners/ExplosionListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/world/Listeners/FireListener.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/Listeners/FireListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/world/Listeners/GameOverListener.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/Listeners/GameOverListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/game/world/SimulationWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesEvaluator.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/SpriteManager.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" />
     </list>
     <ignored path="NeuroAsteroids.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +30,152 @@
   <component name="FavoritesManager">
     <favorites_list name="NeuroAsteroids" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="AsteroidesEvaluator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesEvaluator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7735849">
+              <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#885#886#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#1378#1379#0" expanded="true" />
+                <element signature="e#1402#1403#0" expanded="true" />
+                <element signature="e#1608#1609#0" expanded="true" />
+                <element signature="e#1658#1659#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameWorld.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="295" column="40" selection-start-line="295" selection-start-column="40" selection-end-line="295" selection-end-column="40" />
+              <folding>
+                <element signature="method#GameWorld#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#initialize#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#generateShipSprite#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#generateCommetsSprite#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#generateNewCommets#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#updateSprites#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#handleSpriteUpdate#0;class#GameWorld#0" expanded="false" />
+                <element signature="e#4396#4490#0" expanded="false" />
+                <element signature="method#handleWalls#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#removeMissile#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#handleInput#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#fireMissile#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#notifyListeners#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#getShipPosition#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#distance#0;class#GameWorld#0" expanded="false" />
+                <element signature="e#9972#9973#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulationWorld.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+              <folding>
+                <element signature="e#1530#1531#0" expanded="true" />
+                <element signature="e#1563#1564#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlowerPowerDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/FlowerPowerDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsteroidesDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Input.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpriteManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/managers/SpriteManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+              <folding>
+                <element signature="e#1754#1755#0" expanded="true" />
+                <element signature="e#1781#1782#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="79" selection-start-line="39" selection-start-column="79" selection-end-line="39" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -81,15 +184,27 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/SpriteManager.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesDemo.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesEvaluator.java" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="18" />
-    <option name="width" value="1600" />
-    <option name="height" value="882" />
+    <option name="x" value="-1" />
+    <option name="width" value="1602" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -116,6 +231,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -130,7 +247,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemId" value="projekt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -140,7 +257,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemId" value="projekt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -148,18 +265,218 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="audio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="evolution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="evolution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuroAsteroids" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="evolution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AsteroidesDemo">
+    <configuration default="false" name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.zemris.sm.game.menu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.sm.game.menu.Game" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="NeuroAsteroids" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="AsteroidesDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.zemris.sm.evolution.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="hr.fer.zemris.sm.evolution.demo.AsteroidesDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="NeuroAsteroids" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -551,6 +868,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -565,8 +887,30 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Game" />
+      <item index="1" class="java.lang.String" itemvalue="Application.AsteroidesDemo" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.AsteroidesDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Game" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StatisticProjectComponent">
+    <option name="excludeCompilerOutput" value="true" />
+    <option name="excludeIdea9ArtifactDirectory" value="true" />
+    <option name="excludeTargetDirectories" value="true" />
+    <option name="activateWhenOpenProject" value="false" />
+    <option name="excludedDirectories">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+    <option name="fileTypes" value="class;svn-base;svn-work;Extra;gif;png;jpg;jpeg;bmp;tga;tiff;ear;war;zip;jar;iml;iws;ipr;bz2;gz;" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="77464c1b-33c1-4ac7-9291-c28ee804c947" name="Default" comment="" />
@@ -574,38 +918,41 @@
       <option name="number" value="Default" />
       <updated>1449573283101</updated>
       <workItem from="1449573286273" duration="54000" />
+      <workItem from="1449573638429" duration="5444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54000" />
+    <option name="totallyTimeSpent" value="5498000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="18" width="1600" height="882" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="0" width="1602" height="875" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24967825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -614,5 +961,241 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/KeyboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiThreading/EvaluatorTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiThreading/EvaluatorTaskFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiThreading/MultiThereadingEvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/XOREvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/SpeciesAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/NeuralNetDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/IEvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/EvaluatorException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="79" selection-start-line="39" selection-start-column="79" selection-end-line="39" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/managers/SpriteManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+          <folding>
+            <element signature="e#1754#1755#0" expanded="true" />
+            <element signature="e#1781#1782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+          <folding>
+            <element signature="e#3323#3324#0" expanded="true" />
+            <element signature="e#3358#3359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/physics/IVector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Sprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4528302">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Asteroid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1509434">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="295" column="40" selection-start-line="295" selection-start-column="40" selection-end-line="295" selection-end-column="40" />
+          <folding>
+            <element signature="method#GameWorld#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#initialize#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#generateShipSprite#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#generateCommetsSprite#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#generateNewCommets#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#updateSprites#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#handleSpriteUpdate#0;class#GameWorld#0" expanded="false" />
+            <element signature="e#4396#4490#0" expanded="false" />
+            <element signature="method#handleWalls#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#removeMissile#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#handleInput#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#fireMissile#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#notifyListeners#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#getShipPosition#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#distance#0;class#GameWorld#0" expanded="false" />
+            <element signature="e#9972#9973#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+          <folding>
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/FlowerPowerDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesEvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7735849">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
+            <element signature="e#1608#1609#0" expanded="true" />
+            <element signature="e#1658#1659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

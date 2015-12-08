@@ -37,7 +37,7 @@ public class Constants {
     public static final String BACKGROUND_MUSIC = "res/audio/background_music.mp3";
     public static final String EXPLOSION_CLIP = "res/audio/bomb-03.wav";
     public static final String FIRE_CLIP = "res/audio/fireSound.wav";
-    public static final String SHIP_EXPLODED_CLIP = "res/audio/alah.mp3";
+    public static final String SHIP_EXPLODED_CLIP = "res/audio/shipExploded.mp3";
 
 
     //*************************************//

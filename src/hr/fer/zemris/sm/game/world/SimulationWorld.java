@@ -7,8 +7,15 @@ import hr.fer.zemris.sm.game.models.Sprite;
 
 public class SimulationWorld extends GameWorld {
 
+    private volatile boolean run;
+
+    private int frameCount;
+
+
     public SimulationWorld(int width, int height, int numberOfCommets, IController controller) {
         super(width, height, numberOfCommets, controller);
+        run = true;
+        registerGameOverListener(() -> run = false);
     }
 
     @Override
@@ -38,14 +45,13 @@ public class SimulationWorld extends GameWorld {
 
     @Override
     public void play() {
-        int i = 0;
-        while (i < 20000) {
-            while (paused);
+
+        while (run) {
+            //while (paused);
+            frameCount++;
             newFrameStep();
             //getNearestAsteroidsToShip();
-            i++;
         }
-        System.out.println("IgraGotova " +i);
     }
 
     @Override
@@ -55,7 +61,10 @@ public class SimulationWorld extends GameWorld {
 
     @Override
     protected void asteroidDestroyed() {
-        System.out.println("Unisten asterid");
+        //System.out.println("Unisten asteroid");
     }
 
+    public int getFrameCount() {
+        return frameCount;
+    }
 }

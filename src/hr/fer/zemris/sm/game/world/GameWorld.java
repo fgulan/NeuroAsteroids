@@ -168,7 +168,6 @@ public abstract class GameWorld {
         }
     }
 
-
     private void handleInput() {
         if (gameOver) {
             return;
@@ -284,5 +283,17 @@ public abstract class GameWorld {
 
     public void setController(IController controller) {
         this.controller = controller;
+    }
+
+    public IController getController() {
+        return controller;
+    }
+
+    public SpriteManager getSpriteManager() {
+        return spriteManager;
+    }
+
+    public int getDestroyedAsteroids() {
+        return destroyedAsteroids;
     }
 }
