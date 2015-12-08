@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/sm.iml" filepath="$PROJECT_DIR$/sm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NeuroAsteroids.iml" filepath="$PROJECT_DIR$/NeuroAsteroids.iml" />
     </modules>
   </component>
 </project>
