@@ -270,16 +270,6 @@ public abstract class GameWorld {
         return new Vector(ship.getCollisionBounds().getCenterX(), ship.getCollisionBounds().getCenterY());
     }
 
-    public Map<Double, AsteroidStats> getNearestAsteroidsToShip() {
-        Map<Double, AsteroidStats> asteroidsDistance = new TreeMap<>();
-        for (Asteroid asteroid : spriteManager.getAsteroids()) {
-            Double distance = distance(ship, asteroid);
-            AsteroidStats stats = new AsteroidStats(asteroid.getVelocity(), asteroid.getCenter());
-            asteroidsDistance.put(distance, stats);
-        }
-        return asteroidsDistance;
-    }
-
     private Double distance(Sprite first, Sprite second) {
         double dx = first.getCenter().get(0) - second.getCenter().get(0);
         double dy = first.getCenter().get(1) - second.getCenter().get(1);

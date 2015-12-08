@@ -5,8 +5,6 @@ package hr.fer.zemris.game;
  */
 public class Constants {
 
-
-
     public static final String GAME_TITLE = "NeuroAsteroids";
     public static final String GAME_TITLE_LABEL = "titleLabel";
 
