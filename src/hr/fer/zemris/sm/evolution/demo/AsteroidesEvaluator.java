@@ -3,8 +3,8 @@ package hr.fer.zemris.sm.evolution.demo;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.controllers.NeuralNetworkController;
-import hr.fer.zemris.sm.game.world.Listeners.FireListener;
 import hr.fer.zemris.sm.game.world.SimulationWorld;
+import hr.fer.zemris.sm.game.world.listeners.FireListener;
 
 /**
  * Created by Andrija Milicevic.
@@ -36,11 +36,11 @@ public class AsteroidesEvaluator implements IEvaluator {
 
         double acc = 0;
         if(fc.count != 0)  {
-            acc = world.getDestroyedAsteroids() / (double)fc.count;
+            acc = world.getPoints() / (double)fc.count;
         }
-        System.out.println("acc:" + acc + " fcCount" + fc.count + " destroyed" + world.getDestroyedAsteroids() + " fitness " + controller.fittness);
+        System.out.println("acc:" + acc + " fcCount" + fc.count + " destroyed" + world.getPoints() + " fitness " + controller.fittness);
 
-        return acc * 10 * world.getDestroyedAsteroids() + controller.fittness;
+        return acc * 10 * world.getPoints() + controller.fittness;
     }
 
     @Override

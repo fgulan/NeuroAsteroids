@@ -16,7 +16,7 @@ public class Ship extends Sprite {
     private final static float UNIT_ANGLE_PER_FRAME = ((float) TWO_PI_DEGREES / NUM_DIRECTIONS);
 
     private final static float ACCELERATION_STEP = 0.2f;
-    private final static float MAX_SPEED = 5.5f;
+    private final static float MAX_SPEED = 6.5f;
     private float shipSpeed = 0;
     
     private float currentAngle = 0;

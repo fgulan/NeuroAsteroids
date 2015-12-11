@@ -1,8 +1,8 @@
 package hr.fer.zemris.sm.game.simulation;
 
 import hr.fer.zemris.sm.game.controllers.KeyboardController;
-import hr.fer.zemris.sm.game.world.Listeners.GameOverListener;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
+import hr.fer.zemris.sm.game.world.listeners.GameOverListener;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;

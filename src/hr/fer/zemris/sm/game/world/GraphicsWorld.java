@@ -4,8 +4,9 @@ import hr.fer.zemris.sm.game.controllers.IController;
 import hr.fer.zemris.sm.game.models.Asteroid;
 import hr.fer.zemris.sm.game.models.Missile;
 import hr.fer.zemris.sm.game.models.Sprite;
+import hr.fer.zemris.sm.game.models.Star;
 import hr.fer.zemris.sm.game.nodes.*;
-import hr.fer.zemris.sm.game.world.Listeners.ExplosionListener;
+import hr.fer.zemris.sm.game.world.listeners.ExplosionListener;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -81,7 +82,13 @@ public class GraphicsWorld extends GameWorld {
             //sceneNodes.getChildren().add(asteroid.getSprite().getBounds());
             //sceneNodes.getChildren().add(asteroid.getSprite().getCollisionBounds());
 
-            nodes.put(asteroid.getSprite(), asteroid);
+            nodes.put(sprite, asteroid);
+        }
+        
+        for (Star star : spriteManager.getStars()) {
+            StarNode node = new StarNode(star);
+            sceneNodes.getChildren().add(node.getNode());
+            nodes.put(star, node);
         }
 
         // Initialize ship
@@ -93,7 +100,7 @@ public class GraphicsWorld extends GameWorld {
         //sceneNodes.getChildren().add(shipNode.getSprite().getBounds());
 
         scoreLabel = new Label();
-        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(destroyedAsteroids));
+        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
         scoreLabel.setFont(Font.font("Cambria", FontWeight.EXTRA_LIGHT, FontPosture.ITALIC, 25));
         scoreLabel.setTextFill(Color.BLUE);
         sceneNodes.getChildren().add(scoreLabel);
@@ -146,9 +153,24 @@ public class GraphicsWorld extends GameWorld {
 
     @Override
     protected void asteroidDestroyed() {
-        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(destroyedAsteroids));
+        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
         for(ExplosionListener el : explosionListeners) {
             el.exploded();
         }
+    }
+
+    @Override
+    protected void starCollected() {
+        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
+    };
+    
+    @Override
+    protected void handleNewStarGraphics(Star sprite) {
+        if (sceneNodes == null) {
+            return;
+        }
+        StarNode node = new StarNode(sprite);
+        sceneNodes.getChildren().add(node.getNode());
+        nodes.put(sprite, node);
     }
 }

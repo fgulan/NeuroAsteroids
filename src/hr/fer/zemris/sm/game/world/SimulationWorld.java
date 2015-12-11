@@ -4,6 +4,7 @@ import hr.fer.zemris.sm.game.controllers.IController;
 import hr.fer.zemris.sm.game.models.Asteroid;
 import hr.fer.zemris.sm.game.models.Missile;
 import hr.fer.zemris.sm.game.models.Sprite;
+import hr.fer.zemris.sm.game.models.Star;
 
 public class SimulationWorld extends GameWorld {
 
@@ -45,10 +46,11 @@ public class SimulationWorld extends GameWorld {
 
     @Override
     public void play() {
-
-        while (run) {
+        int frame = 0;
+        while (run && frame < 5000) {
             //while (paused);
             frameCount++;
+            frame++;
             newFrameStep();
             //getNearestAsteroidsToShip();
         }
@@ -63,8 +65,19 @@ public class SimulationWorld extends GameWorld {
     protected void asteroidDestroyed() {
         //System.out.println("Unisten asteroid");
     }
+    
+    @Override
+    protected void starCollected() {
+        
+    };
 
     public int getFrameCount() {
         return frameCount;
+    }
+
+    @Override
+    protected void handleNewStarGraphics(Star sprite) {
+        // TODO Auto-generated method stub
+        
     }
 }

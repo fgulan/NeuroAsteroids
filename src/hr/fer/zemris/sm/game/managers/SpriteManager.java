@@ -10,6 +10,7 @@ import hr.fer.zemris.sm.game.models.Asteroid;
 import hr.fer.zemris.sm.game.models.Missile;
 import hr.fer.zemris.sm.game.models.Ship;
 import hr.fer.zemris.sm.game.models.Sprite;
+import hr.fer.zemris.sm.game.models.Star;
 
 /**
  * Sprite manager is responsible for managing and holding all sprite objects.
@@ -25,8 +26,10 @@ public class SpriteManager {
     private List<Asteroid> ASTEROIDS = new ArrayList<>();
 
     private List<Missile> MISSILES = new ArrayList<>();
+    
+    private List<Star> STARS = new ArrayList<>();
 
-    private static Ship ship;
+    private Ship ship;
     
     /**
      * Sprites to remove.
@@ -65,6 +68,10 @@ public class SpriteManager {
         return MISSILES;
     }
     
+    public List<Star> getStars() {
+        return STARS;
+    }
+    
     public Ship getShip() {
         return ship;
     }
@@ -76,6 +83,17 @@ public class SpriteManager {
             GAME_OBJECTS.addAll(missiles);
         } else {
             MISSILES.add(sprites[0]);
+            GAME_OBJECTS.add(sprites[0]);
+        }
+    }
+    
+    public void addStarSprites(Star... sprites) {
+        if (sprites.length > 1) {
+            List<Star> stars = Arrays.asList((Star[]) sprites);
+            STARS.addAll(stars);
+            GAME_OBJECTS.addAll(stars);
+        } else {
+            STARS.add(sprites[0]);
             GAME_OBJECTS.add(sprites[0]);
         }
     }
@@ -107,6 +125,7 @@ public class SpriteManager {
         GAME_OBJECTS.removeAll(REMOVE_SPRITES);
         ASTEROIDS.removeAll(REMOVE_SPRITES);
         MISSILES.removeAll(REMOVE_SPRITES);
+        STARS.removeAll(REMOVE_SPRITES);
         REMOVE_SPRITES.clear();
     }
 
