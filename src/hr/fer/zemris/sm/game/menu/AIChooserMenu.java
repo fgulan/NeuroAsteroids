@@ -119,7 +119,7 @@ public class AIChooserMenu extends Menu {
                 Scene scene = stage.getScene();
                 IPhenotype network = (IPhenotype) EvolutionObjectDataUtility.getInstance().loadObject(this.name.getText());
 
-                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), 20, null);
+                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), 25, null);
                 NeuralNetworkController controller = new NeuralNetworkController(network, world);
                 world.setController(controller);
                 world.initialize();

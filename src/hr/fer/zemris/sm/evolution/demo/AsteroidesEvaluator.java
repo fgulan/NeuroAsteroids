@@ -15,7 +15,7 @@ public class AsteroidesEvaluator implements IEvaluator {
 
     @Override
     public int getInputNodeCount() {
-        return 4;
+        return 1;
     }
 
     @Override
@@ -25,22 +25,29 @@ public class AsteroidesEvaluator implements IEvaluator {
 
     @Override
     public double evaluate(IPhenotype phenotype) {
-        world = new SimulationWorld(800, 600, 20, null);
-        NeuralNetworkController controller = new NeuralNetworkController(phenotype, world);
-        world.setController(controller);
-        world.initialize();
+        int res = 0;
 
-        FireCounter fc = new FireCounter();
-        world.registerFireListener(fc);
-        world.play();
+        for (int i = 0; i < 5; i++) {
+            world = new SimulationWorld(800, 600, 8, null);
+            NeuralNetworkController controller = new NeuralNetworkController(phenotype, world);
+            world.setController(controller);
+            world.initialize();
 
-        double acc = 0;
-        if(fc.count != 0)  {
-            acc = world.getPoints() / (double)fc.count;
+            FireCounter fc = new FireCounter();
+            world.registerFireListener(fc);
+            world.play();
+
+            double acc = 0;
+            if (fc.count != 0) {
+                acc = world.getPoints() / (double) fc.count;
+            }
+
+            res += controller.fittness + world.getPoints() * 50;
         }
-        System.out.println("acc:" + acc + " fcCount" + fc.count + " destroyed" + world.getPoints() + " fitness " + controller.fittness);
+        //System.out.println("acc:" + acc + " fcCount" + fc.count + " destroyed" + world.getPoints() + " fitness " + controller.fittness);
 
-        return acc * 10 * world.getPoints() + controller.fittness;
+        //System.out.println(res / 5.0);
+        return res;
     }
 
     @Override

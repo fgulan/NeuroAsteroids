@@ -19,8 +19,8 @@ import java.util.*;
  */
 public class SpeciesAlgorithm implements IAlgorithm {
 
-    private static final int POPULATION_SIZE = 50;
-    private static final int MAX_NODE = 25;
+    private static final int POPULATION_SIZE = 25;
+    private static final int MAX_NODE = 20;
     private static final ISpecieCompatibilityOperator speciesCompatibilityOperator = new OneSpecieCompatibility(); //new DeltaDistance(0.6, 3.0, 3.0, 0.02, false);
     private static final Random rand = new Random();
     private final IEvaluator evaluator;
@@ -34,9 +34,9 @@ public class SpeciesAlgorithm implements IAlgorithm {
         this.evaluator = evaluator;
         initializePopulation();
         mutations = new LinkedList<>();
-        mutations.add(new AddNodeMutation(0.1, MAX_NODE));
-        mutations.add(new AddOrEnableConnectionMutation(0.1));
-        mutations.add(new AllWeightGaussianMutation(0.8, 0.05));
+        mutations.add(new AddNodeMutation(0.2, MAX_NODE));
+        mutations.add(new AddOrEnableConnectionMutation(0.4));
+        mutations.add(new AllWeightGaussianMutation(0.8, 0.1));
         //mutations.add(new DisableConnectionMutation(0.05));
         //mutations.add(new DeleteConnectionMutation(0.05));
     }

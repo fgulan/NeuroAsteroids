@@ -47,7 +47,7 @@ public class SimulationWorld extends GameWorld {
     @Override
     public void play() {
         int frame = 0;
-        while (run && frame < 5000) {
+        while (run && frame < 1000) {
             //while (paused);
             frameCount++;
             frame++;

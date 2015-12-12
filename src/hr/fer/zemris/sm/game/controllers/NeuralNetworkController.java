@@ -45,43 +45,48 @@ public class NeuralNetworkController implements IController {
                 double dy = shipCenter.get(1) - asteroidCenter.get(1);
 
                 return new AsteroidDistance(a, Math.sqrt(dx*dx + dy*dy));
-            }).sorted((o1,o2) -> (int)Math.signum(o2.distance - o1.distance)).limit(2).collect(Collectors.toList());
+            }).sorted((o1,o2) -> (int)Math.signum(o1.distance - o2.distance)).limit(2).collect(Collectors.toList());
 
             double aplha1 = getAlpha(ship, closest.get(0));
             double beta1  = getBeta( ship, closest.get(0));
             double d1     = closest.get(0).distance;
 
-            double aplha2 = getAlpha(ship, closest.get(1));
-            double beta2  = getBeta( ship, closest.get(1));
-            double d2     = closest.get(1).distance;
+            //double aplha2 = getAlpha(ship, closest.get(1));
+            //double beta2  = getBeta( ship, closest.get(1));
+            //double d2     = closest.get(1).distance;
 
-            double[] output = phenotype.work(new double[] {aplha1, d1, aplha2, d2});
+            double[] output = phenotype.work(new double[] {aplha1, d1});
 
             List<Input> inputs = new ArrayList<>();
             if(output[0] > 0.5) {
-                inputs.add(Input.MOVE);
-                if(d1 < 60 ) fittness += 5;
-                else fittness-=2;
-                if(d2 < 60 ) fittness += 2;
-                else fittness-=1;
+                //inputs.add(Input.MOVE);
+                //if(d1 < 60 ) fittness += 5;
+                //else fittness-=2;
+                //if(d2 < 60 ) fittness += 2;
+                //else fittness-=1;
             }
+
+            int move = 0;
             if(output[1] > 0.5)  {
                 inputs.add(Input.LEFT);
-                if(aplha1 < 60) fittness += 0.5;
-                else fittness -= 0.25;
-                if(aplha1 > 60) fittness -= 0.25;
-                else fittness -= 0.1;
+                if(aplha1 > 0.0) fittness += 0.5;
+                    else fittness -= 0.4;
+                move++;
             }
             if(output[2] > 0.5)  {
                 inputs.add(Input.RIGHT);
-                if(aplha1 > 320) fittness += 0.5;
-                else fittness -= 0.1;
-                if(aplha1 < 320) fittness -= 0.25;
-                else fittness -= 0.1;
+                if(aplha1 < 0.0 ) fittness += 0.5;
+                    else fittness -= 0.4;
+                move++;
             }
+
+            if (move == 0 || move == 2) {
+                fittness--;
+            }
+
             if(output[3] > 0.5) {
                 inputs.add(Input.FIRE);
-                fittness--;
+
             }
 
             return inputs;
@@ -93,8 +98,40 @@ public class NeuralNetworkController implements IController {
 
             ac.sub(sc);
             double a = Math.atan2(ac.get(1), ac.get(0)); //kut izmedu centra broda i asteroida
+            a = a * 180.0 / Math.PI;
+            a += 90;
 
-            double alpha = ship.getCurrentAngle() - a;
+            if ( a > 180.0 ) {
+                a -= 360.0;
+            }
+
+            if ( a < -180.0) {
+                a += 360.0;
+            }
+
+            double shipAngle = ship.getCurrentAngle();
+
+
+            if (shipAngle > 180.0) {
+                shipAngle -= 360.0;
+            }
+
+            if (shipAngle < -180.0) {
+                shipAngle += 360.0;
+            }
+
+            double alpha = shipAngle - a;
+
+            if (alpha > 180) {
+                alpha -= 360;
+            }
+
+            if (alpha < -180) {
+                alpha += 360;
+            }
+
+
+            //System.out.println(shipAngle + " " + a + " " + alpha );
             return alpha;
         }
 

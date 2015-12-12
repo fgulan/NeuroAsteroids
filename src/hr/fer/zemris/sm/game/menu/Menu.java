@@ -36,7 +36,7 @@ public abstract class Menu extends BorderPane {
             Scene scene = stage.getScene();
             KeyboardController controller = new KeyboardController(scene);
             controller.register();
-            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), 12, controller);
+            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), 20, controller);
 
             world.registerGameOverListener(() -> {
                 EffectsSoundManager.getInstance().playShipExploded();
