@@ -24,7 +24,7 @@ public class ConnectionPhenotype implements IPhenotype {
 
     public ConnectionPhenotype(ConnectionGenotype genotype, Node[] nodes, List<Integer> evaluationSequence ) {
 
-        this.genotype = genotype.copy();
+        this.genotype = genotype;
         this.nodes = nodes;
         this.evaluationSequence = evaluationSequence;
         this.nodeCount = genotype.getNeuronCount();

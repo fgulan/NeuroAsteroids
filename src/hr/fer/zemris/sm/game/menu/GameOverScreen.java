@@ -1,5 +1,7 @@
 package hr.fer.zemris.sm.game.menu;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -15,6 +17,9 @@ import static hr.fer.zemris.sm.game.Constants.*;
  * Created by doctor on 07.12.15..
  */
 public class GameOverScreen extends Menu {
+    Button toMenu;
+    Button restart;
+
     public GameOverScreen(Game parent) {
         super(parent);
         setId(GAME_OVER_SCREEN);
@@ -27,28 +32,30 @@ public class GameOverScreen extends Menu {
 
         HBox buttons = new HBox();
         buttons.setId(GAME_OVER_BUTTON_BOX);
-        Button restart = new KeyEventButton(GAME_OVER_RESET_BUTTON_TEXT);
+        restart = new KeyEventButton(GAME_OVER_RESET_BUTTON_TEXT);
         restart.setId(GAME_OVER_RESET_BUTTON);
-        restart.setOnAction(e -> {
-            new GameStart().handle(null);
-        });
 
-        Button toMenu = new KeyEventButton(GAME_OVER_TO_MENU_BUTTON_TEXT);
+        toMenu = new KeyEventButton(GAME_OVER_TO_MENU_BUTTON_TEXT);
         toMenu.setId(GAME_OVER_TO_MENU_BUTTON);
-        toMenu.setOnAction(e -> {
-            //TODO: deregister key listener
-            Pane root = parent.getRoot();
-            root.getChildren().clear();
-            root.getChildren().add(parent.getPlayMenu());
-            Scene scene = parent.getStage().getScene();
-            scene.getStylesheets().clear();
-            scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
-            scene.setRoot(root);
-        });
+
 
         buttons.getChildren().addAll(restart, toMenu);
         contentBox.getChildren().addAll(gameOver, buttons);
         setCenter(contentBox);
         setAlignment(contentBox, Pos.CENTER);
     }
+
+    @Override
+    public void relaod() {
+        //No implementation
+    }
+
+    public void setOnRestartAction(EventHandler<ActionEvent> value) {
+        restart.setOnAction(value);
+    }
+
+    public void setToMenuAction(EventHandler<ActionEvent> value) {
+        toMenu.setOnAction(value);
+    }
+
 }

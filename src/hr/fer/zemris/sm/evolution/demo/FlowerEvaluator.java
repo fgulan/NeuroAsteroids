@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
@@ -61,7 +62,7 @@ public class FlowerEvaluator implements IEvaluator {
     }
 
     @Override
-    public double evaluate(IPhenotype phenotype) throws EvaluatorException {
+    public void evaluate(IPhenotype phenotype) throws EvaluatorException {
         double returnValue = 0;
         double[] outputValue;
 
@@ -84,7 +85,12 @@ public class FlowerEvaluator implements IEvaluator {
             //returnValue *= (1.0 + 1 / (150 - score(phenotype) + 0.01));
         //}
 
-        return returnValue;
+        phenotype.getGenotype().setFitness(returnValue);
+    }
+
+    @Override
+    public void evaluatePopulation(Collection<IPhenotype> phenotype) {
+        phenotype.forEach(p -> evaluate(p));
     }
 
     @Override

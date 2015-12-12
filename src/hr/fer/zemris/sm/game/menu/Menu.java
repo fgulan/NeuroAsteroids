@@ -29,36 +29,5 @@ public abstract class Menu extends BorderPane {
         return parent;
     }
 
-    public class GameStart implements EventHandler<ActionEvent> {
-        @Override
-        public void handle(ActionEvent event) {
-            Stage stage = getGameParent().getStage();
-            Scene scene = stage.getScene();
-            KeyboardController controller = new KeyboardController(scene);
-            controller.register();
-            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), 20, controller);
-
-            world.registerGameOverListener(() -> {
-                EffectsSoundManager.getInstance().playShipExploded();
-
-                world.pause();
-                StackPane pane = new StackPane();
-                pane.getChildren().addAll(scene.getRoot(), new GameOverScreen(getGameParent()));
-                scene.setRoot(pane);
-            });
-
-            world.registerFireListener(() -> {
-                EffectsSoundManager.getInstance().playFire();
-            });
-
-            world.registerExplosionListener(() -> {
-                EffectsSoundManager.getInstance().playExplosion();
-            });
-            world.initialize();
-            Pane gameSurface = new Pane(world.getGameSurface());
-            scene.setRoot(gameSurface);
-            scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_WORLD_STYLE_PATH).toExternalForm());
-            world.play();
-        }
-    }
+    public abstract void relaod();
 }

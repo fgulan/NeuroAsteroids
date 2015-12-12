@@ -32,8 +32,6 @@ public class Game extends Application {
     private Menu optionsMenu;
     private Menu creditsMenu;
     private Menu AIChooserMenu;
-    private Menu AITrainMenu;
-    private Menu pauseMenu;
 
     private Stage stage;
     private StackPane root;
@@ -75,8 +73,6 @@ public class Game extends Application {
         creditsMenu = new CreditsMenu(this);
         optionsMenu = new OptionsMenu(this);
         AIChooserMenu = new AIChooserMenu(this);
-        AITrainMenu = new AITrainMenu(this);
-        pauseMenu = new PauseMenu(this);
     }
 
     public void transition(Pane from, Pane to, int direction) {
@@ -118,35 +114,33 @@ public class Game extends Application {
     }
 
     public Pane getStartMenu() {
+        startMenu.relaod();
         return startMenu;
     }
 
     public Pane getPlayMenu() {
+        playMenu.relaod();
         return playMenu;
     }
 
     public Pane getScoresMenu() {
+        scoresMenu.relaod();
         return scoresMenu;
     }
 
     public Pane getOptionsMenu() {
+        optionsMenu.relaod();
         return optionsMenu;
     }
 
     public Pane getCreditsMenu() {
+        creditsMenu.relaod();
         return creditsMenu;
     }
 
     public Pane getAIChooserMenu() {
+        AIChooserMenu.relaod();
         return AIChooserMenu;
-    }
-
-    public Pane getAITrainMenu() {
-        return AITrainMenu;
-    }
-
-    public Pane getPauseMenu() {
-        return pauseMenu;
     }
 
     public static void main(String[] args) {

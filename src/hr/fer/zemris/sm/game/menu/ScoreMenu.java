@@ -13,6 +13,8 @@ import static hr.fer.zemris.sm.game.Constants.*;
  */
 public class ScoreMenu extends Menu{
 
+    TableView table;
+
     public ScoreMenu(Game parent) {
         super(parent);
         setId(SCORE_MENU_ID);
@@ -29,7 +31,7 @@ public class ScoreMenu extends Menu{
     }
 
     private TableView createTable() {
-        TableView table = new TableView();
+        table = new TableView();
         table.setId(SCORE_MENU_TABLE);
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
@@ -45,5 +47,11 @@ public class ScoreMenu extends Menu{
         table.getItems().addAll(HSDataUtility.getInstance().getHighScores());
 
         return table;
+    }
+
+    @Override
+    public void relaod() {
+        table.getItems().clear();
+        table.getItems().addAll(HSDataUtility.getInstance().getHighScores());
     }
 }

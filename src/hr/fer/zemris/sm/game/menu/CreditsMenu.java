@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
+ *
  * Created by doctor on 03.12.15..
  */
 public class CreditsMenu extends Menu{
@@ -33,5 +34,10 @@ public class CreditsMenu extends Menu{
         content.setId(CREDITS_MENU_CONTENT);
         content.getChildren().addAll(credits, back);
         setCenter(content);
+    }
+
+    @Override
+    public void relaod() {
+        //No implementation
     }
 }

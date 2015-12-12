@@ -31,24 +31,13 @@ public class StartMenu extends Menu {
         buttons.setId(Constants.START_MENU_BUTTONS_DIV);
 
         Button play = createPlayButton();
-        Button train= createTrainMenu();
         Button scores = createScoresButton();
         Button options = createOptionsMenu();
         Button credits = createCreditsMenu();
         Button exit = createExitMenu();
 
-        buttons.getChildren().addAll(play, train, scores, options, credits, exit);
+        buttons.getChildren().addAll(play, scores, options, credits, exit);
         return buttons;
-    }
-
-    private Button createTrainMenu() {
-        Button train = new KeyEventButton(Constants.TRAIN_BUTTON_TEXT);
-        train.setId(Constants.TRAIN_BUTTON);
-        train.setOnAction( e-> {
-            Game parent = getGameParent();
-            parent.transition(this, parent.getAITrainMenu(), Game.LEFT);
-        });
-        return train;
     }
 
     private Button createExitMenu() {
@@ -96,5 +85,10 @@ public class StartMenu extends Menu {
             parent.transition(this, parent.getPlayMenu(), Game.LEFT);
         });
         return play;
+    }
+
+    @Override
+    public void relaod() {
+        //No implementation
     }
 }

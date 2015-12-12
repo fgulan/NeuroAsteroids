@@ -13,6 +13,7 @@ import hr.fer.zemris.sm.evolution.selection.ISelection;
 import hr.fer.zemris.sm.evolution.selection.TournamentSelection;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by Andrija Milicevic.
@@ -63,9 +64,11 @@ public class SpeciesAlgorithm implements IAlgorithm {
                 connection.setWeight(rand.nextDouble() * 4.0 - 2.0);
             }
 
-            copyGenotype.setFitness(evaluator.evaluate(decoder.decode(copyGenotype)));
             genotypes.add(copyGenotype);
         }
+        evaluator.evaluatePopulation(genotypes.stream().map(g -> {
+            return decoder.decode(g);
+        }).collect(Collectors.toList()));
 
         population = putAllInSpecies(genotypes);
     }
@@ -146,12 +149,13 @@ public class SpeciesAlgorithm implements IAlgorithm {
                     m.mutate(child);
                 }
 
-                child.setFitness(evaluator.evaluate(decoder.decode(child)));
                 newGenotypes.add(child);
             }
 
             cnt++;
         }
+
+        evaluator.evaluatePopulation(newGenotypes.stream().map(g -> decoder.decode(g)).collect(Collectors.toList()));
 
         newGenotypes.add((ConnectionGenotype)population.getBest());
 

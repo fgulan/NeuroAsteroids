@@ -1,4 +1,4 @@
-package hr.fer.zemris.sm.evolution.demo;
+package hr.fer.zemris.sm.evolution.demo.Multithreading;
 
 import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
 import hr.fer.zemris.sm.evolution.EvolutionaryState;
@@ -14,18 +14,21 @@ import hr.fer.zemris.sm.evolution.termination.MaxTerminationCount;
 import java.io.IOException;
 
 /**
- * Created by Andrija Milicevic.
+ * Created by Fredi Šarić on 12.12.15.
  */
-public class AsteroidesDemo {
-    private static final IEvaluator eval = new AsteroidesEvaluator();
+public class MultiThreadingDemo {
 
     public static void main(String[] args) throws IOException {
+        //Neural net with 1 input and 4 outputs
+        IEvaluator eval = new AsteroidMultiThereadingEvaluator(new NeuralNetworkFactory(), 1, 4);
 
         IAlgorithm alg = new SpeciesAlgorithm(eval);
 
         ITerminationOperator term = new MaxTerminationCount(1000);
 
-        IEvolutionaryProcess process = new EvolutionaryProcess(alg, term, eval);
+        IEvolutionaryProcess process = new EvolutionaryProcess(alg,
+                term,
+                eval);
 
         process.addListener((p) -> {
             if (p.getIterationCount() % 1 == 0) {
@@ -41,10 +44,8 @@ public class AsteroidesDemo {
     private static void evaluateBest(IPhenotype p) {
         System.out.println(((ConnectionGenotype) p.getGenotype()).getNeuronCount());
 
-        System.out.println(eval.score(p));
-
         System.out.println(((ConnectionGenotype) p.getGenotype()).getConnectionCount());
     }
 
-}
 
+}

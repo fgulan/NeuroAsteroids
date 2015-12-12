@@ -4,6 +4,7 @@ import hr.fer.zemris.sm.evolution.evaluators.EvaluatorException;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 
+import java.util.Collection;
 import java.util.Random;
 
 public class XOREvaluator implements IEvaluator {
@@ -23,7 +24,7 @@ public class XOREvaluator implements IEvaluator {
     }
 
     @Override
-    public double evaluate(IPhenotype phenotype) throws EvaluatorException {
+    public void evaluate(IPhenotype phenotype) throws EvaluatorException {
 
         double sum = 0;
 
@@ -36,7 +37,12 @@ public class XOREvaluator implements IEvaluator {
             }
         }
 
-        return 4 - sum;
+        phenotype.getGenotype().setFitness(4 - sum);
+    }
+
+    @Override
+    public void evaluatePopulation(Collection<IPhenotype> phenotype) {
+        phenotype.forEach(p -> evaluate(p));
     }
 
     @Override

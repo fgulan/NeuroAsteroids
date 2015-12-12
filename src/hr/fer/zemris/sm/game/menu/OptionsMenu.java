@@ -154,4 +154,10 @@ public class OptionsMenu extends Menu {
 
         return pane;
     }
+
+    @Override
+    public void relaod() {
+        backgroundSoundSlider.setValue(BackgroundSoundManager.getInstance().getVolume());
+        effectSoundSlider.setValue(EffectsSoundManager.getInstance().getVolume());
+    }
 }

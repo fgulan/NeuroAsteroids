@@ -1,7 +1,24 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.Constants;
+import hr.fer.zemris.sm.game.controllers.KeyboardController;
+import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
+import hr.fer.zemris.sm.game.world.GraphicsWorld;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+import java.awt.*;
+import java.security.KeyException;
+
+import static javafx.scene.input.KeyCode.*;
 
 import static hr.fer.zemris.sm.game.Constants.*;
 
@@ -24,7 +41,117 @@ public class PlayMenu extends Menu {
 
         Button humanPlay = new KeyEventButton(HUMAN_PLAY_BTN_TEXT);
         humanPlay.setOnAction(e-> {
-            new GameStart().handle(null);
+            Stage stage = getGameParent().getStage();
+            Scene scene = stage.getScene();
+
+            KeyboardController controller = new KeyboardController(scene);
+            controller.register();
+            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), HUMAN_PLAY_ASTEROIDS_NUMEBER, controller);
+
+            EventHandler<KeyEvent> pauseEvent = new EventHandler<KeyEvent>() {
+                boolean paused = false;
+
+                private PauseMenu pauseMenu = configurePauseMenu();
+
+                private PauseMenu configurePauseMenu() {
+                    PauseMenu pauseMenu = new PauseMenu(getGameParent());
+
+                    pauseMenu.setOnResumeAction(e -> {
+                        //As if someone pressed P
+                        handle(new KeyEvent(null, "", "", P, false, false, false, false));
+                    });
+
+                    pauseMenu.setOnRestartAction(e -> {
+                        scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
+                        humanPlay.fire();
+                    });
+                    pauseMenu.setOnExitAction(e -> {
+                        //TODO: separate this into new method
+                        scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
+                        scene.getStylesheets().clear();
+                        scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
+
+                        controller.deRegister();    //Remove retain cycle
+                        Pane root = getGameParent().getRoot();
+                        root.getChildren().clear();
+                        root.getChildren().add(getGameParent().getPlayMenu());
+
+                        getGameParent().getStage().getScene().setRoot(root);
+                    });
+
+                    return pauseMenu;
+                }
+
+                @Override
+                public void handle(KeyEvent event) {
+                    KeyCode code = event.getCode();
+                    if(code.equals(ESCAPE) || code.equals(P)) {
+                        if(paused) {    //Exits out of pause
+                            paused = false;
+
+                            Pane pausePane = (Pane) scene.getRoot();
+                            Pane game = (Pane) pausePane.getChildren().remove(0);
+                            pausePane.getChildren().clear();
+
+                            scene.rootProperty().setValue(game);
+                            world.play();
+                        } else {
+                            paused = true;
+                            world.pause();
+
+                            StackPane pausePane = new StackPane();
+                            pauseMenu.relaod();
+                            Pane game = (Pane) scene.getRoot();
+                            pausePane.getChildren().addAll(game, pauseMenu);
+                            scene.setRoot(pausePane);
+                        }
+                    }
+                }
+            };
+
+            scene.addEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
+
+
+            world.registerGameOverListener(() -> {
+                scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
+                EffectsSoundManager.getInstance().playShipExploded();
+
+                world.pause();
+                StackPane pane = new StackPane();
+                GameOverScreen gameOverScreen = new GameOverScreen(getGameParent());
+
+                gameOverScreen.setToMenuAction(event -> {
+                    scene.getStylesheets().clear();
+                    scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
+
+                    controller.deRegister();    //Remove retain cycle
+                    Pane root = getGameParent().getRoot();
+                    root.getChildren().clear();
+                    root.getChildren().add(getGameParent().getPlayMenu());
+
+                    getGameParent().getStage().getScene().setRoot(root);
+                });
+
+                gameOverScreen.setOnRestartAction(event -> {
+                    humanPlay.fire();
+                });
+
+                pane.getChildren().addAll(scene.getRoot(), gameOverScreen);
+                scene.setRoot(pane);
+            });
+
+            world.registerFireListener(() -> {
+                EffectsSoundManager.getInstance().playFire();
+            });
+
+            world.registerExplosionListener(() -> {
+                EffectsSoundManager.getInstance().playExplosion();
+            });
+            world.initialize();
+            Pane gameSurface = new Pane(world.getGameSurface());
+            scene.setRoot(gameSurface);
+            scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_WORLD_STYLE_PATH).toExternalForm());
+            world.play();
         });
 
         Button AIPlay = new KeyEventButton(AI_PLAY_BTN_TEXT);
@@ -42,5 +169,10 @@ public class PlayMenu extends Menu {
         buttons.getChildren().addAll(humanPlay, AIPlay, back);
 
         return buttons;
+    }
+
+    @Override
+    public void relaod() {
+        //No implementation
     }
 }

@@ -7,6 +7,7 @@ import hr.fer.zemris.sm.evolution.algorithms.IAlgorithm;
 import hr.fer.zemris.sm.evolution.algorithms.SpeciesAlgorithm;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGenotype;
+import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.evolution.termination.ITerminationOperator;
 import hr.fer.zemris.sm.evolution.termination.MaxTerminationCount;
@@ -35,12 +36,12 @@ public class NeuralNetDemo {
             }
         }, EvolutionaryState.EPOH_OVER);
         process.addListener((p) -> {
-            System.out.println(eval.score(alg.getBestPhenotype()));
+            IPhenotype best = alg.getBestPhenotype();
 
-            System.out.println(eval.evaluate(alg.getBestPhenotype()));
-            System.out.println(eval.evaluate(alg.getBestPhenotype()));
-            System.out.println(eval.evaluate(alg.getBestPhenotype()));
-            System.out.println(eval.score(alg.getBestPhenotype()));
+            for(int i = 0;i < 5; i++) {
+                eval.evaluate(alg.getBestPhenotype());
+                System.out.println(best.getGenotype().getFitness());
+            }
 
             evaluateBest(alg.getBestPhenotype());
         }, EvolutionaryState.FINISHED);

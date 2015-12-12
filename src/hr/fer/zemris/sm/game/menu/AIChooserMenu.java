@@ -8,12 +8,15 @@ import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Separator;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -21,6 +24,8 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 import static hr.fer.zemris.sm.game.Constants.*;
+import static javafx.scene.input.KeyCode.ESCAPE;
+import static javafx.scene.input.KeyCode.P;
 
 /**
  *
@@ -43,10 +48,8 @@ public class AIChooserMenu extends Menu {
         list = new ListView<>();
         fillList(list);
         list.setId(AI_LIST);
-        list.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<ListItem>() {
-            @Override //newValue is selected item
-            public void changed(ObservableValue<? extends ListItem> observable, ListItem oldValue, ListItem newValue) {
-                System.out.println(newValue.name + " " + newValue.comment + " " + newValue.fitness);
+        list.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue != null) {
                 rightPane.setName(newValue.name);
                 rightPane.setComment(newValue.comment);
                 rightPane.setFitness(newValue.fitness);
@@ -71,8 +74,6 @@ public class AIChooserMenu extends Menu {
     private void fillList(ListView<ListItem> list) {
 
         List<EvolutionElement> eObjects = EvolutionObjectDataUtility.getInstance().getNeuralObjects();
-        System.out.println(eObjects.size());
-
 
         for(EvolutionElement e : eObjects) {
             list.getItems().add(new ListItem(e.getName(), e.getComment(), e.getFitness()));
@@ -113,23 +114,102 @@ public class AIChooserMenu extends Menu {
             VBox comm = createComment();
 
             Button play = new KeyEventButton(PLAY_BUTTON_TEXT);
+
             play.setOnAction(e -> {
                 Game parent = getGameParent();
                 Stage stage = parent.getStage();
                 Scene scene = stage.getScene();
                 IPhenotype network = (IPhenotype) EvolutionObjectDataUtility.getInstance().loadObject(this.name.getText());
 
-                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), 25, null);
+                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER, null);
                 NeuralNetworkController controller = new NeuralNetworkController(network, world);
                 world.setController(controller);
                 world.initialize();
 
+                EventHandler<KeyEvent> pauseEvent = new EventHandler<KeyEvent>() {
+                    boolean paused = false;
+
+                    private PauseMenu pauseMenu = configurePauseMenu();
+
+                    private PauseMenu configurePauseMenu() {
+                        PauseMenu pauseMenu = new PauseMenu(getGameParent());
+
+                        pauseMenu.setOnResumeAction(e -> {
+                            //As if someone pressed P
+                            handle(new KeyEvent(null, "", "", P, false, false, false, false));
+                        });
+
+                        pauseMenu.setOnRestartAction(e -> {
+                            scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
+                            play.fire();
+                        });
+                        pauseMenu.setOnExitAction(e -> {
+                            scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
+                            scene.getStylesheets().clear();
+                            scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
+
+                            Pane root = parent.getRoot();
+                            root.getChildren().clear();
+                            root.getChildren().add(parent.getAIChooserMenu());
+
+                            scene.setRoot(root);
+                        });
+
+                        return pauseMenu;
+                    }
+
+                    @Override
+                    public void handle(KeyEvent event) {
+                        KeyCode code = event.getCode();
+                        if(code.equals(ESCAPE) || code.equals(P)) {
+                            if(paused) {    //Exits out of pause
+                                paused = false;
+
+                                Pane pausePane = (Pane) scene.getRoot();
+                                Pane game = (Pane) pausePane.getChildren().remove(0);
+                                pausePane.getChildren().clear();
+
+                                scene.rootProperty().setValue(game);
+                                world.play();
+                            } else {
+                                paused = true;
+                                world.pause();
+
+                                StackPane pausePane = new StackPane();
+                                pauseMenu.relaod();
+                                Pane game = (Pane) scene.getRoot();
+                                pausePane.getChildren().addAll(game, pauseMenu);
+                                scene.setRoot(pausePane);
+                            }
+                        }
+                    }
+                };
+                scene.addEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
+
                 world.registerGameOverListener(() -> {
+                    scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
                     EffectsSoundManager.getInstance().playShipExploded();
 
                     world.pause();
                     StackPane pane = new StackPane();
-                    pane.getChildren().addAll(scene.getRoot(), new GameOverScreen(getGameParent()));
+                    GameOverScreen gameOverScreen = new GameOverScreen(getGameParent());
+
+                    gameOverScreen.setOnRestartAction( event -> {
+                        play.fire();
+                    });
+
+                    gameOverScreen.setToMenuAction( event -> {
+                        scene.getStylesheets().clear();
+                        scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
+
+                        Pane root = parent.getRoot();
+                        root.getChildren().clear();
+                        root.getChildren().add(parent.getAIChooserMenu());
+
+                        scene.setRoot(root);
+                    });
+
+                    pane.getChildren().addAll(scene.getRoot(), gameOverScreen);
                     scene.setRoot(pane);
                 });
 
@@ -140,8 +220,8 @@ public class AIChooserMenu extends Menu {
                 world.registerExplosionListener(() -> {
                     EffectsSoundManager.getInstance().playExplosion();
                 });
-                scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_WORLD_STYLE_PATH).toExternalForm());
 
+                scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_WORLD_STYLE_PATH).toExternalForm());
                 Pane gameSurface = new Pane(world.getGameSurface());
                 scene.setRoot(gameSurface);
                 world.play();
@@ -150,6 +230,7 @@ public class AIChooserMenu extends Menu {
             labels.setId(RIGHT_PANE_LABELS);
             labels.getChildren().addAll(name, fitt, comm);
             VBox.setVgrow(labels, Priority.ALWAYS);
+
 
             getChildren().addAll(labels, play);
         }
@@ -194,5 +275,11 @@ public class AIChooserMenu extends Menu {
         private void setComment(String comment) {
             this.comment.setText(comment);
         }
+    }
+
+    @Override
+    public void relaod() {
+        list.getItems().clear();
+        fillList(list);
     }
 }
