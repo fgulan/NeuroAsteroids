@@ -252,7 +252,11 @@ public abstract class GameWorld {
                 Sprite second = sprites.get(j);
                 if (first.intersects(second)) {
                     handleCollision(first, second);
-                    break;
+                    if ((second instanceof Missile && first instanceof Star)
+                       || (first instanceof Missile && second instanceof Star)) {
+                    } else {
+                        break;
+                    }
                 }
             }
         }

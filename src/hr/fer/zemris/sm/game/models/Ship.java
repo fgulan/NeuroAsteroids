@@ -12,7 +12,7 @@ public class Ship extends Sprite {
     }
 
     private final static int TWO_PI_DEGREES = 360;
-    private final static int NUM_DIRECTIONS = 180;
+    private final static int NUM_DIRECTIONS = 240;
     private final static float UNIT_ANGLE_PER_FRAME = ((float) TWO_PI_DEGREES / NUM_DIRECTIONS);
 
     private final static float ACCELERATION_STEP = 0.2f;
