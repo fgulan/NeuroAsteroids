@@ -44,7 +44,7 @@ public class Constants {
     public static final double INIT_EFFECT_SOUND_VOLUME = 0.1;
 
     public static final String BACKGROUND_MUSIC = "res/audio/background_music.mp3";
-    public static final String EXPLOSION_CLIP = "res/audio/bomb-03.wav";
+    public static final String EXPLOSION_CLIP = "res/audio/explosion_punchy_impact_02.mp3";
     public static final String FIRE_CLIP = "res/audio/fireSound.wav";
     public static final String SHIP_EXPLODED_CLIP = "res/audio/shipExploded.mp3";
 
@@ -57,9 +57,6 @@ public class Constants {
 
     public static final String PLAY_BUTTON = "playButton";
     public static final String PLAY_BUTTON_TEXT = "PLAY";
-
-    public static final String TRAIN_BUTTON = "trainButton";
-    public static final String TRAIN_BUTTON_TEXT = "LEARN";
 
     public static final String SCORES_BUTTON = "scoresButton";
     public static final String SCORES_BUTTON_TEXT = "SCORES";

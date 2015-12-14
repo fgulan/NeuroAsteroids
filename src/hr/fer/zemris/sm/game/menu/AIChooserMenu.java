@@ -120,6 +120,7 @@ public class AIChooserMenu extends Menu {
                 Game parent = getGameParent();
                 Stage stage = parent.getStage();
                 Scene scene = stage.getScene();
+                parent.hideCursor();
                 IPhenotype network = (IPhenotype) EvolutionObjectDataUtility.getInstance().loadObject(this.name.getText());
 
                 GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER, null);
@@ -165,6 +166,7 @@ public class AIChooserMenu extends Menu {
                         if(code.equals(ESCAPE) || code.equals(P)) {
                             if(paused) {    //Exits out of pause
                                 paused = false;
+                                parent.hideCursor();
 
                                 Pane pausePane = (Pane) scene.getRoot();
                                 Pane game = (Pane) pausePane.getChildren().remove(0);
@@ -174,6 +176,7 @@ public class AIChooserMenu extends Menu {
                                 world.play();
                             } else {
                                 paused = true;
+                                parent.showCursor();
                                 world.pause();
 
                                 StackPane pausePane = new StackPane();
@@ -188,6 +191,7 @@ public class AIChooserMenu extends Menu {
                 scene.addEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
 
                 world.registerGameOverListener(() -> {
+                    parent.showCursor();
                     scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
                     EffectsSoundManager.getInstance().playShipExploded();
 

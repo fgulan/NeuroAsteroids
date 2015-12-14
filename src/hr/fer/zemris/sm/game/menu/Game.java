@@ -7,6 +7,7 @@ import javafx.animation.ParallelTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.scene.Cursor;
 import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -34,6 +35,8 @@ public class Game extends Application {
     private Menu creditsMenu;
     private Menu AIChooserMenu;
 
+    private ImageCursor cursor;
+
     private Stage stage;
     private StackPane root;
 
@@ -55,7 +58,7 @@ public class Game extends Application {
         scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
 
         Image cursorImage = new Image(ClassLoader.getSystemResourceAsStream(CURSOR_IMG_PATH));
-        ImageCursor cursor = new ImageCursor(cursorImage, cursorImage.getWidth() / 2, cursorImage.getHeight() / 2);
+        cursor = new ImageCursor(cursorImage, cursorImage.getWidth() / 2, cursorImage.getHeight() / 2);
         scene.setCursor(cursor);
 
         Image gameIcon = new Image(ClassLoader.getSystemResourceAsStream(GAME_ICON));
@@ -142,6 +145,14 @@ public class Game extends Application {
     public Pane getAIChooserMenu() {
         AIChooserMenu.relaod();
         return AIChooserMenu;
+    }
+
+    public void hideCursor() {
+        stage.getScene().setCursor(Cursor.NONE);
+    }
+
+    public void showCursor() {
+        stage.getScene().setCursor(cursor);
     }
 
     public static void main(String[] args) {

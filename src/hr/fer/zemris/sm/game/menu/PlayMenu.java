@@ -39,6 +39,7 @@ public class PlayMenu extends Menu {
 
         Button humanPlay = new KeyEventButton(HUMAN_PLAY_BTN_TEXT);
         humanPlay.setOnAction(e-> {
+            getGameParent().hideCursor();
             Stage stage = getGameParent().getStage();
             Scene scene = stage.getScene();
 
@@ -63,6 +64,7 @@ public class PlayMenu extends Menu {
                         scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
                         humanPlay.fire();
                     });
+
                     pauseMenu.setOnExitAction(e -> {
                         //TODO: separate this into new method
                         scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
@@ -87,6 +89,8 @@ public class PlayMenu extends Menu {
                         if(paused) {    //Exits out of pause
                             paused = false;
 
+                            getGameParent().hideCursor();
+
                             Pane pausePane = (Pane) scene.getRoot();
                             Pane game = (Pane) pausePane.getChildren().remove(0);
                             pausePane.getChildren().clear();
@@ -96,6 +100,8 @@ public class PlayMenu extends Menu {
                         } else {
                             paused = true;
                             world.pause();
+
+                            getGameParent().showCursor();
 
                             StackPane pausePane = new StackPane();
                             pauseMenu.relaod();
@@ -111,6 +117,7 @@ public class PlayMenu extends Menu {
 
 
             world.registerGameOverListener(() -> {
+                getGameParent().showCursor();
                 scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
                 EffectsSoundManager.getInstance().playShipExploded();
 
@@ -119,6 +126,7 @@ public class PlayMenu extends Menu {
                 GameOverScreen gameOverScreen = new GameOverScreen(getGameParent());
 
                 gameOverScreen.setToMenuAction(event -> {
+
                     scene.getStylesheets().clear();
                     scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
 
