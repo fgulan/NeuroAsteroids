@@ -1,5 +1,5 @@
 .root{
-    -fx-background-image: url("bg2.jpg");
+    -fx-background-image: url("images/bg2.jpg");
     -fx-background-size: cover;
 }
 .button {
@@ -59,6 +59,14 @@
 }
 .radio-button .dot {
     -fx-mark-color: rgba(35, 35, 35, 0.8);
+}
+.text-field {
+    -fx-background-color: rgba(150, 150, 150, 0.8);
+    -fx-background-radius: 15;
+    -fx-prompt-text-fill: rgba(0, 0, 0, 0.8);
+}
+.text-field:hover {
+    -fx-cursor: text;
 }
 /*
     Start menu style
@@ -183,75 +191,6 @@
 #commVBoxId {
     -fx-spacing: 10;
 }
-
-/*
-    AITrain menu
-*/
-#aiTrainSidePane {
-    -fx-background-color: rgba(100,100,100,0.4);
-    -fx-background-radius: 20;
-    -fx-border-color: black;
-    -fx-border-width: 3;
-    -fx-border-radius: 20;
-    -fx-padding: 15;
-}
-#aiTrainSidePane .label {
-    -fx-font-size: 20;
-    -fx-text-fill: white;
-}
-#aiTrainSidePane .text-field {
-    -fx-background-color: rgba(150, 150, 150, 0.8);
-    -fx-background-radius: 15;
-    -fx-prompt-text-fill: rgba(0, 0, 0, 0.8);
-}
-#aiTrainSidePane .text-field:hover {
-    -fx-cursor: text;
-}
-#aiTrainSidePane .separator {
-    -fx-padding: 10;
-}
-#aiTrainSidePane .button {
-    -fx-min-height: 35;
-    -fx-font-size: 30;
-}
-#aiTrainAccordion {
-    -fx-padding: 0 0 10 0;
-}
-#aiTrainAccordion .titled-pane {
-    -fx-text-fill: white;
-    -fx-background-radius: 10;
-}
-#aiTrainAccordion .titled-pane > .title {
-    -fx-background-color: rgba(100, 100, 100, 0.8);
-}
-#aiTrainAccordion .titled-pane > .content {
-    -fx-background-color: rgba(100,100,100,0.8);
-    -fx-background-radius: 0 0 10 10;
-    -fx-border-color: transparent;
-}
-#aiTrainAccordion .titled-pane .arrow-button .arrow {
-    -fx-background-color: black;
-    -fx-focus-color: transparent;
-}
-#aiTrainButtonPane {
-    -fx-spacing: 10;
-}
-#centerPane {
-    -fx-padding: 50;
-}
-#evolutionChart {
-    -fx-padding: -50 0 0 -50;
-}
-#evolutionChart .chart-plot-background {
-    -fx-background-color: rgba(100, 100, 100, 0.5);
-}
-#evolutionChart .axis {
-    -fx-tick-label-fill: white;
-}
-#evolutionChart .axis-label {
-    -fx-text-fill: white;
-    -fx-font-size: 15;
-}
 /*
     Options menu
 */
@@ -344,4 +283,31 @@
 }
 #gameOverButtonBox {
     -fx-spacing: 30;
+}
+#highScreenContentBox {
+    -fx-padding: 200 0 0 100;
+    -fx-spacing: 15;
+    -fx-background-color: rgba(100, 100, 100, 0.6);
+}
+#hsLabel {
+    -fx-padding: 0 0 0 50;
+    -fx-font-size: 90;
+    -fx-text-fill: gold;
+}
+#placeLabel {
+    -fx-font-size: 65;
+}
+#scoreInputBox {
+    -fx-spacing: 15;
+}
+#nameTextField {
+    -fx-min-height: 50;
+    -fx-font-size: 35;
+    -fx-text-fill: white;
+}
+#wrongInputLabel {
+    -fx-font-size: 50;
+}
+#enteredScoreButton {
+    -fx-translate-y: 20;
 }

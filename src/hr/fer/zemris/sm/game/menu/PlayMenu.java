@@ -1,11 +1,12 @@
 package hr.fer.zemris.sm.game.menu;
 
-import hr.fer.zemris.sm.game.Constants;
+import hr.fer.zemris.sm.game.Utils.HSDataUtility;
+import hr.fer.zemris.sm.game.Utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.KeyboardController;
+import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
@@ -14,9 +15,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.awt.*;
-import java.security.KeyException;
 
 import static javafx.scene.input.KeyCode.*;
 
@@ -136,7 +134,19 @@ public class PlayMenu extends Menu {
                     humanPlay.fire();
                 });
 
-                pane.getChildren().addAll(scene.getRoot(), gameOverScreen);
+                pane.getChildren().add(scene.getRoot());
+
+                if(HSDataUtility.getInstance().isHighScore(world.getPoints())) {
+                    HighScoreScreen hcs = new HighScoreScreen(world.getPoints(), ScoreElement.HUMAN);
+                    hcs.addScoreEnteredListener(() -> {
+                        pane.getChildren().remove(hcs);
+                        pane.getChildren().add(gameOverScreen);
+                    });
+                    pane.getChildren().add(hcs);
+                } else {
+                    pane.getChildren().addAll(gameOverScreen);
+                }
+
                 scene.setRoot(pane);
             });
 

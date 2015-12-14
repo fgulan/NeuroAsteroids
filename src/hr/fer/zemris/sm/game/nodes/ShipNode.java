@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
+import static hr.fer.zemris.sm.game.Constants.SHIP_IMAGE_PATH;
 
 public class ShipNode extends GameNode {
 
@@ -14,7 +15,7 @@ public class ShipNode extends GameNode {
         super();
         this.sprite = sprite;
 
-        ImageView ship = new ImageView("spaceship.png");
+        ImageView ship = new ImageView(SHIP_IMAGE_PATH);
         ship.setFitWidth(80);
         ship.setPreserveRatio(true);
         this.node = ship;

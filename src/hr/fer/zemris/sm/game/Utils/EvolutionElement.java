@@ -5,6 +5,8 @@ public class EvolutionElement {
 	private String name;
 	private double fitness;
 	private String comment;
+
+	private static final String delimiter = "#";
 	
 	public EvolutionElement(String name, double fitness, String comment) {
 		super();
@@ -17,16 +19,16 @@ public class EvolutionElement {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(name)
-		.append(" ")
+		.append(delimiter)
 		.append(fitness)
-		.append(" ")
+		.append(delimiter)
 		.append(comment);
 		
 		return sb.toString();	
 	}
 	
 	public static EvolutionElement parse(String row){
-		String[] splitted = row.split(" ");
+		String[] splitted = row.split(delimiter);
 		return new EvolutionElement(splitted[0],
 									Double.parseDouble(splitted[1]),
 									splitted[2]);

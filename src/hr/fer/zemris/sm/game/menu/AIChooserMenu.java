@@ -3,11 +3,12 @@ package hr.fer.zemris.sm.game.menu;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.Utils.EvolutionElement;
 import hr.fer.zemris.sm.game.Utils.EvolutionObjectDataUtility;
+import hr.fer.zemris.sm.game.Utils.HSDataUtility;
+import hr.fer.zemris.sm.game.Utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.NeuralNetworkController;
+import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -209,7 +210,19 @@ public class AIChooserMenu extends Menu {
                         scene.setRoot(root);
                     });
 
-                    pane.getChildren().addAll(scene.getRoot(), gameOverScreen);
+                    pane.getChildren().add(scene.getRoot());
+
+                    if(HSDataUtility.getInstance().isHighScore(world.getPoints())) {
+                        HighScoreScreen hcs = new HighScoreScreen(world.getPoints(), ScoreElement.AI);
+                        hcs.addScoreEnteredListener(() -> {
+                            pane.getChildren().remove(hcs);
+                            pane.getChildren().add(gameOverScreen);
+                        });
+                        pane.getChildren().add(hcs);
+                    } else {
+                        pane.getChildren().add(gameOverScreen);
+                    }
+
                     scene.setRoot(pane);
                 });
 

@@ -4,11 +4,14 @@ import javafx.animation.Animation;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
+import static hr.fer.zemris.sm.game.Constants.EXPLOSION_ANIMATION_PATH;
+import static hr.fer.zemris.sm.game.Constants.ASTEROID_ANIMATION_PATH;
+
 
 public class Animations {
     
-    private static final Image explosionImage = new Image("exp2.png");
-    private static final Image commetImage = new Image("rocks.png");
+    private static final Image explosionImage = new Image(EXPLOSION_ANIMATION_PATH);
+    private static final Image commetImage = new Image(ASTEROID_ANIMATION_PATH);
 
     
     public static Animation explosionAnimation(ImageView imageView, Duration duration, int width, int height, int cycles) {

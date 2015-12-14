@@ -9,6 +9,8 @@ public class ScoreElement {
 	public static final int HUMAN = 0;
 	public static final int AI    = 1;
 
+	private static final String delimiter = "#";
+
 	public static final Comparator<ScoreElement> BY_SCORE = (o1,o2) -> (int) Math.signum(o2.getScore() - o1.getScore());
 
 	private int  type;
@@ -39,19 +41,19 @@ public class ScoreElement {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(getType())
-		.append(" ")
+		.append(delimiter)
 		.append(name)
-		.append(" ")
+		.append(delimiter)
 		.append(score);
 
 		return sb.toString();
 	}
 
 	public static ScoreElement parse(String row) {
-		String[] splitted= row.split(" ");
-		return new ScoreElement(splitted[0].equals(SCORE_ELEMENT_TYPE_HUMANE) ? HUMAN : AI,
-								splitted[1],
-								Double.parseDouble(splitted[2]));
+		String[] slitted = row.split(delimiter);
+		return new ScoreElement(slitted[0].equals(SCORE_ELEMENT_TYPE_HUMANE) ? HUMAN : AI,
+								slitted[1],
+								Double.parseDouble(slitted[2]));
 	}
 
 }

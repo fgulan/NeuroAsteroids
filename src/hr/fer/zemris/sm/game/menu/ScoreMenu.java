@@ -1,10 +1,14 @@
 package hr.fer.zemris.sm.game.menu;
 
 import hr.fer.zemris.sm.game.Utils.HSDataUtility;
+import hr.fer.zemris.sm.game.Utils.ScoreElement;
+import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.util.List;
 
 import static hr.fer.zemris.sm.game.Constants.*;
 /**
@@ -52,6 +56,8 @@ public class ScoreMenu extends Menu{
     @Override
     public void relaod() {
         table.getItems().clear();
-        table.getItems().addAll(HSDataUtility.getInstance().getHighScores());
+        List<ScoreElement> scores = HSDataUtility.getInstance().getHighScores();
+        scores.sort((o1, o2) -> (int)Math.signum(o2.getScore() - o1.getScore()));
+        table.getItems().addAll(scores);
     }
 }

@@ -3,10 +3,11 @@ package hr.fer.zemris.sm.game.nodes;
 import hr.fer.zemris.sm.game.models.Missile;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import static hr.fer.zemris.sm.game.Constants.MISSILE_IMAGE_PATH;
 
 public class MissileNode extends GameNode {
 
-    private static final Image missileImage = new Image("miss.gif");
+    private static final Image missileImage = new Image(MISSILE_IMAGE_PATH);
 
     public MissileNode(Missile sprite) {
         super();
