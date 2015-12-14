@@ -33,7 +33,7 @@ public class EffectsSoundManager {
     }
 
     public void setVolume(double volume) {
-        explosion.setVolume(volume);
+        explosion.setVolume(0);
         fire.setVolume(volume);
         shipExploded.setVolume(volume);
     }

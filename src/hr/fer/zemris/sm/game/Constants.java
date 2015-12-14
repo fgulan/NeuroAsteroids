@@ -100,10 +100,13 @@ public class Constants {
     //*************************************//
     public static final String CREDITS_PROJECT_NAME_LABEL_TEXT = "Project NeuroAsteroids (NA)";
     public static final String CREDITS_PROJECT_NAME_LABEL = "creditsProjectNameLabel";
+    public static final String CREDITS_CONTENT_VBOX = "creditsContentVBox";
+    public static final String CREDITS_BACK_BUTTON = "creditsMenuBackBtn";
+    public static final String CREDITS_CONTENT_GRID = "creditsContentGrid";
     public static final String CREDITS_LEADER = "Leader";
     public static final String CREDITS_MENTOR = "Mentor";
-    public static final String CREDITS_TEAM   = "TEAM";
-    public static final String CREDITS_LEADER_LABLE_TEXT = "Team meader: ";
+    public static final String CREDITS_TEAM   = "Team";
+    public static final String CREDITS_LEADER_LABEL_TEXT = "Team leader: ";
     public static final String CREDITS_MENTOR_LABEL_TEXT = "Project mentor: ";
     public static final String CREDITS_TEAM_LABEL_TEXT   = "Team: ";
 
