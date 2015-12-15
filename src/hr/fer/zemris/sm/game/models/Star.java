@@ -7,8 +7,8 @@ public class Star extends Sprite {
 
     public Star() {
         super(new Vector(0, 0));
-        this.collisionBounds = new Circle(15);
-        this.bounds = new Circle(15);
+        this.collisionBounds = new Circle(60);
+        this.bounds = new Circle(60);
     }
 
     @Override

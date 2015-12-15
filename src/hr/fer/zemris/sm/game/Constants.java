@@ -204,6 +204,7 @@ public class Constants {
     //*************************************//
     public static final String EXPLOSION_ANIMATION_PATH = "res/images/exp2.png";
     public static final String ASTEROID_ANIMATION_PATH  = "res/images/rocks.png";
+    public static final String STAR_ANIMATION_PATH = "res/images/starFrames.png";
     public static final String MISSILE_IMAGE_PATH = "res/images/miss.gif";
     public static final String SHIP_IMAGE_PATH = "res/images/spaceship.png";
 
