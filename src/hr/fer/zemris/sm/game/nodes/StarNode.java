@@ -22,13 +22,13 @@ public class StarNode extends GameNode {
         node.setTranslateY(sprite.getBounds().getTranslateY());
 
         ImageView star = new ImageView();
-        star.setFitWidth(60);
+        star.setFitWidth(40);
         star.setPreserveRatio(true);
         star.setViewport(new Rectangle2D(0, 0, 128, 128));
 
         this.node = star;
-        this.node.setLayoutX(-30);
-        this.node.setLayoutY(-30);
+        this.node.setLayoutX(-20);
+        this.node.setLayoutY(-20);
 
         animation = Animations.starRotation(star, Duration.millis(800), 128, 128, Animation.INDEFINITE);
         animation.play();

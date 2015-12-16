@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import hr.fer.zemris.sm.game.Constants;
 import hr.fer.zemris.sm.game.controllers.IController;
 import hr.fer.zemris.sm.game.controllers.Input;
 import hr.fer.zemris.sm.game.managers.SpriteManager;
@@ -53,19 +54,19 @@ public abstract class GameWorld {
         this.height = height;
         this.numberOfCommets = numberOfCommets;
         this.spriteManager = new SpriteManager();
-        
+
         gameOverListeners = new ArrayList<>();
         explosionListeners = new ArrayList<>();
         fireListeners = new ArrayList<>();
         starListeners = new ArrayList<>();
-        
+
         this.controller = controller;
     }
 
     public void initialize() {
         generateCommetsSprite();
         generateShipSprite();
-        generateNewStars(2);
+        generateNewStars();
         initializeGraphics();
     }
 
@@ -76,12 +77,13 @@ public abstract class GameWorld {
         spriteManager.addShipSprite(ship);
     }
 
-    private void generateNewStars(int count) {
-        if (spriteManager.getStars().size() > count) {
+    private void generateNewStars() {
+        if (spriteManager.getStars().size() >= Constants.STARS_NUMBER) {
             return;
         }
 
         Random rnd = new Random();
+        int count = Constants.STARS_NUMBER - spriteManager.getStars().size();
         for (int i = 0; i < count; i++) {
             Star sprite = new Star();
 
@@ -100,7 +102,7 @@ public abstract class GameWorld {
             handleNewStarGraphics(sprite);
         }
     }
-    
+
     protected abstract void handleNewStarGraphics(Star sprite);
 
     private void generateCommetsSprite() {
@@ -133,7 +135,7 @@ public abstract class GameWorld {
         checkCollisions();
         cleanupSprites();
         generateNewCommets();
-        generateNewStars(1);
+        generateNewStars();
     }
 
     private void generateNewCommets() {
@@ -250,42 +252,40 @@ public abstract class GameWorld {
             Sprite first = sprites.get(i);
             for (int j = i + 1; j < size; j++) {
                 Sprite second = sprites.get(j);
-                if (first.intersects(second)) {
-                    handleCollision(first, second);
-                    if ((second instanceof Missile && first instanceof Star)
-                       || (first instanceof Missile && second instanceof Star)) {
-                    } else {
-                        break;
-                    }
+                if (first.intersects(second) && handleCollision(first, second)) {
+                    break;
                 }
             }
         }
     }
 
-    protected void handleCollision(Sprite spriteA, Sprite spriteB) {
+    protected boolean handleCollision(Sprite spriteA, Sprite spriteB) {
         if (spriteA instanceof Asteroid && spriteB instanceof Asteroid) {
             Asteroid first = (Asteroid) spriteA;
             Asteroid second = (Asteroid) spriteB;
             if (bounceAsteroids) {
                 first.bounceOf(second);
             }
+            return true;
         } else if ((spriteA instanceof Missile && spriteB instanceof Asteroid)
                 || (spriteB instanceof Missile && spriteA instanceof Asteroid)) {
             spriteManager.addSpritesToBeRemoved(spriteA, spriteB);
             points++;
             asteroidDestroyed();
-
+            return true;
         } else if ((spriteA instanceof Ship && spriteB instanceof Asteroid)
                 || (spriteB instanceof Ship && spriteA instanceof Asteroid)) {
             spriteManager.addSpritesToBeRemoved(ship);
             gameOver = true;
             notifyListeners();
+            return true;
         } else if (spriteA instanceof Ship && spriteB instanceof Star) {
             spriteManager.addSpritesToBeRemoved(spriteB);
             points += 2;
             starsCollected++;
             starCollected();
             notifyStarListeners();
+            return true;
         } else if (spriteB instanceof Ship && spriteA instanceof Star) {
             starCollected();
             spriteManager.addSpritesToBeRemoved(spriteA);
@@ -293,13 +293,15 @@ public abstract class GameWorld {
             starsCollected++;
             starCollected();
             notifyStarListeners();
+            return true;
         }
+        return false;
     }
 
     protected abstract void cleanupSprites();
 
     protected abstract void asteroidDestroyed();
-    
+
     protected abstract void starCollected();
 
     protected abstract void handleMissileGraphics(Missile missile);
@@ -313,7 +315,7 @@ public abstract class GameWorld {
             listener.starCollected();
         }
     }
-    
+
     private void notifyListeners() {
         for (GameOverListener gameOverListener : gameOverListeners) {
             gameOverListener.gameOver();
@@ -351,7 +353,7 @@ public abstract class GameWorld {
     public int getPoints() {
         return points;
     }
-    
+
     public int getCollectedStars() {
         return starsCollected;
     }

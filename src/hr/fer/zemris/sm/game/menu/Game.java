@@ -59,7 +59,7 @@ public class Game extends Application {
 
         Image cursorImage = new Image(ClassLoader.getSystemResourceAsStream(CURSOR_IMG_PATH));
         cursor = new ImageCursor(cursorImage, cursorImage.getWidth() / 2, cursorImage.getHeight() / 2);
-        scene.setCursor(cursor);
+        scene.getRoot().setCursor(cursor);
 
         Image gameIcon = new Image(ClassLoader.getSystemResourceAsStream(GAME_ICON));
         stage.getIcons().add(gameIcon);

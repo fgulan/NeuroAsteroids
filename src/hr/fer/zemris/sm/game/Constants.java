@@ -28,12 +28,13 @@ public class Constants {
     public static final double OUT_TRANSITION_DURNATION = 0.25;
     public static final double IN_TRANSITION_DURNATION  = 0.25;
 
-    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 20;
+    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 10;
 
-    public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 50;
+    public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 15;
 
-    public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 10;
-
+    public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 15;
+    
+    public static final int STARS_NUMBER = 15;
 
     public static final String FITTNESS_FORMAT = "#.###";
 
