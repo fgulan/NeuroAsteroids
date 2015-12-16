@@ -1,5 +1,6 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.BackgroundSoundManager;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import javafx.event.ActionEvent;

@@ -1,12 +1,15 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.menu.menuUtil.CreditsReader;
+import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Separator;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.util.List;
+
 import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
@@ -17,23 +20,46 @@ public class CreditsMenu extends Menu{
 
     public CreditsMenu(Game parent) {
         super(parent);
+        VBox box = new VBox();
+        box.setId(CREDITS_CONTENT_VBOX);
 
-        Label credits;
-        try {
-            String info = new String(Files.readAllBytes(Paths.get(ClassLoader.getSystemResource(CREDITS_PATH).getPath())));
-            credits = new Label(info);
-        } catch (IOException e) {
-            credits = new Label("Error while loading credits");
+        GridPane pane = new GridPane();
+        pane.setId(CREDITS_CONTENT_GRID);
+        CreditsReader reader = CreditsReader.getInstance();
+
+        Label projectNameLabel = new Label(CREDITS_PROJECT_NAME_LABEL_TEXT);
+        projectNameLabel.setId(CREDITS_PROJECT_NAME_LABEL);
+        box.getChildren().add(projectNameLabel); //Whole firs row
+
+        Label leaderLabel = new Label(CREDITS_LEADER_LABEL_TEXT);
+        Label leader      = new Label(reader.getProjectLeader());
+        pane.addRow(0, leaderLabel, leader);
+
+        Label mentorLabel = new Label(CREDITS_MENTOR_LABEL_TEXT);
+        Label mentor      = new Label(reader.getProjectMentor());
+        pane.addRow(1, mentorLabel, mentor);
+
+        pane.add(new Separator() , 0, 2, 2, 1);
+
+        Label teamLabel   = new Label(CREDITS_TEAM_LABEL_TEXT);
+        pane.add(teamLabel, 0, 3);
+
+        List<String> team = reader.getProjectTeam();
+
+        for(int i = 0; i < team.size(); i++) {
+            pane.add(new Label(team.get(i)), 1, i + 3);
         }
-        credits.setId(CREDITS_LABEL);
 
         Button back = new KeyEventButton(BACK_BUTTON_TEXT);
-        back.setOnAction(e -> parent.transition(this, parent.getStartMenu(), Game.RIGHT));
+        back.setId(CREDITS_BACK_BUTTON);
+        back.setOnAction(e -> {
+            getGameParent().transition(this, getGameParent().getStartMenu(), Game.RIGHT);
+        });
 
-        VBox content = new VBox();
-        content.setId(CREDITS_MENU_CONTENT);
-        content.getChildren().addAll(credits, back);
-        setCenter(content);
+        box.getChildren().add(pane);
+        box.setFillWidth(false);
+        setCenter(box);
+        setBottom(back);
     }
 
     @Override

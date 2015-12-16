@@ -87,6 +87,8 @@ public class GraphicsWorld extends GameWorld {
         
         for (Star star : spriteManager.getStars()) {
             StarNode node = new StarNode(star);
+            // node.getSprite().getCollisionBounds().setFill(Color.RED);
+            // sceneNodes.getChildren().add(star.getCollisionBounds());
             sceneNodes.getChildren().add(node.getNode());
             nodes.put(star, node);
         }
@@ -143,9 +145,9 @@ public class GraphicsWorld extends GameWorld {
     @Override
     protected void handleMissileGraphics(Missile missile) {
         MissileNode node = new MissileNode(missile);
-        node.getSprite().getCollisionBounds().setFill(Color.RED);
-        //sceneNodes.getChildren().add(node.getSprite().getCollisionBounds());
-        //sceneNodes.getChildren().add(node.getSprite().getBounds());
+//        node.getSprite().getCollisionBounds().setFill(Color.RED);
+//        sceneNodes.getChildren().add(node.getSprite().getCollisionBounds());
+//        sceneNodes.getChildren().add(node.getSprite().getBounds());
         sceneNodes.getChildren().add(node.getNode());
 
         nodes.put(missile, node);
@@ -170,6 +172,9 @@ public class GraphicsWorld extends GameWorld {
             return;
         }
         StarNode node = new StarNode(sprite);
+        // node.getSprite().getCollisionBounds().setFill(Color.RED);
+        // sceneNodes.getChildren().add(sprite.getCollisionBounds());
+
         sceneNodes.getChildren().add(node.getNode());
         nodes.put(sprite, node);
     }

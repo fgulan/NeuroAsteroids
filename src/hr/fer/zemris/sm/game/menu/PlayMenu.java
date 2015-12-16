@@ -1,11 +1,12 @@
 package hr.fer.zemris.sm.game.menu;
 
-import hr.fer.zemris.sm.game.Constants;
+import hr.fer.zemris.sm.game.Utils.HSDataUtility;
+import hr.fer.zemris.sm.game.Utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.KeyboardController;
+import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
@@ -14,9 +15,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.awt.*;
-import java.security.KeyException;
 
 import static javafx.scene.input.KeyCode.*;
 
@@ -41,6 +39,7 @@ public class PlayMenu extends Menu {
 
         Button humanPlay = new KeyEventButton(HUMAN_PLAY_BTN_TEXT);
         humanPlay.setOnAction(e-> {
+            getGameParent().hideCursor();
             Stage stage = getGameParent().getStage();
             Scene scene = stage.getScene();
 
@@ -65,6 +64,7 @@ public class PlayMenu extends Menu {
                         scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
                         humanPlay.fire();
                     });
+
                     pauseMenu.setOnExitAction(e -> {
                         //TODO: separate this into new method
                         scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
@@ -89,6 +89,8 @@ public class PlayMenu extends Menu {
                         if(paused) {    //Exits out of pause
                             paused = false;
 
+                            getGameParent().hideCursor();
+
                             Pane pausePane = (Pane) scene.getRoot();
                             Pane game = (Pane) pausePane.getChildren().remove(0);
                             pausePane.getChildren().clear();
@@ -98,6 +100,8 @@ public class PlayMenu extends Menu {
                         } else {
                             paused = true;
                             world.pause();
+
+                            getGameParent().showCursor();
 
                             StackPane pausePane = new StackPane();
                             pauseMenu.relaod();
@@ -113,6 +117,7 @@ public class PlayMenu extends Menu {
 
 
             world.registerGameOverListener(() -> {
+                getGameParent().showCursor();
                 scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
                 EffectsSoundManager.getInstance().playShipExploded();
 
@@ -121,6 +126,7 @@ public class PlayMenu extends Menu {
                 GameOverScreen gameOverScreen = new GameOverScreen(getGameParent());
 
                 gameOverScreen.setToMenuAction(event -> {
+
                     scene.getStylesheets().clear();
                     scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
 
@@ -136,7 +142,19 @@ public class PlayMenu extends Menu {
                     humanPlay.fire();
                 });
 
-                pane.getChildren().addAll(scene.getRoot(), gameOverScreen);
+                pane.getChildren().add(scene.getRoot());
+
+                if(HSDataUtility.getInstance().isHighScore(world.getPoints())) {
+                    HighScoreScreen hcs = new HighScoreScreen(world.getPoints(), ScoreElement.HUMAN);
+                    hcs.addScoreEnteredListener(() -> {
+                        pane.getChildren().remove(hcs);
+                        pane.getChildren().add(gameOverScreen);
+                    });
+                    pane.getChildren().add(hcs);
+                } else {
+                    pane.getChildren().addAll(gameOverScreen);
+                }
+
                 scene.setRoot(pane);
             });
 

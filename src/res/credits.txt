@@ -1,7 +1,7 @@
-NEUROASTEROIDS, FER 2015
-Vođa:     Fredi Šarić
-Tim:       Filip Gulan
-              Andrija Miličević
-              Domagoj Nakić
-              Luka Žmegač
-Mentor: Marko Čupić
+Leader:Fredi Šarić
+Mentor:Marko Čupić
+Team:Fredi Šarić
+Team:Filip Gulan
+Team:Andrija Miličević
+Team:Domagoj Nakić
+Team:Luka Žmegać

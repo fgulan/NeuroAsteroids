@@ -26,8 +26,9 @@ public class HSDataUtility {
 								.map(ScoreElement::parse)
 								.sorted(ScoreElement.BY_SCORE)
 								.collect(Collectors.toList());
-			min = highScoreList.get(highScoreList.size() - 1).getScore();
-
+			if(!highScoreList.isEmpty()) {
+				min = highScoreList.get(highScoreList.size() - 1).getScore();
+			}
 		} catch (IOException e) {
 			highScoreList = new ArrayList<>();
 		}

@@ -1,5 +1,0 @@
-player_01	100
-player_02	 90
-player_03	 75
-player_04	 50
-player_05	 25

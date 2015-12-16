@@ -1,18 +1,38 @@
 package hr.fer.zemris.sm.game.nodes;
 
+import hr.fer.zemris.sm.game.animations.Animations;
 import hr.fer.zemris.sm.game.models.Star;
+import javafx.animation.Animation;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 
 public class StarNode extends GameNode {
-    
+
+    private Animation animation;
+
     public StarNode(Star sprite) {
         super();
         this.sprite = sprite;
-        this.node = new Circle(15);
+        this.node = new Circle(60);
         ((Circle) this.node).setFill(Color.YELLOW);
         node.setTranslateX(sprite.getBounds().getTranslateX());
         node.setTranslateY(sprite.getBounds().getTranslateY());
+
+        ImageView star = new ImageView();
+        star.setFitWidth(40);
+        star.setPreserveRatio(true);
+        star.setViewport(new Rectangle2D(0, 0, 128, 128));
+
+        this.node = star;
+        this.node.setLayoutX(-20);
+        this.node.setLayoutY(-20);
+
+        animation = Animations.starRotation(star, Duration.millis(800), 128, 128, Animation.INDEFINITE);
+        animation.play();
+
     }
 
 

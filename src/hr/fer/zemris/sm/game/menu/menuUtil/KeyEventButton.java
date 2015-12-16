@@ -1,4 +1,4 @@
-package hr.fer.zemris.sm.game.menu;
+package hr.fer.zemris.sm.game.menu.menuUtil;
 
 import javafx.scene.Node;
 import javafx.scene.control.Button;

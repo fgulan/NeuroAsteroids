@@ -1,14 +1,13 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.layout.Pane;
 
 import static hr.fer.zemris.sm.game.Constants.*;
 
@@ -48,6 +47,11 @@ public class GameOverScreen extends Menu {
     @Override
     public void relaod() {
         //No implementation
+    }
+
+    public void buttonDisable(boolean disable) {
+        toMenu.setDisable(disable);
+        restart.setDisable(disable);
     }
 
     public void setOnRestartAction(EventHandler<ActionEvent> value) {

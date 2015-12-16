@@ -3,11 +3,12 @@ package hr.fer.zemris.sm.game.menu;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.Utils.EvolutionElement;
 import hr.fer.zemris.sm.game.Utils.EvolutionObjectDataUtility;
+import hr.fer.zemris.sm.game.Utils.HSDataUtility;
+import hr.fer.zemris.sm.game.Utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.NeuralNetworkController;
+import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -119,6 +120,7 @@ public class AIChooserMenu extends Menu {
                 Game parent = getGameParent();
                 Stage stage = parent.getStage();
                 Scene scene = stage.getScene();
+                parent.hideCursor();
                 IPhenotype network = (IPhenotype) EvolutionObjectDataUtility.getInstance().loadObject(this.name.getText());
 
                 GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER, null);
@@ -164,6 +166,7 @@ public class AIChooserMenu extends Menu {
                         if(code.equals(ESCAPE) || code.equals(P)) {
                             if(paused) {    //Exits out of pause
                                 paused = false;
+                                parent.hideCursor();
 
                                 Pane pausePane = (Pane) scene.getRoot();
                                 Pane game = (Pane) pausePane.getChildren().remove(0);
@@ -173,6 +176,7 @@ public class AIChooserMenu extends Menu {
                                 world.play();
                             } else {
                                 paused = true;
+                                parent.showCursor();
                                 world.pause();
 
                                 StackPane pausePane = new StackPane();
@@ -187,6 +191,7 @@ public class AIChooserMenu extends Menu {
                 scene.addEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
 
                 world.registerGameOverListener(() -> {
+                    parent.showCursor();
                     scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
                     EffectsSoundManager.getInstance().playShipExploded();
 
@@ -209,7 +214,19 @@ public class AIChooserMenu extends Menu {
                         scene.setRoot(root);
                     });
 
-                    pane.getChildren().addAll(scene.getRoot(), gameOverScreen);
+                    pane.getChildren().add(scene.getRoot());
+
+                    if(HSDataUtility.getInstance().isHighScore(world.getPoints())) {
+                        HighScoreScreen hcs = new HighScoreScreen(world.getPoints(), ScoreElement.AI);
+                        hcs.addScoreEnteredListener(() -> {
+                            pane.getChildren().remove(hcs);
+                            pane.getChildren().add(gameOverScreen);
+                        });
+                        pane.getChildren().add(hcs);
+                    } else {
+                        pane.getChildren().add(gameOverScreen);
+                    }
+
                     scene.setRoot(pane);
                 });
 

@@ -1,54 +1,54 @@
-Network 0.0 30.0
-Network 1.0 262.0
-Network_2 270.0 Network_from_30_iteration.
-Network_3 119.06 Network_from_50_iteration.
-Network_4 0.0 Network_from_50_iteration.
-Network_5 2.0 Network_from_100_iteration.
-Network_6 632.0 Network_from_50_iteration.
-Network_7 2.0 Network_from_50_iteration.
-Network_8 12440.0 Network_from_50_iteration.
-Network_9 29110.0 Network_from_50_iteration.
-Network_10 103390.0 Network_from_50_iteration.
-Network_11 21710.0 Network_from_50_iteration.
-Network_12 21710.0 Network_from_50_iteration.
-Network_13 119810.0 Network_from_50_iteration.
-Network_14 64575.0 Network_from_40_iteration.
-Network_15 16612.5 Network_from_50_iteration.
-Network_16 10375.5 Network_from_50_iteration.
-Network_17 2534.0384615384614 Network_from_50_iteration.
-Network_18 2405.3739837398375 Network_from_50_iteration.
-Network_19 508.3333333333333 Network_from_50_iteration.
-Network_20 190.40000000000163 Network_from_50_iteration.
-Network_21 357.19999999999675 Network_from_50_iteration.
-Network_22 473.59999999999013 Network_from_50_iteration.
-Network_23 225.50000000000327 Network_from_70_iteration.
-Network_24 225.50000000000327 Network_from_70_iteration.
-Network_25 225.50000000000327 Network_from_70_iteration.
-Network_26 225.50000000000327 Network_from_70_iteration.
-Network_27 225.50000000000327 Network_from_70_iteration.
-Network_28 225.50000000000327 Network_from_70_iteration.
-Network_29 225.50000000000327 Network_from_70_iteration.
-Network_30 225.50000000000327 Network_from_70_iteration.
-Network_31 225.50000000000327 Network_from_70_iteration.
-Network_32 447.19999999999123 Network_from_150_iteration.
-Network_33 359.49999999999693 Network_from_90_iteration.
-Network_34 122.80000000001087 Network_from_99_iteration.
-Network_35 122.80000000001087 Network_from_99_iteration.
-Network_36 122.80000000001087 Network_from_99_iteration.
-Network_37 715.8999999999764 Network_from_60_iteration.
-Network_38 2529.0 Network_from_50_iteration.
-Network_39 2500.0 Network_from_50_iteration.
-Network_40 2500.0 Network_from_50_iteration.
-Network_41 12436.0 Network_from_60_iteration.
-Network_42 3132.0 Network_from_40_iteration.
-Network_43 3132.0 Network_from_40_iteration.
-Network_44 8828.0 Network_from_40_iteration.
-Network_45 8828.0 Network_from_40_iteration.
-Network_46 3602.0 Network_from_55_iteration.
-Network_47 3602.0 Network_from_55_iteration.
-Network_48 13911.0 Network_from_20_iteration.
-Network_49 4255.0 Network_from_60_iteration.
-Network_50 4342.0 Network_from_40_iteration.
-Network_51 3800.0 Network_from_30_iteration.
-Network_52 7200.0 Network_from_10_iteration.
-Network_53 8850.0 Network_from_40_iteration.
+Network#0.0#30.0
+Network#1.0#262.0
+Network_2#270.0#Network_from_30_iteration.
+Network_3#119.06#Network_from_50_iteration.
+Network_4#0.0#Network_from_50_iteration.
+Network_5#2.0#Network_from_100_iteration.
+Network_6#632.0#Network_from_50_iteration.
+Network_7#2.0#Network_from_50_iteration.
+Network_8#12440.0#Network_from_50_iteration.
+Network_9#29110.0#Network_from_50_iteration.
+Network_10#103390.0#Network_from_50_iteration.
+Network_11#21710.0#Network_from_50_iteration.
+Network_12#21710.0#Network_from_50_iteration.
+Network_13#119810.0#Network_from_50_iteration.
+Network_14#64575.0#Network_from_40_iteration.
+Network_15#16612.5#Network_from_50_iteration.
+Network_16#10375.5#Network_from_50_iteration.
+Network_17#2534.0384615384614#Network_from_50_iteration.
+Network_18#2405.3739837398375#Network_from_50_iteration.
+Network_19#508.3333333333333#Network_from_50_iteration.
+Network_20#190.40000000000163#Network_from_50_iteration.
+Network_21#357.19999999999675#Network_from_50_iteration.
+Network_22#473.59999999999013#Network_from_50_iteration.
+Network_23#225.50000000000327#Network_from_70_iteration.
+Network_24#225.50000000000327#Network_from_70_iteration.
+Network_25#225.50000000000327#Network_from_70_iteration.
+Network_26#225.50000000000327#Network_from_70_iteration.
+Network_27#225.50000000000327#Network_from_70_iteration.
+Network_28#225.50000000000327#Network_from_70_iteration.
+Network_29#225.50000000000327#Network_from_70_iteration.
+Network_30#225.50000000000327#Network_from_70_iteration.
+Network_31#225.50000000000327#Network_from_70_iteration.
+Network_32#447.19999999999123#Network_from_150_iteration.
+Network_33#359.49999999999693#Network_from_90_iteration.
+Network_34#122.80000000001087#Network_from_99_iteration.
+Network_35#122.80000000001087#Network_from_99_iteration.
+Network_36#122.80000000001087#Network_from_99_iteration.
+Network_37#715.8999999999764#Network_from_60_iteration.
+Network_38#2529.0#Network_from_50_iteration.
+Network_39#2500.0#Network_from_50_iteration.
+Network_40#2500.0#Network_from_50_iteration.
+Network_41#12436.0#Network_from_60_iteration.
+Network_42#3132.0#Network_from_40_iteration.
+Network_43#3132.0#Network_from_40_iteration.
+Network_44#8828.0#Network_from_40_iteration.
+Network_45#8828.0#Network_from_40_iteration.
+Network_46#3602.0#Network_from_55_iteration.
+Network_47#3602.0#Network_from_55_iteration.
+Network_48#13911.0#Network_from_20_iteration.
+Network_49#4255.0#Network_from_60_iteration.
+Network_50#4342.0#Network_from_40_iteration.
+Network_51#3800.0#Network_from_30_iteration.
+Network_52#7200.0#Network_from_10_iteration.
+Network_53#8850.0#Network_from_40_iteration.

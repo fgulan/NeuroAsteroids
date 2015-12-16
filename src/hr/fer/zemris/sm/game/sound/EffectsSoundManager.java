@@ -26,7 +26,7 @@ public class EffectsSoundManager {
         explosion = new AudioClip(explosionAudioClip);
 
         String fireAudioClip = ClassLoader.getSystemResource(Constants.FIRE_CLIP).toExternalForm();
-        fire = new AudioClip(fireAudioClip);
+        fire      = new AudioClip(fireAudioClip);
 
         String shipExplodedAudioClip = ClassLoader.getSystemResource(Constants.SHIP_EXPLODED_CLIP).toExternalForm();
         shipExploded = new AudioClip(shipExplodedAudioClip);

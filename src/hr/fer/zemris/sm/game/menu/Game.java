@@ -2,12 +2,12 @@ package hr.fer.zemris.sm.game.menu;
 
 import hr.fer.zemris.sm.game.sound.BackgroundSoundManager;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
-import hr.fer.zemris.sm.game.Constants;
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.scene.Cursor;
 import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -16,6 +16,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
  *
@@ -33,15 +35,17 @@ public class Game extends Application {
     private Menu creditsMenu;
     private Menu AIChooserMenu;
 
+    private ImageCursor cursor;
+
     private Stage stage;
     private StackPane root;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         BackgroundSoundManager.getInstance().loopBackground();
-        BackgroundSoundManager.getInstance().setVolume(Constants.INIT_BACKGROUND_SOUND_VOLUME);
+        BackgroundSoundManager.getInstance().setVolume(INIT_BACKGROUND_SOUND_VOLUME);
 
-        EffectsSoundManager.getInstance().setVolume(Constants.INIT_EFFECT_SOUND_VOLUME);
+        EffectsSoundManager.getInstance().setVolume(INIT_EFFECT_SOUND_VOLUME);
 
         createMenus();
 
@@ -51,13 +55,13 @@ public class Game extends Application {
         root.setId("Root");
 
         Scene scene = new Scene(root, 1000, 1000);
-        scene.getStylesheets().add(ClassLoader.getSystemResource(Constants.GAME_STYLE_PATH).toExternalForm());
+        scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
 
-        Image cursorImage = new Image(ClassLoader.getSystemResourceAsStream(Constants.CURSOR_IMG_PATH));
-        ImageCursor cursor = new ImageCursor(cursorImage, cursorImage.getWidth() / 2, cursorImage.getHeight() / 2);
-        scene.setCursor(cursor);
+        Image cursorImage = new Image(ClassLoader.getSystemResourceAsStream(CURSOR_IMG_PATH));
+        cursor = new ImageCursor(cursorImage, cursorImage.getWidth() / 2, cursorImage.getHeight() / 2);
+        scene.getRoot().setCursor(cursor);
 
-        Image gameIcon = new Image(ClassLoader.getSystemResourceAsStream("res/Meteor-icon.png"));
+        Image gameIcon = new Image(ClassLoader.getSystemResourceAsStream(GAME_ICON));
         stage.getIcons().add(gameIcon);
 
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
@@ -79,11 +83,11 @@ public class Game extends Application {
         to.setOpacity(0);   //Make invisible for fade in animation, so it doesn't glitch
         root.getChildren().add(0, to);
 
-        TranslateTransition fTrans = new TranslateTransition(Duration.seconds(Constants.OUT_TRANSITION_DURNATION), from);
+        TranslateTransition fTrans = new TranslateTransition(Duration.seconds(OUT_TRANSITION_DURNATION), from);
         fTrans.setFromX(0);
         fTrans.setToX(direction * stage.getWidth());
 
-        TranslateTransition tTrans = new TranslateTransition(Duration.seconds(Constants.IN_TRANSITION_DURNATION), to);
+        TranslateTransition tTrans = new TranslateTransition(Duration.seconds(IN_TRANSITION_DURNATION), to);
         tTrans.setFromX(-direction * stage.getWidth());
         tTrans.setToX(0);
 
@@ -141,6 +145,14 @@ public class Game extends Application {
     public Pane getAIChooserMenu() {
         AIChooserMenu.relaod();
         return AIChooserMenu;
+    }
+
+    public void hideCursor() {
+        stage.getScene().setCursor(Cursor.NONE);
+    }
+
+    public void showCursor() {
+        stage.getScene().setCursor(cursor);
     }
 
     public static void main(String[] args) {

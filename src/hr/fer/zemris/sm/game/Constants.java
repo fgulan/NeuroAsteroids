@@ -8,8 +8,10 @@ public class Constants {
     public static final String GAME_TITLE = "NeuroAsteroids";
     public static final String GAME_TITLE_LABEL = "titleLabel";
 
+    public static final String GAME_ICON = "res/images/Meteor-icon.png";
+
     public static final String GAME_STYLE_PATH = "res/style.css";
-    public static final String CURSOR_IMG_PATH = "res/aimCursorWhite.png";
+    public static final String CURSOR_IMG_PATH = "res/images/aimCursorWhite.png";
     public static final String GAME_WORLD_STYLE_PATH = "res/gameStyle.css";
 
     public static final String BACK_BUTTON_TEXT = "Back";
@@ -26,12 +28,13 @@ public class Constants {
     public static final double OUT_TRANSITION_DURNATION = 0.25;
     public static final double IN_TRANSITION_DURNATION  = 0.25;
 
-    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 20;
+    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 10;
 
-    public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 10;
+    public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 15;
 
-    public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 10;
-
+    public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 15;
+    
+    public static final int STARS_NUMBER = 15;
 
     public static final String FITTNESS_FORMAT = "#.###";
 
@@ -42,7 +45,7 @@ public class Constants {
     public static final double INIT_EFFECT_SOUND_VOLUME = 0.1;
 
     public static final String BACKGROUND_MUSIC = "res/audio/background_music.mp3";
-    public static final String EXPLOSION_CLIP = "res/audio/bomb-03.wav";
+    public static final String EXPLOSION_CLIP = "res/audio/explosion_punchy_impact_02.mp3";
     public static final String FIRE_CLIP = "res/audio/fireSound.wav";
     public static final String SHIP_EXPLODED_CLIP = "res/audio/shipExploded.mp3";
 
@@ -55,9 +58,6 @@ public class Constants {
 
     public static final String PLAY_BUTTON = "playButton";
     public static final String PLAY_BUTTON_TEXT = "PLAY";
-
-    public static final String TRAIN_BUTTON = "trainButton";
-    public static final String TRAIN_BUTTON_TEXT = "LEARN";
 
     public static final String SCORES_BUTTON = "scoresButton";
     public static final String SCORES_BUTTON_TEXT = "SCORES";
@@ -96,8 +96,17 @@ public class Constants {
     //*************************************//
     //           Credits menu              //
     //*************************************//
-    public static final String CREDITS_MENU_CONTENT = "creditsMenuContent";
-    public static final String CREDITS_LABEL = "creditsLabel";
+    public static final String CREDITS_PROJECT_NAME_LABEL_TEXT = "Project NeuroAsteroids (NA)";
+    public static final String CREDITS_PROJECT_NAME_LABEL = "creditsProjectNameLabel";
+    public static final String CREDITS_CONTENT_VBOX = "creditsContentVBox";
+    public static final String CREDITS_BACK_BUTTON = "creditsMenuBackBtn";
+    public static final String CREDITS_CONTENT_GRID = "creditsContentGrid";
+    public static final String CREDITS_LEADER = "Leader";
+    public static final String CREDITS_MENTOR = "Mentor";
+    public static final String CREDITS_TEAM   = "Team";
+    public static final String CREDITS_LEADER_LABEL_TEXT = "Team leader: ";
+    public static final String CREDITS_MENTOR_LABEL_TEXT = "Project mentor: ";
+    public static final String CREDITS_TEAM_LABEL_TEXT   = "Team: ";
 
     //*************************************//
     //           Options menu              //
@@ -138,36 +147,6 @@ public class Constants {
     public static final String LIST_ITEM = "listItem";
 
     //*************************************//
-    //            AITrain menu             //
-    //*************************************//
-    public static final String AITRAIN_CENTER_PANE = "centerPane";
-    public static final String AITRAIN_SIDE_PANE = "aiTrainSidePane";
-    public static final int MAX_GRAPH_X_AXIX = 100;
-    public static final int GRAPH_TICK_SPACE = 5;
-    public static final String X_AXIS_LABLE = "Iterations";
-    public static final String Y_AXIS_LABLE = "Fitness";
-    public static final String EVOLUTION_CHART = "evolutionChart";
-    public static final String EVOLUTION_SERIES = "evolutionSeries";
-
-
-    public static final String AITRAIN_ACCORDION= "aiTrainAccordion";
-    public static final String AITRAIN_BUTTON_PANE = "aiTrainButtonPane";
-
-    //Labels and inputs
-    public static final String POPULATION_SIZE_TEXT = "Population size";
-    public static final String POPULATION_PROMPT_TEXT = "Enter population size";
-
-    public static final String MAX_ITER_TEXT = "Maximal iterations";
-    public static final String MAX_ITER_PROMPT = "Enter maximal iterations";
-
-    //Buttons
-    public static final String AITRAIN_START_BUTTON = "Start evolution";
-    public static final String AITRAIN_RESET_BUTTON = "Reset evolution";
-    public static final String AITRAIN_PAUSE_BUTTON = "Pause evolution";
-    public static final String AITRAIN_SAVE_BUTTON  = "Save best phenotype";
-    public static final String AITRAIN_BACK_BUTTON  = "aiTrainBackBtn";
-
-    //*************************************//
     //             Pause menu              //
     //*************************************//
     public static final String PAUSE_MENU = "pauseMenu";
@@ -197,5 +176,37 @@ public class Constants {
     public static final String GAME_OVER_TO_MENU_BUTTON = "gameOverToMenuButton";
     public static final String GAME_OVER_TO_MENU_BUTTON_TEXT = "To menu";
 
+    //*************************************//
+    //          High score screen          //
+    //*************************************//
+    public static final String HIGH_SCORE_SCREEN = "highScoreScreen";
+    public static final String HIGH_SCREEN_CONTENT_BOX = "highScreenContentBox";
+    public static final String HIGH_SCORE_LABEL = "hsLabel";
+    public static final String HIGH_SCORE_LABEL_TEXT = "HIGH SCORE";
+    public static final String SCORE_LABEL_TEXT = " POINTS";
+    public static final String SCORE_LABEL_TEXT_ONE_POINTS = " POINT";
+    public static final String SCORE_LABEL = "scoreLabel";
+
+    public static final String PLACE_TEXT = " PLACE";
+    public static final String PLACE_LABEL = "placeLabel";
+    public static final String NAME_TEXT_FIELD = "nameTextField";
+    public static final String ENTERED_SCORE_BUTTON = "enteredScoreButton";
+    public static final String ENTERED_SCORE_BUTTON_TEXT = "Save score";
+    public static final String WRONG_INPUT_LABEL = "wrongInputLabel";
+    public static final String NAME_TOO_LONG_TEXT = "Name is too long";
+    public static final String NAME_EMPTY_TEXT = "Pleas enter some name";
+    public static final String NAME_TAKEN_TEXT = "Name is already taken";
+    public static final String SCORE_INPUT_HBOX = "scoreInputBox";
+
+    public static final int MAX_NAME_LENGTH = 20;
+
+    //*************************************//
+    //              Game                   //
+    //*************************************//
+    public static final String EXPLOSION_ANIMATION_PATH = "res/images/exp2.png";
+    public static final String ASTEROID_ANIMATION_PATH  = "res/images/rocks.png";
+    public static final String STAR_ANIMATION_PATH = "res/images/starFrames.png";
+    public static final String MISSILE_IMAGE_PATH = "res/images/miss.gif";
+    public static final String SHIP_IMAGE_PATH = "res/images/spaceship.png";
 
 }
