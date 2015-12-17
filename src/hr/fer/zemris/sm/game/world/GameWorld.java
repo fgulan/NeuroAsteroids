@@ -270,7 +270,7 @@ public abstract class GameWorld {
         } else if ((spriteA instanceof Missile && spriteB instanceof Asteroid)
                 || (spriteB instanceof Missile && spriteA instanceof Asteroid)) {
             spriteManager.addSpritesToBeRemoved(spriteA, spriteB);
-            points++;
+            points += Constants.ASTEROID_SCORE;
             asteroidDestroyed();
             return true;
         } else if ((spriteA instanceof Ship && spriteB instanceof Asteroid)
@@ -279,17 +279,14 @@ public abstract class GameWorld {
             gameOver = true;
             notifyListeners();
             return true;
-        } else if (spriteA instanceof Ship && spriteB instanceof Star) {
-            spriteManager.addSpritesToBeRemoved(spriteB);
-            points += 2;
-            starsCollected++;
-            starCollected();
-            notifyStarListeners();
-            return true;
-        } else if (spriteB instanceof Ship && spriteA instanceof Star) {
-            starCollected();
-            spriteManager.addSpritesToBeRemoved(spriteA);
-            points += 2;
+        } else if ((spriteA instanceof Ship && spriteB instanceof Star)
+                || (spriteB instanceof Ship && spriteA instanceof Star)) {
+            if (spriteA instanceof Star) {
+                spriteManager.addSpritesToBeRemoved(spriteA);
+            } else {
+                spriteManager.addSpritesToBeRemoved(spriteB);
+            }
+            points += Constants.STAR_SCORE;
             starsCollected++;
             starCollected();
             notifyStarListeners();
