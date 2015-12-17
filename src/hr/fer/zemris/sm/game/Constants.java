@@ -22,25 +22,27 @@ public class Constants {
     public static final String SCORE_ELEMENT_TYPE_HUMANE = "HUMAN";
 
     public static final String EVOLUTION_ELEMENTS_LIST_FILE = "res/elements";
-    public static final String EVOLUTION_ELEMENTS_FILES_DIR= "res/saved/";
+    public static final String EVOLUTION_ELEMENTS_FILES_DIR = "res/saved/";
     public static final String CREDITS_PATH = "res/credits.txt";
 
     public static final double OUT_TRANSITION_DURNATION = 0.25;
-    public static final double IN_TRANSITION_DURNATION  = 0.25;
+    public static final double IN_TRANSITION_DURNATION = 0.25;
 
     public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 10;
 
     public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 15;
 
     public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 15;
-    
+
     public static final int STARS_NUMBER = 15;
+    public static final int STAR_SCORE = 10;
+    public static final int ASTEROID_SCORE = 1;
 
     public static final String FITTNESS_FORMAT = "#.###";
 
-    //*************************************//
-    //               Audio                 //
-    //*************************************//
+    // *************************************//
+    // Audio //
+    // *************************************//
     public static final double INIT_BACKGROUND_SOUND_VOLUME = 0.1;
     public static final double INIT_EFFECT_SOUND_VOLUME = 0.1;
 
@@ -49,10 +51,9 @@ public class Constants {
     public static final String FIRE_CLIP = "res/audio/fireSound.wav";
     public static final String SHIP_EXPLODED_CLIP = "res/audio/shipExploded.mp3";
 
-
-    //*************************************//
-    //             Start menu              //
-    //*************************************//
+    // *************************************//
+    // Start menu //
+    // *************************************//
     public static final String START_MENU_ID = "startMenu";
     public static final String START_MENU_BUTTONS_DIV = "startMenuButtons";
 
@@ -71,20 +72,18 @@ public class Constants {
     public static final String EXIT_BUTTON = "exitButton";
     public static final String EXIT_BUTTON_TEXT = "EXIT";
 
-
-    //*************************************//
-    //             Play menu               //
-    //*************************************//
+    // *************************************//
+    // Play menu //
+    // *************************************//
     public static final String PLAY_MENU_ID = "playMenu";
     public static final String PLAY_MENU_BUTTONS = "playMenuButtons";
 
     public static final String HUMAN_PLAY_BTN_TEXT = "Play human";
     public static final String AI_PLAY_BTN_TEXT = "Play AI";
 
-
-    //*************************************//
-    //             Score menu              //
-    //*************************************//
+    // *************************************//
+    // Score menu //
+    // *************************************//
     public static final String SCORE_MENU_ID = "scoreMenu";
     public static final String SCORE_MENU_TABLE = "scoreMenuTable";
     public static final String SCORE_MENU_BACK_BTN = "scoreMenuBackBtn";
@@ -93,9 +92,9 @@ public class Constants {
     public static final String SCORE_NICK = "Nick";
     public static final String SCORE = "Score";
 
-    //*************************************//
-    //           Credits menu              //
-    //*************************************//
+    // *************************************//
+    // Credits menu //
+    // *************************************//
     public static final String CREDITS_PROJECT_NAME_LABEL_TEXT = "Project NeuroAsteroids (NA)";
     public static final String CREDITS_PROJECT_NAME_LABEL = "creditsProjectNameLabel";
     public static final String CREDITS_CONTENT_VBOX = "creditsContentVBox";
@@ -103,14 +102,14 @@ public class Constants {
     public static final String CREDITS_CONTENT_GRID = "creditsContentGrid";
     public static final String CREDITS_LEADER = "Leader";
     public static final String CREDITS_MENTOR = "Mentor";
-    public static final String CREDITS_TEAM   = "Team";
+    public static final String CREDITS_TEAM = "Team";
     public static final String CREDITS_LEADER_LABEL_TEXT = "Team leader: ";
     public static final String CREDITS_MENTOR_LABEL_TEXT = "Project mentor: ";
-    public static final String CREDITS_TEAM_LABEL_TEXT   = "Team: ";
+    public static final String CREDITS_TEAM_LABEL_TEXT = "Team: ";
 
-    //*************************************//
-    //           Options menu              //
-    //*************************************//
+    // *************************************//
+    // Options menu //
+    // *************************************//
     public static final String OPTIONS_PANE = "optionsPane";
     public static final String AUDIO_LABEL = "audioLabel";
     public static final String AUDIO_LABEL_TEXT = "AUDIO";
@@ -127,9 +126,9 @@ public class Constants {
     public static final String ARROW_CONTROL_INPUT_LABEL_TEXT = "Arrows";
     public static final String WASD_CONTROL_INPUT_LABEL_TEXT = "W_A_D_SPACE (Linux users)";
 
-    //*************************************//
-    //          AIChooser menu             //
-    //*************************************//
+    // *************************************//
+    // AIChooser menu //
+    // *************************************//
     public static final String NAME_HBOX_ID = "nameHBoxId";
     public static final String NAME_LABEL = "nameLabel";
 
@@ -146,16 +145,16 @@ public class Constants {
     public static final String AI_LIST = "aiList";
     public static final String LIST_ITEM = "listItem";
 
-    //*************************************//
-    //             Pause menu              //
-    //*************************************//
+    // *************************************//
+    // Pause menu //
+    // *************************************//
     public static final String PAUSE_MENU = "pauseMenu";
     public static final String PAUSE_PANE = "pausePane";
 
     public static final String PAUSE_PANE_SLIDERS = "pauseAudioSliderVBox";
     public static final String PAUSE_PANE_BUTTONS = "pausePaneButtons";
 
-    //Buttons
+    // Buttons
     public static final String PAUSE_MENU_RESUME_BUTTON = "pauseMenuResumeBtn";
     public static final String PAUSE_MENU_RESUME_BUTTON_TEXT = "Resume";
     public static final String PAUSE_MENU_RESTART_BUTTON = "pauseMenuRestart";
@@ -163,12 +162,12 @@ public class Constants {
     public static final String PAUSE_MENU_EXIT_BUTTON = "pauseMenuExitBtn";
     public static final String PAUSE_MENU_EXIT_BUTTON_TEXT = "Exit to menu";
 
-    //*************************************//
-    //          Game over screen           //
-    //*************************************//
+    // *************************************//
+    // Game over screen //
+    // *************************************//
     public static final String GAME_OVER_SCREEN = "gameOverScreen";
     public static final String GAME_OVER_BUTTON_BOX = "gameOverButtonBox";
-    public static final String GAME_OVER_CONTENT_BOX= "gameOverContentBox";
+    public static final String GAME_OVER_CONTENT_BOX = "gameOverContentBox";
     public static final String GAME_OVER_LABEL = "gameOverLabel";
     public static final String GAME_OVER_LABEL_TEXT = "GAME OVER";
     public static final String GAME_OVER_RESET_BUTTON = "gameOverResetBtn";
@@ -176,9 +175,9 @@ public class Constants {
     public static final String GAME_OVER_TO_MENU_BUTTON = "gameOverToMenuButton";
     public static final String GAME_OVER_TO_MENU_BUTTON_TEXT = "To menu";
 
-    //*************************************//
-    //          High score screen          //
-    //*************************************//
+    // *************************************//
+    // High score screen //
+    // *************************************//
     public static final String HIGH_SCORE_SCREEN = "highScoreScreen";
     public static final String HIGH_SCREEN_CONTENT_BOX = "highScreenContentBox";
     public static final String HIGH_SCORE_LABEL = "hsLabel";
@@ -200,11 +199,11 @@ public class Constants {
 
     public static final int MAX_NAME_LENGTH = 20;
 
-    //*************************************//
-    //              Game                   //
-    //*************************************//
+    // *************************************//
+    // Game //
+    // *************************************//
     public static final String EXPLOSION_ANIMATION_PATH = "res/images/exp2.png";
-    public static final String ASTEROID_ANIMATION_PATH  = "res/images/rocks.png";
+    public static final String ASTEROID_ANIMATION_PATH = "res/images/rocks.png";
     public static final String STAR_ANIMATION_PATH = "res/images/starFrames.png";
     public static final String MISSILE_IMAGE_PATH = "res/images/miss.gif";
     public static final String SHIP_IMAGE_PATH = "res/images/spaceship.png";
