@@ -1,0 +1,242 @@
+@import "blueberry.css";
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body {
+    background: #f0f0f0;
+    font:14px/20px Arial, San-Serif;
+    color: #555;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 180%;
+    line-height: 120%;
+    padding: 4% 0%;
+}
+
+h2 {
+    line-height: 280%;
+    padding-left: 2%;
+}
+
+h3 {
+    line-height: 110%;
+    padding: 5% 0%;
+}
+
+p {
+    padding: 1%;
+    font-size: 120%;
+}
+
+
+
+img {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-shadow: 0px 0px 5px #3CA8F0;
+}
+
+#introText {
+    float: left;
+    margin: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+#sidebar {
+    background: #C2C2C2;
+    width: 100%;
+    float: left ;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0.90;
+    transform: translateX(100%) 
+        rotate(90deg);
+    transform-origin: left top 0;
+}
+
+#logo {
+    margin: 0px 10px;
+    float: left;
+    width: 80px;
+    height: 100%;
+    background: url(transport463.png) no-repeat center;
+    transform: rotate(-90deg);
+    
+}
+
+nav {
+    float: left;
+}
+
+nav ul {
+    padding: 30px;
+    align-content: center;
+}
+
+nav ul li {
+    display: inline;
+    
+    
+}
+
+nav ul li a {    
+    text-align: center;
+    height: 100%;
+    width: auto;
+    padding: 10px 20px;
+}
+
+#name {
+    text-align: left;
+    margin: 0px 10px;
+    font-size: 300%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+#doc {
+    margin: 0px 0px;
+}
+
+#content {
+    margin: auto auto;
+    max-width: 1140px;
+}
+
+
+.blueberry {
+    max-width: 960px;
+    margin.top: 110px;
+}
+
+section {
+    width: 29%;
+    float: left;
+    margin: 2% 2%;
+    text-align: center;
+}
+
+.clear {
+    clear:both; /*sto je to */
+}
+
+article {
+    float:left;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    padding: 4%;
+}
+
+aside {
+    float: right;
+    margin: 0 auto;
+    width: 35%;
+    height: auto;
+    padding: 3%;
+}
+
+ul.com li {
+    padding-left: 3%;
+}
+
+dl {
+    margin: 20px 20px;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+   letter-spacing:0.1em;
+   text-transform: lowercase;
+   line-height: 150%;
+   font-size: 15pt;
+   font-variant: small-caps;
+
+    width: 40%;
+    float: left;
+}
+
+dt {
+    float: left;
+    clear: left;
+    font-weight: bold;
+    font-size: 130%;
+    width: auto;
+    padding-bottom: 5em;
+    padding-right: 2em;
+}
+
+footer {
+    background: #333333;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+footer p, footer h3 {
+    color: #fff;
+    opacity: 0.95;
+}
+
+footer p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+ul.social li {
+    display: inline;
+}
+
+ul.social li img {
+    height: 50px;
+}
+
+footer.second {
+    border-top: 1px solid #4D4E50;
+    background-color: #333333;
+    max-height: 50px;
+    text-align: center;
+    opacity:0.95;
+}
+
+
+
+.members {
+    margin: 20px 20px;
+}
+
+.members ul {
+    list-style: armenian;
+    text-indent: 10px;
+}
+
+#lof {
+   text-align: left;
+    margin: 10px 30px;
+    width: 30%;
+    font-size: 300%; 
+    transform: rotate(-5deg);
+}
