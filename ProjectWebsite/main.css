@@ -1,5 +1,3 @@
-@import "blueberry.css";
-
 * {
     margin: 0;
     border: 0;
@@ -33,8 +31,6 @@ p {
     padding: 1%;
     font-size: 120%;
 }
-
-
 
 img {
     text-align: center;
@@ -106,7 +102,7 @@ nav ul li a {
     width: auto;
     padding: 10px 20px;
 }
-
+/*mozda ne treba \/ */
 #name {
     text-align: left;
     margin: 0px 10px;
@@ -116,8 +112,6 @@ nav ul li a {
 ul {
     list-style: none;
 }
-
-
 
 #doc {
     margin: 0px 0px;
@@ -142,16 +136,22 @@ section {
 }
 
 .clear {
+    height: 150px;
     clear:both; /*sto je to */
+}
+
+.enlarge:active {
+	transform:scale(3,3);
+/*	transform-origin:0 0;*/
 }
 
 article {
     float:left;
     margin: 0 auto;
-    width: 50%;
+    max-width: 50%;
     height: auto;
     padding: 4%;
-}
+} /*maknuti*/
 
 aside {
     float: right;
@@ -161,12 +161,19 @@ aside {
     padding: 3%;
 }
 
+#video {
+    margin: 20px 20px;
+    float: left;
+    max-width: 780px;
+}
+
+
 ul.com li {
     padding-left: 3%;
 }
 
 dl {
-    margin: 20px 20px;
+    margin: 20px 0 0 20px;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
    letter-spacing:0.1em;
    text-transform: lowercase;
@@ -174,7 +181,7 @@ dl {
    font-size: 15pt;
    font-variant: small-caps;
 
-    width: 40%;
+    width: 45%;
     float: left;
 }
 
@@ -188,6 +195,11 @@ dt {
     padding-right: 2em;
 }
 
+#group {
+    right: 0;
+    max-width: 100%;
+}
+
 footer {
     background: #333333;
     width: 100%;
@@ -195,23 +207,15 @@ footer {
     opacity: 0.9;
 }
 
-footer p, footer h3 {
+footer p, footer h2 {
     color: #fff;
     opacity: 0.95;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
-footer p a {
+footer h2 a, {
     color: #fff;
     text-decoration: none;
-}
-
-
-ul.social li {
-    display: inline;
-}
-
-ul.social li img {
-    height: 50px;
 }
 
 footer.second {
@@ -221,8 +225,6 @@ footer.second {
     text-align: center;
     opacity:0.95;
 }
-
-
 
 .members {
     margin: 20px 20px;
@@ -240,3 +242,52 @@ footer.second {
     font-size: 300%; 
     transform: rotate(-5deg);
 }
+
+#literature {
+     margin: 70px 0 20px 20px;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    letter-spacing: 0.08em;
+    width: 100%;
+}
+
+#literature h3 {
+    border-bottom: 1px solid;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+.refBox {
+    float:left;
+    width: 30%;
+    margin: 0 2em 0 0;
+    
+}
+
+.refBox ul li{
+    list-style: circle;
+}
+
+#download {
+    width: 47%;
+    float: left;
+    text-align: center;
+}
+
+#download img{
+    padding-right: 5px;
+    height: 32px;
+    transform: rotate(90deg) translateX(40%);
+}
+
+#download:hover {
+    /*aktiviraj animaciju*/
+    transform: scale(1.2,1.2);
+}
+
+#download a{
+  vertical-align: middle;
+  font-size: 180%;
+}
+
+
+

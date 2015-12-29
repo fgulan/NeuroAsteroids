@@ -10,11 +10,8 @@
         /*u main.css*/
     </style>
     
-    <script>
-        $(window).load(function() {
-            $('.blueberry').blueberry();
-        }); 
-    </script>
+    <script src="jwplayer-7.2.4/jwplayer.js"></script>
+    <script>jwplayer.key="lQkk8EqL2zVxXTEyDOkNUaqgO1rZWivNONFtjg==";</script>
     
 </head>
 <body>
@@ -33,9 +30,9 @@
     </div>
   <img id="lof" src="title.png">  
 <!--<h1 id="name"> PREDMET PROJEKT <br> NEUROASTEROIDS </h1>-->
-        <p id="introText"> This project was about making neural networks, evolving them and letting them play the game we made.
-            Game was made on example of retro game Asteroids</p>
-    <div id="doc">
+        <p id="introText"> Projekt se bavi izradom neuronskih mreža, njihovom evolucijom i igranjem igrice „Asteroids“. Potrebno je napraviti samu igricu kojoj se prikaz svijeta igrice se može prilagoditi načinu igranja za čovjeka i za neuronsku mrežu. Tokom učenja vremenski 
+razmak između okvira („frame-a“) mora biti smanjen na minimum kako bi se učenje izvršavalo što brže.</p>
+    <!--<div id="doc">
         <div id="content">
             <div class="blueberry">
                 <ul class="slides">
@@ -46,7 +43,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
     
     <section>
         <img src="transport463.png"/>
@@ -66,9 +63,21 @@
     
     <div class="clear"></div>
    
-    <article>
-        <img src="no.jps.png"> 
-    </article> 
+    
+        <div id="video">Loading the player...</div>
+<script type="text/javascript">
+var playerInstance = jwplayer("video");
+playerInstance.setup({
+    file: "Pigeons.mp4",
+    image: "Cloudy-Stars-Wallpaper-Computer.jpg",
+    width: "50%",
+    aspectratio: "16:9",
+    title: 'NeuroAsteroids',
+    description: 'A video with short gameplay'
+});
+</script>
+      <!-- <img src="no.jps.png"> -->
+    
    
     <aside>
         <h2>Comments </h2>
@@ -84,21 +93,36 @@
     </aside>
     
     <div class="clear"></div>
+    
     <section>
         <h1>Main menu</h1>
-        <img src="start.png"/>
+        <img class="enlarge" src="start.png"/>
         <p> .......</p>
     </section>
     <section>
         <h1>Game envinoment</h1>
-        <img src="game.png"/>
+        <img class="enlarge" src="game.png"/>
         <p>...........</p>
     </section>
     <section>
         <h1>In game effects</h1>
-        <img src="game.png"/>
+        <img class="enlarge" src="game.png"/>
         <p>.......... </p>
     </section>
+    
+    <div class="clear"></div>
+    
+    <div id="download">
+        <img src="transport463.png">
+        <a href="#">Download game (.jre file)</a>
+    </div>
+    <div id="download">
+        <img src="transport463.png">
+        <a href="#">Download project documentation</a>
+        
+    </div>
+    
+    <div class="clear"></div>
     
     <dl id="mentor">
                 <dt>Mentor</dt>
@@ -111,35 +135,51 @@
                 <dd>Domagoj Nakić</dd>
                 <dd>Fredi Šarić</dd>
                 <dd>Luka Žmegač</dd>
+        <img id="group" src="minions-1.jpg">
     </dl>
     
-    <section id="literature">
-        <h3>LITERATURA</h3>
-        <ol>
-            <li>sldkasdksdh ldjsahd </li>
-            <li>aksjdho dhaodjb od</li>
-            <li>ksjadh kd hbasd khb</li>
-        </ol>
     
-        <h3>IZVORI MEDIJSKIH SADRŽAJA</h3>
-        <ol>
-            <li>sldkasdksdh ldjsahd </li>
-            <li>aksjdho dhaodjb od</li>
-            <li>ksjadh kd hbasd khb</li>
-        </ol>
-        
-        <h3>SLIČNI PROJEKTI</h3>
-        <ol>
-            <li>sldkasdksdh ldjsahd </li>
-            <li>aksjdho dhaodjb od</li>
-            <li>ksjadh kd hbasd khb</li>
-        </ol>
+         
+    <div class="clear"></div>
+    
+    <section id="literature">
+        <div class="refBox">
+            <h3>LITERATURA</h3>
+            <ul>
+                <li>sldkasdksdh ldjsahd </li>
+                <li>aksjdho dhaodjb od</li>
+                <li>ksjadh kd hbasd khb</li>
+            </ul>
+        </div>
+        <div class="refBox">
+            <h3>IZVORI MEDIJSKIH SADRŽAJA</h3>
+            <ul>
+                <li>sldkasdksdh ldjsahd </li>
+                <li>aksjdho dhaodjb od</li>
+                <li>ksjadh kd hbasd khb</li>
+            </ul>
+         </div>
+        <div class="refBox">
+            <h3>SLIČNI PROJEKTI</h3>
+            <ul>
+                <li>Učenje neuronske mreže evolucijskim algoritmom na
+primjeru igre</li>
+                <li>Evolving Neural Networks through augmenting topologies
+ (2002) [Stanley, Miikkulainen]
+</li>
+                <li>NEAT: Evolving Increasingly Complex Neural Network Topologies
+ (2000-2011) [Stanley, Whiteson, 
+Reisinger, Karpov, Kohl]</li>
+            </ul>
+        </div>
         
     </section>
     
+    <div class="clear"></div>
+    
     <footer>
      <section>
-            <h2><b><a ref="http://www.fer.unizg.hr">FER</a></b></h2>
+            <h2><a href="http://www.fer.unizg.hr">FER</a></h2>
             <p>Unska 3, 10000 Zagreb<br>
             Republika Hrvatska<br>
             mail:fer@fer.hr 
