@@ -9,6 +9,14 @@
     <style type="text/css">
         /*u main.css*/
     </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="jquery.blueberry.js"></script>
+    
+    <script>
+        $(window).load(function() {
+            $('.blueberry').blueberry();
+        }); 
+    </script>
     
     <script src="jwplayer-7.2.4/jwplayer.js"></script>
     <script>jwplayer.key="lQkk8EqL2zVxXTEyDOkNUaqgO1rZWivNONFtjg==";</script>
@@ -28,22 +36,15 @@
         
         </nav>
     </div>
-  <img id="lof" src="title.png">  
-<!--<h1 id="name"> PREDMET PROJEKT <br> NEUROASTEROIDS </h1>-->
-        <p id="introText"> Projekt se bavi izradom neuronskih mreža, njihovom evolucijom i igranjem igrice „Asteroids“. Potrebno je napraviti samu igricu kojoj se prikaz svijeta igrice se može prilagoditi načinu igranja za čovjeka i za neuronsku mrežu. Tokom učenja vremenski 
+    <img id="title" src="title.png">  
+
+    <div class="clear"></div>
+    
+    <p id="introText"> Projekt se bavi izradom neuronskih mreža, njihovom evolucijom i igranjem igrice „Asteroids“. Potrebno je napraviti samu igricu kojoj se prikaz svijeta igrice se može prilagoditi načinu igranja za čovjeka i za neuronsku mrežu. Tokom učenja vremenski 
 razmak između okvira („frame-a“) mora biti smanjen na minimum kako bi se učenje izvršavalo što brže.</p>
-    <!--<div id="doc">
-        <div id="content">
-            <div class="blueberry">
-                <ul class="slides">
-                    <li><img src="no.jps.png"/></li>
-                    <li><img src="no.jps.png"/></li>
-                    <li><img src="no.jps.png"/></li>
-                    <li><img src="print_image__asteroids_game.png"/></li>
-                </ul>
-            </div>
-        </div>
-    </div>-->
+    <img id="introPic" src="no.jps.png">
+    
+    <div class="clear"></div>
     
     <section>
         <img src="transport463.png"/>
@@ -56,9 +57,9 @@ razmak između okvira („frame-a“) mora biti smanjen na minimum kako bi se u�
         <p>....</p>
     </section>
     <section>
-        <img src="minions-1.jpg"/ >
-        <h1> Check out us free!</h1>
-        <p>To show how connfident we are in our knowledge</p>
+        <img src="transport463.png"/ >
+        <h1> ....!</h1>
+        <p>....</p>
     </section>
     
     <div class="clear"></div>
@@ -76,22 +77,42 @@ playerInstance.setup({
     description: 'A video with short gameplay'
 });
 </script>
-      <!-- <img src="no.jps.png"> -->
     
+    <div id="doc">
+        <div id="content">
+            <div class="blueberry">
+                <ul class="slides">
+                    <li>
+                        <article>
+                            <h3>Marko Čupić</h3>
+                            <p>  dljahd lashd ljas l d
+                                asdljh ljhasdlč dasjdh 
+                                dkjad             
+                            </p>
+                        </article>                       
+                    </li>
+                    <li>
+                        <article>
+                            <h3>Filip Gulan </h3>
+                            <p>  ad lijh iahsd lhjsad 
+                            asdasd ad
+                            
+                            </p>
+                        </article>                       
+                    </li>
+                    <li>
+                        <article>
+                            <h3>Luka Žmegač</h3>
+                            <p> asd d fg g kolm ljdjdljsdj  
+                            addsd lj jslj oisdjioj                          
+                            </p>
+                        </article>                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
    
-    <aside>
-        <h2>Comments </h2>
-        <ul class="com">
-            <li><h3>Filip Gulan</h3></li>
-            <p> Bla, bla, bla, bla</p>
-            
-            <li><h3>Andrija Miličević</h3></li>
-            <p> Bla, bla, bla, bla</p>
-            
-            <li><h3>...</h3></li>
-        </ul>
-    </aside>
-    
     <div class="clear"></div>
     
     <section>
@@ -162,8 +183,8 @@ playerInstance.setup({
         <div class="refBox">
             <h3>SLIČNI PROJEKTI</h3>
             <ul>
-                <li>Učenje neuronske mreže evolucijskim algoritmom na
-primjeru igre</li>
+                <li><a href="#">Učenje neuronske mreže evolucijskim algoritmom na
+primjeru igre</a></li>
                 <li>Evolving Neural Networks through augmenting topologies
  (2002) [Stanley, Miikkulainen]
 </li>
@@ -182,7 +203,7 @@ Reisinger, Karpov, Kohl]</li>
             <h2><a href="http://www.fer.unizg.hr">FER</a></h2>
             <p>Unska 3, 10000 Zagreb<br>
             Republika Hrvatska<br>
-            mail:fer@fer.hr 
+            mail # fer@fer.hr 
             </p>
         </section>
         
