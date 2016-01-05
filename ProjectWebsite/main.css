@@ -7,13 +7,19 @@
 }
 body {
     background-image: url(Cloudy-Stars-Wallpaper-Computer.jpg);
-    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
     background-attachment: fixed;
+    margin: 0;
+    
+    /*Font styling*/
     font:20px/26px Arial, San-Serif;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-    /*color: #555;*/
     color:#E0E0E0;
-    margin: 0;
+}
+
+#mainBody{
+    padding: 0 70px 0 0;
 }
 
 h1{
@@ -46,13 +52,13 @@ img {
 }
 
 a {
-    color: #5f5f5f;
+    color: #9f9f9f;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    text-shadow: 0px 0px 5px #3CA8F0;
+    text-shadow: 0px 0px 6px #3CA8F0;
 }
 
 #introText {
@@ -72,7 +78,7 @@ a:hover {
 
 #sidebar {
     background: #666;
-    width: 100%;
+    width: 200%;
     float: left ;
     height: 70px;
     position: fixed;
@@ -92,7 +98,6 @@ a:hover {
     height: 100%;
     background: url(transport463.png) no-repeat center;
     transform: rotate(-90deg);
-    
 }
 
 nav {
@@ -100,14 +105,11 @@ nav {
 }
 
 nav ul {
-    padding: 30px;
-    align-content: center;
+    line-height: 350%;
 }
 
 nav ul li {
-    display: inline;
-    
-    
+    display: inline;   
 }
 
 nav ul li a {    
@@ -117,15 +119,16 @@ nav ul li a {
     padding: 10px 20px;
     color: #000; 
 }
-/*mozda ne treba \/ */
-#name {
-    text-align: left;
-    margin: 0px 10px;
-    font-size: 300%;
-}
 
 ul {
     list-style: none;
+}
+
+#title {
+    text-align: left;
+    margin: 4% 5%;
+    width: 40%; 
+    transform: rotate(-3deg);
 }
 
 #doc {
@@ -138,48 +141,38 @@ ul {
 #content {
     margin: auto 20%;
     max-width: 100%;
+    max-height: 100%;
 }
 
-.slides li article{
+article{
     max-width: 100%;
 }
+
+article p{
+    font-size: 80%;
+    line-height: 130%;
+}
+
 .blueberry {
     max-width: 960px;
     margin.top: 110px;
 }
 
 section {
-    width: 29%;
+    width: 31%;
     float: left;
-    margin: 2% 2%;
+    margin: 0 0 0 2%;
     text-align: center;
 }
 
 .clear {
-    height: 150px;
-    clear:both; /*sto je to */
+    height: 160px;
+    clear:both;
 }
-
+/* 
 .enlarge:active {
-	transform:scale(3,3);
-/*	transform-origin:0 0;*/
-}
-
-article {
-    float:left;
-    margin: 0 auto;
-    max-width: 50%;
-    height: 150px;
-    padding: 4%;
-} /*maknuti*/
-
-aside {
-    float: right;
-    margin: 0 auto;
-    width: 35%;
-    height: auto;
-    padding: 3%;
-}
+	transform:scale(3,3) translateX(50%);
+}*/
 
 #video {
     margin: 0 0 0 40px;
@@ -187,20 +180,13 @@ aside {
     max-width: 780px;
 }
 
-
-ul.com li {
-    padding-left: 3%;
-}
-
 dl {
     margin: 20px 0 0 20px;
-    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
    letter-spacing:0.1em;
    text-transform: lowercase;
    line-height: 150%;
    font-size: 15pt;
    font-variant: small-caps;
-
     width: 45%;
     float: left;
 }
@@ -228,14 +214,7 @@ footer {
 }
 
 footer p, footer h2 {
-    color: #fff;
     opacity: 0.95;
-    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-}
-
-footer h2 a, {
-    color: #fff;
-    text-decoration: none;
 }
 
 footer.second {
@@ -246,26 +225,8 @@ footer.second {
     opacity:0.95;
 }
 
-.members {
-    margin: 20px 20px;
-}
-
-.members ul {
-    list-style: armenian;
-    text-indent: 10px;
-}
-
-#title {
-   text-align: left;
-    margin: 2% 5%;
-    padding: 0 70% 0 0;
-    width: 40%; 
-    transform: rotate(-3deg);
-}
-
 #literature {
-     margin: 70px 0 20px 20px;
-    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    margin: 0 0 40px 0;
     letter-spacing: 0.08em;
     width: 100%;
 }
@@ -278,13 +239,8 @@ footer.second {
 
 .refBox {
     float:left;
-    width: 30%;
-    margin: 0 2em 0 0;
-    
-}
-
-.refBox ul li a{
-    font-weight: normal;
+    width: 29%;
+    margin: 0 0 0 2em;
 }
 
 .refBox ul li{
@@ -292,8 +248,12 @@ footer.second {
     list-style-position: inside;
 }
 
+.refBox ul li a{
+    font-weight: normal;
+}
+
 #download {
-    width: 47%;
+    width: 50%;
     float: left;
     text-align: center;
     line-height: 200%;
@@ -306,7 +266,6 @@ footer.second {
 }
 
 #download:hover {
-    /*aktiviraj animaciju*/
     transform: scale(1.2,1.2);
 }
 
@@ -315,7 +274,3 @@ footer.second {
   font-size: 180%;
     color: #000;
 }
-
-
-
-
