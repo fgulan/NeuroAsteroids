@@ -1,5 +1,6 @@
 package hr.fer.zemris.sm.game.world;
 
+import hr.fer.zemris.sm.game.Constants;
 import hr.fer.zemris.sm.game.controllers.IController;
 import hr.fer.zemris.sm.game.models.Asteroid;
 import hr.fer.zemris.sm.game.models.Missile;
@@ -15,11 +16,16 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
+import jfxtras.labs.scene.control.gauge.linear.SimpleMetroArcGauge;
+import jfxtras.labs.scene.control.gauge.linear.elements.PercentSegment;
+import jfxtras.labs.scene.control.gauge.linear.elements.Segment;
 
 
 import java.util.HashMap;
@@ -32,6 +38,8 @@ public class GraphicsWorld extends GameWorld {
     private Label scoreLabel;
     private Map<Sprite, GameNode> nodes;
     private Timeline gameLoop;
+    private SimpleMetroArcGauge missileGauge = new SimpleMetroArcGauge();
+    ProgressBar fuelGauge = new ProgressBar();
 
     public GraphicsWorld(int fps, int width, int height, int numberOfCommets, IController controller) {
         super(width, height, numberOfCommets, controller);
@@ -106,6 +114,37 @@ public class GraphicsWorld extends GameWorld {
         scoreLabel.setFont(Font.font("Cambria", FontWeight.EXTRA_LIGHT, FontPosture.ITALIC, 25));
         scoreLabel.setTextFill(Color.BLUE);
         sceneNodes.getChildren().add(scoreLabel);
+        initMissileGauge(sceneNodes);
+        initFuelGauge(sceneNodes);
+    }
+
+    private void initFuelGauge(Group sceneNodes) {
+        fuelGauge.setRotate(-90);
+        fuelGauge.setLayoutX(-30);
+        fuelGauge.setLayoutY(80);
+        sceneNodes.getChildren().add(fuelGauge);
+    }
+
+    private void initMissileGauge(Group sceneNodes) {
+        missileGauge.setScaleX(0.5);
+        missileGauge.setScaleY(0.5);
+        missileGauge.getStyleClass().add("colorscheme-red-to-green-6");
+        int count = 6;
+        for (int i = 0; i < count; i++) {
+            Segment lSegment = new PercentSegment(missileGauge, i*100.0/count, (i+1)*100.0/count);
+            missileGauge.segments().add(lSegment);
+        }
+        missileGauge.setMinValue(0);
+        missileGauge.setMaxValue(Constants.NUMBER_OF_MISSILES);
+        missileGauge.setValue(missilesLeft);
+        missileGauge.setLayoutX(-10);
+        missileGauge.setLayoutY(0);
+        sceneNodes.getChildren().add(missileGauge);
+    }
+
+    @Override
+    protected void handleFuelChangeGraphics() {
+        fuelGauge.setProgress(fuelLeft / (float) Constants.FUEL_START);
     }
 
     @Override
@@ -144,6 +183,7 @@ public class GraphicsWorld extends GameWorld {
 
     @Override
     protected void handleMissileGraphics(Missile missile) {
+        missileGauge.setValue(missilesLeft);
         MissileNode node = new MissileNode(missile);
 //        node.getSprite().getCollisionBounds().setFill(Color.RED);
 //        sceneNodes.getChildren().add(node.getSprite().getCollisionBounds());
@@ -163,7 +203,7 @@ public class GraphicsWorld extends GameWorld {
 
     @Override
     protected void starCollected() {
-        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
+        missileGauge.setValue(missilesLeft);
     };
     
     @Override

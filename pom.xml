@@ -34,6 +34,11 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.jfxtras</groupId>
+			<artifactId>jfxtras-controls</artifactId>
+			<version>8.0-r1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	
 </project>

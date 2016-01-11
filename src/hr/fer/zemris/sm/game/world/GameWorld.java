@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.sun.tools.internal.jxc.ap.Const;
 import hr.fer.zemris.sm.game.Constants;
 import hr.fer.zemris.sm.game.controllers.IController;
 import hr.fer.zemris.sm.game.controllers.Input;
@@ -36,9 +37,12 @@ public abstract class GameWorld {
     public boolean bounceAsteroids = true;
     protected int starsCollected = 0;
 
+    protected int fuelLeft = Constants.FUEL_START;
+    protected int missilesLeft = Constants.NUMBER_OF_MISSILES;
+
     private final static float MISSILE_SPEED = 9.5f;
     private final static int MISSILE_CHARGE_TIME = 24;
-    private final static int MISSILE_CHARE_DELTA = 2;
+    private final static int MISSILE_CHARGE_DELTA = 2;
     private int missileCharge = MISSILE_CHARGE_TIME;
 
     protected List<StarListener> starListeners;
@@ -128,7 +132,7 @@ public abstract class GameWorld {
 
     protected void newFrameStep() {
         if (missileCharge < MISSILE_CHARGE_TIME) {
-            missileCharge += MISSILE_CHARE_DELTA;
+            missileCharge += MISSILE_CHARGE_DELTA;
         }
         handleInput();
         updateSprites();
@@ -165,8 +169,7 @@ public abstract class GameWorld {
         } else if (sprite instanceof Asteroid) {
             handleWalls(sprite);
         }
-        // System.out.println(sprite.getClass() + " : " + sprite.getBounds().getTranslateX() + " - " +
-        // sprite.getBounds().getTranslateY());
+
         sprite.update();
         handleGraphicUpdate(sprite);
     }
@@ -206,15 +209,34 @@ public abstract class GameWorld {
         }
     }
 
+    private boolean checkFuel() {
+        if (fuelLeft <= 0) {
+            fuelLeft = 0;
+            return false;
+        }
+        return true;
+    }
+
     private void handleInput() {
         if (gameOver) {
             return;
         }
-
-        for (Input input : controller.getInput()) {
+        List<Input> inputs = controller.getInput();
+        if (inputs == null || inputs.size() == 0) {
+            fuelLeft -= Constants.FUEL_STAY;
+            handleFuelChangeGraphics();
+            return;
+        }
+        if (inputs.size() == 1 && inputs.contains(Input.FIRE)) {
+            fuelLeft -= Constants.FUEL_STAY;
+        }
+        for (Input input : inputs) {
             switch (input) {
             case MOVE:
-                ship.move();
+                if (checkFuel()) {
+                    ship.move();
+                    fuelLeft -= Constants.FUEL_MOVE;
+                }
                 break;
             case FIRE:
                 if (missileCharge >= MISSILE_CHARGE_TIME) {
@@ -223,16 +245,27 @@ public abstract class GameWorld {
                 }
                 break;
             case LEFT:
-                ship.rotate(Direction.COUNTER_CLOCKWISE);
+                if (checkFuel()) {
+                    ship.rotate(Direction.COUNTER_CLOCKWISE);
+                    fuelLeft -= Constants.FUEL_ROTATE;
+                };
                 break;
             case RIGHT:
-                ship.rotate(Direction.CLOCKWISE);
+                if (checkFuel()) {
+                    ship.rotate(Direction.CLOCKWISE);
+                    fuelLeft -= Constants.FUEL_ROTATE;
+                };
                 break;
             }
         }
+        handleFuelChangeGraphics();
     }
 
     private void fireMissile() {
+        if (missilesLeft == 0) {
+            return;
+        }
+        missilesLeft--;
         Missile missile = new Missile(ship.getCurrentAngle(), MISSILE_SPEED);
         missile.translateX(ship.getCollisionBounds().getCenterX());
         missile.translateY(ship.getCollisionBounds().getCenterY());
@@ -308,6 +341,16 @@ public abstract class GameWorld {
     public abstract void pause();
 
     private void notifyStarListeners() {
+        fuelLeft += Constants.STAR_FUEL;
+        missilesLeft += Constants.STAR_MISSILE;
+
+        if (fuelLeft > Constants.FUEL_START) {
+            fuelLeft = Constants.FUEL_START;
+        }
+        if (missilesLeft > Constants.NUMBER_OF_MISSILES) {
+            missilesLeft = Constants.NUMBER_OF_MISSILES;
+        }
+        starCollected();
         for (StarListener listener : starListeners) {
             listener.starCollected();
         }
@@ -318,6 +361,8 @@ public abstract class GameWorld {
             gameOverListener.gameOver();
         }
     }
+
+    protected abstract void handleFuelChangeGraphics();
 
     public boolean registerGameOverListener(GameOverListener listener) {
         return gameOverListeners.add(listener);

@@ -16,11 +16,6 @@ public class StarNode extends GameNode {
     public StarNode(Star sprite) {
         super();
         this.sprite = sprite;
-        this.node = new Circle(60);
-        ((Circle) this.node).setFill(Color.YELLOW);
-        node.setTranslateX(sprite.getBounds().getTranslateX());
-        node.setTranslateY(sprite.getBounds().getTranslateY());
-
         ImageView star = new ImageView();
         star.setFitWidth(40);
         star.setPreserveRatio(true);
@@ -29,10 +24,11 @@ public class StarNode extends GameNode {
         this.node = star;
         this.node.setLayoutX(-20);
         this.node.setLayoutY(-20);
+        this.node.setTranslateX(sprite.getBounds().getTranslateX());
+        this.node.setTranslateY(sprite.getBounds().getTranslateY());
 
         animation = Animations.starRotation(star, Duration.millis(800), 128, 128, Animation.INDEFINITE);
         animation.play();
-
     }
 
 

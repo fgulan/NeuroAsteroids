@@ -20,6 +20,11 @@ public class SimulationWorld extends GameWorld {
     }
 
     @Override
+    protected void handleFuelChangeGraphics() {
+        //Empty implementation
+    }
+
+    @Override
     protected void handleNewCommetGraphics(Asteroid sprite) {
        // Empty implementation
     }

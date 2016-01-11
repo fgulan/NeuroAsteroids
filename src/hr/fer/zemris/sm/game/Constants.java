@@ -28,15 +28,23 @@ public class Constants {
     public static final double OUT_TRANSITION_DURNATION = 0.25;
     public static final double IN_TRANSITION_DURNATION = 0.25;
 
-    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 10;
+    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 2;
 
     public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 15;
 
     public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 15;
 
-    public static final int STARS_NUMBER = 15;
+    public static final int STARS_NUMBER = 3;
     public static final int STAR_SCORE = 10;
     public static final int ASTEROID_SCORE = 1;
+
+    public static final int FUEL_START = 15_000;
+    public static final int FUEL_ROTATE = 4;
+    public static final int FUEL_MOVE = 8;
+    public static final int FUEL_STAY = 1;
+    public static final int NUMBER_OF_MISSILES = 30;
+    public static final int STAR_MISSILE = 5;
+    public static final int STAR_FUEL = 900;
 
     public static final String FITTNESS_FORMAT = "#.###";
 

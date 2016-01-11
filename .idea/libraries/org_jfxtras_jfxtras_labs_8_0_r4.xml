@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="org.jfxtras:jfxtras-labs:8.0-r4" type="repository">
+    <properties maven-id="org.jfxtras:jfxtras-labs:8.0-r4" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jfxtras-labs-8.0-r4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfxtras-controls-8.0-r4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfxtras-fxml-8.0-r4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfxtras-common-8.0-r4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/jfxtras-labs-8.0-r4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/jfxtras-labs-8.0-r4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
