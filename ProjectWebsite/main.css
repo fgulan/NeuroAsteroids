@@ -5,6 +5,8 @@
     border: 0;
     padding: 0;
 }
+
+
 body {
     background-image: url(Cloudy-Stars-Wallpaper-Computer.jpg);
     background-position: top right;
@@ -12,6 +14,10 @@ body {
     background-attachment: fixed;
     margin: 0;
     
+    min-width:1000px;
+    width: auto !important;
+    width:1000px;
+
     /*Font styling*/
     font:20px/26px Arial, San-Serif;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
@@ -74,11 +80,16 @@ a:hover {
     float: left;
     margin: 20px;
     width: 40%;
+    
+    border-color: #858585;
+    border-width: 5px;
+    border-style: ridge;
+ 
 }
 
 #sidebar {
-    background: #666;
-    width: 200%;
+    background: #555;
+    width: 300%;
     float: left ;
     height: 70px;
     position: fixed;
@@ -139,7 +150,7 @@ ul {
 }
 
 #content {
-    margin: auto 20%;
+    margin: auto 5% auto 15%;
     max-width: 100%;
     max-height: 100%;
 }
