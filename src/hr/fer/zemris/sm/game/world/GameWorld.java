@@ -107,8 +107,6 @@ public abstract class GameWorld {
         }
     }
 
-    protected abstract void handleNewStarGraphics(Star sprite);
-
     private void generateCommetsSprite() {
         Random rnd = new Random();
         for (int i = 0; i < numberOfCommets; i++) {
@@ -153,8 +151,6 @@ public abstract class GameWorld {
         }
     }
 
-    protected abstract void handleNewCommetGraphics(Asteroid sprite);
-
     private void updateSprites() {
         for (Sprite sprite : spriteManager.getAllSprites()) {
             handleSpriteUpdate(sprite);
@@ -173,10 +169,6 @@ public abstract class GameWorld {
         sprite.update();
         handleGraphicUpdate(sprite);
     }
-
-    protected abstract void handleGraphicUpdate(Sprite spite);
-
-    protected abstract void initializeGraphics();
 
     private void handleWalls(Sprite sprite) {
         Circle circle = sprite.getCollisionBounds();
@@ -266,6 +258,7 @@ public abstract class GameWorld {
             return;
         }
         missilesLeft--;
+        handleMissileStateGraphics();
         Missile missile = new Missile(ship.getCurrentAngle(), MISSILE_SPEED);
         missile.translateX(ship.getCollisionBounds().getCenterX());
         missile.translateY(ship.getCollisionBounds().getCenterY());
@@ -303,7 +296,7 @@ public abstract class GameWorld {
         } else if ((spriteA instanceof Missile && spriteB instanceof Asteroid)
                 || (spriteB instanceof Missile && spriteA instanceof Asteroid)) {
             spriteManager.addSpritesToBeRemoved(spriteA, spriteB);
-            points += Constants.ASTEROID_SCORE;
+            updatePoints(Constants.ASTEROID_SCORE);
             asteroidDestroyed();
             return true;
         } else if ((spriteA instanceof Ship && spriteB instanceof Asteroid)
@@ -319,7 +312,7 @@ public abstract class GameWorld {
             } else {
                 spriteManager.addSpritesToBeRemoved(spriteB);
             }
-            points += Constants.STAR_SCORE;
+            updatePoints(Constants.STAR_SCORE);
             starsCollected++;
             starCollected();
             notifyStarListeners();
@@ -327,18 +320,6 @@ public abstract class GameWorld {
         }
         return false;
     }
-
-    protected abstract void cleanupSprites();
-
-    protected abstract void asteroidDestroyed();
-
-    protected abstract void starCollected();
-
-    protected abstract void handleMissileGraphics(Missile missile);
-
-    public abstract void play();
-
-    public abstract void pause();
 
     private void notifyStarListeners() {
         fuelLeft += Constants.STAR_FUEL;
@@ -362,14 +343,17 @@ public abstract class GameWorld {
         }
     }
 
-    protected abstract void handleFuelChangeGraphics();
-
     public boolean registerGameOverListener(GameOverListener listener) {
         return gameOverListeners.add(listener);
     }
 
     public IVector getShipPosition() {
         return new Vector(ship.getCollisionBounds().getCenterX(), ship.getCollisionBounds().getCenterY());
+    }
+
+    private void updatePoints(int count) {
+        points += count;
+        handlePointsUpdateGraphics();
     }
 
     public void registerFireListener(FireListener fl) {
@@ -399,4 +383,30 @@ public abstract class GameWorld {
     public int getCollectedStars() {
         return starsCollected;
     }
+
+    protected abstract void handleGraphicUpdate(Sprite spite);
+
+    protected abstract void initializeGraphics();
+
+    protected abstract void handleNewCommetGraphics(Asteroid sprite);
+
+    protected abstract void handleMissileStateGraphics();
+
+    protected abstract void cleanupSprites();
+
+    protected abstract void asteroidDestroyed();
+
+    protected abstract void starCollected();
+
+    protected abstract void handleMissileGraphics(Missile missile);
+
+    public abstract void play();
+
+    public abstract void pause();
+
+    protected abstract void handleFuelChangeGraphics();
+
+    protected abstract void handlePointsUpdateGraphics();
+
+    protected abstract void handleNewStarGraphics(Star sprite);
 }

@@ -12,7 +12,6 @@ public class SimulationWorld extends GameWorld {
 
     private int frameCount;
 
-
     public SimulationWorld(int width, int height, int numberOfCommets, IController controller) {
         super(width, height, numberOfCommets, controller);
         run = true;
@@ -26,7 +25,7 @@ public class SimulationWorld extends GameWorld {
 
     @Override
     protected void handleNewCommetGraphics(Asteroid sprite) {
-       // Empty implementation
+        // Empty implementation
     }
 
     @Override
@@ -70,11 +69,11 @@ public class SimulationWorld extends GameWorld {
     protected void asteroidDestroyed() {
         //System.out.println("Unisten asteroid");
     }
-    
+
     @Override
     protected void starCollected() {
-        
-    };
+
+    }
 
     public int getFrameCount() {
         return frameCount;
@@ -82,7 +81,17 @@ public class SimulationWorld extends GameWorld {
 
     @Override
     protected void handleNewStarGraphics(Star sprite) {
-        // TODO Auto-generated method stub
-        
+        // Empty implementation
+    }
+
+
+    @Override
+    protected void handlePointsUpdateGraphics() {
+        // Empty implementation
+    }
+
+    @Override
+    protected void handleMissileStateGraphics() {
+        // Empty implementation
     }
 }

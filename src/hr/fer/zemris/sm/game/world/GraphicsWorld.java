@@ -17,7 +17,6 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
@@ -62,22 +61,6 @@ public class GraphicsWorld extends GameWorld {
     }
     
     @Override
-    protected void handleGraphicUpdate(Sprite spite) {
-        nodes.get(spite).update();
-    }
-    
-    @Override
-    protected void handleNewCommetGraphics(Asteroid sprite) {
-        AsteroidNode asteroid = new AsteroidNode(sprite);
-
-        sprite.getCollisionBounds().setFill(Color.RED);
-        sceneNodes.getChildren().add(asteroid.getNode());
-        //sceneNodes.getChildren().add(asteroid.getSprite().getBounds());
-        //sceneNodes.getChildren().add(asteroid.getSprite().getCollisionBounds());
-        nodes.put(asteroid.getSprite(), asteroid);        
-    }
-
-    @Override
     protected void initializeGraphics() {
         sceneNodes = new Group();
 
@@ -92,7 +75,7 @@ public class GraphicsWorld extends GameWorld {
 
             nodes.put(sprite, asteroid);
         }
-        
+
         for (Star star : spriteManager.getStars()) {
             StarNode node = new StarNode(star);
             // node.getSprite().getCollisionBounds().setFill(Color.RED);
@@ -142,9 +125,31 @@ public class GraphicsWorld extends GameWorld {
         sceneNodes.getChildren().add(missileGauge);
     }
 
+    public Group getGameSurface() {
+        return sceneNodes;
+    }
+
+    @Override
+    protected void handleGraphicUpdate(Sprite spite) {
+        nodes.get(spite).update();
+    }
+
+    @Override
+    protected void handleNewCommetGraphics(Asteroid sprite) {
+        AsteroidNode asteroid = new AsteroidNode(sprite);
+
+        sprite.getCollisionBounds().setFill(Color.RED);
+        sceneNodes.getChildren().add(asteroid.getNode());
+        //sceneNodes.getChildren().add(asteroid.getSprite().getBounds());
+        //sceneNodes.getChildren().add(asteroid.getSprite().getCollisionBounds());
+        nodes.put(asteroid.getSprite(), asteroid);
+    }
+
     @Override
     protected void handleFuelChangeGraphics() {
-        fuelGauge.setProgress(fuelLeft / (float) Constants.FUEL_START);
+        float progress = fuelLeft / (float) Constants.FUEL_START;
+        if (progress < 0) progress = 0.0f;
+        fuelGauge.setProgress(progress);
     }
 
     @Override
@@ -177,25 +182,15 @@ public class GraphicsWorld extends GameWorld {
         }
     }
 
-    public Group getGameSurface() {
-        return sceneNodes;
-    }
-
     @Override
     protected void handleMissileGraphics(Missile missile) {
-        missileGauge.setValue(missilesLeft);
         MissileNode node = new MissileNode(missile);
-//        node.getSprite().getCollisionBounds().setFill(Color.RED);
-//        sceneNodes.getChildren().add(node.getSprite().getCollisionBounds());
-//        sceneNodes.getChildren().add(node.getSprite().getBounds());
         sceneNodes.getChildren().add(node.getNode());
-
         nodes.put(missile, node);
     }
 
     @Override
     protected void asteroidDestroyed() {
-        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
         for(ExplosionListener el : explosionListeners) {
             el.exploded();
         }
@@ -212,10 +207,17 @@ public class GraphicsWorld extends GameWorld {
             return;
         }
         StarNode node = new StarNode(sprite);
-        // node.getSprite().getCollisionBounds().setFill(Color.RED);
-        // sceneNodes.getChildren().add(sprite.getCollisionBounds());
-
         sceneNodes.getChildren().add(node.getNode());
         nodes.put(sprite, node);
+    }
+
+    @Override
+    protected void handleMissileStateGraphics() {
+        missileGauge.setValue(missilesLeft);
+    }
+
+    @Override
+    protected void handlePointsUpdateGraphics() {
+        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
     }
 }
