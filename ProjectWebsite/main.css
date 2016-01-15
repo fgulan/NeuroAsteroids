@@ -8,7 +8,7 @@
 
 
 body {
-    background-image: url(Cloudy-Stars-Wallpaper-Computer.jpg);
+    background-image: url(res/images/Cloudy-Stars-Wallpaper-Computer.jpg);
     background-position: top right;
     background-size: cover;
     background-attachment: fixed;
@@ -88,7 +88,7 @@ a:hover {
 }
 
 #sidebar {
-    background: #555;
+    background: #2B3557;
     width: 300%;
     float: left ;
     height: 70px;
@@ -107,7 +107,7 @@ a:hover {
     float: left;
     width: 80px;
     height: 100%;
-    background: url(transport463.png) no-repeat center;
+    background: url(res/logos/transport463.png) no-repeat center;
     transform: rotate(-90deg);
 }
 
