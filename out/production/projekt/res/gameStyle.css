@@ -1,7 +1,0 @@
-.root {
-    -fx-background-image: url("images/space.png");
-}
-.root .label {
-    -fx-text-fill: white;
-    -fx-font-size: 30;
-}

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.sun.tools.internal.jxc.ap.Const;
 import hr.fer.zemris.sm.game.Constants;
 import hr.fer.zemris.sm.game.controllers.IController;
 import hr.fer.zemris.sm.game.controllers.Input;
@@ -36,6 +35,8 @@ public abstract class GameWorld {
     protected int points = 0;
     public boolean bounceAsteroids = true;
     protected int starsCollected = 0;
+
+    private final static int MARGIN = 30;
 
     protected int fuelLeft = Constants.FUEL_START;
     protected int missilesLeft = Constants.NUMBER_OF_MISSILES;
@@ -172,29 +173,26 @@ public abstract class GameWorld {
 
     private void handleWalls(Sprite sprite) {
         Circle circle = sprite.getCollisionBounds();
-        double radius = circle.getRadius();
 
         double velocityX = sprite.getVelocity().get(0);
-        if (circle.getCenterX() > (width + 2 * radius) && velocityX > 0) {
-            sprite.translateX(-2 * radius);
-        } else if ((circle.getCenterX() + 2 * radius) < 0 && velocityX < 0) {
-            sprite.translateX(width + 2 * radius);
+        if (circle.getCenterX() > (width + MARGIN) && velocityX > 0) {
+            sprite.translateX(-MARGIN);
+        } else if ((circle.getCenterX() + MARGIN) < 0 && velocityX < 0) {
+            sprite.translateX(width + MARGIN);
         }
 
         double velocityY = sprite.getVelocity().get(1);
-        if (circle.getCenterY() > (height + 2 * radius) && velocityY > 0) {
-            sprite.translateY(-2 * radius);
-        } else if ((circle.getCenterY() + radius) < 0 && velocityY < 0) {
-            sprite.translateY(height + 2 * radius);
+        if (circle.getCenterY() > (height + MARGIN) && velocityY > 0) {
+            sprite.translateY(-MARGIN);
+        } else if ((circle.getCenterY() + MARGIN) < 0 && velocityY < 0) {
+            sprite.translateY(height + MARGIN);
         }
     }
 
     private void removeMissile(Sprite sprite) {
         Circle circle = sprite.getCollisionBounds();
-        double radius = circle.getRadius();
-
-        boolean passedX = circle.getCenterX() > width + radius || circle.getCenterX() + radius < 0;
-        boolean passedY = circle.getCenterY() > height + radius || circle.getCenterY() + radius < 0;
+        boolean passedX = circle.getCenterX() > width + MARGIN || circle.getCenterX() + MARGIN < 0;
+        boolean passedY = circle.getCenterY() > height + MARGIN || circle.getCenterY() + MARGIN < 0;
 
         if (passedY || passedX) {
             spriteManager.addSpritesToBeRemoved(sprite);

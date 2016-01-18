@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68fb1800-5038-495d-a434-97d429fdcaa4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/hs" afterPath="$PROJECT_DIR$/res/hs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="projekt.iws" />
@@ -38,8 +35,8 @@
       <file leaf-file-name="GameWorld.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0654627">
-              <caret line="378" column="28" selection-start-line="378" selection-start-column="28" selection-end-line="378" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.5744681">
+              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
               <folding>
                 <element signature="method#GameWorld#0;class#GameWorld#0" expanded="false" />
                 <element signature="method#initialize#0;class#GameWorld#0" expanded="false" />
@@ -48,21 +45,8 @@
                 <element signature="method#generateCommetsSprite#0;class#GameWorld#0" expanded="false" />
                 <element signature="method#newFrameStep#0;class#GameWorld#0" expanded="false" />
                 <element signature="method#generateNewCommets#0;class#GameWorld#0" expanded="false" />
-                <element signature="e#11894#11895#0" expanded="true" />
-                <element signature="e#11948#11949#0" expanded="true" />
-                <element signature="e#12271#12272#0" expanded="true" />
-                <element signature="e#12308#12309#0" expanded="true" />
-                <element signature="e#12375#12376#0" expanded="true" />
-                <element signature="e#12417#12418#0" expanded="true" />
-                <element signature="e#12474#12475#0" expanded="true" />
-                <element signature="e#12518#12519#0" expanded="true" />
-                <element signature="e#12560#12561#0" expanded="true" />
-                <element signature="e#12593#12594#0" expanded="true" />
-                <element signature="e#12640#12641#0" expanded="true" />
-                <element signature="e#12676#12677#0" expanded="true" />
-                <element signature="e#12735#12736#0" expanded="true" />
-                <element signature="e#12773#12774#0" expanded="true" />
-                <element signature="e#12810#12811#0" expanded="true" />
+                <element signature="e#12588#12589#0" expanded="true" />
+                <element signature="e#12617#12618#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,7 +55,7 @@
       <file leaf-file-name="GraphicsWorld.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.80645">
+            <state vertical-scroll-proportion="0.0">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#4874#4875#0" expanded="true" />
@@ -115,7 +99,6 @@
               <folding>
                 <element signature="e#231143#231144#0" expanded="true" />
                 <element signature="e#231186#231187#0" expanded="true" />
-                <element signature="e#388042#388074#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -724,14 +707,15 @@
       <workItem from="1450102594207" duration="3840000" />
       <workItem from="1452498021518" duration="9496000" />
       <workItem from="1452535597370" duration="1286000" />
+      <workItem from="1453117749423" duration="711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82654000" />
+    <option name="totallyTimeSpent" value="83365000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="832" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -880,9 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1023,9 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9585799">
           <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,7 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17751479">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,7 +1127,6 @@
           <folding>
             <element signature="e#231143#231144#0" expanded="true" />
             <element signature="e#231186#231187#0" expanded="true" />
-            <element signature="e#388042#388074#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1175,7 +1149,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.80645">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#4874#4875#0" expanded="true" />
@@ -1200,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0654627">
-          <caret line="378" column="28" selection-start-line="378" selection-start-column="28" selection-end-line="378" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.5744681">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
           <folding>
             <element signature="method#GameWorld#0;class#GameWorld#0" expanded="false" />
             <element signature="method#initialize#0;class#GameWorld#0" expanded="false" />
@@ -1210,21 +1184,8 @@
             <element signature="method#generateCommetsSprite#0;class#GameWorld#0" expanded="false" />
             <element signature="method#newFrameStep#0;class#GameWorld#0" expanded="false" />
             <element signature="method#generateNewCommets#0;class#GameWorld#0" expanded="false" />
-            <element signature="e#11894#11895#0" expanded="true" />
-            <element signature="e#11948#11949#0" expanded="true" />
-            <element signature="e#12271#12272#0" expanded="true" />
-            <element signature="e#12308#12309#0" expanded="true" />
-            <element signature="e#12375#12376#0" expanded="true" />
-            <element signature="e#12417#12418#0" expanded="true" />
-            <element signature="e#12474#12475#0" expanded="true" />
-            <element signature="e#12518#12519#0" expanded="true" />
-            <element signature="e#12560#12561#0" expanded="true" />
-            <element signature="e#12593#12594#0" expanded="true" />
-            <element signature="e#12640#12641#0" expanded="true" />
-            <element signature="e#12676#12677#0" expanded="true" />
-            <element signature="e#12735#12736#0" expanded="true" />
-            <element signature="e#12773#12774#0" expanded="true" />
-            <element signature="e#12810#12811#0" expanded="true" />
+            <element signature="e#12588#12589#0" expanded="true" />
+            <element signature="e#12617#12618#0" expanded="true" />
           </folding>
         </state>
       </provider>
