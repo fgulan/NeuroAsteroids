@@ -49,17 +49,12 @@ public class GraphicsWorld extends GameWorld {
 
     private final void buildGameLoop() {
         final Duration frameDuration = Duration.millis(1000.0 / fps);
-        final KeyFrame frame = new KeyFrame(frameDuration, new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                newFrameStep();
-            }
-        });
+        final KeyFrame frame = new KeyFrame(frameDuration, event -> newFrameStep());
         Timeline timeline = new Timeline(frame);
         timeline.setCycleCount(Animation.INDEFINITE);
         gameLoop = timeline;
     }
-    
+
     @Override
     protected void initializeGraphics() {
         sceneNodes = new Group();
@@ -180,6 +175,10 @@ public class GraphicsWorld extends GameWorld {
         } else {
             gameLoop.play();
         }
+    }
+
+    public void stop() {
+        gameLoop.stop();
     }
 
     @Override

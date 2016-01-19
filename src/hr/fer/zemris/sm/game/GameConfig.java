@@ -39,6 +39,14 @@ public class GameConfig {
         return numberOfComments;
     }
 
+    public int getFuelIncrease() {
+        return fuelIncrease;
+    }
+
+    public int getAmmoIncrease() {
+        return ammoIncrease;
+    }
+
     public void setNumberOfStars(int numberOfStars) {
         if(numberOfStars < 1) return;
         this.numberOfStars = numberOfStars;
@@ -47,6 +55,14 @@ public class GameConfig {
     public void setNumberOfComments(int numberOfComments) {
         if(numberOfComments < 0) return;
         this.numberOfComments = numberOfComments;
+    }
+
+    public void setFuelIncrease(int fuelIncrease) {
+        this.fuelIncrease = fuelIncrease;
+    }
+
+    public void setAmmoIncrease(int ammoIncrease) {
+        this.ammoIncrease = ammoIncrease;
     }
 }
 

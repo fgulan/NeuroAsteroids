@@ -1,5 +1,6 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.GameConfig;
 import hr.fer.zemris.sm.game.Utils.EvolutionElement;
 import hr.fer.zemris.sm.game.Utils.EvolutionObjectDataUtility;
 import hr.fer.zemris.sm.game.Utils.HSDataUtility;
@@ -55,7 +56,6 @@ public class AIChooserMenu extends Menu {
                 rightPane.setFitness(newValue.fitness);
             }
         });
-
 
         Button back = new KeyEventButton(BACK_BUTTON_TEXT);
         back.setOnAction(e -> {
@@ -122,7 +122,10 @@ public class AIChooserMenu extends Menu {
                 parent.hideCursor();
                 IController controller = (IController) EvolutionObjectDataUtility.getInstance().loadObject(this.name.getText());
 
-                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), ASTEROIDS_NUMEBER, STARS_NUMBER);
+                int asteroidsNumber = GameConfig.getInstance().getNumberOfComments();
+                int starsNumber = GameConfig.getInstance().getNumberOfStars();
+
+                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), asteroidsNumber, starsNumber);
                 controller.setWorld(world);
                 world.setController(controller);
                 world.initialize();
@@ -142,9 +145,11 @@ public class AIChooserMenu extends Menu {
 
                         pauseMenu.setOnRestartAction(e -> {
                             scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
+                            world.stop();
                             play.fire();
                         });
                         pauseMenu.setOnExitAction(e -> {
+                            world.stop();
                             scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
                             scene.getStylesheets().clear();
                             scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
@@ -199,10 +204,12 @@ public class AIChooserMenu extends Menu {
                     GameOverScreen gameOverScreen = new GameOverScreen(getGameParent());
 
                     gameOverScreen.setOnRestartAction( event -> {
+                        world.stop();
                         play.fire();
                     });
 
                     gameOverScreen.setToMenuAction( event -> {
+                        world.stop();
                         scene.getStylesheets().clear();
                         scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
 

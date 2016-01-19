@@ -1,5 +1,6 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.GameConfig;
 import hr.fer.zemris.sm.game.Utils.HSDataUtility;
 import hr.fer.zemris.sm.game.Utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.IConnectibleController;
@@ -46,7 +47,10 @@ public class PlayMenu extends Menu {
             IConnectibleController controller = getGameParent().getHumanController();
             controller.connect(); //Connect to scene
 
-            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), ASTEROIDS_NUMEBER, STARS_NUMBER);
+            int asteroidsNumber = GameConfig.getInstance().getNumberOfComments();
+            int numberOfStars   = GameConfig.getInstance().getNumberOfStars();
+
+            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), asteroidsNumber, numberOfStars);
             world.setController(controller);
 
             EventHandler<KeyEvent> pauseEvent = new EventHandler<KeyEvent>() {
@@ -64,6 +68,7 @@ public class PlayMenu extends Menu {
 
                     pauseMenu.setOnRestartAction(e -> {
                         scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
+                        world.stop();
                         humanPlay.fire();
                     });
 
@@ -78,6 +83,7 @@ public class PlayMenu extends Menu {
                         root.getChildren().clear();
                         root.getChildren().add(getGameParent().getPlayMenu());
 
+                        world.stop();
                         getGameParent().getStage().getScene().setRoot(root);
                     });
 
@@ -128,6 +134,7 @@ public class PlayMenu extends Menu {
                 GameOverScreen gameOverScreen = new GameOverScreen(getGameParent());
 
                 gameOverScreen.setToMenuAction(event -> {
+                    world.stop();
 
                     scene.getStylesheets().clear();
                     scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());

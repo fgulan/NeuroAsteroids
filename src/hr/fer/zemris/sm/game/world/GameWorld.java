@@ -7,6 +7,7 @@ import java.util.Random;
 
 import static hr.fer.zemris.sm.game.Constants.*;
 
+import hr.fer.zemris.sm.game.GameConfig;
 import hr.fer.zemris.sm.game.controllers.IController;
 import hr.fer.zemris.sm.game.controllers.Input;
 import hr.fer.zemris.sm.game.managers.SpriteManager;
@@ -333,8 +334,8 @@ public abstract class GameWorld implements Serializable {
     }
 
     private void notifyStarListeners() {
-        fuelLeft += STAR_FUEL;
-        missilesLeft += STAR_MISSILE;
+        fuelLeft += GameConfig.getInstance().getFuelIncrease();
+        missilesLeft += GameConfig.getInstance().getAmmoIncrease();
 
         if (fuelLeft > FUEL_START) {
             fuelLeft = FUEL_START;

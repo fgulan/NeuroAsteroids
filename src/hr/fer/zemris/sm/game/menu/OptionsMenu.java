@@ -1,11 +1,9 @@
 package hr.fer.zemris.sm.game.menu;
 
-import hr.fer.zemris.sm.game.Constants;
+import hr.fer.zemris.sm.game.GameConfig;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.BackgroundSoundManager;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.geometry.HPos;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
@@ -41,17 +39,17 @@ public class OptionsMenu extends Menu {
         VBox optionsPane = new VBox();
         optionsPane.setId(OPTIONS_PANE);
 
+        VBox gameWorldBox = new VBox();
+        Label gameWorldLabel = new Label(GAME_WORLD_OPTIONS_LABEL_TEXT);
+        gameWorldLabel.setId(GAME_WORLD_OPTIONS_LABEL);
+        Pane gameWorldPane = createGameWorldPane();
+        gameWorldBox.getChildren().addAll(gameWorldLabel, gameWorldPane);
+
         VBox audioBox = new VBox();
         Label audioLabel = new Label(AUDIO_LABEL_TEXT);
         audioLabel.setId(AUDIO_LABEL);
         Pane audioPane = createAudioPane();
         audioBox.getChildren().addAll(audioLabel, audioPane);
-
-        VBox videoBox = new VBox();
-        Label videoLabel = new Label(VIDEO_LABEL_TEXT);
-        videoLabel.setId(VIDEO_LABEL);
-        Pane videoPane = createVideoPane();
-        videoBox.getChildren().addAll(videoLabel, videoPane);
 
         VBox controlBox = new VBox();
         Label controlLabel = new Label(CONTROL_LABEL_TEXT);
@@ -59,7 +57,7 @@ public class OptionsMenu extends Menu {
         Pane controlPane = createControlPane();
         controlBox.getChildren().addAll(controlLabel, controlPane);
 
-        optionsPane.getChildren().addAll(audioBox, videoBox, controlBox);
+        optionsPane.getChildren().addAll(gameWorldBox, audioBox, controlBox);
 
         return optionsPane;
     }
@@ -135,16 +133,6 @@ public class OptionsMenu extends Menu {
         return grid;
     }
 
-    private void addSeparator(GridPane grid, int row) {
-        Separator s = new Separator();
-        grid.add(s,0,row,2,1);
-    }
-
-    private Pane createVideoPane() {
-        //TODO: make video pane
-        return new Pane();
-    }
-
     private Pane createGameWorldPane() {
         GridPane grid = createGridPane();
         grid.setId(GAME_WORLD_OPTIONS_GRID);
@@ -153,8 +141,13 @@ public class OptionsMenu extends Menu {
         Slider numOfStarsSlider = new Slider();
         numOfStarsSlider.setMin(1);
         numOfStarsSlider.setMax(10);
-        numOfStarsSlider.setValue(ASTEROIDS_NUMEBER);
+        numOfStarsSlider.setValue(STARS_NUMBER);
         numOfStarsSlider.setBlockIncrement(1);
+        numOfStarsSlider.setMajorTickUnit(1);
+        numOfStarsSlider.setSnapToTicks(true);
+        numOfStarsSlider.valueProperty().addListener( e -> {
+            GameConfig.getInstance().setNumberOfStars((int) numOfStarsSlider.getValue());
+        });
 
         grid.addRow(0, numOfStarsLabel, numOfStarsSlider);
         addSeparator(grid, 1);
@@ -165,10 +158,14 @@ public class OptionsMenu extends Menu {
         numOfAsteroidsOnScreen.setMax(15);
         numOfAsteroidsOnScreen.setValue(ASTEROIDS_NUMEBER);
         numOfAsteroidsOnScreen.setBlockIncrement(1);
+        numOfAsteroidsOnScreen.setMajorTickUnit(1);
+        numOfAsteroidsOnScreen.setSnapToTicks(true);
+        numOfAsteroidsOnScreen.valueProperty().addListener( e -> {
+            GameConfig.getInstance().setNumberOfComments((int) numOfAsteroidsOnScreen.getValue());
+        });
 
         grid.addRow(2, numOfAsteroidsLabel, numOfAsteroidsOnScreen);
         addSeparator(grid, 3);
-
 
         Label fuelIncreaseLabel = new Label(GAME_WORLD_FUEL_INCREASE_TEXT);
         Slider fuelIncreaseSlider = new Slider();
@@ -176,10 +173,14 @@ public class OptionsMenu extends Menu {
         fuelIncreaseSlider.setMax(5000);
         fuelIncreaseSlider.setValue(STAR_FUEL);
         fuelIncreaseSlider.setBlockIncrement(10);
+        fuelIncreaseSlider.setMajorTickUnit(10);
+        fuelIncreaseSlider.setSnapToTicks(true);
+        fuelIncreaseSlider.valueProperty().addListener( e -> {
+            GameConfig.getInstance().setFuelIncrease((int) fuelIncreaseSlider.getValue());
+        });
 
-
-        grid.addRow(0, fuelIncreaseLabel, fuelIncreaseSlider);
-        addSeparator(grid, 1);
+        grid.addRow(4, fuelIncreaseLabel, fuelIncreaseSlider);
+        addSeparator(grid, 5);
 
         Label ammoIncreaseLabel = new Label(GAME_WORLD_AMMO_INCREASE_TEXT);
         Slider ammoIncreaseSlider = new Slider();
@@ -187,11 +188,21 @@ public class OptionsMenu extends Menu {
         ammoIncreaseSlider.setMax(15);
         ammoIncreaseSlider.setValue(STAR_MISSILE);
         ammoIncreaseSlider.setBlockIncrement(1);
+        ammoIncreaseSlider.setMajorTickUnit(1);
+        ammoIncreaseSlider.setSnapToTicks(true);
+        ammoIncreaseSlider.valueProperty().addListener( e -> {
+            GameConfig.getInstance().setAmmoIncrease((int) ammoIncreaseSlider.getValue());
+        });
 
-        grid.addRow(2, ammoIncreaseLabel, ammoIncreaseSlider);
-        addSeparator(grid, 3);
+        grid.addRow(6, ammoIncreaseLabel, ammoIncreaseSlider);
+        addSeparator(grid, 7);
 
         return grid;
+    }
+
+    private void addSeparator(GridPane grid, int row) {
+        Separator s = new Separator();
+        grid.add(s,0,row,2,1);
     }
 
     private GridPane createGridPane() {

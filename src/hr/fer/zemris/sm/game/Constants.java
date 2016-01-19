@@ -152,7 +152,7 @@ public class Constants {
     public static final String WASD_CONTROL_INPUT_LABEL_TEXT = "W_A_D_SPACE (Linux users)";
     public static final String GAME_WORLD_OPTIONS_GRID = "gameWorld_options_grid";
     public static final String GAME_WORLD_OPTIONS_LABEL = "gameWorld_options_label";
-    public static final String GAME_WORLD_OPTIONS_LABEL_TEXT = "gameWorld_options_label_text";
+    public static final String GAME_WORLD_OPTIONS_LABEL_TEXT = "Game World options";
     public static final String GAME_WORLD_FUEL_INCREASE_TEXT = "Fuel increase";
     public static final String GAME_WORLD_AMMO_INCREASE_TEXT = "Ammo increase";
     public static final String GAME_WORLD_STARS_ON_SCREEN = "Number of stars in world";
