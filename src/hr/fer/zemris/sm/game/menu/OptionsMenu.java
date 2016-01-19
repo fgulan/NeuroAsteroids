@@ -1,5 +1,6 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.Constants;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.BackgroundSoundManager;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
@@ -142,6 +143,55 @@ public class OptionsMenu extends Menu {
     private Pane createVideoPane() {
         //TODO: make video pane
         return new Pane();
+    }
+
+    private Pane createGameWorldPane() {
+        GridPane grid = createGridPane();
+        grid.setId(GAME_WORLD_OPTIONS_GRID);
+
+        Label numOfStarsLabel =  new Label(GAME_WORLD_STARS_ON_SCREEN);
+        Slider numOfStarsSlider = new Slider();
+        numOfStarsSlider.setMin(1);
+        numOfStarsSlider.setMax(10);
+        numOfStarsSlider.setValue(ASTEROIDS_NUMEBER);
+        numOfStarsSlider.setBlockIncrement(1);
+
+        grid.addRow(0, numOfStarsLabel, numOfStarsSlider);
+        addSeparator(grid, 1);
+
+        Label numOfAsteroidsLabel =  new Label(GAME_WORLD_ASTEROIDS_ON_SCREEN);
+        Slider numOfAsteroidsOnScreen =  new Slider();
+        numOfAsteroidsOnScreen.setMin(0);
+        numOfAsteroidsOnScreen.setMax(15);
+        numOfAsteroidsOnScreen.setValue(ASTEROIDS_NUMEBER);
+        numOfAsteroidsOnScreen.setBlockIncrement(1);
+
+        grid.addRow(2, numOfAsteroidsLabel, numOfAsteroidsOnScreen);
+        addSeparator(grid, 3);
+
+
+        Label fuelIncreaseLabel = new Label(GAME_WORLD_FUEL_INCREASE_TEXT);
+        Slider fuelIncreaseSlider = new Slider();
+        fuelIncreaseSlider.setMin(500);
+        fuelIncreaseSlider.setMax(5000);
+        fuelIncreaseSlider.setValue(STAR_FUEL);
+        fuelIncreaseSlider.setBlockIncrement(10);
+
+
+        grid.addRow(0, fuelIncreaseLabel, fuelIncreaseSlider);
+        addSeparator(grid, 1);
+
+        Label ammoIncreaseLabel = new Label(GAME_WORLD_AMMO_INCREASE_TEXT);
+        Slider ammoIncreaseSlider = new Slider();
+        ammoIncreaseSlider.setMin(2);
+        ammoIncreaseSlider.setMax(15);
+        ammoIncreaseSlider.setValue(STAR_MISSILE);
+        ammoIncreaseSlider.setBlockIncrement(1);
+
+        grid.addRow(2, ammoIncreaseLabel, ammoIncreaseSlider);
+        addSeparator(grid, 3);
+
+        return grid;
     }
 
     private GridPane createGridPane() {

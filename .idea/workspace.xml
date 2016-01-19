@@ -2,127 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68fb1800-5038-495d-a434-97d429fdcaa4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/projekt/res/audio/starCollected.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/projekt/res/images/GAMEOVER_slika.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/projekt/res/images/backgroundRedFill.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/projekt/res/images/gameOverText.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/projekt/res/images/title.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_1000_index_50_fit_9.754574357533815E-4.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_1000_index_61_fit_2.107317485989026.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_19_fit_30.520833333333332.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_209_fit_11.033333333333333.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_253_fit_24.161538461538463.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_323_fit_13.75.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_37_fit_10.983333333333334.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_393_fit_3.0.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_433_fit_3.014705882352941.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_500_index_97_fit_16.0.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_573_fit_25.107142857142858.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_577_fit_11.379999999999999.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_659_fit_12.136363636363637.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_726_fit_4.0.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_857_fit_19.16017316017316.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_863_fit_18.21951219512195.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_903_fit_28.6875.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_905_fit_32.876408861251456.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_93_fit_16.133333333333333.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_943_fit_16.306451612903224.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_94_fit_11.633333333333333.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/saved/Iter_95_fit_15.083333333333334.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/audio/starCollected.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/images/GAMEOVER_slika.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/images/backgroundRedFill.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/images/gameOverText.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/images/title.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/doctor.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/projekt/res/gameStyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/projekt/res/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/Disconnectable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/FFANNAlgorithms/AbstractFFANNGeneticAlgorithm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/FFANNAlgorithms/GenerationalFFANNAlgorithm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/FFANNAlgorithms/SteadyStateFFANNAlgorithm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/FFANNAlgorithms/StopAndEvalAlg.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/HumanFitnessDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/GenerationalDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/NSGADemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/IDistanceFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/MultiObjectiveEvaluator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/MultiObjectiveEvaluatorTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/MultiObjectiveTaskFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/ObjectiveSpaceDistanceFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/ParetoFrontierIndividual.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/ShareFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/DoubleArrayGenotype.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/FFANNDecoder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/FFANNGenotypePrototype.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/FFANNPopulation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/SteadyStateDecoder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/crossover/BLXCrossover.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/crossover/BetterParentChanceCrossover.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/crossover/RandomChanceCrossover.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/crossover/UniformCrossover.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/mutation/ChanceDoubleArrayGausianMutation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/mutation/DoubleArrayGausianMutation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/IMutation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/function/RadialBasisFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/selection/ElitisticSelection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/AbstractPhenotypeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController5.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController6.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController7.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNPhenotypeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNPhenotypeController2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNPhenotypeController3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNPhenotypeController4.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IConnectibleController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/MultipleKeyController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/LimitedFramesSimulationWorld.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/ICrossover.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/ICrossover.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/IDecoder.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/IDecoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/GameConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/elements" afterPath="$PROJECT_DIR$/res/elements" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/hs" afterPath="$PROJECT_DIR$/res/hs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/IEvolutionaryProcess.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/IEvolutionaryProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/SpeciesAlgorithm.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/SpeciesAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesEvaluator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/FlowerPowerDemo.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/FlowerPowerDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/AsteroidMultiThereadingEvaluator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/AsteroidMultiThereadingEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/AsteroidsEvaluatorTask.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/AsteroidsEvaluatorTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/MultiThreadingDemo.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/MultiThreadingDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiThreading/EvaluatorTask.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiThreading/EvaluatorTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiThreading/EvaluatorTaskFactory.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiThreading/EvaluatorTaskFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/ConnectionDecoder.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/ConnectionDecoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/SlowCrossover.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/SlowCrossover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/function/IActivationFunction.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/function/IActivationFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/mutation/AddOrEnableConnectionMutation.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/mutation/AddOrEnableConnectionMutation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/mutation/Mutation.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/mutation/Mutation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/selection/RouletteWheelSelection.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/selection/RouletteWheelSelection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/KeyboardController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/KeyboardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Ship.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Ship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/ShipNode.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/ShipNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/sound/EffectsSoundManager.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/sound/EffectsSoundManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/res/gameStyle.css" afterPath="$PROJECT_DIR$/src/res/gameStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/res/style.css" afterPath="$PROJECT_DIR$/src/res/style.css" />
     </list>
     <ignored path="projekt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -151,59 +36,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameWorld.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java">
+      <file leaf-file-name="OptionsMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.035433073">
-              <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
               <folding>
-                <element signature="method#GameWorld#0;class#GameWorld#0" expanded="false" />
-                <element signature="method#initialize#0;class#GameWorld#0" expanded="false" />
-                <element signature="method#generateShipSprite#0;class#GameWorld#0" expanded="false" />
-                <element signature="method#generateNewStars#0;class#GameWorld#0" expanded="false" />
-                <element signature="method#generateCommetsSprite#0;class#GameWorld#0" expanded="false" />
-                <element signature="method#newFrameStep#0;class#GameWorld#0" expanded="false" />
-                <element signature="method#generateNewCommets#0;class#GameWorld#0" expanded="false" />
+                <element signature="method#createControlPane#0;class#OptionsMenu#0" expanded="false" />
+                <element signature="method#addSeparator#0;class#OptionsMenu#0" expanded="false" />
+                <element signature="method#createVideoPane#0;class#OptionsMenu#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphicsWorld.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java">
+      <file leaf-file-name="AIChooserMenu.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.54330707">
+              <caret line="124" column="124" selection-start-line="124" selection-start-column="124" selection-end-line="124" selection-end-column="124" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StarNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/StarNode.java">
+      <file leaf-file-name="GameConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/GameConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MissileNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/MissileNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractLinearGauge.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/jfxtras-labs-8.0-r4-sources.jar!/jfxtras/labs/scene/control/gauge/linear/AbstractLinearGauge.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="61" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -213,17 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimulationWorld.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -250,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="/usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/scene/control/Button.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" />
         <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Void.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidsEvaluatorTask.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/IEvaluator.java" />
@@ -291,16 +140,18 @@
         <option value="/usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/media/jfxmedia/AudioClip.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/animations/Animations.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Star.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/StarNode.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/GameConfig.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" />
       </list>
     </option>
   </component>
@@ -372,6 +223,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -465,6 +396,65 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -479,6 +469,84 @@
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -537,6 +605,32 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -558,12 +652,62 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="projekt" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -574,12 +718,80 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
       <envs />
       <method />
     </configuration>
@@ -644,12 +856,12 @@
       <workItem from="1452498021518" duration="9496000" />
       <workItem from="1452535597370" duration="1286000" />
       <workItem from="1453117749423" duration="971000" />
-      <workItem from="1453202582875" duration="117000" />
+      <workItem from="1453202582875" duration="2509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83742000" />
+    <option name="totallyTimeSpent" value="86134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="18" width="1600" height="882" extended-state="6" />
@@ -657,7 +869,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32700136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.321519" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -744,7 +956,7 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -753,22 +965,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/MissileNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/jfxtras-labs-8.0-r4-sources.jar!/jfxtras/labs/scene/control/gauge/linear/AbstractLinearGauge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="61" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -897,14 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.0236685">
           <caret line="103" column="57" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46745563">
-          <caret line="193" column="40" selection-start-line="193" selection-start-column="40" selection-end-line="193" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1040,54 +1228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/StarNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/jfxtras-labs-8.0-r4-sources.jar!/jfxtras/labs/scene/control/gauge/linear/AbstractLinearGauge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="61" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/MissileNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1098,7 +1238,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035433073">
+        <state vertical-scroll-proportion="0.02356021">
           <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding>
             <element signature="method#GameWorld#0;class#GameWorld#0" expanded="false" />
@@ -1109,6 +1249,82 @@
             <element signature="method#newFrameStep#0;class#GameWorld#0" expanded="false" />
             <element signature="method#generateNewCommets#0;class#GameWorld#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02356021">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/StarNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02356021">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/MissileNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02356021">
+          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jfxtras-labs-8.0-r4-sources.jar!/jfxtras/labs/scene/control/gauge/linear/AbstractLinearGauge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02356021">
+          <caret line="81" column="61" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/SimulationWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7879581">
+          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/GameConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+          <folding>
+            <element signature="method#createControlPane#0;class#OptionsMenu#0" expanded="false" />
+            <element signature="method#addSeparator#0;class#OptionsMenu#0" expanded="false" />
+            <element signature="method#createVideoPane#0;class#OptionsMenu#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54330707">
+          <caret line="124" column="124" selection-start-line="124" selection-start-column="124" selection-end-line="124" selection-end-column="124" />
+          <folding />
         </state>
       </provider>
     </entry>

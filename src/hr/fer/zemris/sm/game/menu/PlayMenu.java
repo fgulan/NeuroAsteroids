@@ -46,7 +46,7 @@ public class PlayMenu extends Menu {
             IConnectibleController controller = getGameParent().getHumanController();
             controller.connect(); //Connect to scene
 
-            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), HUMAN_PLAY_ASTEROIDS_NUMEBER, STARS_NUMBER);
+            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), ASTEROIDS_NUMEBER, STARS_NUMBER);
             world.setController(controller);
 
             EventHandler<KeyEvent> pauseEvent = new EventHandler<KeyEvent>() {

@@ -122,7 +122,7 @@ public class AIChooserMenu extends Menu {
                 parent.hideCursor();
                 IController controller = (IController) EvolutionObjectDataUtility.getInstance().loadObject(this.name.getText());
 
-                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER, STARS_NUMBER);
+                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), ASTEROIDS_NUMEBER, STARS_NUMBER);
                 controller.setWorld(world);
                 world.setController(controller);
                 world.initialize();

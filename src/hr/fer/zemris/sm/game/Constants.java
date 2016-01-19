@@ -29,9 +29,7 @@ public class Constants {
     public static final double OUT_TRANSITION_DURNATION = 0.25;
     public static final double IN_TRANSITION_DURNATION = 0.25;
 
-    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 10;
-
-    public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 0;
+    public static final int ASTEROIDS_NUMEBER = 10;
 
     public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 10;
 
@@ -152,6 +150,13 @@ public class Constants {
     public static final String CONTROL_INPUT_LABEL_TEXT = "INPUT";
     public static final String ARROW_CONTROL_INPUT_LABEL_TEXT = "Arrows";
     public static final String WASD_CONTROL_INPUT_LABEL_TEXT = "W_A_D_SPACE (Linux users)";
+    public static final String GAME_WORLD_OPTIONS_GRID = "gameWorld_options_grid";
+    public static final String GAME_WORLD_OPTIONS_LABEL = "gameWorld_options_label";
+    public static final String GAME_WORLD_OPTIONS_LABEL_TEXT = "gameWorld_options_label_text";
+    public static final String GAME_WORLD_FUEL_INCREASE_TEXT = "Fuel increase";
+    public static final String GAME_WORLD_AMMO_INCREASE_TEXT = "Ammo increase";
+    public static final String GAME_WORLD_STARS_ON_SCREEN = "Number of stars in world";
+    public static final String GAME_WORLD_ASTEROIDS_ON_SCREEN = "Number of asteroids in world";
 
     // *************************************//
     // AIChooser menu //
