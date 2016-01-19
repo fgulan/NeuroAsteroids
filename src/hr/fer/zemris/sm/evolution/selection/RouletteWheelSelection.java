@@ -20,7 +20,8 @@ public class RouletteWheelSelection implements ISelection<Genotype> {
                 return b;
             }
         }
+
         //Will not happen
-        return null;
+        return genotypes.get(genotypes.size() - 1);
     }
 }

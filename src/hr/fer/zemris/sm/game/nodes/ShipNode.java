@@ -51,12 +51,7 @@ public class ShipNode extends GameNode {
         ship.setFitWidth(196);
         ship.setPreserveRatio(true);
         Animation animation = Animations.explosionAnimation(ship, Duration.seconds(2), 192, 192, 1);
-        animation.setOnFinished(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                handler.handle(ShipNode.this);
-            }
-        });
+        animation.setOnFinished(event -> handler.handle(ShipNode.this));
         animation.play();
     }
 }

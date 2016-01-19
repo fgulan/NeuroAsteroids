@@ -1,5 +1,6 @@
 package hr.fer.zemris.sm.evolution.representation.neuralNet;
 
+import hr.fer.zemris.sm.evolution.representation.ICrossover;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnection;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGenotype;
 

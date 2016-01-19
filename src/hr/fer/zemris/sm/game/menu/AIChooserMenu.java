@@ -1,11 +1,10 @@
 package hr.fer.zemris.sm.game.menu;
 
-import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.Utils.EvolutionElement;
 import hr.fer.zemris.sm.game.Utils.EvolutionObjectDataUtility;
 import hr.fer.zemris.sm.game.Utils.HSDataUtility;
 import hr.fer.zemris.sm.game.Utils.ScoreElement;
-import hr.fer.zemris.sm.game.controllers.NeuralNetworkController;
+import hr.fer.zemris.sm.game.controllers.*;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
@@ -40,7 +39,7 @@ public class AIChooserMenu extends Menu {
 
     public AIChooserMenu(Game parent) {
         super(parent);
-        formatter = new DecimalFormat(FITTNESS_FORMAT);
+        formatter = new DecimalFormat(FITNESS_FORMAT);
         setId("chooserMenu");
 
         SidePane rightPane = new SidePane();
@@ -121,10 +120,10 @@ public class AIChooserMenu extends Menu {
                 Stage stage = parent.getStage();
                 Scene scene = stage.getScene();
                 parent.hideCursor();
-                IPhenotype network = (IPhenotype) EvolutionObjectDataUtility.getInstance().loadObject(this.name.getText());
+                IController controller = (IController) EvolutionObjectDataUtility.getInstance().loadObject(this.name.getText());
 
-                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER, null);
-                NeuralNetworkController controller = new NeuralNetworkController(network, world);
+                GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER, STARS_NUMBER);
+                controller.setWorld(world);
                 world.setController(controller);
                 world.initialize();
 

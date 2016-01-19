@@ -3,12 +3,13 @@ package hr.fer.zemris.sm.game.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import hr.fer.zemris.sm.game.world.GameWorld;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
-public class KeyboardController implements IController {
+public class KeyboardController implements IConnectibleController {
 
     private Scene gameScene;
     private EventHandler<KeyEvent> pressHandler;
@@ -70,7 +71,50 @@ public class KeyboardController implements IController {
         gameScene.removeEventHandler(KeyEvent.KEY_PRESSED, pressHandler);
         gameScene.removeEventHandler(KeyEvent.KEY_RELEASED, releaseHandler);
     }
-    
+
+    @Override
+    public void connect() {
+        if (gameScene != null) {
+            pressHandler = new EventHandler<KeyEvent>() {
+                @Override
+                public void handle(KeyEvent event) {
+                    if (KeyCode.SPACE == event.getCode()) {
+                        fire = true;
+                    }
+                    if (KeyCode.LEFT == event.getCode()) {
+                        left = true;
+                    }
+                    if (KeyCode.RIGHT == event.getCode()) {
+                        right = true;
+                    }
+                    if (KeyCode.UP == event.getCode()) {
+                        move = true;
+                    }
+                }
+            };
+
+            releaseHandler = new EventHandler<KeyEvent>() {
+                @Override
+                public void handle(KeyEvent event) {
+                    if (KeyCode.SPACE == event.getCode()) {
+                        fire = false;
+                    }
+                    if (KeyCode.LEFT == event.getCode()) {
+                        left = false;
+                    }
+                    if (KeyCode.RIGHT == event.getCode()) {
+                        right = false;
+                    }
+                    if (KeyCode.UP == event.getCode()) {
+                        move = false;
+                    }
+                }
+            };
+            gameScene.addEventHandler(KeyEvent.KEY_PRESSED, pressHandler);
+            gameScene.addEventHandler(KeyEvent.KEY_RELEASED, releaseHandler);
+        }
+    }
+
     @Override
     public List<Input> getInput() {
         List<Input> inputs = new ArrayList<>();
@@ -79,5 +123,16 @@ public class KeyboardController implements IController {
         if (left) inputs.add(Input.LEFT);
         if (right) inputs.add(Input.RIGHT);
         return inputs;
+    }
+
+    @Override
+    public void disconnect() {
+        deRegister();
+        gameScene = null;
+    }
+
+    @Override
+    public void setWorld(GameWorld world) {
+        //Human sees the world with its eyes
     }
 }

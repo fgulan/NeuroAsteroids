@@ -1,13 +1,16 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.Constants;
 import hr.fer.zemris.sm.game.menu.menuUtil.CreditsReader;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
+import java.nio.file.Paths;
 import java.util.List;
 
 import static hr.fer.zemris.sm.game.Constants.*;
@@ -27,9 +30,9 @@ public class CreditsMenu extends Menu{
         pane.setId(CREDITS_CONTENT_GRID);
         CreditsReader reader = CreditsReader.getInstance();
 
-        Label projectNameLabel = new Label(CREDITS_PROJECT_NAME_LABEL_TEXT);
-        projectNameLabel.setId(CREDITS_PROJECT_NAME_LABEL);
-        box.getChildren().add(projectNameLabel); //Whole firs row
+        ImageView title = new ImageView(Paths.get(ClassLoader.getSystemResource(Constants.GAME_TITLE).toExternalForm()).toString());
+        title.setId(Constants.CREDITS_PROJECT_NAME_LABEL);
+        box.getChildren().add(title); //Whole firs row
 
         Label leaderLabel = new Label(CREDITS_LEADER_LABEL_TEXT);
         Label leader      = new Label(reader.getProjectLeader());

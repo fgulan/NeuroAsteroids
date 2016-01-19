@@ -4,11 +4,11 @@ import java.util.concurrent.Callable;
 
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 
-public abstract class EvaluatorTask implements Callable<Void> {
-	
+public abstract class EvaluatorTask<V> implements Callable<V> {
+
 	private IPhenotype phenotype;
 
-	void setPhenotype(IPhenotype phenotype) {
+	public void setPhenotype(IPhenotype phenotype) {
 		this.phenotype = phenotype;
 	}
 

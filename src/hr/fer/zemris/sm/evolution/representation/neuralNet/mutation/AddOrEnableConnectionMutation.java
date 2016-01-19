@@ -1,10 +1,8 @@
 package hr.fer.zemris.sm.evolution.representation.neuralNet.mutation;
 
 import hr.fer.zemris.sm.evolution.representation.neuralNet.ConnectionDecoder;
-import hr.fer.zemris.sm.evolution.representation.neuralNet.IDecoder;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGenotype;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnection;
-import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.ConnectionPhenotype;
 
 /**
  * Created by Andrija Milicevic.

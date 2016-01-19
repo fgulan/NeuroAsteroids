@@ -78,7 +78,6 @@ public final class AsteroidMultiThereadingEvaluator implements IEvaluator {
 		if(exception != null) {
 			throw exception;
 		}
-		//Finished all evaluation successfully
 	}
 
 	@Override
@@ -86,4 +85,7 @@ public final class AsteroidMultiThereadingEvaluator implements IEvaluator {
 		return 0;
 	}
 
+	public void shutDownExecutors() {
+		executors.shutdown();
+	}
 }

@@ -1,13 +1,16 @@
 package hr.fer.zemris.sm.game.menu;
 
+import static hr.fer.zemris.sm.game.Constants.*;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+
+import java.nio.file.Paths;
 
 import static hr.fer.zemris.sm.game.Constants.*;
 
@@ -26,7 +29,8 @@ public class GameOverScreen extends Menu {
         VBox contentBox = new VBox();
         contentBox.setId(GAME_OVER_CONTENT_BOX);
 
-        Label gameOver = new Label(GAME_OVER_LABEL_TEXT);
+        //Label gameOver = new Label(GAME_OVER_LABEL_TEXT);
+        ImageView gameOver = new ImageView(Paths.get(ClassLoader.getSystemResource(GAME_OVER_LABEL_PATH).toExternalForm()).toString());
         gameOver.setId(GAME_OVER_LABEL);
 
         HBox buttons = new HBox();

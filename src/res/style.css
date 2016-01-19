@@ -77,11 +77,8 @@
     -fx-spacing: 15;
 }
 #titleLabel {
-    -fx-rotate: -7;
-    -fx-font-size: 100;
-    -fx-font-family: fantasy;
-    -fx-padding: 30;
-    -fx-text-fill: white;
+    -fx-translate-x: 100;
+    -fx-translate-y: 50;
 }
 /*
     Score menu style
@@ -127,7 +124,7 @@
     Credits menu
 */
 #creditsContentVBox {
-    -fx-padding: 150 0 0 50;
+    -fx-padding: 50 0 0 50;
     -fx-spacing: 35;
 }
 #creditsContentGrid {
@@ -142,8 +139,6 @@
     -fx-vgap: 15;
 }
 #creditsProjectNameLabel {
-    -fx-text-fill: white;
-   -fx-font-size: 50;
 
 }
 #creditsContentGrid .label {
@@ -293,16 +288,17 @@
     Game Over Screen
 */
 #gameOverScreen {
-    -fx-background-color: rgba(100, 100, 100, 0.6);
+    -fx-background-image: url("images/backgroundRedFill.png");
+    -fx-background-size: cover;
+    -fx-background-color: rgba(100,100,100,0.4);
 }
 #gameOverContentBox {
-    -fx-padding: 350 0 0 100;
+    -fx-padding: 350 0 0 200;
     -fx-spacing: 20;
 }
 #gameOverLabel {
-    -fx-padding: 0 0 0 200;
-    -fx-font-size: 40;
-    -fx-text-fill: white;
+    -fx-translate-x: 250;
+    -fx-translate-y: -100;
 }
 #gameOverButtonBox {
     -fx-spacing: 30;

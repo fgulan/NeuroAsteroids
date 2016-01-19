@@ -1,23 +1,13 @@
 package hr.fer.zemris.sm.game.menu;
 
-import hr.fer.zemris.sm.game.controllers.KeyboardController;
-import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
-import hr.fer.zemris.sm.game.world.GraphicsWorld;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
+import hr.fer.zemris.sm.Disconnectable;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-
-import static hr.fer.zemris.sm.game.Constants.GAME_WORLD_STYLE_PATH;
 
 /**
  *
  * Created by doctor on 02.12.15..
  */
-public abstract class Menu extends BorderPane {
+public abstract class Menu extends BorderPane implements Disconnectable{
 
     private Game parent;
 
@@ -27,6 +17,11 @@ public abstract class Menu extends BorderPane {
 
     public Game getGameParent() {
         return parent;
+    }
+
+    @Override
+    public void disconnect() {
+        parent = null;
     }
 
     public abstract void relaod();

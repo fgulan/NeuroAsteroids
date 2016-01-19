@@ -12,8 +12,8 @@ public class SimulationWorld extends GameWorld {
 
     private int frameCount;
 
-    public SimulationWorld(int width, int height, int numberOfCommets, IController controller) {
-        super(width, height, numberOfCommets, controller);
+    public SimulationWorld(int width, int height, int numberOfCommets, int numOfStars) {
+        super(width, height, numberOfCommets, numOfStars);
         run = true;
         registerGameOverListener(() -> run = false);
     }

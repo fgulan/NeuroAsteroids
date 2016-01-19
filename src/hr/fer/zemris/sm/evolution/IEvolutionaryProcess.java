@@ -6,9 +6,6 @@ import java.nio.file.Path;
 
 import hr.fer.zemris.sm.evolution.algorithms.IAlgorithm;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
-import hr.fer.zemris.sm.evolution.population.Population;
-import hr.fer.zemris.sm.evolution.representation.neuralNet.IDecoder;
-import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.evolution.termination.ITerminationOperator;
 
 /**

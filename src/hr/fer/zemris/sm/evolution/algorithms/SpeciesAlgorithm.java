@@ -3,6 +3,8 @@ package hr.fer.zemris.sm.evolution.algorithms;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.population.Population;
 import hr.fer.zemris.sm.evolution.population.Specie;
+import hr.fer.zemris.sm.evolution.representation.ICrossover;
+import hr.fer.zemris.sm.evolution.representation.IDecoder;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.*;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGenotype;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;

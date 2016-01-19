@@ -9,6 +9,7 @@ import java.util.Random;
  */
 public abstract class Mutation<T extends Genotype> {
     protected static final Random rand = new Random();
+
     protected double mutationChance;
 
     public Mutation(double mutationChance) {

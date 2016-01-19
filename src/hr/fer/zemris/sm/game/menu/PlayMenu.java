@@ -2,7 +2,7 @@ package hr.fer.zemris.sm.game.menu;
 
 import hr.fer.zemris.sm.game.Utils.HSDataUtility;
 import hr.fer.zemris.sm.game.Utils.ScoreElement;
-import hr.fer.zemris.sm.game.controllers.KeyboardController;
+import hr.fer.zemris.sm.game.controllers.IConnectibleController;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
@@ -16,9 +16,9 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import static javafx.scene.input.KeyCode.*;
-
 import static hr.fer.zemris.sm.game.Constants.*;
+import static javafx.scene.input.KeyCode.ESCAPE;
+import static javafx.scene.input.KeyCode.P;
 
 /**
  *
@@ -43,9 +43,11 @@ public class PlayMenu extends Menu {
             Stage stage = getGameParent().getStage();
             Scene scene = stage.getScene();
 
-            KeyboardController controller = new KeyboardController(scene);
-            controller.register();
-            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), HUMAN_PLAY_ASTEROIDS_NUMEBER, controller);
+            IConnectibleController controller = getGameParent().getHumanController();
+            controller.connect(); //Connect to scene
+
+            GraphicsWorld world = new GraphicsWorld(60, (int)stage.getWidth(), (int)stage.getHeight(), HUMAN_PLAY_ASTEROIDS_NUMEBER, STARS_NUMBER);
+            world.setController(controller);
 
             EventHandler<KeyEvent> pauseEvent = new EventHandler<KeyEvent>() {
                 boolean paused = false;
@@ -71,7 +73,7 @@ public class PlayMenu extends Menu {
                         scene.getStylesheets().clear();
                         scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
 
-                        controller.deRegister();    //Remove retain cycle
+                        controller.disconnect();    //Remove retain cycle
                         Pane root = getGameParent().getRoot();
                         root.getChildren().clear();
                         root.getChildren().add(getGameParent().getPlayMenu());
@@ -130,7 +132,7 @@ public class PlayMenu extends Menu {
                     scene.getStylesheets().clear();
                     scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
 
-                    controller.deRegister();    //Remove retain cycle
+                    controller.disconnect();    //Remove retain cycle
                     Pane root = getGameParent().getRoot();
                     root.getChildren().clear();
                     root.getChildren().add(getGameParent().getPlayMenu());
@@ -165,6 +167,12 @@ public class PlayMenu extends Menu {
             world.registerExplosionListener(() -> {
                 EffectsSoundManager.getInstance().playExplosion();
             });
+
+            world.registerStarCollectedListeners(() -> {
+                EffectsSoundManager.getInstance().playStarCollected();
+            });
+
+
             world.initialize();
             Pane gameSurface = new Pane(world.getGameSurface());
             scene.setRoot(gameSurface);

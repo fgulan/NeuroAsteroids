@@ -4,8 +4,12 @@ import hr.fer.zemris.sm.game.Constants;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+
+import java.nio.file.Paths;
 
 /**
  *
@@ -17,7 +21,7 @@ public class StartMenu extends Menu {
         super(parent);
         setId(Constants.START_MENU_ID);
 
-        Label title = new Label(Constants.GAME_TITLE);
+        ImageView title = new ImageView(Paths.get(ClassLoader.getSystemResource(Constants.GAME_TITLE).toExternalForm()).toString());
         title.setId(Constants.GAME_TITLE_LABEL);
 
         VBox buttons = createButtons();

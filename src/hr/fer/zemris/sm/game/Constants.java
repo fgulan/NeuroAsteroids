@@ -1,11 +1,12 @@
 package hr.fer.zemris.sm.game;
 
 /**
+ *
  * Created by doctor on 02.12.15..
  */
 public class Constants {
 
-    public static final String GAME_TITLE = "NeuroAsteroids";
+    public static final String GAME_TITLE = "res/images/title.png";
     public static final String GAME_TITLE_LABEL = "titleLabel";
 
     public static final String GAME_ICON = "res/images/Meteor-icon.png";
@@ -17,7 +18,7 @@ public class Constants {
     public static final String BACK_BUTTON_TEXT = "Back";
 
     public static final String HIGH_SCORE_FILE = "res/hs";
-    public static final int MAX_HIGH_SCORE_LIST_SIZE = 100;
+    public static final int MAX_HIGH_SCORE_LIST_SIZE = 20;
     public static final String SCORE_ELEMENT_TYPE_AI = "AI";
     public static final String SCORE_ELEMENT_TYPE_HUMANE = "HUMAN";
 
@@ -28,25 +29,42 @@ public class Constants {
     public static final double OUT_TRANSITION_DURNATION = 0.25;
     public static final double IN_TRANSITION_DURNATION = 0.25;
 
-    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 2;
+    public static final int HUMAN_PLAY_ASTEROIDS_NUMEBER = 10;
 
-    public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 15;
+    public static final int AI_GRAPHIC_PLAY_ASTEROIDS_NUMBER = 0;
 
-    public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 15;
+    public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 10;
 
-    public static final int STARS_NUMBER = 3;
+    public static final int STARS_NUMBER = 1;
+
     public static final int STAR_SCORE = 10;
     public static final int ASTEROID_SCORE = 1;
 
-    public static final int FUEL_START = 15_000;
-    public static final int FUEL_ROTATE = 4;
-    public static final int FUEL_MOVE = 8;
-    public static final int FUEL_STAY = 1;
-    public static final int NUMBER_OF_MISSILES = 30;
-    public static final int STAR_MISSILE = 5;
-    public static final int STAR_FUEL = 900;
+    //Init fuel and star parameters
+    public static final int FUEL_START = 12_000;
+    public static final int NUMBER_OF_MISSILES = 15;
 
-    public static final String FITTNESS_FORMAT = "#.###";
+    //Missile information
+    public static final int MISSILE_CHARGE_TIME = 20;
+    public final static float MISSILE_SPEED = 9.5f;
+    public final static int MISSILE_CHARGE_DELTA = 1;
+
+
+    //How many fuel you lose per these action
+    public static final int FUEL_ROTATE = 10;
+    public static final int FUEL_MOVE = 5;
+    public static final int FUEL_STAY = 1;
+
+    public static final int STAR_FUEL = 2000;   //Number of fuel you get per collected star
+    public static final int STAR_MISSILE = 5;   //Number of missiles you get per collected star
+
+    public final static float ACCELERATION_STEP = 0.15f;
+    public final static float DECCELETATION_STEP = 0.5f;
+
+    public final static float MAX_SPEED = 6.5f;
+
+
+    public static final String FITNESS_FORMAT = "#.###";
 
     // *************************************//
     // Audio //
@@ -58,6 +76,7 @@ public class Constants {
     public static final String EXPLOSION_CLIP = "res/audio/explosion_punchy_impact_02.mp3";
     public static final String FIRE_CLIP = "res/audio/fireSound.wav";
     public static final String SHIP_EXPLODED_CLIP = "res/audio/shipExploded.mp3";
+    public static final String STAR_COLLECTED_CLIP = "res/audio/starCollected.mp3";
 
     // *************************************//
     // Start menu //
@@ -177,7 +196,8 @@ public class Constants {
     public static final String GAME_OVER_BUTTON_BOX = "gameOverButtonBox";
     public static final String GAME_OVER_CONTENT_BOX = "gameOverContentBox";
     public static final String GAME_OVER_LABEL = "gameOverLabel";
-    public static final String GAME_OVER_LABEL_TEXT = "GAME OVER";
+    public static final String GAME_OVER_LABEL_PATH = "res/images/gameOverText.png";
+    public static final String GAME_OVER_RED_FILL = "res/images/backgroundRedFill.png";
     public static final String GAME_OVER_RESET_BUTTON = "gameOverResetBtn";
     public static final String GAME_OVER_RESET_BUTTON_TEXT = "Reset";
     public static final String GAME_OVER_TO_MENU_BUTTON = "gameOverToMenuButton";

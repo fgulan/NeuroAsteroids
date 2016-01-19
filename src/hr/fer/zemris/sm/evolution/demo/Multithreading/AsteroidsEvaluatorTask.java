@@ -25,7 +25,7 @@ public class AsteroidsEvaluatorTask extends EvaluatorTask {
         int res = 0;
 
         for (int i = 0; i < 5; i++) {
-            world = new SimulationWorld(800, 600, Constants.AI_SIMULATION_PLAY_ASTEROIDS_NUMBER, null);
+            world = new SimulationWorld(800, 600, Constants.AI_SIMULATION_PLAY_ASTEROIDS_NUMBER, Constants.STARS_NUMBER);
             //THIS LINE is previous implementation if you have better way of making evaluation
             //go ahead an write it
             NeuralNetworkController controller = new NeuralNetworkController(phenotype, world);

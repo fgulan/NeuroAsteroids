@@ -20,7 +20,7 @@ public class MultiThreadingDemo {
 
     public static void main(String[] args) throws IOException {
         //Neural net with 1 input and 4 outputs
-        IEvaluator eval = new AsteroidMultiThereadingEvaluator(new NeuralNetworkFactory(), 1, 4);
+        AsteroidMultiThereadingEvaluator eval = new AsteroidMultiThereadingEvaluator(new NeuralNetworkFactory(), 1, 4);
 
         IAlgorithm alg = new SpeciesAlgorithm(eval);
 
@@ -38,6 +38,7 @@ public class MultiThreadingDemo {
             }
         }, EvolutionaryState.EPOH_OVER);
         process.addListener((p) -> evaluateBest(alg.getBestPhenotype()), EvolutionaryState.FINISHED);
+        process.addListener(p -> eval.shutDownExecutors(), EvolutionaryState.FINISHED);
         process.start();
     }
 

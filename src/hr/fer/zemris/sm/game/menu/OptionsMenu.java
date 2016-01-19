@@ -69,12 +69,6 @@ public class OptionsMenu extends Menu {
 
         Label controlInputLabel = new Label(CONTROL_INPUT_LABEL_TEXT);
         ToggleGroup group = new ToggleGroup();
-        group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-                //TODO: change input controller
-            }
-        });
 
         RadioButton arrows = new RadioButton();
         arrows.setToggleGroup(group);
@@ -90,7 +84,19 @@ public class OptionsMenu extends Menu {
 
         grid.add(new Separator(), 0, 1, 2, 1);
 
-        //TODO: check what controller is chosen and select it.
+        if(getGameParent().getHumanController() == getGameParent().getHumanArrowController()) {
+            arrows.setSelected(true);
+        } else {
+            wasd.setDisable(false);
+        }
+
+        group.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+            if(wasd.isDisabled()) {
+                getGameParent().setHumanController(getGameParent().getHumanArrowController());
+            } else {
+                getGameParent().setHumanController(getGameParent().getHumanWASDController());
+            }
+        });
 
         return grid;
     }

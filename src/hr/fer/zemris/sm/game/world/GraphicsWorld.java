@@ -40,8 +40,8 @@ public class GraphicsWorld extends GameWorld {
     private SimpleMetroArcGauge missileGauge = new SimpleMetroArcGauge();
     ProgressBar fuelGauge = new ProgressBar();
 
-    public GraphicsWorld(int fps, int width, int height, int numberOfCommets, IController controller) {
-        super(width, height, numberOfCommets, controller);
+    public GraphicsWorld(int fps, int width, int height, int numberOfCommets, int numberOfStars) {
+        super(width, height, numberOfCommets, numberOfStars);
         this.fps = fps;
         this.nodes = new HashMap<>();
         buildGameLoop();
@@ -198,6 +198,7 @@ public class GraphicsWorld extends GameWorld {
 
     @Override
     protected void starCollected() {
+        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
         missileGauge.setValue(missilesLeft);
     };
     

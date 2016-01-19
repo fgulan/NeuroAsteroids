@@ -2,8 +2,8 @@ package hr.fer.zemris.sm.evolution.evaluators.multiThreading;
 
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 
-public interface EvaluatorTaskFactory {
+public interface EvaluatorTaskFactory<V> {
 
-	public EvaluatorTask createTask(IPhenotype phenotype);
+	public EvaluatorTask<V> createTask(IPhenotype phenotype);
 	
 }

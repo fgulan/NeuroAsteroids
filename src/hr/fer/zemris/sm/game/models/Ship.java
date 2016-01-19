@@ -4,6 +4,7 @@ import hr.fer.zemris.sm.game.physics.IVector;
 import hr.fer.zemris.sm.game.physics.Vector;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
+import static hr.fer.zemris.sm.game.Constants.*;
 
 public class Ship extends Sprite {
 
@@ -15,8 +16,6 @@ public class Ship extends Sprite {
     private final static int NUM_DIRECTIONS = 240;
     private final static float UNIT_ANGLE_PER_FRAME = ((float) TWO_PI_DEGREES / NUM_DIRECTIONS);
 
-    private final static float ACCELERATION_STEP = 0.2f;
-    private final static float MAX_SPEED = 6.5f;
     private float shipSpeed = 0;
     
     private float currentAngle = 0;
@@ -25,7 +24,7 @@ public class Ship extends Sprite {
     public Ship() {
         super();
         Polygon polygon = new Polygon();
-        polygon.getPoints().addAll(new Double[] { 40.0, 5.0, 0.0, 60.0, 80.0, 60.0 });
+        polygon.getPoints().addAll(40.0, 5.0, 0.0, 60.0, 80.0, 60.0);
         this.bounds = polygon;
         this.collisionBounds = new Circle(0, 0, 50);
         velocity = new Vector(0, 0);
@@ -47,7 +46,7 @@ public class Ship extends Sprite {
             move = false;
         } else {
             if (shipSpeed > 0) {
-                shipSpeed -= 0.15*ACCELERATION_STEP;
+                shipSpeed -= DECCELETATION_STEP;
                 IVector velocityDirection = getSpeed(currentAngle);
                 velocity = velocityDirection.scalarMultiply(shipSpeed);
             } else {

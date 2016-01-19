@@ -1,5 +1,8 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.controllers.IConnectibleController;
+import hr.fer.zemris.sm.game.controllers.IController;
+import hr.fer.zemris.sm.game.controllers.MultipleKeyController;
 import hr.fer.zemris.sm.game.sound.BackgroundSoundManager;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import javafx.animation.FadeTransition;
@@ -11,6 +14,7 @@ import javafx.scene.Cursor;
 import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -18,6 +22,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import static hr.fer.zemris.sm.game.Constants.*;
+import static javafx.scene.input.KeyCode.*;
 
 /**
  *
@@ -34,6 +39,11 @@ public class Game extends Application {
     private Menu optionsMenu;
     private Menu creditsMenu;
     private Menu AIChooserMenu;
+
+    private IConnectibleController humanArrowController;
+    private IConnectibleController humanWASDController;
+
+    private IConnectibleController chosenController;
 
     private ImageCursor cursor;
 
@@ -56,6 +66,10 @@ public class Game extends Application {
 
         Scene scene = new Scene(root, 1000, 1000);
         scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
+
+        humanArrowController = new MultipleKeyController(scene ,UP, KeyCode.LEFT, KeyCode.RIGHT, SPACE);
+        humanWASDController  = new MultipleKeyController(scene ,W , A, D, SPACE);
+        chosenController = humanArrowController;
 
         Image cursorImage = new Image(ClassLoader.getSystemResourceAsStream(CURSOR_IMG_PATH));
         cursor = new ImageCursor(cursorImage, cursorImage.getWidth() / 2, cursorImage.getHeight() / 2);
@@ -114,6 +128,14 @@ public class Game extends Application {
     }
 
     public void closeGame() {
+        humanArrowController.disconnect();
+        startMenu.disconnect();
+        playMenu.disconnect();
+        scoresMenu.disconnect();
+        optionsMenu.disconnect();
+        AIChooserMenu.disconnect();
+        creditsMenu.disconnect();
+
         Platform.exit();
     }
 
@@ -149,6 +171,22 @@ public class Game extends Application {
 
     public void hideCursor() {
         stage.getScene().setCursor(Cursor.NONE);
+    }
+
+    public IConnectibleController getHumanController() {
+        return chosenController;
+    }
+
+    public IConnectibleController getHumanArrowController() {
+        return humanArrowController;
+    }
+
+    public IConnectibleController getHumanWASDController() {
+        return humanWASDController;
+    }
+
+    public void setHumanController(IConnectibleController controller) {
+        chosenController = controller;
     }
 
     public void showCursor() {

@@ -31,7 +31,7 @@ public class AsteroidesEvaluator implements IEvaluator {
         int res = 0;
 
         for (int i = 0; i < 5; i++) {
-            world = new SimulationWorld(800, 600, AI_SIMULATION_PLAY_ASTEROIDS_NUMBER, null);
+            world = new SimulationWorld(800, 600, AI_SIMULATION_PLAY_ASTEROIDS_NUMBER, STARS_NUMBER);
             NeuralNetworkController controller = new NeuralNetworkController(phenotype, world);
             world.setController(controller);
             world.initialize();
