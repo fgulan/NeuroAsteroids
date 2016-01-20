@@ -1,1 +1,3 @@
 HUMAN#frdi#46.0
+HUMAN#Abcd#12.0
+HUMAN#ldkmsak#56.0
