@@ -1,6 +1,7 @@
 package hr.fer.zemris.sm.game.Utils;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -22,12 +23,13 @@ public class EvolutionObjectDataUtility {
 		saveMap = new HashMap<>();
 		elements = new ArrayList<>();
 
-		try {
-			List<String> data = Files.readAllLines(Paths.get(EVOLUTION_ELEMENTS_LIST_FILE));
+		try (InputStream src = getClass().getClassLoader().getResourceAsStream(EVOLUTION_ELEMENTS_LIST_FILE)){
+			List<String> data = new BufferedReader(new InputStreamReader(src, StandardCharsets.UTF_8)).lines().collect(Collectors.toList());
 			//Curtsy of IntelliJ IDEA
 			elements = data.stream().map(EvolutionElement::parse).collect(Collectors.toList());
 		} catch (IOException e) {
 			//elements.txt file not found
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -39,9 +41,8 @@ public class EvolutionObjectDataUtility {
 		Serializable net;
 
 		// Deserialize data to new class object
-		try {
-			FileInputStream fi = new FileInputStream(EVOLUTION_ELEMENTS_FILES_DIR + id+".ser");
-			ObjectInputStream si = new ObjectInputStream(fi);
+		try (InputStream src = getClass().getClassLoader().getResourceAsStream(EVOLUTION_ELEMENTS_FILES_DIR + id+".ser")) {
+			ObjectInputStream si = new ObjectInputStream(src);
 			net = (Serializable) si.readObject();
 			si.close();
 		} catch (Exception e) {
@@ -49,6 +50,7 @@ public class EvolutionObjectDataUtility {
 			e.printStackTrace();
 			net = saveMap.get(id+".ser");
 		}
+
 		return net;
 
 	}

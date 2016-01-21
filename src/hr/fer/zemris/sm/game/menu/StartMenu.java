@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
+import java.io.InputStream;
 import java.nio.file.Paths;
 
 /**
@@ -21,7 +22,12 @@ public class StartMenu extends Menu {
         super(parent);
         setId(Constants.START_MENU_ID);
 
-        ImageView title = new ImageView(Paths.get(ClassLoader.getSystemResource(Constants.GAME_TITLE).toExternalForm()).toString());
+        ImageView title = new ImageView();
+        InputStream src = Menu.class.getClassLoader().getResourceAsStream(Constants.GAME_TITLE);
+        if(src != null) {
+            title.setImage(new Image(src));
+        }
+
         title.setId(Constants.GAME_TITLE_LABEL);
 
         VBox buttons = createButtons();

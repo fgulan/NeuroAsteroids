@@ -1,5 +1,6 @@
 package hr.fer.zemris.sm.game.menu;
 
+import hr.fer.zemris.sm.game.Constants;
 import hr.fer.zemris.sm.game.GameConfig;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.BackgroundSoundManager;
@@ -74,14 +75,13 @@ public class OptionsMenu extends Menu {
         Label arrowsControlLabel = new Label(ARROW_CONTROL_INPUT_LABEL_TEXT);
         grid.addRow(0, arrows, arrowsControlLabel);
 
-        grid.add(new Separator(), 0, 1, 2, 1);
+        addSeparator(grid, 1);
 
         RadioButton wasd = new RadioButton();
         wasd.setToggleGroup(group);
         Label wasdControls = new Label(WASD_CONTROL_INPUT_LABEL_TEXT);
         grid.addRow(2, wasd, wasdControls);
 
-        grid.add(new Separator(), 0, 1, 2, 1);
 
         if(getGameParent().getHumanController() == getGameParent().getHumanArrowController()) {
             arrows.setSelected(true);
@@ -128,7 +128,6 @@ public class OptionsMenu extends Menu {
         });
 
         grid.addRow(2, effectSoundLabel, effectSoundSlider);
-        addSeparator(grid, 3);
 
         return grid;
     }
@@ -196,6 +195,36 @@ public class OptionsMenu extends Menu {
 
         grid.addRow(6, ammoIncreaseLabel, ammoIncreaseSlider);
         addSeparator(grid, 7);
+
+        Label accelerationLabel = new Label(GAME_WORLD_ACCELERATIN_LABEL_TEXT);
+        Slider accelerationSlider = new Slider();
+        accelerationSlider.setMin(0);
+        accelerationSlider.setMax(1);
+        accelerationSlider.setValue(Constants.ACCELERATION_STEP);
+        accelerationSlider.setBlockIncrement(0.01);
+        accelerationSlider.setMajorTickUnit(0.01);
+        accelerationSlider.setSnapToTicks(true);
+        accelerationSlider.valueProperty().addListener( e -> {
+            GameConfig.getInstance().setAcceleration(accelerationSlider.getValue());
+        });
+
+        grid.addRow(8, accelerationLabel, accelerationSlider);
+        addSeparator(grid, 9);
+
+        Label decelerationLabel = new Label("Deceleration");
+        Slider decelerationSlider = new Slider();
+        decelerationSlider.setMin(0);
+        decelerationSlider.setMax(1);
+        decelerationSlider.setValue(Constants.DECELERATION_STEP);
+        decelerationSlider.setBlockIncrement(0.01);
+        decelerationSlider.setMajorTickUnit(0.01);
+        decelerationSlider.setSnapToTicks(true);
+        decelerationSlider.valueProperty().addListener( e -> {
+            GameConfig.getInstance().setDeceleration(decelerationSlider.getValue());
+        });
+
+        grid.addRow(10, decelerationLabel, decelerationSlider);
+
 
         return grid;
     }

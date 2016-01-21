@@ -17,7 +17,7 @@ public class Constants {
 
     public static final String BACK_BUTTON_TEXT = "Back";
 
-    public static final String HIGH_SCORE_FILE = "res/hs";
+    public static final String HIGH_SCORE_FILE = "hs.txt";
     public static final int MAX_HIGH_SCORE_LIST_SIZE = 20;
     public static final String SCORE_ELEMENT_TYPE_AI = "AI";
     public static final String SCORE_ELEMENT_TYPE_HUMANE = "HUMAN";
@@ -57,7 +57,7 @@ public class Constants {
     public static final int STAR_MISSILE = 5;   //Number of missiles you get per collected star
 
     public final static float ACCELERATION_STEP = 0.15f;
-    public final static float DECCELETATION_STEP = 0.5f;
+    public final static float DECELERATION_STEP = 0.5f;
 
     public final static float MAX_SPEED = 6.5f;
 
@@ -157,9 +157,12 @@ public class Constants {
     public static final String GAME_WORLD_AMMO_INCREASE_TEXT = "Ammo increase";
     public static final String GAME_WORLD_STARS_ON_SCREEN = "Number of stars in world";
     public static final String GAME_WORLD_ASTEROIDS_ON_SCREEN = "Number of asteroids in world";
+    public static final String GAME_WORLD_ACCELERATIN_LABEL_TEXT = "Acceleration";
+    public static final String GAME_WORLD_ACCELERATIN_LABEL = "accelerationLabel";
+
 
     // *************************************//
-    // AIChooser menu //
+    // AIChooser menu //Title
     // *************************************//
     public static final String NAME_HBOX_ID = "nameHBoxId";
     public static final String NAME_LABEL = "nameLabel";

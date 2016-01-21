@@ -15,13 +15,17 @@ public class GameConfig {
 
     private int ammoIncrease;
 
+    private double acceleration;
+
+    private double deceleration;
+
     private GameConfig() {
         numberOfComments = 5;
         numberOfStars = 1;
-
-        //Default values
         fuelIncrease = Constants.STAR_FUEL;
         ammoIncrease = Constants.STAR_MISSILE;
+        acceleration = Constants.ACCELERATION_STEP;
+        deceleration = Constants.DECELERATION_STEP;
     }
 
     public static GameConfig getInstance() {
@@ -47,6 +51,14 @@ public class GameConfig {
         return ammoIncrease;
     }
 
+    public double getAcceleration() {
+        return acceleration;
+    }
+
+    public double getDeceleration() {
+        return deceleration;
+    }
+
     public void setNumberOfStars(int numberOfStars) {
         if(numberOfStars < 1) return;
         this.numberOfStars = numberOfStars;
@@ -63,6 +75,14 @@ public class GameConfig {
 
     public void setAmmoIncrease(int ammoIncrease) {
         this.ammoIncrease = ammoIncrease;
+    }
+
+    public void setAcceleration(double acceleration) {
+        this.acceleration = acceleration;
+    }
+
+    public void setDeceleration(double deceleration) {
+        this.deceleration = deceleration;
     }
 }
 
