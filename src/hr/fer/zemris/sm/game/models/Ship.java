@@ -1,5 +1,6 @@
 package hr.fer.zemris.sm.game.models;
 
+import hr.fer.zemris.sm.game.GameConfig;
 import hr.fer.zemris.sm.game.physics.IVector;
 import hr.fer.zemris.sm.game.physics.Vector;
 import javafx.scene.shape.Circle;
@@ -21,6 +22,9 @@ public class Ship extends Sprite {
     private float currentAngle = 0;
     private boolean move = false;
 
+    private final double acceleration = GameConfig.getInstance().getAcceleration();
+    private final double deceleration = GameConfig.getInstance().getDeceleration();
+
     public Ship() {
         super();
         Polygon polygon = new Polygon();
@@ -40,13 +44,13 @@ public class Ship extends Sprite {
                 shipSpeed = 0;
             }
             if (shipSpeed < MAX_SPEED) {
-                shipSpeed += ACCELERATION_STEP;
+                shipSpeed += acceleration;
             }
             velocity = velocityDirection.scalarMultiply(shipSpeed);
             move = false;
         } else {
             if (shipSpeed > 0) {
-                shipSpeed -= DECCELETATION_STEP;
+                shipSpeed -= deceleration;
                 IVector velocityDirection = getSpeed(currentAngle);
                 velocity = velocityDirection.scalarMultiply(shipSpeed);
             } else {

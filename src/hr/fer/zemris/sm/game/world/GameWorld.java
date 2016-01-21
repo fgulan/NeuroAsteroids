@@ -118,7 +118,7 @@ public abstract class GameWorld implements Serializable {
                 newX = width - sprite.getCollisionBounds().getRadius();
             }
 
-            double newY = rnd.nextInt(3 * height / 4);
+            double newY = rnd.nextInt(2 * height / 5);
             if (newY > height - sprite.getCollisionBounds().getRadius()) {
                 newY = height - sprite.getCollisionBounds().getRadius();
             }

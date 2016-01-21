@@ -1,9 +1,15 @@
 package hr.fer.zemris.sm.game.menu.menuUtil;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
@@ -22,10 +28,10 @@ public class CreditsReader {
 
     private CreditsReader(){
         projectTeam = new ArrayList<>();
-        try {
-            List<String> credits = Files.readAllLines(Paths.get(ClassLoader.getSystemResource(CREDITS_PATH).getPath()));
+        try (InputStream src = getClass().getClassLoader().getResourceAsStream(CREDITS_PATH))  {
+            List<String> lines = new BufferedReader(new InputStreamReader(src, StandardCharsets.UTF_8)).lines().collect(Collectors.toList());
 
-            for(String line : credits) {
+            for(String line : lines) {
                 if(line.startsWith(CREDITS_LEADER)) {
                     projectLeader = line.trim().split(delimiter, 2)[1];
                 }
@@ -37,7 +43,7 @@ public class CreditsReader {
                 }
             }
         } catch (Exception ex) {
-            throw new RuntimeException();
+            throw new RuntimeException(ex);
         }
     }
 

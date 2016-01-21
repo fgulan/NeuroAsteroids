@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
+import java.io.InputStream;
 import java.nio.file.Paths;
 
 import static hr.fer.zemris.sm.game.Constants.*;
@@ -30,7 +31,11 @@ public class GameOverScreen extends Menu {
         contentBox.setId(GAME_OVER_CONTENT_BOX);
 
         //Label gameOver = new Label(GAME_OVER_LABEL_TEXT);
-        ImageView gameOver = new ImageView(Paths.get(ClassLoader.getSystemResource(GAME_OVER_LABEL_PATH).toExternalForm()).toString());
+        ImageView gameOver = new ImageView();
+        InputStream src = getClass().getClassLoader().getResourceAsStream(GAME_OVER_LABEL_PATH);
+        if(src != null) {
+            gameOver.setImage(new Image(src));
+        }
         gameOver.setId(GAME_OVER_LABEL);
 
         HBox buttons = new HBox();
