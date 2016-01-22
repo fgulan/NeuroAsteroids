@@ -7,113 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68fb1800-5038-495d-a434-97d429fdcaa4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/projekt_jar/hs.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/asteroid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/exp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/exp2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/miss.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/Meteor-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/aimCursor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/aimCursorWhite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/alah.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/background_music.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/bomb-03.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/explosion.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/explosion_punchy_impact_02.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/explosion_punchy_impact_03.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/explosion_single_large_01.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/explosion_single_large_02.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/fireSound.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/audio/shipExploded.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/bg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/credits.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/gameStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/icon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/scores.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/space.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/res/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/rocks.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/spaceship.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/NeuroAsteroids/starstars.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/background_music.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/bomb-03.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/explosion.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/explosion_punchy_impact_02.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/explosion_punchy_impact_03.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/explosion_single_large_01.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/explosion_single_large_02.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/fireSound.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/shipExploded.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/audio/starCollected.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/credits.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/gameStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/GAMEOVER_slika.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/Meteor-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/aimCursor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/aimCursorWhite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/asteroid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/backgroundRedFill.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/bg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/exp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/exp2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/gameOverText.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/icon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/miss.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/rocks.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/space.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/spaceship.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/starAnimation.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/starFrames.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/starstars.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/images/title.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/projekt/res/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController5.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController6.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController7.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNPhenotypeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNPhenotypeController2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNPhenotypeController3.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNPhenotypeController4.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EPListener.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EPListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcess.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/FFANNAlgorithms/AbstractFFANNGeneticAlgorithm.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/FFANNAlgorithms/AbstractFFANNGeneticAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/FFANNAlgorithms/GenerationalFFANNAlgorithm.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/FFANNAlgorithms/GenerationalFFANNAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/IAlgorithm.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/IAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidsDemo.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidsDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/AsteroidMultiThreadingEvaluator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/AsteroidMultiThreadingEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/GenerationalDemo.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/GenerationalDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/NSGADemo.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/NSGADemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/IEvaluator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/IEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/MultiObjectiveEvaluator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/MultiObjectiveEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/DoubleArrayGenotype.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/DoubleArrayGenotype.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/FFANNGenotypePrototype.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/FFANNGenotypePrototype.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/genotype/ConnectionGenotype.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/genotype/ConnectionGenotype.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/genotype/Genotype.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/genotype/Genotype.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/selection/ElitisticSelection.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/selection/ElitisticSelection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/CompositTerminatorOperator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/CompositTerminatorOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ConstantTimeTermination.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ConstantTimeTermination.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/FittnessTerminationOperator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/FittnessTerminationOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ITerminationOperator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ITerminationOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/MaxTerminationCount.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/MaxTerminationCount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/AbstractPhenotypeController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/AbstractPhenotypeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/HighScoreScreen.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/HighScoreScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GraphicsWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/utils/EvolutionObjectDataUtility.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/utils/EvolutionObjectDataUtility.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/res/elements" afterPath="$PROJECT_DIR$/src/res/elements" />
     </list>
     <ignored path="projekt.iws" />
@@ -165,7 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/models/Ship.java" />
@@ -216,6 +108,7 @@
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" />
+        <option value="$PROJECT_DIR$/src/res/elements" />
       </list>
     </option>
   </component>
@@ -338,24 +231,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projekt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projekt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -923,12 +798,12 @@
       <workItem from="1453117749423" duration="971000" />
       <workItem from="1453202582875" duration="7137000" />
       <workItem from="1453224221226" duration="18030000" />
-      <workItem from="1453465922643" duration="25510000" />
+      <workItem from="1453465922643" duration="26122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134302000" />
+    <option name="totallyTimeSpent" value="134914000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -940,7 +815,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="24" width="1920" height="1056" extended-state="6" />
+    <frame x="1600" y="24" width="1920" height="1056" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -950,8 +825,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19917013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3226141" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6348548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3226141" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6348548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20500532" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1035,11 +910,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/res/images/starFrames.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/res/images/title.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1278,14 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/res/elements">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70726913">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/res/gameStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1475,6 +1337,22 @@
           <folding>
             <element signature="class#AsteroidDistance#0;class#NeuralNetworkController#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/elements">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54545456">
+          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
