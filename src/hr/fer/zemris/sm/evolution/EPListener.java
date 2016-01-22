@@ -19,6 +19,6 @@ public interface EPListener extends Serializable {
 	 * 
 	 * @param process process being listened to
 	 */
-	public void listen(IEvolutionaryProcess process);
+	public void listen(EvolutionaryProcess process);
 	
 }

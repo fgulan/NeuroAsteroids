@@ -7,7 +7,10 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
  * Created by Andrija Milicevic.
  */
 public interface IAlgorithm {
+
     void nextGeneration();
+
     Genotype getBestGenotype();
+
     IPhenotype getBestPhenotype();
 }

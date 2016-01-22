@@ -26,10 +26,10 @@ public class Constants {
     public static final String EVOLUTION_ELEMENTS_FILES_DIR = "res/saved/";
     public static final String CREDITS_PATH = "res/credits.txt";
 
-    public static final double OUT_TRANSITION_DURNATION = 0.25;
-    public static final double IN_TRANSITION_DURNATION = 0.25;
+    public static final double OUT_TRANSITION_DURATION = 0.25;
+    public static final double IN_TRANSITION_DURATION = 0.25;
 
-    public static final int ASTEROIDS_NUMEBER = 10;
+    public static final int ASTEROIDS_NUMBER = 10;
 
     public static final int AI_SIMULATION_PLAY_ASTEROIDS_NUMBER = 10;
 
@@ -67,8 +67,8 @@ public class Constants {
     // *************************************//
     // Audio //
     // *************************************//
-    public static final double INIT_BACKGROUND_SOUND_VOLUME = 0.0;
-    public static final double INIT_EFFECT_SOUND_VOLUME = 0.0;
+    public static final double INIT_BACKGROUND_SOUND_VOLUME = 0.1;
+    public static final double INIT_EFFECT_SOUND_VOLUME = 0.1;
 
     public static final String BACKGROUND_MUSIC = "res/audio/background_music.mp3";
     public static final String EXPLOSION_CLIP = "res/audio/explosion_punchy_impact_02.mp3";

@@ -185,9 +185,4 @@ public class MultiObjectiveEvaluator implements IEvaluator {
             fit = fitMin * reducingFactor;      //Set fitness for next front
         }
     }
-
-    @Override
-    public double score(IPhenotype phenotype) {
-        return 0;
-    }
 }

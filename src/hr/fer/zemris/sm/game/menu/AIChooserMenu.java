@@ -1,10 +1,10 @@
 package hr.fer.zemris.sm.game.menu;
 
 import hr.fer.zemris.sm.game.GameConfig;
-import hr.fer.zemris.sm.game.Utils.EvolutionElement;
-import hr.fer.zemris.sm.game.Utils.EvolutionObjectDataUtility;
-import hr.fer.zemris.sm.game.Utils.HSDataUtility;
-import hr.fer.zemris.sm.game.Utils.ScoreElement;
+import hr.fer.zemris.sm.utils.EvolutionElement;
+import hr.fer.zemris.sm.utils.EvolutionObjectDataUtility;
+import hr.fer.zemris.sm.utils.HSDataUtility;
+import hr.fer.zemris.sm.utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.*;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
@@ -240,6 +240,8 @@ public class AIChooserMenu extends Menu {
                 world.addListener(GameEvent.ASTEROID_DESTROYED, gameEvent -> EffectsSoundManager.getInstance().playExplosion());
 
                 world.addListener(GameEvent.STAR_COLLECTED, gameEvent -> EffectsSoundManager.getInstance().playStarCollected());
+
+                world.addListener(GameEvent.MISSILE_FIRED, gameEvent -> EffectsSoundManager.getInstance().playFire());
 
                 scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_WORLD_STYLE_PATH).toExternalForm());
                 Pane gameSurface = new Pane(world.getGameSurface());

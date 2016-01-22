@@ -1,6 +1,5 @@
 package hr.fer.zemris.sm.evolution.selection;
 
-import hr.fer.zemris.sm.evolution.representation.FFANN.DoubleArrayGenotype;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
 
 import java.util.List;

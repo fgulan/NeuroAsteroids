@@ -13,13 +13,11 @@ import hr.fer.zemris.sm.evolution.representation.IMutation;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.function.IActivationFunction;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.function.SigmoidActivationFunction;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
-import hr.fer.zemris.sm.evolution.selection.ElitisticSelection;
 import hr.fer.zemris.sm.evolution.selection.ISelection;
 import hr.fer.zemris.sm.evolution.selection.RouletteWheelSelection;
-import hr.fer.zemris.sm.evolution.selection.TournamentSelection;
 import hr.fer.zemris.sm.evolution.termination.ITerminationOperator;
 import hr.fer.zemris.sm.evolution.termination.MaxTerminationCount;
-import hr.fer.zemris.sm.game.Utils.EvolutionObjectDataUtility;
+import hr.fer.zemris.sm.utils.EvolutionObjectDataUtility;
 import hr.fer.zemris.sm.game.controllers.*;
 import hr.fer.zemris.sm.game.world.LimitedFramesSimulationWorld;
 
@@ -82,7 +80,7 @@ public class GenerationalDemo {
 
         double[][] bounds = createBounds(numOfWeights(), -1, 1);   //Initial bounds of weights  double[][] bounds = createBounds(numOfWeights(), -1, 1);   //Initial bounds of weights
 
-        AsteroidMultiThereadingEvaluator eval = new AsteroidMultiThereadingEvaluator(p -> {
+        AsteroidMultiThreadingEvaluator eval = new AsteroidMultiThreadingEvaluator(p -> {
             EvaluatorTask task = new AET();
             task.setPhenotype(p);
             return task;
@@ -97,7 +95,7 @@ public class GenerationalDemo {
 
         ITerminationOperator maximalIterations = new MaxTerminationCount(MAXIMAL_ITERATION_OF_ALGORITHM);
 
-        EvolutionaryProcess process = new EvolutionaryProcess(alg, maximalIterations, eval);
+        EvolutionaryProcess process = new EvolutionaryProcess(alg, maximalIterations);
 
         process.addListener(p -> {  //Prints fitness of the best in population.
             int iter = p.getIterationCount();

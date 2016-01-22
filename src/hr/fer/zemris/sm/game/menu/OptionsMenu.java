@@ -155,7 +155,7 @@ public class OptionsMenu extends Menu {
         Slider numOfAsteroidsOnScreen =  new Slider();
         numOfAsteroidsOnScreen.setMin(0);
         numOfAsteroidsOnScreen.setMax(15);
-        numOfAsteroidsOnScreen.setValue(ASTEROIDS_NUMEBER);
+        numOfAsteroidsOnScreen.setValue(ASTEROIDS_NUMBER);
         numOfAsteroidsOnScreen.setBlockIncrement(1);
         numOfAsteroidsOnScreen.setMajorTickUnit(1);
         numOfAsteroidsOnScreen.setSnapToTicks(true);

@@ -1,7 +1,7 @@
 package hr.fer.zemris.sm.evolution.termination;
 
-	
-import hr.fer.zemris.sm.evolution.IEvolutionaryProcess;
+
+import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
 
 public class ConstantTimeTermination implements ITerminationOperator {
 
@@ -19,7 +19,7 @@ public class ConstantTimeTermination implements ITerminationOperator {
 	}
 
 	@Override
-	public boolean isFinished(IEvolutionaryProcess process) {
+	public boolean isFinished(EvolutionaryProcess process) {
 		if(!hasStarted) {
 			long start = System.currentTimeMillis();
 			finish = start + durnation;

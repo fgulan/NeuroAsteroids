@@ -12,12 +12,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ *
  * Created by doctor on 08.12.15..
  */
 public class NeuralNetworkController extends AbstractPhenotypeController {
 
     public double fittness = 0;
-
 
     public NeuralNetworkController(IPhenotype phenotype, GameWorld world) {
         super(phenotype);
@@ -26,12 +26,12 @@ public class NeuralNetworkController extends AbstractPhenotypeController {
 
     @Override
     public List<Input> getInput() {
-        SpriteManager menager = world.getSpriteManager();
+        SpriteManager manager = world.getSpriteManager();
 
-        final Ship ship = menager.getShip();
+        final Ship ship = manager.getShip();
         final IVector shipCenter = ship.getCenter();
 
-        List<AsteroidDistance> closest = menager.getAsteroids().stream().map(a -> {
+        List<AsteroidDistance> closest = manager.getAsteroids().stream().map(a -> {
             IVector asteroidCenter = a.getCenter();
 
             double dx = shipCenter.get(0) - asteroidCenter.get(0);
@@ -40,7 +40,7 @@ public class NeuralNetworkController extends AbstractPhenotypeController {
             return new AsteroidDistance(a, Math.sqrt(dx * dx + dy * dy));
         }).sorted((o1, o2) -> (int) Math.signum(o1.distance - o2.distance)).limit(2).collect(Collectors.toList());
 
-        double aplha1 = getAlpha(ship, closest.get(0));
+        double aplha1 = calcDistance(ship, closest.get(0).a);
         double beta1 = getBeta(ship, closest.get(0));
         double d1 = closest.get(0).distance;
 
@@ -83,54 +83,6 @@ public class NeuralNetworkController extends AbstractPhenotypeController {
         }
 
         return inputs;
-    }
-
-    @Override
-    public void setWorld(GameWorld world) {
-
-    }
-
-    private double getAlpha(Ship ship, AsteroidDistance asteroidDistance) {
-        IVector ac = asteroidDistance.a.getCenter();
-        IVector sc = ship.getCenter();
-
-        ac.sub(sc);
-        double a = Math.atan2(ac.get(1), ac.get(0)); //kut izmedu centra broda i asteroida
-        a = a * 180.0 / Math.PI;
-        a += 90;
-
-        if (a > 180.0) {
-            a -= 360.0;
-        }
-
-        if (a < -180.0) {
-            a += 360.0;
-        }
-
-        double shipAngle = ship.getCurrentAngle();
-
-
-        if (shipAngle > 180.0) {
-            shipAngle -= 360.0;
-        }
-
-        if (shipAngle < -180.0) {
-            shipAngle += 360.0;
-        }
-
-        double alpha = shipAngle - a;
-
-        if (alpha > 180) {
-            alpha -= 360;
-        }
-
-        if (alpha < -180) {
-            alpha += 360;
-        }
-
-
-        //System.out.println(shipAngle + " " + a + " " + alpha );
-        return alpha;
     }
 
     private double getBeta(Ship ship, AsteroidDistance asteroidDistance) {

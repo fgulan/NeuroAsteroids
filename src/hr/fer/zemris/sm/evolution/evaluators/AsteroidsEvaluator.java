@@ -1,6 +1,5 @@
 package hr.fer.zemris.sm.evolution.evaluators;
 
-import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.controllers.NeuralNetworkController;
 import hr.fer.zemris.sm.game.world.GameEvent;
@@ -50,14 +49,7 @@ public class AsteroidsEvaluator implements IEvaluator {
     }
 
     @Override
-    public double score(IPhenotype phenotype) {
-        return 0;
-    }
-
-    @Override
     public void evaluatePopulation(Collection<IPhenotype> phenotypes) {
-        for (IPhenotype p : phenotypes) {
-            evaluate(p);
-        }
+        phenotypes.forEach(this::evaluate);
     }
 }

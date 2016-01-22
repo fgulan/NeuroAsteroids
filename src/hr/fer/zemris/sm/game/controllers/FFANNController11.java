@@ -2,7 +2,6 @@ package hr.fer.zemris.sm.game.controllers;
 
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.managers.SpriteManager;
-import hr.fer.zemris.sm.game.menu.Game;
 import hr.fer.zemris.sm.game.models.Asteroid;
 import hr.fer.zemris.sm.game.models.Ship;
 import hr.fer.zemris.sm.game.models.Sprite;
@@ -22,6 +21,8 @@ import java.util.List;
  * Created by Fredi Šarić on 15.01.16.
  */
 public class FFANNController11 extends AbstractPhenotypeController {
+
+    public static final long serialVersionUID = 7261276772547929496L;
 
     //Input indexes
     public static final int STAR_ANGLE = 0;
@@ -157,51 +158,6 @@ public class FFANNController11 extends AbstractPhenotypeController {
         }
 
         return top * Math.pow(top / slope, (x - xMin)/(xMax - xMin)) - 1;
-    }
-
-    private double calculateAngle(Ship ship, Sprite sprite) {
-
-        IVector ac = sprite.getCenter();
-        IVector sc = ship.getCenter();
-
-        IVector vec = ac.nSub(sc);
-        double a = Math.atan2(vec.get(1), vec.get(0)); //Angle between ship and sprite
-
-        a = a * 180.0 / Math.PI;
-        a += 90;
-
-        if ( a > 180.0 ) {
-            a -= 360.0;
-        }
-
-        if ( a < -180.0) {
-            a += 360.0;
-        }
-
-        double shipAngle = ship.getCurrentAngle();
-
-        if (shipAngle > 180.0) {
-            shipAngle -= 360.0;
-        }
-
-        if (shipAngle < -180.0) {
-            shipAngle += 360.0;
-        }
-
-        double alpha = shipAngle - a;
-
-        if (alpha > 180) {
-            alpha -= 360;
-        }
-
-        if (alpha < -180) {
-            alpha += 360;
-        }
-        return - alpha; //Return in degrees
-    }
-
-    private static double calcDistance(Ship ship, Sprite sprite) {
-        return ship.getCenter().nSub(sprite.getCenter()).norm();
     }
 
     @Override

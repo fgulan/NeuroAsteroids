@@ -96,11 +96,11 @@ public class Game extends Application {
         to.setOpacity(0);   //Make invisible for fade in animation, so it doesn't glitch
         root.getChildren().add(0, to);
 
-        TranslateTransition fTrans = new TranslateTransition(Duration.seconds(OUT_TRANSITION_DURNATION), from);
+        TranslateTransition fTrans = new TranslateTransition(Duration.seconds(OUT_TRANSITION_DURATION), from);
         fTrans.setFromX(0);
         fTrans.setToX(direction * stage.getWidth());
 
-        TranslateTransition tTrans = new TranslateTransition(Duration.seconds(IN_TRANSITION_DURNATION), to);
+        TranslateTransition tTrans = new TranslateTransition(Duration.seconds(IN_TRANSITION_DURATION), to);
         tTrans.setFromX(-direction * stage.getWidth());
         tTrans.setToX(0);
 

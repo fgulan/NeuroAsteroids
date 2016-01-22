@@ -1,6 +1,6 @@
 package hr.fer.zemris.sm.evolution.termination;
 
-import hr.fer.zemris.sm.evolution.IEvolutionaryProcess;
+import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
 
 public class MaxTerminationCount implements ITerminationOperator{
 
@@ -19,7 +19,7 @@ public class MaxTerminationCount implements ITerminationOperator{
 	}
 
 	@Override
-	public boolean isFinished(IEvolutionaryProcess process) {
+	public boolean isFinished(EvolutionaryProcess process) {
 		return process.getIterationCount() >= maxTermination;
 	}
 	

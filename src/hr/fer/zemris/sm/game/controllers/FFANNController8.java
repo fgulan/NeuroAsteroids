@@ -113,47 +113,6 @@ public class FFANNController8 extends AbstractPhenotypeController {
         return res > 1 ? 1 : res;
     }
 
-    private double calculateAngle(Ship ship, Sprite sprite) {
-
-        IVector ac = sprite.getCenter();
-        IVector sc = ship.getCenter();
-
-        IVector vec = ac.nSub(sc);
-        double a = Math.atan2(vec.get(1), vec.get(0)); //Angle between ship and sprite
-
-        a = a * 180.0 / Math.PI;
-        a += 90;
-
-        if ( a > 180.0 ) {
-            a -= 360.0;
-        }
-
-        if ( a < -180.0) {
-            a += 360.0;
-        }
-
-        double shipAngle = ship.getCurrentAngle();
-
-        if (shipAngle > 180.0) {
-            shipAngle -= 360.0;
-        }
-
-        if (shipAngle < -180.0) {
-            shipAngle += 360.0;
-        }
-
-        double alpha = shipAngle - a;
-
-        if (alpha > 180) {
-            alpha -= 360;
-        }
-
-        if (alpha < -180) {
-            alpha += 360;
-        }
-        return - alpha; //Return in degrees
-    }
-
     private static class DistanceComparator implements Comparator<Sprite>, Serializable{
 
         Ship ship;
@@ -170,9 +129,4 @@ public class FFANNController8 extends AbstractPhenotypeController {
             return (int)Math.signum(d1-d2);
         }
     }
-
-    private static double calcDistance(Ship ship, Sprite sprite) {
-        return ship.getCenter().nSub(sprite.getCenter()).norm();
-    }
-
 }

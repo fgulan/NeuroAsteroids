@@ -2,7 +2,6 @@ package hr.fer.zemris.sm.evolution.demo;
 
 import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
 import hr.fer.zemris.sm.evolution.EvolutionaryState;
-import hr.fer.zemris.sm.evolution.IEvolutionaryProcess;
 import hr.fer.zemris.sm.evolution.algorithms.IAlgorithm;
 import hr.fer.zemris.sm.evolution.algorithms.SpeciesAlgorithm;
 import hr.fer.zemris.sm.evolution.evaluators.AsteroidsEvaluator;
@@ -26,7 +25,7 @@ public class AsteroidsDemo {
 
         ITerminationOperator term = new MaxTerminationCount(1000);
 
-        IEvolutionaryProcess process = new EvolutionaryProcess(alg, term, eval);
+        EvolutionaryProcess process = new EvolutionaryProcess(alg, term);
 
         process.addListener((p) -> {
             if (p.getIterationCount() % 10 == 0) {

@@ -8,6 +8,7 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
  */
 public class FFANNGenotypePrototype implements IPhenotype<DoubleArrayGenotype>{
 
+    public static final long serialVersionUID = 4993935976755937571L;
 
     int[] layers;
     IActivationFunction[] functions;

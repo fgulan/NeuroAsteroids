@@ -1,7 +1,7 @@
 package hr.fer.zemris.sm.game.menu;
 
-import hr.fer.zemris.sm.game.Utils.HSDataUtility;
-import hr.fer.zemris.sm.game.Utils.ScoreElement;
+import hr.fer.zemris.sm.utils.HSDataUtility;
+import hr.fer.zemris.sm.utils.ScoreElement;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;

@@ -1,13 +1,12 @@
 package hr.fer.zemris.sm.game.menu;
 
 import hr.fer.zemris.sm.game.GameConfig;
-import hr.fer.zemris.sm.game.Utils.HSDataUtility;
-import hr.fer.zemris.sm.game.Utils.ScoreElement;
+import hr.fer.zemris.sm.utils.HSDataUtility;
+import hr.fer.zemris.sm.utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.IConnectibleController;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
 import hr.fer.zemris.sm.game.world.GameEvent;
-import hr.fer.zemris.sm.game.world.GameWorld;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -75,7 +74,6 @@ public class PlayMenu extends Menu {
                     });
 
                     pauseMenu.setOnExitAction(e -> {
-                        //TODO: separate this into new method
                         scene.removeEventHandler(KeyEvent.KEY_RELEASED, this);
                         scene.getStylesheets().clear();
                         scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
@@ -175,6 +173,7 @@ public class PlayMenu extends Menu {
 
             world.addListener(GameEvent.STAR_COLLECTED, gameEvent -> EffectsSoundManager.getInstance().playStarCollected());
 
+            world.addListener(GameEvent.MISSILE_FIRED, gameEvent -> EffectsSoundManager.getInstance().playFire());
 
             world.initialize();
             Pane gameSurface = new Pane(world.getGameSurface());

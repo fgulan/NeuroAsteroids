@@ -4,7 +4,7 @@ import hr.fer.zemris.sm.evolution.evaluators.EvaluatorException;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.evaluators.multiThreading.EvaluatorTask;
 import hr.fer.zemris.sm.evolution.evaluators.multiThreading.EvaluatorTaskFactory;
-import hr.fer.zemris.sm.evolution.representation.NEAT.phenotype.IPhenotype;
+import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -18,9 +18,8 @@ import hr.fer.zemris.sm.evolution.selection.ISelection;
 import hr.fer.zemris.sm.evolution.selection.RouletteWheelSelection;
 import hr.fer.zemris.sm.evolution.termination.ITerminationOperator;
 import hr.fer.zemris.sm.evolution.termination.MaxTerminationCount;
-import hr.fer.zemris.sm.game.Utils.EvolutionObjectDataUtility;
+import hr.fer.zemris.sm.utils.EvolutionObjectDataUtility;
 import hr.fer.zemris.sm.game.controllers.FFANNController10;
-import hr.fer.zemris.sm.game.controllers.FFANNController11;
 
 import java.util.List;
 
@@ -85,7 +84,7 @@ public class NSGADemo {
                                                         evaluator, crossover, mutation, selection);
 
         ITerminationOperator term = new MaxTerminationCount(MAXIMAL_ITERATION_OF_ALGORITHM);
-        EvolutionaryProcess process = new EvolutionaryProcess(alg,term, evaluator);
+        EvolutionaryProcess process = new EvolutionaryProcess(alg,term);
 
         process.addListener(p -> {
             int iter = p.getIterationCount();

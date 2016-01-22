@@ -2,7 +2,10 @@ package hr.fer.zemris.sm.evolution.representation.neuralNet.genotype;
 
 import java.io.Serializable;
 
-public abstract class Genotype implements Comparable<Genotype>, Iterable<NeuronConnection>, Serializable {
+public abstract class Genotype implements Comparable<Genotype>, Serializable {
+
+    public static final long serialVersionUID = 4721662339634105080L;
+
     private double fitness;
 
     @Override

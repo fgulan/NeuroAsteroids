@@ -14,9 +14,11 @@ import static hr.fer.zemris.sm.game.Constants.EVOLUTION_ELEMENTS_FILES_DIR;
 import static hr.fer.zemris.sm.game.Constants.EVOLUTION_ELEMENTS_LIST_FILE;
 
 public class EvolutionObjectDataUtility {
+
 	private static final EvolutionObjectDataUtility instance = new EvolutionObjectDataUtility();
 
 	List<EvolutionElement> elements;
+
 	Map<String, Serializable> saveMap;
 
 	private EvolutionObjectDataUtility(){
@@ -52,7 +54,6 @@ public class EvolutionObjectDataUtility {
 		}
 
 		return net;
-
 	}
 
 	public void saveObject(Serializable object, String name, double fitness, String comment){
@@ -77,19 +78,12 @@ public class EvolutionObjectDataUtility {
 		try {
 			// Serialize data to file
 			for(String fileName : saveMap.keySet()) {
-				FileOutputStream fo = new FileOutputStream(EVOLUTION_ELEMENTS_FILES_DIR + fileName);
+				FileOutputStream fo = new FileOutputStream( "src/" + EVOLUTION_ELEMENTS_FILES_DIR + fileName);
 				ObjectOutputStream so = new ObjectOutputStream(fo);
 				so.writeObject(saveMap.get(fileName));
 				so.close();
-
-				if(!elements.contains(saveMap.get(fileName))) {
-					Files.write(Paths.get(EVOLUTION_ELEMENTS_LIST_FILE), sb.toString().getBytes());
-				}
+				Files.write(Paths.get("src/" + EVOLUTION_ELEMENTS_LIST_FILE), sb.toString().getBytes());
 			}
-		} catch (IOException e) {
-			//xxx.ser files
-			//or nerualNets.txt file could not be saved
-			e.printStackTrace();
-		}
+		} catch (IOException ignored) {}
 	}
 }

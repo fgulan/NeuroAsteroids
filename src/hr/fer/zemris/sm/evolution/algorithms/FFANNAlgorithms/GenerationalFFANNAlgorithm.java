@@ -2,7 +2,6 @@ package hr.fer.zemris.sm.evolution.algorithms.FFANNAlgorithms;
 
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.representation.FFANN.DoubleArrayGenotype;
-import hr.fer.zemris.sm.evolution.representation.FFANN.FFANNDecoder;
 import hr.fer.zemris.sm.evolution.representation.FFANN.SteadyStateDecoder;
 import hr.fer.zemris.sm.evolution.representation.ICrossover;
 import hr.fer.zemris.sm.evolution.representation.IMutation;

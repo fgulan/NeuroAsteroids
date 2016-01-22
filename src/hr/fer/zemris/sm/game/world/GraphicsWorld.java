@@ -65,7 +65,6 @@ public class GraphicsWorld extends GameWorld {
         addListener(GameEvent.ASTEROID_DESTROYED, e -> {
             points += Constants.ASTEROID_SCORE;
             handlePointsUpdateGraphics();
-            //TODO: start explosion
         });
 
         addListener(GameEvent.STAR_COLLECTED, e -> {

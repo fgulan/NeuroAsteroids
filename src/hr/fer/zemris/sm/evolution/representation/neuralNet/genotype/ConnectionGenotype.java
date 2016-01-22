@@ -2,7 +2,7 @@ package hr.fer.zemris.sm.evolution.representation.neuralNet.genotype;
 
 import java.util.*;
 
-public class ConnectionGenotype extends Genotype {
+public class ConnectionGenotype extends Genotype implements Iterable<NeuronConnection>{
 
     private static final Random rand = new Random();
 

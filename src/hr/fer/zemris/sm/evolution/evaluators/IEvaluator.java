@@ -8,7 +8,9 @@ import java.util.Collection;
  * Created by Andrija Milicevic.
  */
 public interface IEvaluator {
+
     int getInputNodeCount();
+
     int getOutputNodeCount();
 
     /**
@@ -24,6 +26,4 @@ public interface IEvaluator {
     void evaluate(IPhenotype phenotype);
 
     void evaluatePopulation(Collection<IPhenotype> phenotype);
-
-    double score(IPhenotype phenotype);
 }

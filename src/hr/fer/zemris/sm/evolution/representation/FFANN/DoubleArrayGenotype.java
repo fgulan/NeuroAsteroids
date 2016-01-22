@@ -6,9 +6,12 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnec
 import java.util.Iterator;
 
 /**
+ *
  * Created by Fredi Šarić on 19.12.15.
  */
 public class DoubleArrayGenotype extends Genotype {
+
+    public static final long serialVersionUID = 3978763612070310871L;
 
     double[] weights;
 
@@ -26,10 +29,5 @@ public class DoubleArrayGenotype extends Genotype {
         System.arraycopy(weights, 0, copy, 0, weights.length);
 
         return new DoubleArrayGenotype(copy);
-    }
-
-    @Override
-    public Iterator<NeuronConnection> iterator() {
-        throw new UnsupportedOperationException("You do not need this!!!");
     }
 }
