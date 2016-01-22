@@ -3,8 +3,8 @@ package hr.fer.zemris.sm.evolution.demo;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.controllers.NeuralNetworkController;
-import hr.fer.zemris.sm.game.world.SimulationWorld;
-import hr.fer.zemris.sm.game.world.listeners.FireListener;
+import hr.fer.zemris.sm.game.world.GameEvent;
+import hr.fer.zemris.sm.game.world.LimitedFramesSimulationWorld;
 import static hr.fer.zemris.sm.game.Constants.*;
 
 import java.util.Collection;
@@ -14,7 +14,9 @@ import java.util.Collection;
  */
 public class AsteroidesEvaluator implements IEvaluator {
 
-    SimulationWorld world;
+    LimitedFramesSimulationWorld world;
+
+    private int fireCounter = 0;
 
     @Override
     public int getInputNodeCount() {
@@ -31,21 +33,14 @@ public class AsteroidesEvaluator implements IEvaluator {
         int res = 0;
 
         for (int i = 0; i < 5; i++) {
-            world = new SimulationWorld(800, 600, AI_SIMULATION_PLAY_ASTEROIDS_NUMBER, STARS_NUMBER);
+            world = new LimitedFramesSimulationWorld(800, 600, AI_SIMULATION_PLAY_ASTEROIDS_NUMBER, STARS_NUMBER, 10_000);
             NeuralNetworkController controller = new NeuralNetworkController(phenotype, world);
             world.setController(controller);
             world.initialize();
 
-            FireCounter fc = new FireCounter();
-            world.registerFireListener(fc);
+            world.addListener(GameEvent.MISSILE_FIRED, e -> fireCounter++);
             world.play();
-
-            double acc = 0;
-            if (fc.count != 0) {
-                acc = world.getPoints() / (double) fc.count;
-            }
-
-            res += controller.fittness + world.getPoints() * 50;
+            res += controller.fittness * 50;
         }
         //System.out.println("acc:" + acc + " fcCount" + fc.count + " destroyed" + world.getPoints() + " fitness " + controller.fittness);
 
@@ -65,15 +60,4 @@ public class AsteroidesEvaluator implements IEvaluator {
             evaluate(p);
         }
     }
-
-    private class FireCounter implements FireListener {
-
-        int count = 0;
-
-        @Override
-        public void fired() {
-            count++;
-        }
-    }
-
 }

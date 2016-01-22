@@ -67,8 +67,8 @@ public class Constants {
     // *************************************//
     // Audio //
     // *************************************//
-    public static final double INIT_BACKGROUND_SOUND_VOLUME = 0.1;
-    public static final double INIT_EFFECT_SOUND_VOLUME = 0.1;
+    public static final double INIT_BACKGROUND_SOUND_VOLUME = 0.0;
+    public static final double INIT_EFFECT_SOUND_VOLUME = 0.0;
 
     public static final String BACKGROUND_MUSIC = "res/audio/background_music.mp3";
     public static final String EXPLOSION_CLIP = "res/audio/explosion_punchy_impact_02.mp3";

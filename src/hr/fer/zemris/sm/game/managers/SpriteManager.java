@@ -49,7 +49,7 @@ public class SpriteManager {
         ship = sprite;
     }
     
-    public void addAsteroidSprites(Asteroid... sprites) {
+    public void addAsteroidSprites(Asteroid ... sprites) {
         if (sprites.length > 1) {
             List<Asteroid> asteroids = Arrays.asList((Asteroid[]) sprites);
             ASTEROIDS.addAll(asteroids);

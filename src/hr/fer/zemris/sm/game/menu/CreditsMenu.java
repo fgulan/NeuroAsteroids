@@ -73,7 +73,7 @@ public class CreditsMenu extends Menu{
     }
 
     @Override
-    public void relaod() {
+    public void reload() {
         //No implementation
     }
 }

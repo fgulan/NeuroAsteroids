@@ -1,6 +1,8 @@
 package hr.fer.zemris.sm.game;
 
 /**
+ * Class for storing game configs
+ *
  * Created by Fredi Šarić on 19.01.16.
  */
 public class GameConfig {

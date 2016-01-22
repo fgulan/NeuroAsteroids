@@ -8,6 +8,7 @@ import hr.fer.zemris.sm.game.Utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.*;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
+import hr.fer.zemris.sm.game.world.GameEvent;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -58,9 +59,7 @@ public class AIChooserMenu extends Menu {
         });
 
         Button back = new KeyEventButton(BACK_BUTTON_TEXT);
-        back.setOnAction(e -> {
-            parent.transition(this, parent.getPlayMenu(), Game.RIGHT);
-        });
+        back.setOnAction(e -> parent.transition(this, parent.getPlayMenu(), Game.RIGHT) );
 
         VBox leftPane = new VBox();
         VBox.setVgrow(list, Priority.ALWAYS);   //Strech list
@@ -184,7 +183,7 @@ public class AIChooserMenu extends Menu {
                                 world.pause();
 
                                 StackPane pausePane = new StackPane();
-                                pauseMenu.relaod();
+                                pauseMenu.reload();
                                 Pane game = (Pane) scene.getRoot();
                                 pausePane.getChildren().addAll(game, pauseMenu);
                                 scene.setRoot(pausePane);
@@ -194,7 +193,7 @@ public class AIChooserMenu extends Menu {
                 };
                 scene.addEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
 
-                world.registerGameOverListener(() -> {
+                world.addListener(GameEvent.GAME_OVER, gameEvent -> {
                     parent.showCursor();
                     scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
                     EffectsSoundManager.getInstance().playShipExploded();
@@ -236,13 +235,11 @@ public class AIChooserMenu extends Menu {
                     scene.setRoot(pane);
                 });
 
-                world.registerFireListener(() -> {
-                    EffectsSoundManager.getInstance().playFire();
-                });
+                world.addListener(GameEvent.MISSILE_FIRED, gameEvent -> EffectsSoundManager.getInstance().playFire());
 
-                world.registerExplosionListener(() -> {
-                    EffectsSoundManager.getInstance().playExplosion();
-                });
+                world.addListener(GameEvent.ASTEROID_DESTROYED, gameEvent -> EffectsSoundManager.getInstance().playExplosion());
+
+                world.addListener(GameEvent.STAR_COLLECTED, gameEvent -> EffectsSoundManager.getInstance().playStarCollected());
 
                 scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_WORLD_STYLE_PATH).toExternalForm());
                 Pane gameSurface = new Pane(world.getGameSurface());
@@ -301,7 +298,7 @@ public class AIChooserMenu extends Menu {
     }
 
     @Override
-    public void relaod() {
+    public void reload() {
         list.getItems().clear();
         fillList(list);
     }

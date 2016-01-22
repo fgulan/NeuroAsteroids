@@ -54,7 +54,7 @@ public class ScoreMenu extends Menu{
     }
 
     @Override
-    public void relaod() {
+    public void reload() {
         table.getItems().clear();
         List<ScoreElement> scores = HSDataUtility.getInstance().getHighScores();
         scores.sort((o1, o2) -> (int)Math.signum(o2.getScore() - o1.getScore()));

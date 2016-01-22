@@ -6,6 +6,8 @@ import hr.fer.zemris.sm.game.Utils.ScoreElement;
 import hr.fer.zemris.sm.game.controllers.IConnectibleController;
 import hr.fer.zemris.sm.game.menu.menuUtil.KeyEventButton;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
+import hr.fer.zemris.sm.game.world.GameEvent;
+import hr.fer.zemris.sm.game.world.GameWorld;
 import hr.fer.zemris.sm.game.world.GraphicsWorld;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -112,7 +114,7 @@ public class PlayMenu extends Menu {
                             getGameParent().showCursor();
 
                             StackPane pausePane = new StackPane();
-                            pauseMenu.relaod();
+                            pauseMenu.reload();
                             Pane game = (Pane) scene.getRoot();
                             pausePane.getChildren().addAll(game, pauseMenu);
                             scene.setRoot(pausePane);
@@ -124,7 +126,7 @@ public class PlayMenu extends Menu {
             scene.addEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
 
 
-            world.registerGameOverListener(() -> {
+            world.addListener(GameEvent.GAME_OVER, gameEvent -> {
                 getGameParent().showCursor();
                 scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
                 EffectsSoundManager.getInstance().playShipExploded();
@@ -167,17 +169,11 @@ public class PlayMenu extends Menu {
                 scene.setRoot(pane);
             });
 
-            world.registerFireListener(() -> {
-                EffectsSoundManager.getInstance().playFire();
-            });
+            world.addListener(GameEvent.GAME_OVER, gameEvent -> EffectsSoundManager.getInstance().playFire());
 
-            world.registerExplosionListener(() -> {
-                EffectsSoundManager.getInstance().playExplosion();
-            });
+            world.addListener(GameEvent.ASTEROID_DESTROYED, gameEvent -> EffectsSoundManager.getInstance().playExplosion());
 
-            world.registerStarCollectedListeners(() -> {
-                EffectsSoundManager.getInstance().playStarCollected();
-            });
+            world.addListener(GameEvent.STAR_COLLECTED, gameEvent -> EffectsSoundManager.getInstance().playStarCollected());
 
 
             world.initialize();
@@ -205,7 +201,7 @@ public class PlayMenu extends Menu {
     }
 
     @Override
-    public void relaod() {
+    public void reload() {
         //No implementation
     }
 }

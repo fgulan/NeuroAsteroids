@@ -1,11 +1,9 @@
 package hr.fer.zemris.sm.game.world;
 
-import hr.fer.zemris.sm.game.models.Asteroid;
-import hr.fer.zemris.sm.game.models.Missile;
-import hr.fer.zemris.sm.game.models.Sprite;
-import hr.fer.zemris.sm.game.models.Star;
-
 /**
+ *  Simulation world for network training.
+ *
+ *  It has ability to stop run after some period of time.
  *
  * Created by Fredi Šarić on 18.12.15.
  */
@@ -31,39 +29,16 @@ public class LimitedFramesSimulationWorld extends GameWorld {
         this.shootsFired = 0;
         this.frames = 0;
         this.run = true;
-        registerFireListener(() -> shootsFired++);
-        registerGameOverListener(() -> run = false);
 
+        addListener(GameEvent.GAME_OVER, e -> run = false);
+        addListener(GameEvent.MISSILE_FIRED, e -> shootsFired++);
+        addListener(GameEvent.ASTEROID_DESTROYED, e -> asteroidsDestroyed++);
+        addListener(GameEvent.STAR_COLLECTED, e -> starsCollected++);
     }
-
-    @Override
-    protected void handleNewStarGraphics(Star sprite) {}
-
-    @Override
-    protected void handleNewCommetGraphics(Asteroid sprite) {}
-
-    @Override
-    protected void handleMissileStateGraphics() {}
-
-    @Override
-    protected void handleGraphicUpdate(Sprite spite) {}
-
-    @Override
-    protected void initializeGraphics() {}
 
     @Override
     protected void cleanupSprites() {
         spriteManager.cleanupSprites();
-    }
-
-    @Override
-    protected void asteroidDestroyed() {
-        asteroidsDestroyed++;
-    }
-
-    @Override
-    protected void starCollected() {
-        starsCollected++;
     }
 
     public int getStarsCollected() {
@@ -79,9 +54,6 @@ public class LimitedFramesSimulationWorld extends GameWorld {
     }
 
     @Override
-    protected void handleMissileGraphics(Missile missile) {}
-
-    @Override
     public void play() {
         while(run && frames < maxFrames) {
             frames++;
@@ -93,10 +65,5 @@ public class LimitedFramesSimulationWorld extends GameWorld {
     public void pause() {}
 
     @Override
-    protected void handleFuelChangeGraphics() {}
-
-    @Override
-    protected void handlePointsUpdateGraphics() {
-
-    }
+    public void stop() {};
 }

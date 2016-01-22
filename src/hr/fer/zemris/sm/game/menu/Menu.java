@@ -24,5 +24,5 @@ public abstract class Menu extends BorderPane implements Disconnectable{
         parent = null;
     }
 
-    public abstract void relaod();
+    public abstract void reload();
 }

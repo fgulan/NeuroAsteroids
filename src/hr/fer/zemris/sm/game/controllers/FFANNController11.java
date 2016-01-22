@@ -2,11 +2,13 @@ package hr.fer.zemris.sm.game.controllers;
 
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.game.managers.SpriteManager;
+import hr.fer.zemris.sm.game.menu.Game;
 import hr.fer.zemris.sm.game.models.Asteroid;
 import hr.fer.zemris.sm.game.models.Ship;
 import hr.fer.zemris.sm.game.models.Sprite;
 import hr.fer.zemris.sm.game.models.Star;
 import hr.fer.zemris.sm.game.physics.IVector;
+import hr.fer.zemris.sm.game.world.GameEvent;
 import hr.fer.zemris.sm.game.world.GameWorld;
 
 import static hr.fer.zemris.sm.game.Constants.*;
@@ -206,7 +208,7 @@ public class FFANNController11 extends AbstractPhenotypeController {
     public void setWorld(GameWorld world) {
         super.setWorld(world);
         if(world != null) {
-            world.registerFireListener(() -> {
+            world.addListener(GameEvent.MISSILE_FIRED, e -> {
                 numOfFiredMissiles++;
             });
             numOfFiredMissiles = 0; //reset every time when world is changed

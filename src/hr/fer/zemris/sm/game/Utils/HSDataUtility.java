@@ -1,13 +1,29 @@
 package hr.fer.zemris.sm.game.Utils;
 
-import java.io.*;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static hr.fer.zemris.sm.game.Constants.*;
+import static hr.fer.zemris.sm.game.Constants.HIGH_SCORE_FILE;
+import static hr.fer.zemris.sm.game.Constants.MAX_HIGH_SCORE_LIST_SIZE;
 
+
+/**
+ * This class is used for managing high scores.
+ *
+ * If file hs.txt does not exist it will be created.
+ *
+ * Place where this file will be created depends on whether or not
+ * you run this program from *.jar file, or from IDE.
+ *
+ * If run from IDE it will create a hs.txt file in working directory
+ * (outside of the src folder).
+ *
+ * If run form *.jar file it will create hs.txt in folder of that file
+ */
 public class HSDataUtility {
     private static HSDataUtility instance;
 
@@ -22,7 +38,7 @@ public class HSDataUtility {
         highScoreList = new ArrayList<>();
         try {
             getHighScoreFilePath();
-            if (Files.exists(hsFile)) {
+            if (!Files.isDirectory(hsFile) && Files.exists(hsFile)) {
 
                 //Loads all elements from file and sorts it
                 highScoreList = Files.readAllLines(hsFile)
@@ -86,7 +102,20 @@ public class HSDataUtility {
         }
     }
 
-    public void getHighScoreFilePath() {
-        hsFile = Paths.get(System.getProperty("java.class.path")).getParent().resolve(HIGH_SCORE_FILE);
+    private void getHighScoreFilePath() {
+        if(isRunningInJar()) {
+            String path = System.getProperty("java.class.path");
+            hsFile = Paths.get(path).getParent().resolve(HIGH_SCORE_FILE);
+        } else {
+            //If started in IDE environment get current working directory
+            hsFile = Paths.get("").toAbsolutePath().resolve(HIGH_SCORE_FILE);
+        }
+    }
+
+    private boolean isRunningInJar() {
+        String className = this.getClass().getName().replace('.', '/');
+        String classJar  = this.getClass().getResource("/" + className + ".class").toString();
+        return classJar.startsWith("jar:");
     }
 }
+

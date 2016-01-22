@@ -110,7 +110,7 @@ public class PauseMenu extends Menu {
     }
 
     @Override
-    public void relaod() {
+    public void reload() {
         backgroundSoundSlider.setValue(BackgroundSoundManager.getInstance().getVolume());
         effectSoundSlider.setValue(EffectsSoundManager.getInstance().getVolume());
     }

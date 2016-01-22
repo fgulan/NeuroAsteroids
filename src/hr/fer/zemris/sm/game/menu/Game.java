@@ -1,7 +1,6 @@
 package hr.fer.zemris.sm.game.menu;
 
 import hr.fer.zemris.sm.game.controllers.IConnectibleController;
-import hr.fer.zemris.sm.game.controllers.IController;
 import hr.fer.zemris.sm.game.controllers.MultipleKeyController;
 import hr.fer.zemris.sm.game.sound.BackgroundSoundManager;
 import hr.fer.zemris.sm.game.sound.EffectsSoundManager;
@@ -140,32 +139,32 @@ public class Game extends Application {
     }
 
     public Pane getStartMenu() {
-        startMenu.relaod();
+        startMenu.reload();
         return startMenu;
     }
 
     public Pane getPlayMenu() {
-        playMenu.relaod();
+        playMenu.reload();
         return playMenu;
     }
 
     public Pane getScoresMenu() {
-        scoresMenu.relaod();
+        scoresMenu.reload();
         return scoresMenu;
     }
 
     public Pane getOptionsMenu() {
-        optionsMenu.relaod();
+        optionsMenu.reload();
         return optionsMenu;
     }
 
     public Pane getCreditsMenu() {
-        creditsMenu.relaod();
+        creditsMenu.reload();
         return creditsMenu;
     }
 
     public Pane getAIChooserMenu() {
-        AIChooserMenu.relaod();
+        AIChooserMenu.reload();
         return AIChooserMenu;
     }
 

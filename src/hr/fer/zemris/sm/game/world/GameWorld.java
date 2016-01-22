@@ -1,9 +1,7 @@
 package hr.fer.zemris.sm.game.world;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 import static hr.fer.zemris.sm.game.Constants.*;
 
@@ -17,16 +15,11 @@ import hr.fer.zemris.sm.game.models.Ship;
 import hr.fer.zemris.sm.game.models.Sprite;
 import hr.fer.zemris.sm.game.models.Star;
 import hr.fer.zemris.sm.game.models.Ship.Direction;
-import hr.fer.zemris.sm.game.physics.IVector;
 import hr.fer.zemris.sm.game.physics.Vector;
-import hr.fer.zemris.sm.game.world.listeners.ExplosionListener;
-import hr.fer.zemris.sm.game.world.listeners.FireListener;
-import hr.fer.zemris.sm.game.world.listeners.GameOverListener;
-import hr.fer.zemris.sm.game.world.listeners.StarListener;
 import javafx.scene.shape.Circle;
 
 public abstract class GameWorld implements Serializable {
-//Need to implement serilizable just to store IController
+    //Need to implement serializable just to store IController
 
     protected SpriteManager spriteManager;
 
@@ -34,45 +27,39 @@ public abstract class GameWorld implements Serializable {
     protected Ship ship;
     protected int width;
     protected int height;
-    protected final int numberOfCommets;
+    protected final int numberOfComets;
     protected final int numberOfStars;
     protected boolean gameOver = false;
-    protected int points = 0;
     public boolean bounceAsteroids = true;
-    protected int starsCollected = 0;
 
     protected int fuelLeft = FUEL_START;
     protected int missilesLeft = NUMBER_OF_MISSILES;
 
+    private int fuelIncrease = GameConfig.getInstance().getFuelIncrease();
+    private int ammoIncrease = GameConfig.getInstance().getAmmoIncrease();
+
     private final static int MARGIN = 30;
     private int missileCharge = MISSILE_CHARGE_TIME;
 
-    protected List<StarListener> starListeners;
-    protected List<GameOverListener> gameOverListeners;
-    protected List<FireListener> fireListeners;
-    protected List<ExplosionListener> explosionListeners;
+    private Map<String, List<GameWorldListener>> listenersMap;
 
     private IController controller;
 
-    public GameWorld(int width, int height, int numberOfCommets, int numberOfStars) {
+    public GameWorld(int width, int height, int numberOfComets, int numberOfStars) {
         super();
         this.width = width;
         this.height = height;
-        this.numberOfCommets = numberOfCommets;
+        this.numberOfComets = numberOfComets;
         this.numberOfStars = numberOfStars;
         this.spriteManager = new SpriteManager();
 
-        gameOverListeners = new ArrayList<>();
-        explosionListeners = new ArrayList<>();
-        fireListeners = new ArrayList<>();
-        starListeners = new ArrayList<>();
+        listenersMap = new HashMap<>();
     }
 
     public void initialize() {
-        generateCommetsSprite();
         generateShipSprite();
+        generateCometsSprite();
         generateNewStars();
-        initializeGraphics();
     }
 
     private void generateShipSprite() {
@@ -80,6 +67,7 @@ public abstract class GameWorld implements Serializable {
         ship.translateX(width / 2);
         ship.translateY(3 * height / 4);
         spriteManager.addShipSprite(ship);
+        notifyListeners(GameEvent.SHIP_CREATED, new GameEvent(ship));
     }
 
     private void generateNewStars() {
@@ -90,27 +78,31 @@ public abstract class GameWorld implements Serializable {
         Random rnd = new Random();
         int count = numberOfStars - spriteManager.getStars().size();
         for (int i = 0; i < count; i++) {
-            Star sprite = new Star();
+            Star star = new Star();
 
             double newX = rnd.nextInt(width);
-            if (newX > width - sprite.getCollisionBounds().getRadius()) {
-                newX = width - sprite.getCollisionBounds().getRadius();
+            if (newX > width - star.getCollisionBounds().getRadius()) {
+                newX = width - star.getCollisionBounds().getRadius();
             }
 
             double newY = rnd.nextInt(3 * height / 4);
-            if (newY > height - sprite.getCollisionBounds().getRadius()) {
-                newY = height - sprite.getCollisionBounds().getRadius();
+            if (newY > height - star.getCollisionBounds().getRadius()) {
+                newY = height - star.getCollisionBounds().getRadius();
             }
-            sprite.translateX(newX);
-            sprite.translateY(newY);
-            spriteManager.addStarSprites(sprite);
-            handleNewStarGraphics(sprite);
+            star.translateX(newX);
+            star.translateY(newY);
+            addNewStar(star);
         }
     }
 
-    private void generateCommetsSprite() {
+    protected void addNewStar(Star star) {
+        spriteManager.addStarSprites(star);
+        notifyListeners(GameEvent.STAR_ADDED, new GameEvent(star));
+    }
+
+    private void generateCometsSprite() {
         Random rnd = new Random();
-        for (int i = 0; i < numberOfCommets; i++) {
+        for (int i = 0; i < numberOfComets; i++) {
             Asteroid sprite = new Asteroid(Vector.random2D(-1, 1));
 
             double newX = rnd.nextInt(width);
@@ -125,7 +117,7 @@ public abstract class GameWorld implements Serializable {
 
             sprite.translateX(newX);
             sprite.translateY(newY);
-            spriteManager.addAsteroidSprites(sprite);
+            addNewAsteroid(sprite);
         }
     }
 
@@ -137,28 +129,30 @@ public abstract class GameWorld implements Serializable {
         updateSprites();
         checkCollisions();
         cleanupSprites();
-        generateNewCommets();
+        generateNewComets();
         generateNewStars();
     }
 
-    private void generateNewCommets() {
-        if (spriteManager.getAsteroids().size() < numberOfCommets) {
+    private void generateNewComets() {
+        if (spriteManager.getAsteroids().size() < numberOfComets) {
             Random random = new Random();
             Asteroid sprite = new Asteroid(Vector.random2D(-1, 1));
             sprite.translateX(-80 * random.nextDouble());
             sprite.translateY(-80 * random.nextDouble());
-            spriteManager.addAsteroidSprites(sprite);
-            handleNewCommetGraphics(sprite);
+            addNewAsteroid(sprite);
         }
+    }
+
+    protected void addNewAsteroid(Asteroid asteroid) {
+        spriteManager.addAsteroidSprites(asteroid);
+        notifyListeners(GameEvent.ASTEROID_ADDED, new GameEvent(asteroid));
     }
 
     private void updateSprites() {
-        for (Sprite sprite : spriteManager.getAllSprites()) {
-            handleSpriteUpdate(sprite);
-        }
+        spriteManager.getAllSprites().forEach(this::handleSpriteUpdate);
     }
 
-    private void handleSpriteUpdate(Sprite sprite) {
+    protected void handleSpriteUpdate(Sprite sprite) {
         if (sprite instanceof Missile) {
             removeMissile(sprite);
         } else if (sprite instanceof Ship) {
@@ -166,9 +160,7 @@ public abstract class GameWorld implements Serializable {
         } else if (sprite instanceof Asteroid) {
             handleWalls(sprite);
         }
-
         sprite.update();
-        handleGraphicUpdate(sprite);
     }
 
     private void handleWalls(Sprite sprite) {
@@ -214,50 +206,51 @@ public abstract class GameWorld implements Serializable {
         List<Input> inputs = controller.getInput();
         if (inputs == null || inputs.size() == 0) {
             fuelLeft -= FUEL_STAY;
-            handleFuelChangeGraphics();
-            return;
-        }
-        if (inputs.size() == 1 && inputs.contains(Input.FIRE)) {
-            fuelLeft -= FUEL_STAY;
-        }
-        boolean hasFuel = checkFuel();
-        boolean hasRemovedFuel = false;
-        for (Input input : inputs) {
-            switch (input) {
-            case MOVE:
-                if (hasFuel) {
-                    ship.move();
-                    fuelLeft -= FUEL_MOVE;
-                    hasRemovedFuel = true;
+        } else {
+            if (inputs.size() == 1 && inputs.contains(Input.FIRE)) {
+                fuelLeft -= FUEL_STAY;
+            }
+
+            boolean hasFuel = checkFuel();
+            boolean hasRemovedFuel = false;
+
+            for (Input input : inputs) {
+                switch (input) {
+                    case MOVE:
+                        if (hasFuel) {
+                            ship.move();
+                            fuelLeft -= FUEL_MOVE;
+                            hasRemovedFuel = true;
+                        }
+                        break;
+                    case FIRE:
+                        if (missileCharge >= MISSILE_CHARGE_TIME) {
+                            fireMissile();
+                            missileCharge = 0;
+                        }
+                        break;
+                    case LEFT:
+                        if (hasFuel) {
+                            ship.rotate(Direction.COUNTER_CLOCKWISE);
+                            if (hasRemovedFuel) {
+                                fuelLeft -= FUEL_ROTATE;
+                                hasRemovedFuel = true;
+                            }
+                        }
+                        break;
+                    case RIGHT:
+                        if (hasFuel) {
+                            ship.rotate(Direction.CLOCKWISE);
+                            if (hasRemovedFuel) {
+                                fuelLeft -= FUEL_ROTATE;
+                                hasRemovedFuel = true;
+                            }
+                        }
+                        break;
                 }
-                break;
-            case FIRE:
-                if (missileCharge >= MISSILE_CHARGE_TIME) {
-                    fireMissile();
-                    missileCharge = 0;
-                }
-                break;
-            case LEFT:
-                if (hasFuel) {
-                    ship.rotate(Direction.COUNTER_CLOCKWISE);
-                    if(hasRemovedFuel) {
-                        fuelLeft -= FUEL_ROTATE;
-                        hasRemovedFuel = true;
-                    }
-                };
-                break;
-            case RIGHT:
-                if (hasFuel) {
-                    ship.rotate(Direction.CLOCKWISE);
-                    if(hasRemovedFuel) {
-                        fuelLeft -= FUEL_ROTATE;
-                        hasRemovedFuel = true;
-                    }
-                };
-                break;
             }
         }
-        handleFuelChangeGraphics();
+        notifyListeners(GameEvent.FUEL_CHANGE, null);
     }
 
     private void fireMissile() {
@@ -265,19 +258,15 @@ public abstract class GameWorld implements Serializable {
             return;
         }
         missilesLeft--;
-        handleMissileStateGraphics();
         Missile missile = new Missile(ship.getCurrentAngle(), MISSILE_SPEED);
         missile.translateX(ship.getCollisionBounds().getCenterX());
         missile.translateY(ship.getCollisionBounds().getCenterY());
 
         spriteManager.addMissileSprites(missile);
-        handleMissileGraphics(missile);
-        for (FireListener fireListener : fireListeners) {
-            fireListener.fired();
-        }
+        notifyListeners(GameEvent.MISSILE_FIRED, new GameEvent(missile));
     }
 
-    protected void checkCollisions() {
+    private void checkCollisions() {
         List<Sprite> sprites = spriteManager.getAllSprites();
         int size = sprites.size();
 
@@ -292,7 +281,7 @@ public abstract class GameWorld implements Serializable {
         }
     }
 
-    protected boolean handleCollision(Sprite spriteA, Sprite spriteB) {
+    private boolean handleCollision(Sprite spriteA, Sprite spriteB) {
         if (spriteA instanceof Asteroid && spriteB instanceof Asteroid) {
             Asteroid first = (Asteroid) spriteA;
             Asteroid second = (Asteroid) spriteB;
@@ -302,78 +291,48 @@ public abstract class GameWorld implements Serializable {
             return true;
         } else if ((spriteA instanceof Missile && spriteB instanceof Asteroid)
                 || (spriteB instanceof Missile && spriteA instanceof Asteroid)) {
-            spriteManager.addSpritesToBeRemoved(spriteA, spriteB);
-            updatePoints(ASTEROID_SCORE);
 
-            asteroidDestroyed();
+            spriteManager.addSpritesToBeRemoved(spriteA, spriteB);
+            notifyListeners(GameEvent.ASTEROID_DESTROYED, null);
             return true;
+
         } else if ((spriteA instanceof Ship && spriteB instanceof Asteroid)
                 || (spriteB instanceof Ship && spriteA instanceof Asteroid)) {
+
             spriteManager.addSpritesToBeRemoved(ship);
             gameOver = true;
-            notifyListeners();
+            notifyListeners(GameEvent.GAME_OVER, null);   //Ship is destroyed
             return true;
+
         } else if ((spriteA instanceof Ship && spriteB instanceof Star)
                 || (spriteB instanceof Ship && spriteA instanceof Star)) {
+
+            updateResources();
+
             if (spriteA instanceof Star) {
                 spriteManager.addSpritesToBeRemoved(spriteA);
+                notifyListeners(GameEvent.STAR_COLLECTED, new GameEvent(spriteA));
             } else {
                 spriteManager.addSpritesToBeRemoved(spriteB);
+                notifyListeners(GameEvent.STAR_COLLECTED, new GameEvent(spriteB));
             }
-            updatePoints(STAR_SCORE);
-            starsCollected++;
-            starCollected();
-            notifyStarListeners();
             return true;
         }
+
+
         return false;
     }
 
-    public void registerStarCollectedListeners(StarListener listener) {
-        starListeners.add(listener);
-    }
-
-    private void notifyStarListeners() {
-        fuelLeft += GameConfig.getInstance().getFuelIncrease();
-        missilesLeft += GameConfig.getInstance().getAmmoIncrease();
-
-        if (fuelLeft > FUEL_START) {
+    private void updateResources() {
+        fuelLeft += fuelIncrease;
+        if(fuelLeft > FUEL_START) {
             fuelLeft = FUEL_START;
         }
-        if (missilesLeft > NUMBER_OF_MISSILES) {
+
+        missilesLeft += ammoIncrease;
+        if(missilesLeft > NUMBER_OF_MISSILES) {
             missilesLeft = NUMBER_OF_MISSILES;
         }
-        starCollected();
-        for (StarListener listener : starListeners) {
-            listener.starCollected();
-        }
-    }
-
-    private void notifyListeners() {
-        for (GameOverListener gameOverListener : gameOverListeners) {
-            gameOverListener.gameOver();
-        }
-    }
-
-    public boolean registerGameOverListener(GameOverListener listener) {
-        return gameOverListeners.add(listener);
-    }
-
-    public IVector getShipPosition() {
-        return new Vector(ship.getCollisionBounds().getCenterX(), ship.getCollisionBounds().getCenterY());
-    }
-
-    private void updatePoints(int count) {
-        points += count;
-        handlePointsUpdateGraphics();
-    }
-
-    public void registerFireListener(FireListener fl) {
-        fireListeners.add(fl);
-    }
-
-    public void registerExplosionListener(ExplosionListener el) {
-        explosionListeners.add(el);
     }
 
     public void setController(IController controller) {
@@ -388,14 +347,6 @@ public abstract class GameWorld implements Serializable {
         return spriteManager;
     }
 
-    public int getPoints() {
-        return points;
-    }
-
-    public int getCollectedStars() {
-        return starsCollected;
-    }
-
     public int getFuelLeft() {
         return fuelLeft;
     }
@@ -404,30 +355,31 @@ public abstract class GameWorld implements Serializable {
         return missilesLeft;
     }
 
-    protected abstract void handleGraphicUpdate(Sprite spite);
+    public void addListener(String event, GameWorldListener listener) {
+        List<GameWorldListener> listeners = listenersMap.get(event);
+        if( listeners == null ) {
+            listeners = new ArrayList<>();
+            listenersMap.put(event, listeners);
+        }
+        listeners.add(listener);
+    }
 
-    protected abstract void initializeGraphics();
+    private void notifyListeners(String eventType, GameEvent event) {
+        List<GameWorldListener> listeners = listenersMap.get(eventType);
+        if(listeners != null) {
+            listeners.forEach(l -> l.worldEvent(event));
+        }
+    }
 
-    protected abstract void handleNewCommetGraphics(Asteroid sprite);
-
-    protected abstract void handleMissileStateGraphics();
-
-    protected abstract void cleanupSprites();
-
-    protected abstract void asteroidDestroyed();
-
-    protected abstract void starCollected();
-
-    protected abstract void handleMissileGraphics(Missile missile);
+    //*******************************************
+    //Abstract methods
+    //*******************************************
 
     public abstract void play();
 
     public abstract void pause();
 
-    protected abstract void handleFuelChangeGraphics();
+    public abstract void stop();
 
-    protected abstract void handlePointsUpdateGraphics();
-
-    protected abstract void handleNewStarGraphics(Star sprite);
-
+    protected abstract void cleanupSprites();
 }
