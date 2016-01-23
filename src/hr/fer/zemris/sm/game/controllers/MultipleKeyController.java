@@ -124,16 +124,13 @@ public class MultipleKeyController implements IConnectibleController {
     }
 
     @Override
-    public void setWorld(GameWorld world) {
-
-    }
+    public void setWorld(GameWorld world) {}
 
     @Override
     public void disconnect() {
         if(scene != null) {
             scene.removeEventHandler(KeyEvent.KEY_PRESSED, pressedController);
             scene.removeEventHandler(KeyEvent.KEY_RELEASED, releasedController);
-            scene = null;
         }
     }
 }

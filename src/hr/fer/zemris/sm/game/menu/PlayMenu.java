@@ -139,7 +139,7 @@ public class PlayMenu extends Menu {
                     scene.getStylesheets().clear();
                     scene.getStylesheets().add(ClassLoader.getSystemResource(GAME_STYLE_PATH).toExternalForm());
 
-                    controller.disconnect();    //Remove retain cycle
+                    controller.disconnect();                              //Remove retain cycle
                     Pane root = getGameParent().getRoot();
                     root.getChildren().clear();
                     root.getChildren().add(getGameParent().getPlayMenu());
@@ -148,6 +148,7 @@ public class PlayMenu extends Menu {
                 });
 
                 gameOverScreen.setOnRestartAction(event -> {
+                    world.stop();
                     humanPlay.fire();
                 });
 
