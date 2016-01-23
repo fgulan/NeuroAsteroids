@@ -30,6 +30,7 @@ import static javafx.scene.input.KeyCode.ESCAPE;
 import static javafx.scene.input.KeyCode.P;
 
 /**
+ *  Menu for choosing neural networks and playing the game with them as the controller.
  *
  * Created by doctor on 03.12.15..
  */
@@ -70,6 +71,10 @@ public class AIChooserMenu extends Menu {
         setRight(rightPane);
     }
 
+    /**
+     * Fills the list model with the loaded neural networks.
+     * @param list list view
+     */
     private void fillList(ListView<ListItem> list) {
 
         List<EvolutionElement> eObjects = EvolutionObjectDataUtility.getInstance().getNeuralObjects();
@@ -80,6 +85,9 @@ public class AIChooserMenu extends Menu {
 
     }
 
+    /**
+     * Costume list view item
+     */
     private static class ListItem extends BorderPane {
 
         String name;
@@ -101,6 +109,10 @@ public class AIChooserMenu extends Menu {
         }
     }
 
+    /**
+     * Side pane used as container for neural network name, fitness, and description.
+     * And play button.
+     */
     private class SidePane extends VBox {
 
         private Label name;
@@ -114,6 +126,11 @@ public class AIChooserMenu extends Menu {
 
             Button play = new KeyEventButton(PLAY_BUTTON_TEXT);
 
+            /*
+             *  Set of actions that needs to be executed when you start the game.
+             *  This should be written better, but it is small enough project to look
+             *  the other way.
+             */
             play.setOnAction(e -> {
                 Game parent = getGameParent();
                 Stage stage = parent.getStage();

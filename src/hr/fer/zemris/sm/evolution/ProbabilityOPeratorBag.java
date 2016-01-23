@@ -5,6 +5,12 @@ import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Class that maps entries with probability and when get method is called
+ * every entry has the given probability to be chosen.
+ *
+ * @param <T>
+ */
 public class ProbabilityOPeratorBag<T> {
 
     private static final Random rnd = new Random();
@@ -22,6 +28,11 @@ public class ProbabilityOPeratorBag<T> {
         sum = entries.stream().mapToDouble((e) -> e.probability).sum();
     }
 
+    /**
+     * Returns some entry from the collection. Entries with greater probability
+     * have greater chance to be  chosen.
+     * @return
+     */
     public T get() {
         double rndVal = rnd.nextDouble();
         double currSum = 0;

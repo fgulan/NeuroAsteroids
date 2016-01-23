@@ -13,6 +13,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * This controller provides neural network with this information:
+ * <ul>
+*     <li>Binary information of the star angle relative to the ship orientation. Left = -1, Right = 1</li>
+ *     <li>Information how much frames before did ship fired missile on scale 0-1 linearly</li>
+ *     <li>Amount of danger form the right, left, and front.</li>
+ *     <ul>
+ *         <li>Where sides are defined as:</li>
+ *         <ul>
+ *             <li>Front view is a rectangle surface of width 120 length units (relative to the screen) and unlimited length</li>
+ *             <li>Right is everything to the right of the ship</li>
+ *             <li>Left  is everything to the left  of the ship</li>
+ *         </ul>
+ *         <li>And amount of danger is defined as:</li>
+ *         <ul>
+ *             <li>0 - 60 length units = 1 danger</li>
+ *             <li>60 - 120 length units = 3/4 danger</li>
+ *             <li>120 - 180 length units = 1/2 danger</li>
+ *             <li>180 - 240 length units = 1/4 danger</li>
+ *             <li>240 &gt length units = danger</li>
+ *         </ul>
+ *     </ul>
+ * </ul>
+ *
+ * This controller will only work if there is at least one star in the world
+ *
  * Created by Fredi Šarić on 14.01.16.
  */
 public class FFANNController10 extends AbstractPhenotypeController {

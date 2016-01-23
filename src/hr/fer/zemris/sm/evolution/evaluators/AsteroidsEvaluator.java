@@ -1,7 +1,7 @@
 package hr.fer.zemris.sm.evolution.evaluators;
 
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
-import hr.fer.zemris.sm.game.controllers.NeuralNetworkController;
+import hr.fer.zemris.sm.game.controllers.FFANNController11;
 import hr.fer.zemris.sm.game.world.GameEvent;
 import hr.fer.zemris.sm.game.world.LimitedFramesSimulationWorld;
 import static hr.fer.zemris.sm.game.Constants.*;
@@ -33,13 +33,18 @@ public class AsteroidsEvaluator implements IEvaluator {
 
         for (int i = 0; i < 5; i++) {
             world = new LimitedFramesSimulationWorld(800, 600, AI_SIMULATION_PLAY_ASTEROIDS_NUMBER, STARS_NUMBER, 10_000);
-            NeuralNetworkController controller = new NeuralNetworkController(phenotype, world);
+            FFANNController11 controller = new FFANNController11(phenotype);
+            controller.setWorld(world);
             world.setController(controller);
             world.initialize();
 
             world.addListener(GameEvent.MISSILE_FIRED, e -> fireCounter++);
             world.play();
-            res += controller.fittness * 50;
+
+
+
+            //TODO: change this
+            res += 50;
         }
         //System.out.println("acc:" + acc + " fcCount" + fc.count + " destroyed" + world.getPoints() + " fitness " + controller.fittness);
 

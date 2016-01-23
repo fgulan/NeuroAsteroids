@@ -10,14 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Implementation of the controller that is controlled by key input.
+ *
  * Created by Fredi Šarić on 18.12.15.
  */
 public class MultipleKeyController implements IConnectibleController {
 
-    private boolean move;
-    private boolean fire;
-    private boolean left;
-    private boolean right;
+    private boolean move;   //move in the next frame forward
+    private boolean fire;   //fire missile in the next frame
+    private boolean left;   //turn left in the next frame
+    private boolean right;  //turn right in the next frame
 
     private List<Input> inputs;
 
@@ -27,6 +29,14 @@ public class MultipleKeyController implements IConnectibleController {
     private KeyReleasedController releasedController;
 
 
+    /**
+     *
+     * @param scene Scene that this controller is going to control
+     * @param move  Key that is binding with move  action
+     * @param left  Key that is binding with left  action
+     * @param right Key that is binding with right action
+     * @param fire  Key that is binding with fire  action
+     */
     public MultipleKeyController(Scene scene, KeyCode move, KeyCode left, KeyCode right, KeyCode fire) {
         this.scene = scene;
 

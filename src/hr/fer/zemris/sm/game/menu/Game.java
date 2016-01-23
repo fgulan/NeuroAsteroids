@@ -24,6 +24,9 @@ import static hr.fer.zemris.sm.game.Constants.*;
 import static javafx.scene.input.KeyCode.*;
 
 /**
+ * This is the entry point into the game.
+ *
+ * Game has small number of menus so they are all loaded on the start.
  *
  * Created by doctor on 02.12.15..
  */
@@ -32,6 +35,9 @@ public class Game extends Application {
     public static final int RIGHT = 1;
     public static final int LEFT  =-1;
 
+    /*
+    * Menus
+    * */
     private Menu startMenu;
     private Menu playMenu;
     private Menu scoresMenu;
@@ -39,14 +45,29 @@ public class Game extends Application {
     private Menu creditsMenu;
     private Menu AIChooserMenu;
 
+    /*
+    * Available human controllers. They are created booth created at the
+    * start of the game and hold in the memory and accessed from
+    * chosenController reference.
+    * */
     private IConnectibleController humanArrowController;
     private IConnectibleController humanWASDController;
-
     private IConnectibleController chosenController;
 
+    /*
+    * Cursor that is used in the game
+    * */
     private ImageCursor cursor;
 
+    /*
+    * Primary stage
+    * */
     private Stage stage;
+    /*
+    * Main container for the menus.
+    * This instance will be only removed from the scene when the game is played because
+    * the game can not be in any pane with layout manager.
+    * */
     private StackPane root;
 
     @Override
@@ -92,6 +113,13 @@ public class Game extends Application {
         AIChooserMenu = new AIChooserMenu(this);
     }
 
+    /**
+     * Method used for switching menus. It creates slide (translate) transition with fade in
+     * effect
+     * @param from menu that is going to be removed
+     * @param to   menu that is going to be shown
+     * @param direction in what direction will transition go
+     */
     public void transition(Pane from, Pane to, int direction) {
         to.setOpacity(0);   //Make invisible for fade in animation, so it doesn't glitch
         root.getChildren().add(0, to);
@@ -127,6 +155,7 @@ public class Game extends Application {
     }
 
     public void closeGame() {
+        //Make it easy on GC
         humanArrowController.disconnect();
         startMenu.disconnect();
         playMenu.disconnect();

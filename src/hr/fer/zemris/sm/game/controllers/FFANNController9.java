@@ -15,6 +15,15 @@ import static hr.fer.zemris.sm.game.Constants.FUEL_START;
 import static hr.fer.zemris.sm.game.Constants.NUMBER_OF_MISSILES;
 
 /**
+ * This controller gives all the same inputs to the network as the
+ * {@link FFANNController8} except that it does not give distance to the
+ * closes star relative to the ship center and it does not provide information
+ * of the ship velocity. Also information of the star angle is now binary eg. if
+ * the star is to the left than input is -1, and if the star is to the right of the
+ * ship than input is 1.
+ *
+ * This controller will only work if there is at least one star in the world
+ *
  * Created by Fredi Šarić on 14.01.16.
  */
 public class FFANNController9 extends AbstractPhenotypeController {

@@ -12,6 +12,7 @@ import java.util.List;
 
 import static hr.fer.zemris.sm.game.Constants.*;
 /**
+ * Menu showing high scores.
  *
  * Created by doctor on 02.12.15..
  */

@@ -16,6 +16,9 @@ import javafx.scene.layout.VBox;
 import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
+ * Screen shown when player presses "p".
+ *
+ * It holds
  *
  * Created by doctor on 05.12.15..
  */

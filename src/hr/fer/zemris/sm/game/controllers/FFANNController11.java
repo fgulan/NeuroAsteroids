@@ -16,6 +16,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * This controller provides neural network with this information:
+ * <ul>
+ *     <li>Binary information of the star angle relative to the ship orientation. Left = -1, Right = 1</li>
+ *     <li>
+ *         Whether or not there is an asteroid in ships field of view. Field of view is a rectangle
+ *         of width same as ship and length that is equal as 3 * asteroid diameter and it is positioned
+ *         in front of the ship
+ *     </li>
+ *     <li>
+ *         Information of the number of frames that have passed since last shoot have been taken. That information
+ *         is modeled by exponential function that starts from 1 and goes to 0.
+ *     </li>
+ *     <li>Information of how much danger there is from the LEFT and RIGHT. That information
+ *         is modeled by exponential function that starts from 1 and goes to 0 and it depends on distance from
+ *         asteroid center to ship center.
+ *     </li>
+ * </ul>
+ *
+ *
  * This controller will only work if there is at least one star in the world
  *
  * Created by Fredi Šarić on 15.01.16.
@@ -164,9 +183,7 @@ public class FFANNController11 extends AbstractPhenotypeController {
     public void setWorld(GameWorld world) {
         super.setWorld(world);
         if(world != null) {
-            world.addListener(GameEvent.MISSILE_FIRED, e -> {
-                numOfFiredMissiles++;
-            });
+            world.addListener(GameEvent.MISSILE_FIRED, e -> numOfFiredMissiles++);
             numOfFiredMissiles = 0; //reset every time when world is changed
         }
     }

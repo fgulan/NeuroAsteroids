@@ -19,6 +19,7 @@ import java.util.List;
 import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
+ * Credits menu.
  *
  * Created by doctor on 03.12.15..
  */
