@@ -7,8 +7,14 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import static hr.fer.zemris.sm.game.Constants.*;
 
+/**
+ * Represents ship sprite. Its collision bound is Circle and real bound is Polygon.
+ */
 public class Ship extends Sprite {
 
+    /**
+     * Ship rotation direction.
+     */
     public enum Direction {
         CLOCKWISE, COUNTER_CLOCKWISE
     }
@@ -25,6 +31,9 @@ public class Ship extends Sprite {
     private final double acceleration = GameConfig.getInstance().getAcceleration();
     private final double deceleration = GameConfig.getInstance().getDeceleration();
 
+    /**
+     * Ship constructor.
+     */
     public Ship() {
         super();
         Polygon polygon = new Polygon();
@@ -64,6 +73,10 @@ public class Ship extends Sprite {
         translateY(y);
     }
 
+    /**
+     * Rotates ship sprite in given direction.
+     * @param direction Rotation direction.
+     */
     public void rotate(Direction direction) {
         if (direction == Direction.CLOCKWISE) {
             currentAngle += UNIT_ANGLE_PER_FRAME;
@@ -74,35 +87,17 @@ public class Ship extends Sprite {
         bounds.setRotate(currentAngle);
     }
 
+    /**
+     * Sets move flag to the ship.
+     */
     public void move() {
         this.move = true;
     }
 
-    private IVector getSpeed(double angle) {
-        double ang = Math.abs(angle);
-        double radians;
-        double xV = 0;
-        double yV = 0;
-        if (ang >= 0 && ang <= 90) {
-            radians = Math.toRadians(angle);
-            xV = Math.sin(radians);
-            yV = -Math.cos(radians);
-        } else if (ang > 90 && ang <= 180) {
-            radians = Math.toRadians(angle - 90);
-            xV = Math.cos(radians);
-            yV = Math.sin(radians);
-        } else if (ang > 180 && ang <= 270) {
-            radians = Math.toRadians(angle - 180);
-            xV = -Math.sin(radians);
-            yV = Math.cos(radians);
-        } else if (ang > 270 && ang <= 360) {
-            radians = Math.toRadians(angle - 270);
-            xV = -Math.cos(radians);
-            yV = -Math.sin(radians);
-        }
-        return new Vector(xV, yV);
-    }
-
+    /**
+     * Returns current angle of ship.
+     * @return Ship current angle.
+     */
     public float getCurrentAngle() {
         return currentAngle;
     }

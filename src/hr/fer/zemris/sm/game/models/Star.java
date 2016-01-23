@@ -3,8 +3,14 @@ package hr.fer.zemris.sm.game.models;
 import hr.fer.zemris.sm.game.physics.Vector;
 import javafx.scene.shape.Circle;
 
+/**
+ * Represents star sprite. Its collision bounds and real bounds are Circle.
+ */
 public class Star extends Sprite {
 
+    /**
+     * Star constructor
+     */
     public Star() {
         super(new Vector(0, 0));
         this.collisionBounds = new Circle(20);

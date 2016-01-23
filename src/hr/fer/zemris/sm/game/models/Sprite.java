@@ -155,10 +155,40 @@ public abstract class Sprite {
     }
 
     /**
-     * Sets given bounds to current sprite.
+     * Sets given real bounds to current sprite.
      * @param bounds New real bounds.
      */
     public void setBounds(Shape bounds) {
         this.bounds = bounds;
+    }
+
+    /**
+     * Calculates unit vector (2D) of speed for given angle.
+     * @param angle Sprite view angle.
+     * @return Unit speed vector (2D).
+     */
+    protected IVector getSpeed(double angle) {
+        double ang = Math.abs(angle);
+        double radians;
+        double xV = 0;
+        double yV = 0;
+        if (ang >= 0 && ang <= 90) {
+            radians = Math.toRadians(angle);
+            xV = Math.sin(radians);
+            yV = -Math.cos(radians);
+        } else if (ang > 90 && ang <= 180) {
+            radians = Math.toRadians(angle - 90);
+            xV = Math.cos(radians);
+            yV = Math.sin(radians);
+        } else if (ang > 180 && ang <= 270) {
+            radians = Math.toRadians(angle - 180);
+            xV = -Math.sin(radians);
+            yV = Math.cos(radians);
+        } else if (ang > 270 && ang <= 360) {
+            radians = Math.toRadians(angle - 270);
+            xV = -Math.cos(radians);
+            yV = -Math.sin(radians);
+        }
+        return new Vector(xV, yV);
     }
 }
