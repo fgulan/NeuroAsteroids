@@ -9,22 +9,32 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
+/**
+ * AsteroidNode class represent NeuroAsteroids asteroid game node.
+ */
 public class AsteroidNode extends GameNode {
 
+    /**
+     * Asteroid rotation animation.
+     */
     private Animation animation;
-    
+
+    /**
+     * Asteroid game node constructor.
+     * @param sprite Asteroid sprite.
+     */
     public AsteroidNode(Asteroid sprite) {
         super();
         this.sprite = sprite;
-        ImageView commet = new ImageView();
-        commet.setFitWidth(80);
-        commet.setPreserveRatio(true);
-        commet.setViewport(new Rectangle2D(0, 0, 128, 128));
-        this.node = commet;
+        ImageView asteroid = new ImageView();
+        asteroid.setFitWidth(80);
+        asteroid.setPreserveRatio(true);
+        asteroid.setViewport(new Rectangle2D(0, 0, 128, 128));
+        this.node = asteroid;
         node.setLayoutX(-40);
         node.setLayoutY(-40);
 
-        animation = Animations.asteroidRotation(commet, Duration.millis(800), 128, 128, Animation.INDEFINITE);
+        animation = Animations.asteroidRotation(asteroid, Duration.millis(800), 128, 128, Animation.INDEFINITE);
         animation.play();
     }
 

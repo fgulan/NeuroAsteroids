@@ -5,10 +5,20 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import static hr.fer.zemris.sm.game.Constants.MISSILE_IMAGE_PATH;
 
+/**
+ * MissileNode class represent NeuroAsteroids missile game node.
+ */
 public class MissileNode extends GameNode {
 
+    /**
+     * Missile image.
+     */
     private static final Image missileImage = new Image(MISSILE_IMAGE_PATH);
 
+    /**
+     * MissileNode constructor.
+     * @param sprite Missile sprite.
+     */
     public MissileNode(Missile sprite) {
         super();
         this.sprite = sprite;

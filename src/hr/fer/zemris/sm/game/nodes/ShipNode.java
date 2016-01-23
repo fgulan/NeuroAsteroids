@@ -9,8 +9,15 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 import static hr.fer.zemris.sm.game.Constants.SHIP_IMAGE_PATH;
 
+/**
+ * ShipNode class represent NeuroAsteroids ship game node.
+ */
 public class ShipNode extends GameNode {
 
+    /**
+     * ShipNode constructor.
+     * @param sprite Ship sprite.
+     */
     public ShipNode(Ship sprite) {
         super();
         this.sprite = sprite;

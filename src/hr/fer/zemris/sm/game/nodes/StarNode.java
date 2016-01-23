@@ -9,10 +9,20 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
+/**
+ * StarNode class represent NeuroAsteroids star game node.
+ */
 public class StarNode extends GameNode {
 
+    /**
+     * Star rotation animation.
+     */
     private Animation animation;
 
+    /**
+     * StarNode constructor.
+     * @param sprite Star sprite.
+     */
     public StarNode(Star sprite) {
         super();
         this.sprite = sprite;
@@ -54,5 +64,4 @@ public class StarNode extends GameNode {
     public void explode(ExplosionHandler handler) {
         handler.handle(this);
     }
-
 }
