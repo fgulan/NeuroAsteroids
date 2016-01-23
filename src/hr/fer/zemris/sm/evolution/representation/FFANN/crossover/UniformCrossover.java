@@ -4,6 +4,9 @@ import hr.fer.zemris.sm.evolution.representation.FFANN.DoubleArrayGenotype;
 import hr.fer.zemris.sm.evolution.representation.ICrossover;
 
 /**
+ * Crossover implementation that will take one gene from one parent, and
+ * next gene for other parent. That process is repeated to the end of the genotype.
+ *
  * Created by Fredi Šarić on 19.12.15.
  */
 public class UniformCrossover implements ICrossover<DoubleArrayGenotype> {

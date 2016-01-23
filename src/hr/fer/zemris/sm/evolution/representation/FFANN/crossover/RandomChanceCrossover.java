@@ -6,6 +6,8 @@ import hr.fer.zemris.sm.evolution.representation.ICrossover;
 import java.util.Random;
 
 /**
+ * Crossover implementation that takes gene form one parent with 50% chance.
+ *
  * Created by Fredi Šarić on 19.12.15.
  */
 public class RandomChanceCrossover implements ICrossover<DoubleArrayGenotype> {

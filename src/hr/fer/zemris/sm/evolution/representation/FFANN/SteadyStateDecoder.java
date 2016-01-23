@@ -5,6 +5,9 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.function.IActivationF
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 
 /**
+ * Decoder for {@link DoubleArrayGenotype}.
+ * Each time this decoded decodes a genotype it will create new instance of Phenotype class
+ *
  * Created by Fredi Šarić on 20.12.15.
  */
 public class SteadyStateDecoder implements IDecoder<DoubleArrayGenotype> {

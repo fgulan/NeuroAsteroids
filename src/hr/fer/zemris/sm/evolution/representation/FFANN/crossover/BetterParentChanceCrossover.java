@@ -6,6 +6,8 @@ import hr.fer.zemris.sm.evolution.representation.ICrossover;
 import java.util.Random;
 
 /**
+ * Crossover implementation that takes genes from better parent with given probability.
+ *
  * Created by Fredi Šarić on 19.12.15.
  */
 public class BetterParentChanceCrossover implements ICrossover<DoubleArrayGenotype> {

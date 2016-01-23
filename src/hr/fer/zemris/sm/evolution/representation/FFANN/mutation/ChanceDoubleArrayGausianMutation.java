@@ -6,6 +6,8 @@ import hr.fer.zemris.sm.evolution.representation.IMutation;
 import java.util.Random;
 
 /**
+ * Mutation implementation for {@link DoubleArrayGenotype}. It will perform
+ * Gausian mutation on a gene with given probability.
  *
  * Created by Fredi Šarić on 19.12.15.
  */
