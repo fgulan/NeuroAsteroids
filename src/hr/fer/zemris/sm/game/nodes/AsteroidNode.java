@@ -24,7 +24,7 @@ public class AsteroidNode extends GameNode {
         node.setLayoutX(-40);
         node.setLayoutY(-40);
 
-        animation = Animations.commetRotation(commet, Duration.millis(800), 128, 128, Animation.INDEFINITE);
+        animation = Animations.asteroidRotation(commet, Duration.millis(800), 128, 128, Animation.INDEFINITE);
         animation.play();
     }
 
