@@ -4,6 +4,10 @@ import hr.fer.zemris.sm.evolution.representation.ICrossover;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnection;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGenotype;
 
+/**
+ * Crossover for two NEAT genotypes.
+ * All genes are taken from the fitter parent and additional ones are added from the other.
+ */
 public class SlowCrossover implements ICrossover<ConnectionGenotype> {
 
 	@Override

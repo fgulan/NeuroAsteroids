@@ -2,6 +2,10 @@ package hr.fer.zemris.sm.evolution.representation.neuralNet.genotype;
 
 import java.io.Serializable;
 
+/**
+ * Represents a NEAT gene which is a neuron connection with its weight, neurons and activity.
+ */
+
 public class NeuronConnection implements Comparable<NeuronConnection>, Serializable
 {
     private int inNeuron;

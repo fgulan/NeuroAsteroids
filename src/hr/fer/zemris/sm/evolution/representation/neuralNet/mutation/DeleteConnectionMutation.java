@@ -3,6 +3,8 @@ package hr.fer.zemris.sm.evolution.representation.neuralNet.mutation;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGenotype;
 
 /**
+ * Deletes a random connections from a genotype.
+ *
  * Created by Andrija Milicevic.
  */
 public class DeleteConnectionMutation extends Mutation<ConnectionGenotype> {

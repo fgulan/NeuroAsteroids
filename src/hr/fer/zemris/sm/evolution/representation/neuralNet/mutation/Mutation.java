@@ -5,6 +5,8 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
 import java.util.Random;
 
 /**
+ * Interface for NEAT genotype mutations.
+ *
  * Created by Andrija Milicevic.
  */
 public abstract class Mutation<T extends Genotype> {

@@ -1,6 +1,8 @@
 package hr.fer.zemris.sm.evolution.representation.neuralNet.function;
 
 /**
+ * Activation function used in the neuron implementation.
+ *
  * Created by Andrija Milicevic.
  */
 public class SigmoidActivationFunction implements IActivationFunction {

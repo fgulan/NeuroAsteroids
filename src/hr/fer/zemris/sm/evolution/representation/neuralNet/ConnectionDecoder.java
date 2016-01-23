@@ -11,6 +11,12 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.NodeConnect
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Recursive decoder which constructs a workable NEAT neural network from a NEAT genotype.
+ * The network may contain cycles.
+ *
+ * After the decoding, the NEAT neural network can be evaluated linearly using a generated neuron evaluation list.
+ */
 public class ConnectionDecoder implements IDecoder<ConnectionGenotype> {
     private boolean bio[];
 

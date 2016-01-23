@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * Helper class used to construct and process NEAT neural networks.
+ *
  * Created by Andrija Milicevic.
  */
 public class Node implements Serializable {
