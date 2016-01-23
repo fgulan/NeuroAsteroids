@@ -22,13 +22,22 @@ public class SpriteManager {
      * List of all game objects currently on scene.
      */
     private List<Sprite> GAME_OBJECTS = new ArrayList<>();
-    
+    /**
+     * List of all asteroid objects currently on scene.
+     */
     private List<Asteroid> ASTEROIDS = new ArrayList<>();
-
+    /**
+     * List of all missile objects currently on scene.
+     */
     private List<Missile> MISSILES = new ArrayList<>();
-    
+    /**
+     * List of all star objects currently on scene.
+     */
     private List<Star> STARS = new ArrayList<>();
 
+    /**
+     * Ship sprite
+     */
     private Ship ship;
     
     /**
@@ -43,12 +52,20 @@ public class SpriteManager {
     public List<Sprite> getAllSprites() {
         return GAME_OBJECTS;
     }
-    
+
+    /**
+     * Adds given sprite as ship sprite
+     * @param sprite Ship sprite.
+     */
     public void addShipSprite(Ship sprite) {
         GAME_OBJECTS.add(sprite);
         ship = sprite;
     }
-    
+
+    /**
+     * Adds given array of sprites as asteroid sprites.
+     * @param sprites Asteroid sprite (or array of them)
+     */
     public void addAsteroidSprites(Asteroid ... sprites) {
         if (sprites.length > 1) {
             List<Asteroid> asteroids = Arrays.asList((Asteroid[]) sprites);
@@ -59,23 +76,43 @@ public class SpriteManager {
             GAME_OBJECTS.add(sprites[0]);
         }
     }
-    
+
+    /**
+     * List of all asteroids on scene.
+     * @return List of all asteroids on scene.
+     */
     public List<Asteroid> getAsteroids() {
         return ASTEROIDS;
     }
-    
+
+    /**
+     * List of all missiles on scene.
+     * @return List of all missiles on scene.
+     */
     public List<Missile> getMissiles() {
         return MISSILES;
     }
-    
+
+    /**
+     * List of all bonus stars on scene.
+     * @return List of all bonus stars on scene.
+     */
     public List<Star> getStars() {
         return STARS;
     }
-    
+
+    /**
+     * Gets ship sprite.
+     * @return Ship sprite.
+     */
     public Ship getShip() {
         return ship;
     }
-    
+
+    /**
+     * Adds a given array of sprites as Missile sprites.
+     * @param sprites Array of Missile sprites, or Missile sprite
+     */
     public void addMissileSprites(Missile... sprites) {
         if (sprites.length > 1) {
             List<Missile> missiles = Arrays.asList((Missile[]) sprites);
@@ -86,7 +123,11 @@ public class SpriteManager {
             GAME_OBJECTS.add(sprites[0]);
         }
     }
-    
+
+    /**
+     * Adds a given array of sprites as Star sprites.
+     * @param sprites Array of Star sprites, or Star sprite
+     */
     public void addStarSprites(Star... sprites) {
         if (sprites.length > 1) {
             List<Star> stars = Arrays.asList((Star[]) sprites);
@@ -102,7 +143,7 @@ public class SpriteManager {
      * Returns set of sprites to be removed.
      * @return Set of sprites.
      */
-    public Set<Sprite> getSpritesToBeRemovec() {
+    public Set<Sprite> getSpritesToBeRemoved() {
         return REMOVE_SPRITES;
     }
     
@@ -128,6 +169,4 @@ public class SpriteManager {
         STARS.removeAll(REMOVE_SPRITES);
         REMOVE_SPRITES.clear();
     }
-
-
 }
