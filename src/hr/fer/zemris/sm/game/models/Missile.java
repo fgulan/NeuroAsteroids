@@ -5,10 +5,18 @@ import hr.fer.zemris.sm.game.physics.Vector;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 
+/**
+ * Represents missile sprite. Its collision bound is Circle and real bound is Polygon.
+ */
 public class Missile extends Sprite {
 
     private float angle;
-    
+
+    /**
+     * Creates missile with given speed and direction.
+     * @param angle Missile direction.
+     * @param speed Missile speed.
+     */
     public Missile(float angle, double speed) {
         super();
         collisionBounds = new Circle(0, 0, 17);
@@ -33,18 +41,31 @@ public class Missile extends Sprite {
         translateX(x);
         translateY(y);
     }
-    
+
+    /**
+     * Gets current missile angle.
+     * @return Current missile angle.
+     */
     public float getAngle() {
         return angle;
     }
 
+    /**
+     * Sets a given angle to current missile.
+     * @param angle New missile angle.
+     */
     public void setAngle(float angle) {
         this.angle = angle;
         bounds.setRotate(angle);
         collisionBounds.setRotate(angle);
         velocity = getSpeed(angle);
     }
-    
+
+    /**
+     * Calculates unit vector (2D) of speed for given angle.
+     * @param angle Missile angle.
+     * @return Unit speed vector (2D).
+     */
     private IVector getSpeed(double angle) {
         double ang = Math.abs(angle);
         double radians;
