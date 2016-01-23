@@ -188,7 +188,7 @@ public class GraphicsWorld extends GameWorld {
 
     @Override
     protected void cleanupSprites() {
-        for (Sprite sprite : spriteManager.getSpritesToBeRemovec()) {
+        for (Sprite sprite : spriteManager.getSpritesToBeRemoved()) {
             nodes.get(sprite).explode(node -> {
                 sceneNodes.getChildren().remove(node.getNode());
                 nodes.remove(sprite);

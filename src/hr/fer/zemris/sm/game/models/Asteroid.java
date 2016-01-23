@@ -4,8 +4,15 @@ import hr.fer.zemris.sm.game.physics.IVector;
 import hr.fer.zemris.sm.game.physics.Vector;
 import javafx.scene.shape.Circle;
 
+/**
+ * Represents asteroid sprite. Its collision bounds and real bounds are Circle.
+ */
 public class Asteroid extends Sprite {
-    
+
+    /**
+     * Creates asteroid with given velocity (2D Vector)
+     * @param velocity Velocity vector (2D)
+     */
     public Asteroid(IVector velocity) {
         super(velocity);
         collisionBounds = new Circle(0, 0, 29);
@@ -19,7 +26,11 @@ public class Asteroid extends Sprite {
         translateX(x);
         translateY(y);
     }
-    
+
+    /**
+     * Bounces of current asteroid with given asteroid
+     * @param other Other asteroid.
+     */
     public void bounceOf(Asteroid other) {
         Circle firstBounds = this.collisionBounds;
         Circle secondBounds = other.collisionBounds;
