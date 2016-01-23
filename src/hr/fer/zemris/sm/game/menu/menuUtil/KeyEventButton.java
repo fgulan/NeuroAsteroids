@@ -5,6 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 
 /**
+ * Decorator for button that enables activation on costume key press.
+ *
+ * Default button activation key is KeyCode.ENTER.
+ *
  * Created by doctor on 02.12.15..
  */
 public class KeyEventButton extends Button {

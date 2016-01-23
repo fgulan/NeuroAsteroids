@@ -23,6 +23,8 @@ import static javafx.scene.input.KeyCode.ESCAPE;
 import static javafx.scene.input.KeyCode.P;
 
 /**
+ * Menu that enables the player to start playing or go to the
+ * {@link AIChooserMenu}.
  *
  * Created by doctor on 03.12.15..
  */
@@ -123,7 +125,11 @@ public class PlayMenu extends Menu {
 
             scene.addEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);
 
-
+            /*
+             *  Set of actions that needs to be executed when you start the game.
+             *  This should be written better, but it is small enough project to look
+             *  the other way.
+             */
             world.addListener(GameEvent.GAME_OVER, gameEvent -> {
                 getGameParent().showCursor();
                 scene.removeEventHandler(KeyEvent.KEY_RELEASED, pauseEvent);

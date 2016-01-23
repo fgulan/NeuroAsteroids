@@ -13,7 +13,34 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IConnectibleController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IConnectibleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/MultipleKeyController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/MultipleKeyController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/HighScoreScreen.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/HighScoreScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PauseMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PauseMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/CreditsReader.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/CreditsReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/KeyEventButton.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/KeyEventButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/ScoreEnteredListener.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/ScoreEnteredListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/res/credits.txt" afterPath="$PROJECT_DIR$/src/res/credits.txt" />
+	    </list>
     <ignored path="projekt.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,6 +69,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="SpeciesAlgorithm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/SpeciesAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,6 +148,15 @@
               <folding>
                 <element signature="e#17985#17986#0" expanded="true" />
                 <element signature="e#18030#18031#0" expanded="true" />
+=======
+      <file leaf-file-name="ProbabilityOPeratorBag.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6792079">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+              <folding>
+                <element signature="class#ProbabilityEntry#0;class#ProbabilityOPeratorBag#0" expanded="false" />
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
               </folding>
             </state>
           </provider>
@@ -167,6 +204,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" />
         <option value="$PROJECT_DIR$/src/res/style.css" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Utils/HSDataUtility.java" />
@@ -183,6 +221,8 @@
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/IEvaluator.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/AsteroidMultiThereadingEvaluator.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java" />
+=======
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesDemo.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/MultiObjectiveEvaluator.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/population/Population.java" />
@@ -199,25 +239,46 @@
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/NSGADemo.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/GenerationalDemo.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/Constants.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/utils/EvolutionObjectDataUtility.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/FFANNGenotypePrototype.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/FFANN/DoubleArrayGenotype.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/genotype/ConnectionGenotype.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/representation/neuralNet/genotype/Genotype.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/AbstractPhenotypeController.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/world/GameWorld.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" />
         <option value="$PROJECT_DIR$/src/res/elements" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/IAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IConnectibleController.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/MultipleKeyController.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/animations/Animations.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/animations/SpriteAnimator.java" />
+=======
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/HighScoreScreen.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PauseMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java" />
+        <option value="$PROJECT_DIR$/src/res/credits.txt" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/CreditsReader.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/KeyEventButton.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/ScoreEnteredListener.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java" />
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
       </list>
     </option>
   </component>
@@ -322,22 +383,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="projekt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projekt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -354,28 +401,7 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projekt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projekt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="sm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -388,6 +414,8 @@
               <option name="myItemId" value="animations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+=======
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -406,6 +434,7 @@
               <option name="myItemId" value="sm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="evolution" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -548,6 +577,8 @@
               <option name="myItemId" value="demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+=======
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -921,13 +952,21 @@
       <workItem from="1453202582875" duration="7137000" />
       <workItem from="1453224221226" duration="18030000" />
       <workItem from="1453465922643" duration="26452000" />
+<<<<<<< HEAD
       <workItem from="1453545979034" duration="724000" />
       <workItem from="1453557499157" duration="3759000" />
+=======
+      <workItem from="1453545979034" duration="6938000" />
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="139727000" />
+=======
+    <option name="totallyTimeSpent" value="142182000" />
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -942,6 +981,7 @@
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883817" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3205394" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -968,6 +1008,34 @@
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937758" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+=======
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32883817" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3205394" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19873418" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.321519" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6341772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20474967" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3278481" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2278481" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937758" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1025,7 +1093,7 @@
           <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="83" />
+      <option name="time" value="85" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1034,6 +1102,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EPListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1076,6 +1145,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28985506">
@@ -1105,9 +1176,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="86" column="70" selection-start-line="86" selection-start-column="70" selection-end-line="86" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2750533">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/SpeciesAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidsDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44136462">
@@ -1184,55 +1275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8708134">
-          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IConnectibleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14354067">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34449762">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.057416268">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/managers/SpriteManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2583732">
@@ -1244,6 +1286,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.6985645">
           <caret line="345" column="36" selection-start-line="345" selection-start-column="36" selection-end-line="345" selection-end-column="36" />
+          <folding>
+            <element signature="method#initialize#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#generateShipSprite#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#generateNewStars#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#addNewStar#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#generateCometsSprite#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#newFrameStep#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#generateNewComets#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#addNewAsteroid#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#handleSpriteUpdate#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#handleWalls#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#removeMissile#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#checkFuel#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#handleInput#0;class#GameWorld#0" expanded="false" />
+            <element signature="method#fireMissile#0;class#GameWorld#0" expanded="false" />
+            <element signature="e#11690#11691#0" expanded="false" />
+            <element signature="e#11726#11727#0" expanded="false" />
+            <element signature="method#addListener#0;class#GameWorld#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,13 +1312,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15351813">
           <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java">
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/nodes/AsteroidNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09594883">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.07675906">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1275,11 +1337,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/IAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35340315">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35340315">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+          <folding>
+            <element signature="class#DistanceComparator#0;class#FFANNController8#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16492146">
+          <caret line="17" column="106" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IConnectibleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09424084">
+          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2827225">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21204188">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/MultipleKeyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.552356">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding>
+            <element signature="class#KeyReleasedController#0;class#MultipleKeyController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6727749">
+          <caret line="84" column="39" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.552356">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PauseMenu.java">
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="204" column="65" selection-start-line="204" selection-start-column="65" selection-end-line="204" selection-end-column="65" />
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="132" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92941177">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1764706">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java">
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.427451">
+          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <element signature="class#4496:7301" expanded="false" />
             <element signature="e#10671#10672#0" expanded="false" />
@@ -1290,12 +1479,65 @@
             <element signature="e#10980#10981#0" expanded="false" />
             <element signature="e#11365#11366#0" expanded="false" />
             <element signature="e#11418#11419#0" expanded="false" />
+=======
+            <element signature="e#5073#5074#0" expanded="true" />
+            <element signature="e#5101#5102#0" expanded="true" />
+            <element signature="e#5135#5136#0" expanded="true" />
+            <element signature="e#5162#5163#0" expanded="true" />
+            <element signature="e#6117#6118#0" expanded="true" />
+            <element signature="e#6172#6173#0" expanded="true" />
+            <element signature="e#6230#6231#0" expanded="true" />
+            <element signature="e#6269#6270#0" expanded="true" />
+            <element signature="e#6332#6333#0" expanded="true" />
+            <element signature="e#6375#6376#0" expanded="true" />
+            <element signature="e#6437#6438#0" expanded="true" />
+            <element signature="e#6479#6480#0" expanded="true" />
+            <element signature="e#6552#6553#0" expanded="true" />
+            <element signature="e#6597#6598#0" expanded="true" />
+            <element signature="e#6629#6630#0" expanded="true" />
+            <element signature="e#6679#6680#0" expanded="true" />
+            <element signature="e#6725#6726#0" expanded="true" />
+            <element signature="e#6765#6766#0" expanded="true" />
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1764706">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1882353">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21176471">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1764706">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="58" selection-start-line="142" selection-start-column="58" selection-end-line="142" selection-end-column="58" />
           <folding>
@@ -1303,12 +1545,44 @@
             <element signature="class#2006:4756" expanded="false" />
             <element signature="method#configurePauseMenu#0;class#2006:4756" expanded="false" />
             <element signature="method#handle#0;class#2006:4756" expanded="false" />
+=======
+        <state vertical-scroll-proportion="0.21176471">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding>
+            <element signature="method#configurePauseMenu#0;class#2094:4844" expanded="false" />
+            <element signature="method#handle#0;class#2094:4844" expanded="false" />
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/MultipleKeyController.java">
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/CreditsReader.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1764706">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/credits.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21176471">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/HighScoreScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32277226">
+          <caret line="135" column="16" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/ScoreEnteredListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding />
@@ -1434,7 +1708,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.83511776">
           <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+=======
+        <state vertical-scroll-proportion="0.14257425">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+>>>>>>> ccb56767e2ddabe40b2f7f6bc5067538a519b73c
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/KeyEventButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22574258">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6792079">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding>
+            <element signature="class#ProbabilityEntry#0;class#ProbabilityOPeratorBag#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

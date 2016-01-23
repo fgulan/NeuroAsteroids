@@ -15,6 +15,23 @@ import static hr.fer.zemris.sm.game.Constants.FUEL_START;
 import static hr.fer.zemris.sm.game.Constants.NUMBER_OF_MISSILES;
 
 /**
+ * This neural network will accept as an input:
+ * <ul>
+ *     <li>Ships velocity</li>
+ *     <li>Angle of the closest star relative to the ship in interval (-1, 1)</li>
+ *     <li>Distance to the closest star relative to the ship center</li>
+ *     <li>Amount of fuel it has left on the scale from 0 to 1</li>
+ *     <li>Amount of ammo it has left on the scale from 0 to 1</li>
+ *     <li>Binary information that tells it if the asteroid is on his LEFT, RIGHT or BACK side. Where sides are defined as:</li>
+ *     <ul>
+ *         <li>LEFT: -150 to 0 degrees</li>
+ *         <li>RIGHT: 0 to 150 degrees</li>
+ *         <li>BACK: -180 to -150 and 150 to 180 degrees</li>
+ *     </ul>
+ * </ul>
+ *
+ * This controller will only work if there is at least one star in the world
+ *
  * Created by Fredi Šarić on 12.01.16.
  */
 public class FFANNController8 extends AbstractPhenotypeController {

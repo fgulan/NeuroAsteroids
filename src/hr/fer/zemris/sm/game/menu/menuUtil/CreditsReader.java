@@ -13,11 +13,13 @@ import java.util.stream.Collectors;
 import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
+ * Class that reads credits from the credits file.
+ *
  * Created by Fredi Šarić on 14.12.15.
  */
 public class CreditsReader {
 
-    public static final String delimiter = ":";
+    public static final String delimiter = "#";
 
     private static CreditsReader instance;
 

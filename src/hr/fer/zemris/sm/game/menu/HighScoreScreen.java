@@ -17,6 +17,7 @@ import java.util.List;
 import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
+ *  Screen showing high scores.
  *
  * Created by Fredi Šarić on 13.12.15.
  */

@@ -16,6 +16,7 @@ import java.nio.file.Paths;
 import static hr.fer.zemris.sm.game.Constants.*;
 
 /**
+ * Screen that is shown when player looses the game.
  *
  * Created by doctor on 07.12.15..
  */

@@ -13,6 +13,7 @@ import java.io.InputStream;
 import java.nio.file.Paths;
 
 /**
+ * Main menu congaing all of the navigation buttons needed to access the other menus.
  *
  * Created by doctor on 02.12.15..
  */

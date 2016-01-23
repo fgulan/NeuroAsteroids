@@ -13,6 +13,24 @@ import static hr.fer.zemris.sm.game.Constants.*;
 
 
 /**
+ * Menu with the game options.
+ *
+ * Provided options are:
+ * <ul>
+ *     <li>Setting number of starts in the game world</li>
+ *     <li>Setting number of asteroids in the world</li>
+ *     <li>Setting fuel increase when star is collected</li>
+ *     <li>Setting ammo increase when star is collected</li>
+ *     <li>Ship acceleration</li>
+ *     <li>Ship deceleration</li>
+ *     <br>
+ *     <li>Controls for volume of background music</li>
+ *     <li>Controls for volume of game sound effects</li>
+ *     <br>
+ *     <li>Radio button group for choosing type of controls for human controller</li>
+ * </ul>
+ *
+ * Provided human controllers are: WAD_SPACE and UP_LEFT_RIGHT_SPACE.
  *
  * Created by doctor on 03.12.15..
  */
