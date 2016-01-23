@@ -6,10 +6,15 @@
     <title>Projekt - NeuroAsteriods</title>
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" />
-    <style type="text/css">
-        /*u main.css*/
-    </style>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="res/highslide/highslide.css" />
+    <!--[if lt IE 7]>
+    <link rel="stylesheet" type="text/css" href="highslide/highslide-ie6.css" />
+    <![endif]-->
+    
+    <script type="text/javascript" src="res/highslide/highslide-with-gallery.js"></script>
+    <script type="text/javascript" src="res/highslide/highslide.config.js" charset="utf-8"></script>
+    <script type="text/javascript" src="res/highslide/higslide-additional.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="jquery.blueberry.js"></script>
     
     <script>
@@ -40,96 +45,55 @@
     <div id="mainBody">
         <img id="title" src="res/logos/title.png">  
 
-        <div class="clear"></div>
+        <div class="clear1"></div>
 
-        <p id="introText"> Projekt se bavi izradom neuronskih mreža, njihovom evolucijom i igranjem igrice „Asteroids“. Potrebno je napraviti samu igricu kojoj se prikaz svijeta igrice se može prilagoditi načinu igranja za čovjeka i za neuronsku mrežu. Tokom učenja vremenski 
-    razmak između okvira („frame-a“) mora biti smanjen na minimum kako bi se učenje izvršavalo što brže.</p>
-        <img id="introPic" src="res/images/AsteroidsPewPew.jpg">
-
-        <div class="clear"></div>
-
-  <!--      <section>
-            <img src="res/logos/transport463.png"/>
-          <!--  <h1> ....!</h1>
-            <p>....</p> 
-        </section>
-        <section>
-            <img src="res/logos/transport463.png"/>
-         <!--   <h1> ....!</h1>
-            <p>....</p> 
-        </section>
-        <section>
-            <img src="res/logos/transport463.png"/ >
-          <!--  <h1> ....!</h1>
-            <p>....</p> 
-        </section> 
-    -->
+        <p id="introText">Projekt NeuroAsteroids je projekt nastao u sklopu predmeta Projekt na prediplomskom studiju Fakulteta elektrothnike i računarstva. Bavio se s nekoliko područja: neuronskim mrežama,  evolucijskim algoritmima te računalnim igrama. Igra na kojoj se projekt temeljio je inspirirana arkadnom igrom <a href="https://en.wikipedia.org/wiki/Asteroids_(video_game)">„Asteroids“</a>. <br><br>
+Projekt bi mogli podijeliti na dva područja. Prvo je računalna igra za koju je potrebno napraviti fiziku svijeta, model svijeta s njegovim objektima te animacije. Kako bi i ljudi i neuronske mreže mogli igrati igru bilo je potrebno omogućiti i igranje igre bez grafičkog sučelja te njeno ubrzanje jer računalo puno brže procesira informacije od čovjeka. <br><br>
+Drugo područje su neuronske mreže „igrači“ koje igraju igru pomoću određenih informacija o svijetu ih koje okružuju. Zbog kompleksnosti igre i svijeta koji okružuje igrača potrebno je davati različite jednostavne informacije kojih treba biti što manje. Učenje neuronskih mreža napravljeno je evolucijskim algoritmima, posebice genetskim algoritmom. <br>
+Projekt je pisan većinom u programskom jeziku Java, a sama igra u JavaFX tehnologiji koja ima različite napredne mogućnosti.
+</p>
+        <img id="introPic" src="res/images/Sprites.png">
 
         <div id="vd" class="clear"></div>
-
-
-            <div id="video">Loading the player...</div>
-    <script type="text/javascript">
-    var playerInstance = jwplayer("video");
-    playerInstance.setup({
-        file: "res/videos/Pigeons.mp4",
-        image: "res/images/Cloudy-Stars-Wallpaper-Computer.jpg",
-        width: "50%",
-        aspectratio: "16:9",
-        title: 'NeuroAsteroids',
-        skin: {
-            name: "stormtrooper"
-        }
-    });
-    </script>
-
-        <div id="doc">
-            <div id="content">
-                <div class="blueberry">
-                    <ul class="slides">
-                        <li>
-                            <article>
-                                <h3>Fredi Šarić</h3>
-                                <p>  . . . . .            
-                                </p>
-                            </article>                       
-                        </li>
-                        <li>
-                            <article>
-                                <h3>Filip Gulan </h3>
-                                <p>  . . . . . .
-                                </p>
-                            </article>                       
-                        </li>
-                        <li>
-                            <article>
-                                <h3>Luka Žmegač</h3>
-                                <p> . . . . .
-                                </p>
-                            </article>                       
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         <div class="clear"></div>
-        <div class="clear"></div>
-
-        <section>        
-            <a href="res/images/MainMenu.jpg"><img src="res/images/MainMenu.jpg"/></a>
-            <h2>Glavni izbornik</h1>   
-        </section>
-        <section>
-            
-            <a href="res/images/envirnoment.jpg"><img src="res/images/envirnoment.jpg"/></a>
-            <h2>Simulacija fizičkog svijeta</h1>
-        </section>
-        <section>
-            
-            <a href="res/images/ingame_effects.jpg"><img src="res/images/ingame_effects.jpg"/></a>
-            <h2>Igračko sučelje</h1>
-        </section>
-
+        
+        <div id="video">Učitavanje videa...</div>
+        <script type="text/javascript">
+        var playerInstance = jwplayer("video");
+        playerInstance.setup({
+            width: "60%",
+            aspectratio: "16:9",
+            playlist: [{
+                file: "res/videos/GameVideo.mp4",
+                image: "res/images/Cloudy-Stars-Wallpaper-Computer.jpg",
+                 title: 'NA - gameplay'
+            },
+                       {
+                file: "res/videos/GameVideo_AvoidLeft.mp4",
+                image: "res/images/Cloudy-Stars-Wallpaper-Computer.jpg",
+                 title: 'NA - avoiding left'
+            },
+                       {
+                file: "res/videos/GameVideo_BlindLeft.mp4",
+                image: "res/images/Cloudy-Stars-Wallpaper-Computer.jpg",
+                 title: 'NA - blind left'
+            },
+                       {
+                file: "res/videos/GameVideo_LuckyBustard.mp4",
+                image: "res/images/Cloudy-Stars-Wallpaper-Computer.jpg",
+                 title: 'NA - lucky'
+            },
+                       {
+                file: "res/videos/GameVideo_No_Shooting.mp4",
+                image: "res/images/Cloudy-Stars-Wallpaper-Computer.jpg",
+                 title: 'NA - no shooting'
+            }
+                      ],
+            skin: {
+                name: "stormtrooper"
+            }
+        });
+        </script>
         <div id="dw" class="clear"></div>
 
         <div id="download">
@@ -141,6 +105,76 @@
             <a href="#">Preuzmite dokumentaciju projekta</a>
 
         </div>
+        <div class="clear"></div>
+            
+        <div id="doc">
+            <ul class="comments">
+                <li>
+                    <article>
+                        <h3>Filip Gulan </h3>
+                        <p>Prije početka samog projekta bio sam jako skeptičan po pitanju kako ću se uspjeti snaći i odraditi svoj dio kako treba. No zahvaljujući izvrsnom timu i mentoru ispalo je veoma dobro. Prije početka samog projekta nisam znao što su neuronske mreže u računarstvu, genetski algoritam niti sam imao ikakvog iskustva u izradi igrica, no upornim trudom i radom naučio sam puno novih stvari te stekao neka nova znanja na području umjetne inteligencije i ponajviše u izradi igrica u tehnologiji JavaFX. Preporučio bih svima koga bar malo zanimaju gore navedeni pojmovi da si uzmu ovakav sličan projekt, jer naučit će gomilu novih i korisnih stvari, a istovremeno se i dobro zabaviti.
+                        </p>
+                        <img src="res/images/members/fg.jpg">
+                    </article>                       
+                </li>
+                <li>
+                    <article>
+                        <h3>Andrija Miličević</h3>
+                        <p>Radeći na ovom projektu naučio sam mnogo. Naučio sam što su neuronske mreže te kako ih implementirati i istrenirati. Upoznao sam tehnologiju JavaFX te izradu igre u istoj. Po prvi puta sam koristio alate za rad u timu. Posebno sam ponosan na uspješan rad u timu te naših gotovo 10k linija koda.
+                        </p>
+                        <img src="res/images/photo.jpg">
+                    </article>                       
+                </li>
+                 <li>
+                    <article>
+                        <h3>Luka Žmegač</h3>
+                        <p>Projekt je bio zanimljivo iskustvo. Od početka smo znali da će biti zahtjevno i zahvaljujući timskom radu smo uspjeli u njegovoj izradi. Kroz projekt sam se upoznao s područjem umjetne inteligencije te ponešto od toga što se krije iza pojmova „neuronske mreže“ i „evolucijski algoritmi“. Unaprijedio sam i znanja u izradi grafičkog korisničkog sučelja u radu s tehnologijom JavaFX koju sam na projektu prvi puta susreo.
+                        </p>
+                        <img src="res/images/photo.jpg">
+                    </article>                       
+                </li>
+                <li>
+                    <article>
+                        <h3>Domagoj Nakić</h3>
+                        <p>Projekt je bio vrijedno iskustvo timskog rada. Drago mi je što sam naučio osnove rada na platformi JavaFX kao i što sam proširio svoja znanja o umjetnim neuronskim mrežama.
+                        </p>
+                        <img src="res/images/photo.jpg">
+                    </article>                       
+                </li>
+                <li>
+                    <article>
+                        <h3>Fredi Šarić</h3>
+                        <p>
+        Jako sam zadovoljan s ovim projektom jer sam stekao puno znanja vezana uz neuronske mreže, umjetnu inteligenciju i evolucijske algoritme općenito, kao i znanje o razvoju računalnih igrica i tehnologiji “JavaFx”, te sam se još više zainteresirao u računalnu znanost i područje umjetne inteligencije. Također sam stekao iskustvo u radu s timom i sad znam koliko je važno imati dobar tim i komunikaciju unutar tima da bi neki projekt uspio.           
+                        </p>
+                        <img src="res/images/photo.jpg">
+                    </article>                       
+                </li>
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+        <div class="clear"></div>
+
+        <section>        
+            <a href="res/images/MainMenu.jpg" class="highslide" onclick="return hs.expand(this)"	>
+                <img src="res/images/MainMenu.jpg"  alt=""/>
+	       </a>
+        </section>
+        <section>
+            <a href="res/images/ingame_effects.jpg" class="highslide" onclick="return hs.expand(this)"	>
+                <img src="res/images/ingame_effects.jpg"  alt=""/>
+	       </a>
+        </section>
+        <section>
+           <a href="res/images/envirnoment.jpg" class="highslide" onclick="return hs.expand(this)"	>
+                <img src="res/images/envirnoment.jpg"  alt=""/>
+	       </a>
+        </section>
+        
+        
+
+        
 
         <div class="clear"></div>
 
@@ -156,11 +190,13 @@
                     <dd>Domagoj Nakić</dd>
                     <dd>Fredi Šarić</dd>
                     <dd>Luka Žmegač</dd>
-            <img id="group" src="res/images/minions-1.jpg">
         </dl>
-
+        
+            <div id="group">
+        <img id="groupImg" src="res/images/minions-1.jpg">
+        </div>
+        
         <div class="clear"></div>
-
 
         <section id="literature">
             <div class="refBox">
@@ -177,9 +213,9 @@
             <div class="refBox">
                 <h3>IZVORI MEDIJSKIH SADRŽAJA</h3>
                 <ul>
-                    <li><a url="http://www.dl-sounds.com/">dl-sounds.com</a></li>
-                    <li><a url="http://themushroomkingdom.net">themushroomkingdom.net</a></li>
-                    <li><a url="http://soundbible.com">soundbible.com</a></li>
+                    <li><a href="http://www.dl-sounds.com/">dl-sounds.com</a></li>
+                    <li><a href="http://themushroomkingdom.net">themushroomkingdom.net</a></li>
+                    <li><a href="http://soundbible.com">soundbible.com</a></li>
                 </ul>
              </div>
             <div class="refBox">
@@ -187,12 +223,12 @@
                 <ul>
                     <li><a href="#">Učenje neuronske mreže evolucijskim algoritmom na
     primjeru igre</a></li>
-                    <li>Evolving Neural Networks through augmenting topologies
-     (2002) [Stanley, Miikkulainen]
+                    <li><a href="http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf">Evolving Neural Networks through augmenting topologies
+                        (2002) [Stanley, Miikkulainen]</a>
     </li>
-                    <li>NEAT: Evolving Increasingly Complex Neural Network Topologies
+                    <li><a href="https://www.cs.ucf.edu/~kstanley/neat.html">NEAT: Evolving Increasingly Complex Neural Network Topologies
      (2000-2011) [Stanley, Whiteson, 
-    Reisinger, Karpov, Kohl]</li>
+                        Reisinger, Karpov, Kohl]</a></li>
                 </ul>
             </div>
 

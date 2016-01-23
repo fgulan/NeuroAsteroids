@@ -15,12 +15,12 @@ body {
     margin: 0;
     
     min-width:1000px;
-    width: auto !important;
-    width:1000px;
+
 
     /*Font styling*/
+     text-shadow: -1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px black;
     font:20px/26px Arial, San-Serif;
-    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    font-family: "Lucida Sans Unicode", "Hoefler Text", Georgia, Garamond, Times, serif;/*Adobe Caslon Pro*/
     color:#E0E0E0;
 }
 
@@ -58,7 +58,7 @@ img {
 }
 
 a {
-    color: #9f9f9f;
+    color: #bfbfbf;
     text-decoration: none;
     font-weight: bold;
 }
@@ -78,13 +78,9 @@ a:hover {
 
 #introPic {
     float: left;
-    margin: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
     width: 40%;
-    
-    border-color: #858585;
-    border-width: 5px;
-    border-style: ridge;
- 
 }
 
 #sidebar {
@@ -128,7 +124,7 @@ nav ul li a {
     height: 100%;
     width: auto;
     padding: 10px 20px;
-    color: #000; 
+    color: #fff; 
 }
 
 ul {
@@ -143,31 +139,23 @@ ul {
 }
 
 #doc {
-    width: 45%;
-    float: left;
-    font-size: 150%;
-    line-height: 150%;
+   
 }
 
-#content {
-    margin: auto 5% auto 15%;
-    max-width: 100%;
-    max-height: 100%;
-}
+
 
 article{
-    max-width: 100%;
+    clear: both;
 }
 
 article p{
+    float: left;
+    width: 70%;
     font-size: 80%;
     line-height: 130%;
 }
 
-.blueberry {
-    max-width: 960px;
-    margin.top: 110px;
-}
+
 
 section {
     width: 31%;
@@ -180,15 +168,9 @@ section {
     height: 160px;
     clear:both;
 }
-/* 
-.enlarge:active {
-	transform:scale(3,3) translateX(50%);
-}*/
-
 #video {
-    margin: 0 0 0 40px;
-    float: left;
-    max-width: 780px;
+    margin: 0 0 0 20%;
+    max-width: 850px;
 }
 
 dl {
@@ -196,7 +178,7 @@ dl {
    letter-spacing:0.1em;
    text-transform: lowercase;
    line-height: 150%;
-   font-size: 15pt;
+   font-size: 20pt;
    font-variant: small-caps;
     width: 45%;
     float: left;
@@ -213,7 +195,11 @@ dt {
 }
 
 #group {
-    right: 0;
+    clear: left;
+    width: 100%;
+}
+#groupImg {
+    //treba 
     max-width: 100%;
 }
 
@@ -283,5 +269,72 @@ footer.second {
 #download a{
   vertical-align: middle;
   font-size: 180%;
-    color: #000;
+ /*   color: #555;*/
+}
+.clear1 {
+    height: 80px;
+    clear:both;
+}
+
+/*Highslide additional editing*/
+
+.highslide-wrapper, .highslide-outline {
+	background: #FFFFFF;
+}
+.highslide img {
+	border: 1px solid #D0D0D0;
+}
+.highslide:hover img {
+	border-color: #A0A0A0;
+}
+.highslide-dimming {
+	background: #000000;
+}
+.highslide-image {
+	border: none;
+}
+.highslide-caption {
+	background-color: #DDDDDD;
+	padding: 5px;
+	border-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-color: #FFFFFF;
+ border-style: solid;
+}
+.highslide-loading {
+	display: block;
+	padding: 3px 0 3px 38px;
+	width: 0;
+	height: 32px;
+	overflow: hidden;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: 3px 3px;
+	background-image: url(graphics/loader.big.white.gif);
+}
+
+
+
+.comments {
+     width: 85%;
+    float: left;
+    font-size: 150%;
+    line-height: 150%;
+    
+    margin: auto 5% auto 5%;
+    max-width: 100%;
+   /* max-height: 100%;*/
+}
+
+article img{
+    float: left;
+    margin-left: 2%;
+    max-width: 300px;
+}
+
+article h3 {
+        line-height: 110%;
+    padding: 7% 0% 1% 0%;
 }
