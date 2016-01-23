@@ -1,5 +1,9 @@
 package hr.fer.zemris.sm.evolution;
 
+
+/**
+ * Exception thrown when process encounters some kind of problem.
+ */
 public class EvolutionaryProcessException extends RuntimeException{
 
 	private static final long serialVersionUID = 7799398342631889349L;

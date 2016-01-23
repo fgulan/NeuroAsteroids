@@ -7,33 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68fb1800-5038-495d-a434-97d429fdcaa4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/NeuralNetworkController.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcess.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcessException.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcessException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryState.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryState.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/AsteroidsEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController10.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController11.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController8.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/FFANNController9.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IConnectibleController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IConnectibleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/IController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/Input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/MultipleKeyController.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/controllers/MultipleKeyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/AIChooserMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/CreditsMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/HighScoreScreen.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/HighScoreScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Menu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/OptionsMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PauseMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PauseMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/PlayMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/ScoreMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/StartMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/CreditsReader.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/CreditsReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/KeyEventButton.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/KeyEventButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/ScoreEnteredListener.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/ScoreEnteredListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/res/credits.txt" afterPath="$PROJECT_DIR$/src/res/credits.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidsDemo.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidsDemo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/GenerationalDemo.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/GenerationalDemo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/NSGADemo.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/NSGADemo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/CompositTerminatorOperator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/CompositTerminatorOperator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ConstantTimeTermination.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ConstantTimeTermination.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/FittnessTerminationOperator.java" afterPath="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/FittnessTerminationOperator.java" />
     </list>
     <ignored path="projekt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,14 +47,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProbabilityOPeratorBag.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java">
+      <file leaf-file-name="ConstantTimeTermination.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ConstantTimeTermination.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6792079">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-              <folding>
-                <element signature="class#ProbabilityEntry#0;class#ProbabilityOPeratorBag#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-4.8461537">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FittnessTerminationOperator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/FittnessTerminationOperator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2682927">
+              <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,16 +89,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidesDemo.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/evaluators/multiobjective/MultiObjectiveEvaluator.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/population/Population.java" />
         <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/io/Serializable.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EPListener.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ITerminationOperator.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ConstantTimeTermination.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/MaxTerminationCount.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/FittnessTerminationOperator.java" />
-        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/CompositTerminatorOperator.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/IEvolutionaryProcess.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcess.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidsDemo.java" />
@@ -148,6 +135,11 @@
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/KeyEventButton.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/menuUtil/ScoreEnteredListener.java" />
         <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryState.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcessException.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/CompositTerminatorOperator.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ConstantTimeTermination.java" />
+        <option value="$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/FittnessTerminationOperator.java" />
       </list>
     </option>
   </component>
@@ -306,7 +298,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="evolution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="evolution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="termination" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -877,12 +943,12 @@
       <workItem from="1453202582875" duration="7137000" />
       <workItem from="1453224221226" duration="18030000" />
       <workItem from="1453465922643" duration="26452000" />
-      <workItem from="1453545979034" duration="6938000" />
+      <workItem from="1453545979034" duration="8442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142182000" />
+    <option name="totallyTimeSpent" value="143686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -909,7 +975,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20474967" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3278481" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278481" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -989,63 +1055,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28985506">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/population/Population.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3768116">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056360707">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-          <folding>
-            <element signature="method#setTerminationOperator#0;class#EvolutionaryProcess#0" expanded="false" />
-            <element signature="class#EARun#0;class#EvolutionaryProcess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/NSGADemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="70" selection-start-line="86" selection-start-column="70" selection-end-line="86" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2750533">
-          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/algorithms/SpeciesAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/AsteroidsDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44136462">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/demo/Multithreading/GenerationalDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.9957356">
@@ -1309,14 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1764706">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.427451">
@@ -1427,13 +1428,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcessException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7692308">
+          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setTerminationOperator#0;class#EvolutionaryProcess#0" expanded="false" />
+            <element signature="class#EARun#0;class#EvolutionaryProcess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EPListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2827225">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/CompositTerminatorOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20596206">
+          <caret line="13" column="80" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/EvolutionaryState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/game/menu/GameOverScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11780105">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/ProbabilityOPeratorBag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6792079">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.30628273">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding>
             <element signature="class#ProbabilityEntry#0;class#ProbabilityOPeratorBag#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/ConstantTimeTermination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8461537">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hr/fer/zemris/sm/evolution/termination/FittnessTerminationOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2682927">
+          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>

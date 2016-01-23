@@ -9,7 +9,12 @@ import java.util.stream.Collectors;
  * Class that maps entries with probability and when get method is called
  * every entry has the given probability to be chosen.
  *
- * @param <T>
+ * This collection is not resistant to the scale problem. Meaning if
+ * you put probability of one entry to 0.2 (scale 0-1) and other
+ * entry to be 200 (scale from  0-1000) then almost never will be the fist
+ * element chosen.
+ *
+ * @param <T> type of the element that is being stored
  */
 public class ProbabilityOPeratorBag<T> {
 
@@ -31,7 +36,7 @@ public class ProbabilityOPeratorBag<T> {
     /**
      * Returns some entry from the collection. Entries with greater probability
      * have greater chance to be  chosen.
-     * @return
+     * @return some entry from the collection.
      */
     public T get() {
         double rndVal = rnd.nextDouble();

@@ -291,10 +291,10 @@ public class EvolutionaryProcess implements Serializable {
 
             while (!termination.isFinished(EvolutionaryProcess.this) && !stop) {
                 pauseIfAble();
-                notifyListeners(EPOH_STARTED);
+                notifyListeners(EPOCH_STARTED);
                 alg.nextGeneration();
                 iterationCount++;
-                notifyListeners(EPOH_OVER);
+                notifyListeners(EPOCH_OVER);
             }
             if (stop) {
                 changeState(STOPPED);

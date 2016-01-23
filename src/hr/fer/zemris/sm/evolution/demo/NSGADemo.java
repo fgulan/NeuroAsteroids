@@ -101,7 +101,7 @@ public class NSGADemo {
                 }
                 EvolutionObjectDataUtility.getInstance().flush();
             }
-        }, EvolutionaryState.EPOH_OVER);
+        }, EvolutionaryState.EPOCH_OVER);
 
         process.addListener(p -> evaluator.shutDownExecutors(), EvolutionaryState.FINISHED);
 

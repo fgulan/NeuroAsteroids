@@ -106,7 +106,7 @@ public class GenerationalDemo {
             System.out.println("Best fitness: " + fit);
 
             saveBest(iter, fit, phenotype);
-        }, EvolutionaryState.EPOH_STARTED);
+        }, EvolutionaryState.EPOCH_STARTED);
 
         process.addListener(p -> {  //Saves best phenotype in population when algorithm is over.
             IPhenotype phenotype = p.getAlgorithm().getBestPhenotype();

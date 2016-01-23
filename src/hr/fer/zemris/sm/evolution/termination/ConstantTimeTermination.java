@@ -3,6 +3,10 @@ package hr.fer.zemris.sm.evolution.termination;
 
 import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
 
+/**
+ * Termination operator that stops algorithm execution if given time execution
+ * period is exceeded.
+ */
 public class ConstantTimeTermination implements ITerminationOperator {
 
 	private static final long serialVersionUID = -3263293812447383271L;

@@ -5,6 +5,15 @@ import java.util.List;
 
 import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
 
+/**
+ * Class that enables you to have multiple termination operators.
+ *
+ * It works with OR logic meaning that if one of the termination operators
+ * have returned true than {@link #isFinished}  will also return true.
+ *
+ * Possible improvement is to add support for other kind of logic to this class.
+ *
+ */
 public class CompositTerminatorOperator implements ITerminationOperator{
 
 	private static final long serialVersionUID = -3836285638984245562L;

@@ -32,7 +32,7 @@ public class AsteroidsDemo {
                 System.out.println("Iteration " + p.getIterationCount());
                 System.out.println("BEST FIT : " + alg.getBestGenotype().getFitness());
             }
-        }, EvolutionaryState.EPOH_OVER);
+        }, EvolutionaryState.EPOCH_OVER);
         process.addListener((p) -> evaluateBest(alg.getBestPhenotype()), EvolutionaryState.FINISHED);
         process.start();
     }
