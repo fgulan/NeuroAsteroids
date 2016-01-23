@@ -1,5 +1,8 @@
 package hr.fer.zemris.sm.evolution.evaluators;
 
+/**
+ * Exception thrown when problem occurs during EvolutionProcess execution.
+ */
 public class EvaluatorException extends RuntimeException {
 
 	private static final long serialVersionUID = 6929875006066108755L;

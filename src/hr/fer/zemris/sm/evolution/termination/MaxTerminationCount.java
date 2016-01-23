@@ -2,12 +2,14 @@ package hr.fer.zemris.sm.evolution.termination;
 
 import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
 
+/**
+ * Termination operator that will stop algorithm execution after the given
+ * numbers of algorithm iterations.
+ */
 public class MaxTerminationCount implements ITerminationOperator{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3431156720842578522L;
+
 	private int maxTermination;
 
 	public MaxTerminationCount(int maxTermination) {

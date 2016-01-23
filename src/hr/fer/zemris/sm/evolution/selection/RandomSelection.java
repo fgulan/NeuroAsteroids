@@ -5,6 +5,9 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Selects random individual from the population.
+ */
 public class RandomSelection implements ISelection<Genotype> {
 
     private static final Random rand = new Random();

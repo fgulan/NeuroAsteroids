@@ -13,6 +13,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
+ * NSGA I evaluator.
+ *
+ * It will separate individuals in fronts and assign them fitness by their front
+ * and their sharing function.
+ *
+ * This is multithreading evaluator and it does not support single individual evaluation.
+ *
  * Created by Fredi Šarić on 15.01.16.
  */
 public class MultiObjectiveEvaluator implements IEvaluator {
@@ -35,6 +42,17 @@ public class MultiObjectiveEvaluator implements IEvaluator {
 
     private Set<ParetoFrontierIndividual> resultSet;
 
+    /**
+     * Constructor
+     *
+     * @param factory Factory for creating evolutionary tasks
+     * @param shareFunction share function
+     * @param inputNodeCount numbers of input nodes
+     * @param outputNodeCount number of output nodes
+     * @param popSize population size
+     * @param numberOfObjectives number of objectives
+     * @param reducingFactor factor that is used for determining max fitness of next front.
+     */
     public MultiObjectiveEvaluator(MultiObjectiveTaskFactory factory, ShareFunction shareFunction,
                                    int inputNodeCount, int outputNodeCount,
                                    int popSize, int numberOfObjectives,
@@ -58,6 +76,9 @@ public class MultiObjectiveEvaluator implements IEvaluator {
         this.reducingFactor = reducingFactor;
     }
 
+    /**
+     * Shuts down executors.
+     */
     public void shutDownExecutors() {
         this.executors.shutdown();
     }

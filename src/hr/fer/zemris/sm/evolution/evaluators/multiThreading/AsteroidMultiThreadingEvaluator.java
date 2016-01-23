@@ -1,4 +1,4 @@
-package hr.fer.zemris.sm.evolution.demo.Multithreading;
+package hr.fer.zemris.sm.evolution.evaluators.multiThreading;
 
 import hr.fer.zemris.sm.evolution.evaluators.EvaluatorException;
 import hr.fer.zemris.sm.evolution.evaluators.IEvaluator;
@@ -9,11 +9,12 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
+/**
+ * Evaluator that evaluates population in multithreading environment.
+ * The evaluator tasks should assign fitness for individuals post evaluation.
+ */
 public final class AsteroidMultiThreadingEvaluator implements IEvaluator {
 
 	private EvaluatorTaskFactory factory;
@@ -24,15 +25,24 @@ public final class AsteroidMultiThreadingEvaluator implements IEvaluator {
 
 	private int outputNodeCount;
 
-	public AsteroidMultiThreadingEvaluator(EvaluatorTaskFactory factory, int inputNodeCount, int outputNodeCount) {
-		this(factory, Runtime.getRuntime().availableProcessors(),inputNodeCount, outputNodeCount);
+    private int popSize;
+
+    private List<Future<Void>> resultList;
+
+    private int evalCounter = 0;
+
+	public AsteroidMultiThreadingEvaluator(EvaluatorTaskFactory factory, int inputNodeCount, int outputNodeCount, int popSize) {
+		this(factory, Runtime.getRuntime().availableProcessors(),inputNodeCount, outputNodeCount, popSize);
 	}
 	
-	public AsteroidMultiThreadingEvaluator(EvaluatorTaskFactory factory, int poolSize, int inputNodeCount, int outputNodeCount) {
+	public AsteroidMultiThreadingEvaluator(EvaluatorTaskFactory factory, int poolSize, int inputNodeCount, int outputNodeCount, int popSize) {
 		this.factory = factory;
 		this.executors = Executors.newFixedThreadPool(poolSize);
         this.inputNodeCount = inputNodeCount;
         this.outputNodeCount = outputNodeCount;
+        this.popSize = popSize;
+
+        this.resultList = new ArrayList<>(popSize);
 	}
 
 	@Override
@@ -45,15 +55,20 @@ public final class AsteroidMultiThreadingEvaluator implements IEvaluator {
 		return outputNodeCount;
 	}
 
-	@Override
+    @Override
 	public void evaluate(IPhenotype phenotype) {
 		EvaluatorTask task = factory.createTask(phenotype);
-		Future<Void> result = executors.submit(task);
-		try {
-			result.get();
-		} catch(Exception e) {
-			throw new EvaluatorException("Couldn't evaluate genotype.", e);
-		}
+        resultList.add(executors.submit(task));
+        evalCounter++;
+        if(evalCounter == popSize) { //When you submit all individual for evaluation than get them
+            resultList.forEach(r -> {
+                try {
+                    r.get();
+                } catch (Exception ex) {
+                    throw new EvaluatorException("Exception while evaluation", ex);
+                }
+            });
+        }
 	}
 
 	@Override

@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
+ * Selects the best individual by that participate in tournament.
+ *
  * Created by Andrija Milicevic.
  */
 public class TotalRandomTournamentSelection implements ISelection<Genotype> {
@@ -14,6 +16,10 @@ public class TotalRandomTournamentSelection implements ISelection<Genotype> {
 
     private int count;
 
+    /**
+     * Constructor
+     * @param count number of individual that is going to participate in tournament
+     */
     public TotalRandomTournamentSelection(int count) {
         this.count = count;
     }

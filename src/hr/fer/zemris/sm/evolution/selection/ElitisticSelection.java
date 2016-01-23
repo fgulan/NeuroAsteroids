@@ -5,6 +5,8 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
 import java.util.List;
 
 /**
+ * Selection that always selects the best individual in the population.
+ *
  * Created by Fredi Šarić on 22.12.15.
  */
 public class ElitisticSelection implements ISelection<Genotype> {

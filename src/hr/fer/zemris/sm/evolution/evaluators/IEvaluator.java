@@ -5,9 +5,13 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import java.util.Collection;
 
 /**
+ *
+ *
  * Created by Andrija Milicevic.
  */
 public interface IEvaluator {
+
+    //TODO: add support for punishment instead of only fitness
 
     int getInputNodeCount();
 
@@ -25,5 +29,10 @@ public interface IEvaluator {
      */
     void evaluate(IPhenotype phenotype);
 
+    /**
+     * Evaluates whole population.
+     *
+     * @param phenotype
+     */
     void evaluatePopulation(Collection<IPhenotype> phenotype);
 }
