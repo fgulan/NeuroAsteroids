@@ -18,6 +18,10 @@ import hr.fer.zemris.sm.game.models.Ship.Direction;
 import hr.fer.zemris.sm.game.physics.Vector;
 import javafx.scene.shape.Circle;
 
+/**
+ * GameWorld bastract class is implementation of NeuroAsteroids game world. It implements physical part of world.
+ * For implementing graphics world override initialize method and sets GameEvent listeners.
+ */
 public abstract class GameWorld implements Serializable {
     //Need to implement serializable just to store IController
 
@@ -45,6 +49,13 @@ public abstract class GameWorld implements Serializable {
 
     private IController controller;
 
+    /**
+     * GamewWolrd constructor.
+     * @param width Width of world.
+     * @param height height of world
+     * @param numberOfComets Number of asteroids on scene.
+     * @param numberOfStars Number of stars on scene.
+     */
     public GameWorld(int width, int height, int numberOfComets, int numberOfStars) {
         super();
         this.width = width;
@@ -56,12 +67,18 @@ public abstract class GameWorld implements Serializable {
         listenersMap = new HashMap<>();
     }
 
+    /**
+     * Initialize game world.
+     */
     public void initialize() {
         generateShipSprite();
         generateCometsSprite();
         generateNewStars();
     }
 
+    /**
+     * Generates ship sprite.
+     */
     private void generateShipSprite() {
         ship = new Ship();
         ship.translateX(width / 2);
@@ -70,6 +87,9 @@ public abstract class GameWorld implements Serializable {
         notifyListeners(GameEvent.SHIP_CREATED, new GameEvent(ship));
     }
 
+    /**
+     * Generates stars on scene.
+     */
     private void generateNewStars() {
         if (spriteManager.getStars().size() >= numberOfStars) {
             return;
@@ -91,15 +111,14 @@ public abstract class GameWorld implements Serializable {
             }
             star.translateX(newX);
             star.translateY(newY);
-            addNewStar(star);
+            spriteManager.addStarSprites(star);
+            notifyListeners(GameEvent.STAR_ADDED, new GameEvent(star));
         }
     }
 
-    protected void addNewStar(Star star) {
-        spriteManager.addStarSprites(star);
-        notifyListeners(GameEvent.STAR_ADDED, new GameEvent(star));
-    }
-
+    /**
+     * Generates asteroids on scene.
+     */
     private void generateCometsSprite() {
         Random rnd = new Random();
         for (int i = 0; i < numberOfComets; i++) {
@@ -121,6 +140,18 @@ public abstract class GameWorld implements Serializable {
         }
     }
 
+    /**
+     * Adds new asteroid on scene.
+     * @param sprite New Asteroid.
+     */
+    private void addNewAsteroid(Asteroid sprite) {
+        spriteManager.addAsteroidSprites(sprite);
+        notifyListeners(GameEvent.ASTEROID_ADDED, new GameEvent(sprite));
+    }
+
+    /**
+     * Game world frame step.
+     */
     protected void newFrameStep() {
         if (missileCharge < MISSILE_CHARGE_TIME) {
             missileCharge += MISSILE_CHARGE_DELTA;
@@ -133,6 +164,9 @@ public abstract class GameWorld implements Serializable {
         generateNewStars();
     }
 
+    /**
+     * Generates new asteroids.
+     */
     private void generateNewComets() {
         if (spriteManager.getAsteroids().size() < numberOfComets) {
             Random random = new Random();
@@ -143,15 +177,17 @@ public abstract class GameWorld implements Serializable {
         }
     }
 
-    protected void addNewAsteroid(Asteroid asteroid) {
-        spriteManager.addAsteroidSprites(asteroid);
-        notifyListeners(GameEvent.ASTEROID_ADDED, new GameEvent(asteroid));
-    }
-
+    /**
+     * Updates all sprites on scene.
+     */
     private void updateSprites() {
         spriteManager.getAllSprites().forEach(this::handleSpriteUpdate);
     }
 
+    /**
+     * Handle update for each type of sprite.
+     * @param sprite Sprite to update.
+     */
     protected void handleSpriteUpdate(Sprite sprite) {
         if (sprite instanceof Missile) {
             removeMissile(sprite);
@@ -163,6 +199,10 @@ public abstract class GameWorld implements Serializable {
         sprite.update();
     }
 
+    /**
+     * Handle game world bounds for given sprite.
+     * @param sprite Input sprite.
+     */
     private void handleWalls(Sprite sprite) {
         Circle circle = sprite.getCollisionBounds();
 
@@ -181,6 +221,10 @@ public abstract class GameWorld implements Serializable {
         }
     }
 
+    /**
+     * Handle game world bounds for given missile sprite
+     * @param sprite Missile sprite.
+     */
     private void removeMissile(Sprite sprite) {
         Circle circle = sprite.getCollisionBounds();
         boolean passedX = circle.getCenterX() > width + MARGIN || circle.getCenterX() + MARGIN < 0;
@@ -191,6 +235,10 @@ public abstract class GameWorld implements Serializable {
         }
     }
 
+    /**
+     * Checks fuel.
+     * @return true if there is left fuel, false otherwise.
+     */
     private boolean checkFuel() {
         if (fuelLeft <= 0) {
             fuelLeft = 0;
@@ -199,6 +247,9 @@ public abstract class GameWorld implements Serializable {
         return true;
     }
 
+    /**
+     * Handle controller input.
+     */
     private void handleInput() {
         if (gameOver) {
             return;
@@ -253,6 +304,9 @@ public abstract class GameWorld implements Serializable {
         notifyListeners(GameEvent.FUEL_CHANGE, null);
     }
 
+    /**
+     * Fire missile.
+     */
     private void fireMissile() {
         if (missilesLeft == 0) {
             return;
@@ -266,6 +320,9 @@ public abstract class GameWorld implements Serializable {
         notifyListeners(GameEvent.MISSILE_FIRED, new GameEvent(missile));
     }
 
+    /**
+     * Check for collision between sprites.
+     */
     private void checkCollisions() {
         List<Sprite> sprites = spriteManager.getAllSprites();
         int size = sprites.size();
@@ -281,6 +338,12 @@ public abstract class GameWorld implements Serializable {
         }
     }
 
+    /**
+     * Handle collision for given sprites.
+     * @param spriteA First sprite
+     * @param spriteB Second sprite
+     * @return true if two sprites really were in collision, false otherwise.
+     */
     private boolean handleCollision(Sprite spriteA, Sprite spriteB) {
         if (spriteA instanceof Asteroid && spriteB instanceof Asteroid) {
             Asteroid first = (Asteroid) spriteA;
@@ -318,11 +381,12 @@ public abstract class GameWorld implements Serializable {
             }
             return true;
         }
-
-
         return false;
     }
 
+    /**
+     * Update ship fuel and missiles count.
+     */
     private void updateResources() {
         fuelLeft += fuelIncrease;
         if(fuelLeft > FUEL_START) {
@@ -335,26 +399,51 @@ public abstract class GameWorld implements Serializable {
         }
     }
 
+    /**
+     * Sets game controller.
+     * @param controller Game controller.
+     */
     public void setController(IController controller) {
         this.controller = controller;
     }
 
+    /**
+     * Gets current game controller.
+     * @return Current game controller.
+     */
     public IController getController() {
         return controller;
     }
 
+    /**
+     * Gets current game sprite manager.
+     * @return Current game sprite manager.
+     */
     public SpriteManager getSpriteManager() {
         return spriteManager;
     }
 
+    /**
+     * Returns left fuel.
+     * @return left fuel.
+     */
     public int getFuelLeft() {
         return fuelLeft;
     }
 
+    /**
+     * Returns missiles left.
+     * @return Missiles left,
+     */
     public int getMissilesLeft() {
         return missilesLeft;
     }
 
+    /**
+     * Adds game world listener.
+     * @param event GameEvent id.
+     * @param listener GameWorldListener listener object.
+     */
     public void addListener(String event, GameWorldListener listener) {
         List<GameWorldListener> listeners = listenersMap.get(event);
         if( listeners == null ) {
@@ -364,6 +453,11 @@ public abstract class GameWorld implements Serializable {
         listeners.add(listener);
     }
 
+    /**
+     * Notify registered listeners for given event type.
+     * @param eventType Event type.
+     * @param event Game event.
+     */
     private void notifyListeners(String eventType, GameEvent event) {
         List<GameWorldListener> listeners = listenersMap.get(eventType);
         if(listeners != null) {
@@ -375,11 +469,23 @@ public abstract class GameWorld implements Serializable {
     //Abstract methods
     //*******************************************
 
+    /**
+     * Play game.
+     */
     public abstract void play();
 
+    /**
+     * Pause game.
+     */
     public abstract void pause();
 
+    /**
+     * Stop game.
+     */
     public abstract void stop();
 
+    /**
+     * Checks if there is any sprites to be removed and if, removes them.
+     */
     protected abstract void cleanupSprites();
 }
