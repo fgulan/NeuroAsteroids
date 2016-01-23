@@ -86,7 +86,7 @@ public class SpeciesAlgorithm implements IAlgorithm {
         for (ConnectionGenotype g : genotypes) {
             isAdded = false;
             for (Specie ns : newPopulation) {
-                if (speciesCompatibilityOperator.isCompatibile(g, ns)) {
+                if (speciesCompatibilityOperator.isCompatible(g, ns)) {
                     ns.getGenotypes().add(g);
                     isAdded = true;
                     break;
