@@ -2,15 +2,33 @@ package hr.fer.zemris.sm.game.physics;
 
 import java.util.Random;
 
+/**
+ * Implements AbstractVector class. Simple n-dimensional vector representation.
+ */
 public class Vector extends AbstractVector {
-    
+
+	/**
+	 * Vector dimension.
+	 */
 	private int dimensions;
+	/**
+	 * Vector components.
+	 */
 	private double[] elements;
 
+	/**
+	 * Vector constructor. Creates Vector from given array of doubles. Array is copied.
+	 * @param elems Vector components.
+	 */
 	public Vector(double... elems) {
 		this(false, elems);
 	}
 
+	/**
+	 * Creates Vector with given array of components. If useGiven array is not copied.
+	 * @param useGiven Copy given array.
+	 * @param elems Vector components.
+	 */
 	public Vector(boolean useGiven, double... elems) {
 		if (useGiven) {
 			this.elements = elems;
@@ -61,22 +79,9 @@ public class Vector extends AbstractVector {
         }
         return vector;
     }
-    
-    public IVector newInstance(int dimension) {
+
+    private IVector newInstance(int dimension) {
         double[] components = new double[dimension];
         return new Vector(components);
     }
-    
-	public static Vector parseSimple(String input) {
-		String[] elems = input.split("\\s+");
-		double[] components = new double[elems.length];
-		for (int i = 0; i < components.length; i++) {
-			try {
-				components[i] = Double.parseDouble(elems[i]);
-			} catch (Exception e) {
-			    //TODO excpetion
-			}
-		}
-		return new Vector(true, components);
-	}
 }

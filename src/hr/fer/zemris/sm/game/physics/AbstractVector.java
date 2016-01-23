@@ -1,5 +1,8 @@
 package hr.fer.zemris.sm.game.physics;
 
+/**
+ * Represents abstract vector class. Implements IVector interface.
+ */
 public abstract class AbstractVector implements IVector {
 
     @Override
@@ -80,14 +83,6 @@ public abstract class AbstractVector implements IVector {
     public IVector nNormalize() {
         return this.copy().normalize();
     }
-    
-    @Override
-    public double cosine(IVector other) {
-        if (this.getDimension() != other.getDimension()) {
-            // TODO Exception
-        }
-        return this.scalarProduct(other) / (this.norm() * other.norm());
-    }
 
     @Override
     public double scalarProduct(IVector other) {
@@ -99,20 +94,6 @@ public abstract class AbstractVector implements IVector {
             sum += this.get(i) * other.get(i);
         }
         return sum;
-    }
-
-    @Override
-    public IVector reverse(int index) {
-        return set(index, -get(index));
-    }
-
-    @Override
-    public double[] toArray() {
-        double[] vectorComponents = new double[this.getDimension()];
-        for (int i = this.getDimension() - 1; i >= 0; i--) {
-            vectorComponents[i] = this.get(i);
-        }
-        return vectorComponents;
     }
 
     public String toString() {
