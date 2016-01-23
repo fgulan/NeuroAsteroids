@@ -8,6 +8,9 @@ import static java.lang.Math.*;
 import java.util.Random;
 
 /**
+ * Implementation of BLX-alpha.
+ * @see <a href="http://www.tomaszgwiazda.com/blendX.htm">http://www.tomaszgwiazda.com/blendX.htm</a>
+ *
  * Created by Fredi Šarić on 19.12.15.
  */
 public class BLXCrossover implements ICrossover<DoubleArrayGenotype> {

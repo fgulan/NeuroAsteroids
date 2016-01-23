@@ -1,6 +1,8 @@
 package hr.fer.zemris.sm.evolution.evaluators.multiobjective;
 
 /**
+ * Share function implementation described in
+ *
  * Created by Fredi Šarić on 15.01.16.
  */
 public class ShareFunction {

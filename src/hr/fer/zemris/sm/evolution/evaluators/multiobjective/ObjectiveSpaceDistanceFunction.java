@@ -1,6 +1,9 @@
 package hr.fer.zemris.sm.evolution.evaluators.multiobjective;
 
 /**
+ * Distance function that measures distance based on objective functions
+ * values.
+ *
  * Created by Fredi Šarić on 15.01.16.
  */
 public class ObjectiveSpaceDistanceFunction implements IDistanceFunction {

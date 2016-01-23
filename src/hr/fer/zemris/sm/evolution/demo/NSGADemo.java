@@ -24,6 +24,8 @@ import hr.fer.zemris.sm.game.controllers.FFANNController10;
 import java.util.List;
 
 /**
+ * Demo class for running the NSGA-I algorithm.
+ *
  * Created by Fredi Šarić on 15.01.16.
  */
 public class NSGADemo {

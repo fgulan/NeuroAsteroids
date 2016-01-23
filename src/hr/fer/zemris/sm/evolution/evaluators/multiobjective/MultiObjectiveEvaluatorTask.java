@@ -6,6 +6,10 @@ import hr.fer.zemris.sm.game.controllers.FFANNController11;
 import hr.fer.zemris.sm.game.world.LimitedFramesSimulationWorld;
 
 /**
+ * This class evaluates single phenotype.
+ * Evaluation is performed multiple number of times and as fitness for
+ * individual is equal to arithmetic middle of two worst runs, to reduce
+ * influence of luck.
  *
  * Created by Fredi Šarić on 15.01.16.
  */

@@ -5,6 +5,10 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Selects individual from the population from proportionally based on fitness.
+ * All fitness should be positive number.
+ */
 public class RouletteWheelSelection implements ISelection<Genotype> {
 
     private static final Random rand = new Random();

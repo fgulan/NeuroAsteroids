@@ -1,11 +1,9 @@
 package hr.fer.zemris.sm.evolution.representation.FFANN;
 
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
-import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnection;
-
-import java.util.Iterator;
 
 /**
+ * Genotype representation of fully connected feedforward network.
  *
  * Created by Fredi Šarić on 19.12.15.
  */

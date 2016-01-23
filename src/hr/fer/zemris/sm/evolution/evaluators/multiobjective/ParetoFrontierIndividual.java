@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Genotype decorator for nondominating sorting.
+ *
  * Created by Fredi Šarić on 15.01.16.
  */
 public class ParetoFrontierIndividual {

@@ -4,6 +4,9 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.function.IActivationF
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 
 /**
+ * This is phenotype for {@link DoubleArrayGenotype}.
+ *
+ *
  * Created by Fredi Šarić on 19.12.15.
  */
 public class FFANNGenotypePrototype implements IPhenotype<DoubleArrayGenotype>{

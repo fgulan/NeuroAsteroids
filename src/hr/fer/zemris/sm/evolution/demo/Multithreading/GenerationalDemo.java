@@ -4,6 +4,7 @@ import hr.fer.zemris.sm.evolution.EvolutionaryProcess;
 import hr.fer.zemris.sm.evolution.EvolutionaryState;
 import hr.fer.zemris.sm.evolution.algorithms.FFANNAlgorithms.GenerationalFFANNAlgorithm;
 import hr.fer.zemris.sm.evolution.algorithms.IAlgorithm;
+import hr.fer.zemris.sm.evolution.evaluators.multiThreading.AsteroidMultiThreadingEvaluator;
 import hr.fer.zemris.sm.evolution.evaluators.multiThreading.EvaluatorTask;
 import hr.fer.zemris.sm.evolution.representation.FFANN.DoubleArrayGenotype;
 import hr.fer.zemris.sm.evolution.representation.FFANN.crossover.BLXCrossover;
@@ -24,6 +25,9 @@ import hr.fer.zemris.sm.game.world.LimitedFramesSimulationWorld;
 import java.util.Arrays;
 
 /**
+ * Demo that uses classic generation genetic algorithm. Where evaluation is executed in multithreading
+ * environment.
+ *
  * Created by Fredi Šarić on 20.12.15.
  */
 public class GenerationalDemo {
@@ -84,7 +88,7 @@ public class GenerationalDemo {
             EvaluatorTask task = new AET();
             task.setPhenotype(p);
             return task;
-        }, NETWORK_INPUTS, NETWORK_OUTPUTS);
+        }, NETWORK_INPUTS, NETWORK_OUTPUTS, POPULATION_SIZE);
 
         ICrossover<DoubleArrayGenotype> crossover = new BLXCrossover(BLX_ALPHA);
         IMutation<DoubleArrayGenotype> mutation = new ChanceDoubleArrayGausianMutation(MUTATION_SIGMA, MUTATION_CHANCE);

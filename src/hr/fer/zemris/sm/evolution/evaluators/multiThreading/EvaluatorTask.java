@@ -4,6 +4,10 @@ import java.util.concurrent.Callable;
 
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 
+/**
+ * Task that is used for evaluating single instance of phenotype.
+ * @param <V>
+ */
 public abstract class EvaluatorTask<V> implements Callable<V> {
 
 	private IPhenotype phenotype;

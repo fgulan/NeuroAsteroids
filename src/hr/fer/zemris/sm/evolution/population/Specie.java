@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Class that represents specie in population. All individual in the specie should be
+ * similar.
+ *
+ */
 public class Specie implements Iterable<ConnectionGenotype>{;
 
 	private List<ConnectionGenotype> genotypes;

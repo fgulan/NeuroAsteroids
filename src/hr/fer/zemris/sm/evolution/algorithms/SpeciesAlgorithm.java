@@ -12,7 +12,7 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnec
 import hr.fer.zemris.sm.evolution.representation.neuralNet.mutation.*;
 import hr.fer.zemris.sm.evolution.representation.neuralNet.phenotype.IPhenotype;
 import hr.fer.zemris.sm.evolution.selection.ISelection;
-import hr.fer.zemris.sm.evolution.selection.TournamentSelection;
+import hr.fer.zemris.sm.evolution.selection.TotalRandomTournamentSelection;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -28,7 +28,7 @@ public class SpeciesAlgorithm implements IAlgorithm {
     private static final Random rand = new Random();
     private final IEvaluator evaluator;
     private final List<Mutation> mutations;
-    private final ISelection selection = new TournamentSelection(3);
+    private final ISelection selection = new TotalRandomTournamentSelection(3);
     private final ICrossover<ConnectionGenotype> crossover = new SlowCrossover();
     private Population population;
     IDecoder decoder = new ConnectionDecoder();
