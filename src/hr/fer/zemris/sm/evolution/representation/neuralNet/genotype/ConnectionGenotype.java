@@ -2,7 +2,10 @@ package hr.fer.zemris.sm.evolution.representation.neuralNet.genotype;
 
 import java.util.*;
 
-public class ConnectionGenotype extends Genotype implements Iterable<NeuronConnection>{
+/**
+ * This class represents a complete NEAT genotype composed of NeuronConnection genes.
+ */
+public class ConnectionGenotype extends Genotype implements Iterable<NeuronConnection> {
 
     private static final Random rand = new Random();
 
@@ -74,7 +77,7 @@ public class ConnectionGenotype extends Genotype implements Iterable<NeuronConne
     }
 
     public NeuronConnection getConnection(int inNeuronIndex, int outNeuronIndex) {
-        int position = Collections.binarySearch(connections, new NeuronConnection(inNeuronIndex, outNeuronIndex,0.0, false));
+        int position = Collections.binarySearch(connections, new NeuronConnection(inNeuronIndex, outNeuronIndex, 0.0, false));
 
         if (position >= 0) {
             return connections.get(position);
@@ -119,6 +122,7 @@ public class ConnectionGenotype extends Genotype implements Iterable<NeuronConne
     public boolean isInputNeuron(int inNeuron) {
         return inNeuron < inputNeuronCount;
     }
+
     public boolean isOutputNeuron(int inNeuron) {
         return inNeuron >= inputNeuronCount && inNeuron < outputNeuronCount + inputNeuronCount;
     }
@@ -133,7 +137,6 @@ public class ConnectionGenotype extends Genotype implements Iterable<NeuronConne
 
         genotype.neuronCount = this.neuronCount;
         genotype.setFitness(getFitness());
-        //genotype.setSpecieFitness(getSpecieFitness());
 
         return genotype;
     }

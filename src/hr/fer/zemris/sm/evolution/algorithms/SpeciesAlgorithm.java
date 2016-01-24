@@ -18,13 +18,16 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
+ * This class represents the genetic algorithm ( Neuroevolution of augmenting topologies ).
+ * The difference between the classic genetic algorithms used with neural networks is that NEAT also generates topology of the neural network through evolution.
+ *
  * Created by Andrija Milicevic.
  */
 public class SpeciesAlgorithm implements IAlgorithm {
 
     private static final int POPULATION_SIZE = 25;
     private static final int MAX_NODE = 20;
-    private static final ISpecieCompatibilityOperator speciesCompatibilityOperator = new OneSpecieCompatibility(); //new DeltaDistance(0.6, 3.0, 3.0, 0.02, false);
+    private static final ISpecieCompatibilityOperator speciesCompatibilityOperator = new DeltaDistance(0.6, 3.0, 3.0, 0.02, false);
     private static final Random rand = new Random();
     private final IEvaluator evaluator;
     private final List<Mutation> mutations;
@@ -83,7 +86,7 @@ public class SpeciesAlgorithm implements IAlgorithm {
         for (ConnectionGenotype g : genotypes) {
             isAdded = false;
             for (Specie ns : newPopulation) {
-                if (speciesCompatibilityOperator.isCompatibile(g, ns)) {
+                if (speciesCompatibilityOperator.isCompatible(g, ns)) {
                     ns.getGenotypes().add(g);
                     isAdded = true;
                     break;
@@ -143,8 +146,8 @@ public class SpeciesAlgorithm implements IAlgorithm {
         for (Specie s : population) {
             for (int i = 0; i < offspringCount[cnt]; i++) {
 
-                ConnectionGenotype p1 = (ConnectionGenotype)selection.select(s.getGenotypes());
-                ConnectionGenotype p2 = (ConnectionGenotype)selection.select(s.getGenotypes());
+                ConnectionGenotype p1 = (ConnectionGenotype) selection.select(s.getGenotypes());
+                ConnectionGenotype p2 = (ConnectionGenotype) selection.select(s.getGenotypes());
 
                 ConnectionGenotype child = crossover.crossover(p1, p2);
                 for (Mutation m : mutations) {
@@ -159,11 +162,9 @@ public class SpeciesAlgorithm implements IAlgorithm {
 
         evaluator.evaluatePopulation(newGenotypes.stream().map(g -> decoder.decode(g)).collect(Collectors.toList()));
 
-        newGenotypes.add((ConnectionGenotype)population.getBest());
+        newGenotypes.add((ConnectionGenotype) population.getBest());
 
         population = putAllInSpecies(newGenotypes);
-
-        //System.out.println(" SP : " + population.getSpeciesCount());
     }
 
     @Override

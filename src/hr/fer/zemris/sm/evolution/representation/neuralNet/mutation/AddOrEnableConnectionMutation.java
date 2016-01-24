@@ -5,6 +5,9 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGe
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnection;
 
 /**
+ * Selects two random neurons ands adds a new connection between them ( except if they are both input or output neurons ).
+ * If a connection already exists between the selected neurons, the connection gets activated instead.
+ *
  * Created by Andrija Milicevic.
  */
 public class AddOrEnableConnectionMutation extends Mutation<ConnectionGenotype> {
@@ -34,29 +37,6 @@ public class AddOrEnableConnectionMutation extends Mutation<ConnectionGenotype> 
             return;
         }
 
-        /*
-        int tmpNeuron;
-
-
-        if (neuron1 < neuron2) {
-            tmpNeuron = neuron1;
-            neuron1 = neuron2;
-            neuron2 = tmpNeuron;
-        }
-
-        if (genotype.isOutputNeuron(neuron2)) {
-            tmpNeuron = neuron1;
-            neuron1 = neuron2;
-            neuron2 = tmpNeuron;
-        }
-
-        if (genotype.isInputNeuron(neuron1)) {
-            tmpNeuron = neuron1;
-            neuron1 = neuron2;
-            neuron2 = tmpNeuron;
-        }
-
-*/
         NeuronConnection connection = genotype.getConnection(neuron1, neuron2);
 
         if (connection != null) {
@@ -65,10 +45,6 @@ public class AddOrEnableConnectionMutation extends Mutation<ConnectionGenotype> 
 
             ConnectionGenotype testGenotype = genotype.copy();
             testGenotype.addConnection(new NeuronConnection(neuron1, neuron2, 0.0, true));
-
-            //if (decoder.containsCycle(testGenotype)) {
-                //return;
-            //}
 
             genotype.addConnection(new NeuronConnection(neuron1, neuron2, rand.nextDouble() * 4.0 - 2.0, true));
         }

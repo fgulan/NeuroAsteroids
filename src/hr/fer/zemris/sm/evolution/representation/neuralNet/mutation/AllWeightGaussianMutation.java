@@ -4,6 +4,8 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGe
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnection;
 
 /**
+ * Modifies only the weights of a neural network genotype.
+ *
  * Created by Andrija Milicevic.
  */
 public class AllWeightGaussianMutation extends Mutation<ConnectionGenotype> {

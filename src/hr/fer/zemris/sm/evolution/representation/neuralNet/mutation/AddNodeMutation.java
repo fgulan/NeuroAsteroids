@@ -4,6 +4,9 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGe
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnection;
 
 /**
+ * Adds a new node to a genotype by modifying an existing connection.
+ * The connection is deactivated and replaced with two new connections and a new neuron in between.
+ *
  * Created by Andrija Milicevic.
  */
 public class AddNodeMutation extends Mutation<ConnectionGenotype>{
@@ -24,8 +27,6 @@ public class AddNodeMutation extends Mutation<ConnectionGenotype>{
         if (genotype.getNeuronCount() >= maxNodeCount) {
             return;
         }
-
-        //NeuronConnection connection = genotype.getRandomActiveOutputConnection();
 
         if (genotype.getConnectionCount() == 0) {
             return;

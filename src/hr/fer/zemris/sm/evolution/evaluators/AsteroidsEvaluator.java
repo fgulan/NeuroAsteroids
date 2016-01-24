@@ -9,6 +9,8 @@ import static hr.fer.zemris.sm.game.Constants.*;
 import java.util.Collection;
 
 /**
+ * Evaluator for the neural network controllers.
+ *
  * Created by Andrija Milicevic.
  */
 public class AsteroidsEvaluator implements IEvaluator {
@@ -41,14 +43,9 @@ public class AsteroidsEvaluator implements IEvaluator {
             world.addListener(GameEvent.MISSILE_FIRED, e -> fireCounter++);
             world.play();
 
-
-
             //TODO: change this
             res += 50;
         }
-        //System.out.println("acc:" + acc + " fcCount" + fc.count + " destroyed" + world.getPoints() + " fitness " + controller.fittness);
-
-        //System.out.println(res / 5.0);
 
         phenotype.getGenotype().setFitness(res);
     }

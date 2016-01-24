@@ -8,6 +8,9 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.Genotype;
 import java.util.List;
 
 /**
+ * Represents a constructed neural network from a NEAT genotype.
+ * The network is able to work by generating some output from input assigned to the input neurons.
+ *
  * Created by Andrija Milicevic.
  */
 public class ConnectionPhenotype implements IPhenotype {
@@ -39,7 +42,7 @@ public class ConnectionPhenotype implements IPhenotype {
             nodes[current].value = input[current];
         }
 
-        // POVRATNE VEZE?
+        // ADDS MEMORY TO THE NETWORKS IF REMOVED
         for (int current = inputNodeIndex; current < nodes.length; current++) {
             nodes[current].value = 0;
         }

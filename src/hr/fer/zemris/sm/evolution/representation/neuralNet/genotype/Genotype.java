@@ -2,6 +2,9 @@ package hr.fer.zemris.sm.evolution.representation.neuralNet.genotype;
 
 import java.io.Serializable;
 
+/**
+ * Abstract class which represents any genotype used.
+ */
 public abstract class Genotype implements Comparable<Genotype>, Serializable {
 
     public static final long serialVersionUID = 4721662339634105080L;

@@ -14,6 +14,8 @@ import hr.fer.zemris.sm.evolution.termination.MaxTerminationCount;
 import java.io.IOException;
 
 /**
+ * Main method which runs the NEAT algorithm for the Asteroids game.
+ *
  * Created by Andrija Milicevic.
  */
 public class AsteroidsDemo {

@@ -5,6 +5,9 @@ import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.ConnectionGe
 import hr.fer.zemris.sm.evolution.representation.neuralNet.genotype.NeuronConnection;
 
 /**
+ * This class is used to measure the homology between two NEAT neural network genotypes.
+ * According to this measure, genotypes are assigned to thier species.
+ *
  * Created by Andrija Milicevic.
  */
 public class DeltaDistance implements ISpecieCompatibilityOperator<ConnectionGenotype> {
@@ -24,7 +27,7 @@ public class DeltaDistance implements ISpecieCompatibilityOperator<ConnectionGen
     }
 
     @Override
-    public boolean isCompatibile(ConnectionGenotype genotype1, Specie specie) {
+    public boolean isCompatible(ConnectionGenotype genotype1, Specie specie) {
         ConnectionGenotype genotype2 = specie.getSpeciesRepresentative();
 
         int numberOfGenes;
