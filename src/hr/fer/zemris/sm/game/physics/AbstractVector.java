@@ -17,7 +17,7 @@ public abstract class AbstractVector implements IVector {
     @Override
     public IVector add(IVector other) {
         if (this.getDimension() != other.getDimension()) {
-            // TODO Exception
+            throw new RuntimeException("Vector dimension doesn't match!");
         }
         for (int i = this.getDimension() - 1; i >= 0; i--) {
             this.set(i, this.get(i) + other.get(i));
@@ -33,7 +33,7 @@ public abstract class AbstractVector implements IVector {
     @Override
     public IVector sub(IVector other) {
         if (this.getDimension() != other.getDimension()) {
-            // TODO exception
+            throw new RuntimeException("Vector dimension doesn't match!");
         }
         for (int i = this.getDimension() - 1; i >= 0; i--) {
             this.set(i, this.get(i) - other.get(i));
@@ -87,7 +87,7 @@ public abstract class AbstractVector implements IVector {
     @Override
     public double scalarProduct(IVector other) {
         if (this.getDimension() != other.getDimension()) {
-            // TODO exception
+            throw new RuntimeException("Vector dimension doesn't match!");
         }
         double sum = 0;
         for (int i = this.getDimension() - 1; i >= 0; i--) {
