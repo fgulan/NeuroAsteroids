@@ -19,7 +19,7 @@ import hr.fer.zemris.sm.game.physics.Vector;
 import javafx.scene.shape.Circle;
 
 /**
- * GameWorld bastract class is implementation of NeuroAsteroids game world. It implements physical part of world.
+ * GameWorld qbstract class is implementation of NeuroAsteroids game world. It implements physical part of world.
  * For implementing graphics world override initialize method and sets GameEvent listeners.
  */
 public abstract class GameWorld implements Serializable {

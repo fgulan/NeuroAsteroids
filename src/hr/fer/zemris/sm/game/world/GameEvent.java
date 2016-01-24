@@ -3,6 +3,8 @@ package hr.fer.zemris.sm.game.world;
 import hr.fer.zemris.sm.game.models.Sprite;
 
 /**
+ * Game world events.
+ *
  * Created by Fredi Šarić on 22.01.16.
  */
 public class GameEvent {

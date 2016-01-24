@@ -25,6 +25,9 @@ import jfxtras.labs.scene.control.gauge.linear.elements.Segment;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Graphics world class is graphical representation if NeuroAsteroids game.
+ */
 public class GraphicsWorld extends GameWorld {
 
     private int fps;
@@ -36,8 +39,16 @@ public class GraphicsWorld extends GameWorld {
     private SimpleMetroArcGauge missileGauge = new SimpleMetroArcGauge();
     ProgressBar fuelGauge = new ProgressBar();
 
-    public GraphicsWorld(int fps, int width, int height, int numberOfComets, int numberOfStars) {
-        super(width, height, numberOfComets, numberOfStars);
+    /**
+     * Creates fame world with given width and height, number of asteroids and stars, frames per second.
+     * @param fps Frames per second.
+     * @param width Game world width.
+     * @param height Game world height.
+     * @param numberOfAsteroids Number of asteroids on scene.
+     * @param numberOfStars Number of stars on scene.
+     */
+    public GraphicsWorld(int fps, int width, int height, int numberOfAsteroids, int numberOfStars) {
+        super(width, height, numberOfAsteroids, numberOfStars);
         this.fps = fps;
         this.nodes = new HashMap<>();
 
@@ -58,7 +69,7 @@ public class GraphicsWorld extends GameWorld {
             handleMissileGraphics((Missile) e.getEventCauseSprite());
         });
 
-        addListener(GameEvent.ASTEROID_ADDED, event -> handleNewCometGraphics((Asteroid) event.getEventCauseSprite()));
+        addListener(GameEvent.ASTEROID_ADDED, event -> handleNewAsteroidGraphics((Asteroid) event.getEventCauseSprite()));
 
         addListener(GameEvent.STAR_ADDED, event -> handleNewStarGraphics((Star) event.getEventCauseSprite()));
 
@@ -77,6 +88,9 @@ public class GraphicsWorld extends GameWorld {
         addListener(GameEvent.GAME_OVER, e -> stop());
     }
 
+    /**
+     * Creates game loop with given number of frames per second.
+     */
     private void buildGameLoop() {
         final Duration frameDuration = Duration.millis(1000.0 / fps);
         final KeyFrame frame = new KeyFrame(frameDuration, event -> newFrameStep());
@@ -85,7 +99,10 @@ public class GraphicsWorld extends GameWorld {
         gameLoop = timeline;
     }
 
-    protected void initializeGraphics() {
+    /**
+     * Initialize graphics.
+     */
+    private void initializeGraphics() {
         sceneNodes = new Group();
 
         // Initialize asteroids
@@ -118,6 +135,10 @@ public class GraphicsWorld extends GameWorld {
         initFuelGauge(sceneNodes);
     }
 
+    /**
+     * Creates fuel gauge on screen.
+     * @param sceneNodes Scene nodes.
+     */
     private void initFuelGauge(Group sceneNodes) {
         fuelGauge.setRotate(-90);
         fuelGauge.setLayoutX(-30);
@@ -125,6 +146,10 @@ public class GraphicsWorld extends GameWorld {
         sceneNodes.getChildren().add(fuelGauge);
     }
 
+    /**
+     * Creates missile gauge on screen.
+     * @param sceneNodes Scene nodes.
+     */
     private void initMissileGauge(Group sceneNodes) {
         missileGauge.setScaleX(0.5);
         missileGauge.setScaleY(0.5);
@@ -142,6 +167,10 @@ public class GraphicsWorld extends GameWorld {
         sceneNodes.getChildren().add(missileGauge);
     }
 
+    /**
+     * Returns game surface.
+     * @return Game surface.
+     */
     public Group getGameSurface() {
         return sceneNodes;
     }
@@ -152,38 +181,83 @@ public class GraphicsWorld extends GameWorld {
         handleGraphicUpdate(sprite);
     }
 
-    private void handleGraphicUpdate(Sprite spite) {
-        nodes.get(spite).update();
+    /**
+     * Handle graphic update for given sprite.
+     * @param sprite Sprite.
+     */
+    private void handleGraphicUpdate(Sprite sprite) {
+        nodes.get(sprite).update();
     }
 
-    private void handleNewCometGraphics(Asteroid sprite) {
+    /**
+     * Creates new asteroid on screen.
+     * @param sprite Asteroid sprite.
+     */
+    private void handleNewAsteroidGraphics(Asteroid sprite) {
+        if (sceneNodes == null) {
+            return;
+        }
         AsteroidNode asteroid = new AsteroidNode(sprite);
-
         sprite.getCollisionBounds().setFill(Color.RED);
         sceneNodes.getChildren().add(asteroid.getNode());
         nodes.put(asteroid.getSprite(), asteroid);
     }
 
-    protected void handleMissileGraphics(Missile missile) {
+    /**
+     * Creates new missile on screen.
+     * @param missile Missile sprite.
+     */
+    private void handleMissileGraphics(Missile missile) {
+        if (sceneNodes == null) {
+            return;
+        }
         MissileNode node = new MissileNode(missile);
         sceneNodes.getChildren().add(node.getNode());
         nodes.put(missile, node);
     }
 
+    /**
+     * Creates new star on screen.
+     * @param sprite Star sprite
+     */
     private void handleNewStarGraphics(Star sprite) {
         if (sceneNodes == null) {
             return;
         }
-
         StarNode node = new StarNode(sprite);
         sceneNodes.getChildren().add(node.getNode());
         nodes.put(sprite, node);
     }
 
-    protected void handleFuelChangeGraphics() {
+    /**
+     * Updates fuel gauge.
+     */
+    private void handleFuelChangeGraphics() {
         float progress = fuelLeft / (float) Constants.FUEL_START;
         if (progress < 0) progress = 0.0f;
         fuelGauge.setProgress(progress);
+    }
+
+    /**
+     * Updates missile gaguge on screen.
+     */
+    protected void handleMissileStateGraphics() {
+        missileGauge.setValue(missilesLeft);
+    }
+
+    /**
+     * Updates collected points on screen.
+     */
+    private void handlePointsUpdateGraphics() {
+        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
+    }
+
+    /**
+     * Gets current collected points.
+     * @return Collected points.
+     */
+    public int getPoints() {
+        return points;
     }
 
     @Override
@@ -216,17 +290,5 @@ public class GraphicsWorld extends GameWorld {
     @Override
     public void stop() {
         gameLoop.stop();
-    }
-
-    protected void handleMissileStateGraphics() {
-        missileGauge.setValue(missilesLeft);
-    }
-
-    protected void handlePointsUpdateGraphics() {
-        scoreLabel.textProperty().bind(new SimpleStringProperty("Score: ").concat(points));
-    }
-
-    public int getPoints() {
-        return points;
     }
 }
