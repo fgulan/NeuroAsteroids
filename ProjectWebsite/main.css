@@ -101,8 +101,8 @@ a:hover {
 #logo {
     margin: 0px 10px;
     float: left;
-    width: 80px;
-    height: 100%;
+    width: 70px;
+    height: 70px;
     background: url(res/logos/transport463.png) no-repeat center;
     transform: rotate(-90deg);
 }
@@ -111,20 +111,18 @@ nav {
     float: left;
 }
 
-nav ul {
-    line-height: 350%;
-}
-
 nav ul li {
-    display: inline;   
+    display: inline-block;   
 }
 
 nav ul li a {    
+    vertical-align: middle;
+    display: table-cell;
+    height: 70px;
     text-align: center;
-    height: 100%;
-    width: auto;
-    padding: 10px 20px;
+    padding: 0px 10px;
     color: #fff; 
+    font-size: 105%;
 }
 
 ul {
@@ -137,12 +135,6 @@ ul {
     width: 40%; 
     transform: rotate(-3deg);
 }
-
-#doc {
-   
-}
-
-
 
 article{
     clear: both;
@@ -194,14 +186,8 @@ dt {
     padding-right: 2em;
 }
 
-#group {
-    clear: left;
-    width: 100%;
-}
-#groupImg {
-    //treba 
-    max-width: 100%;
-}
+
+
 
 footer {
     background: #333333;
@@ -276,6 +262,54 @@ footer.second {
     clear:both;
 }
 
+
+.menu-icon {
+    display: none;
+    height: 100%;
+    margin-left: 30px;
+}
+
+.menu-icon img {
+    display: none;
+    margin-top: 50%;
+    transform: rotate(-90deg);
+    height: 40px;
+    width: 40px;
+}
+
+/*-------MEDIA"""--------------*/
+@media screen and (max-width: 1330px){
+    body{
+        position: absolute;
+    }
+}
+@media screen and (max-width: 1330px){
+    header{
+        position: absolute;
+    }
+    
+    .menu-icon {
+        display: inline-block;
+    }
+    
+    .menu-icon img{
+        display: inline-block;
+    }
+    
+    nav ul, nav:active ul{
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: #405580;
+        border: 1px solid #fff;
+        right: 20px;
+        top:60px;
+        width: 50%;
+        border-radius: 2px 0 2px 2px;
+    }
+}
+
+
 /*Highslide additional editing*/
 
 .highslide-wrapper, .highslide-outline {
@@ -332,6 +366,7 @@ article img{
     float: left;
     margin-left: 2%;
     max-width: 300px;
+    max-height: 250px;
 }
 
 article h3 {

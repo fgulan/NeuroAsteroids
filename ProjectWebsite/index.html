@@ -14,24 +14,20 @@
     <script type="text/javascript" src="res/highslide/highslide-with-gallery.js"></script>
     <script type="text/javascript" src="res/highslide/highslide.config.js" charset="utf-8"></script>
     <script type="text/javascript" src="res/highslide/higslide-additional.js"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-    <script src="jquery.blueberry.js"></script>
     
-    <script>
-        $(window).load(function() {
-            $('.blueberry').blueberry();
-        }); 
-    </script>
-    
-    <script src="jwplayer-7.2.4/jwplayer.js"></script>
+    <script src="res/jwplayer-7.2.4/jwplayer.js"></script>
     <script>jwplayer.key="lQkk8EqL2zVxXTEyDOkNUaqgO1rZWivNONFtjg==";</script>
     
 </head>
 <body>
     <div id="sidebar">
-        <a href="#" id="logo"></a>
+        <div id="logo"></div>
         
         <nav>
+            <a href="#" class="menu-icon"><img src="res/logos/home.png"></a>
+            <a href="#vd" class="menu-icon"><img src="res/logos/video.png"></a>
+            <a href="#dw" class="menu-icon"><img src="res/logos/download.png"></a>
+            <a href="#literature" class="menu-icon"><img src="res/logos/resources.png"></a>
             <ul>
                 <li><a href="#" class="current">O PROJEKTU</a></li>
                 <li><a href="#vd">VIDEO</a></li>
@@ -49,8 +45,9 @@
 
         <p id="introText">Projekt NeuroAsteroids je projekt nastao u sklopu predmeta Projekt na prediplomskom studiju Fakulteta elektrothnike i računarstva. Bavio se s nekoliko područja: neuronskim mrežama,  evolucijskim algoritmima te računalnim igrama. Igra na kojoj se projekt temeljio je inspirirana arkadnom igrom <a href="https://en.wikipedia.org/wiki/Asteroids_(video_game)">„Asteroids“</a>. <br><br>
 Projekt bi mogli podijeliti na dva područja. Prvo je računalna igra za koju je potrebno napraviti fiziku svijeta, model svijeta s njegovim objektima te animacije. Kako bi i ljudi i neuronske mreže mogli igrati igru bilo je potrebno omogućiti i igranje igre bez grafičkog sučelja te njeno ubrzanje jer računalo puno brže procesira informacije od čovjeka. <br><br>
-Drugo područje su neuronske mreže „igrači“ koje igraju igru pomoću određenih informacija o svijetu ih koje okružuju. Zbog kompleksnosti igre i svijeta koji okružuje igrača potrebno je davati različite jednostavne informacije kojih treba biti što manje. Učenje neuronskih mreža napravljeno je evolucijskim algoritmima, posebice genetskim algoritmom. <br>
-Projekt je pisan većinom u programskom jeziku Java, a sama igra u JavaFX tehnologiji koja ima različite napredne mogućnosti.
+Drugo područje su neuronske mreže „igrači“ koje igraju igru pomoću određenih informacija o svijetu ih koje okružuju. Zbog kompleksnosti igre i svijeta koji okružuje igrača potrebno je davati različite jednostavne informacije kojih treba biti što manje. Učenje neuronskih mreža napravljeno je genetskim algoritmom.<br>
+Projekt je pisan u programskom jeziku Java, a sama igra u JavaFX tehnologiji koja ima različite napredne mogućnosti.
+
 </p>
         <img id="introPic" src="res/images/Sprites.png">
 
@@ -94,6 +91,7 @@ Projekt je pisan većinom u programskom jeziku Java, a sama igra u JavaFX tehnol
             }
         });
         </script>
+        
         <div id="dw" class="clear"></div>
 
         <div id="download">
@@ -147,7 +145,7 @@ Projekt je pisan većinom u programskom jeziku Java, a sama igra u JavaFX tehnol
                         <p>
         Jako sam zadovoljan s ovim projektom jer sam stekao puno znanja vezana uz neuronske mreže, umjetnu inteligenciju i evolucijske algoritme općenito, kao i znanje o razvoju računalnih igrica i tehnologiji “JavaFx”, te sam se još više zainteresirao u računalnu znanost i područje umjetne inteligencije. Također sam stekao iskustvo u radu s timom i sad znam koliko je važno imati dobar tim i komunikaciju unutar tima da bi neki projekt uspio.           
                         </p>
-                        <img src="res/images/photo.jpg">
+                        <img src="res/images/members/fs.jpg">
                     </article>                       
                 </li>
             </ul>
@@ -192,10 +190,8 @@ Projekt je pisan većinom u programskom jeziku Java, a sama igra u JavaFX tehnol
                     <dd>Luka Žmegač</dd>
         </dl>
         
-            <div id="group">
-        <img id="groupImg" src="res/images/minions-1.jpg">
-        </div>
         
+        <div class="clear"></div>
         <div class="clear"></div>
 
         <section id="literature">
