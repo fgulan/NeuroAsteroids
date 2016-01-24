@@ -14,7 +14,7 @@ body {
     background-attachment: fixed;
     margin: 0;
     
-    min-width:1000px;
+    /*min-width:1000px;*/
 
 
     /*Font styling*/
@@ -125,6 +125,21 @@ nav ul li a {
     font-size: 105%;
 }
 
+.menu-icon {
+    display: none;
+    height: 100%;
+    margin-left: 30px;
+}
+
+.menu-icon img {
+    display: none;
+    transform: rotate(-90deg) translateY(0%);
+    margin-top: 40%;
+    
+    height: 40px;
+    width: 40px;
+}
+
 ul {
     list-style: none;
 }
@@ -160,6 +175,12 @@ section {
     height: 160px;
     clear:both;
 }
+
+.clear1 {
+    height: 80px;
+    clear:both;
+}
+
 #video {
     margin: 0 0 0 20%;
     max-width: 850px;
@@ -257,25 +278,7 @@ footer.second {
   font-size: 180%;
  /*   color: #555;*/
 }
-.clear1 {
-    height: 80px;
-    clear:both;
-}
 
-
-.menu-icon {
-    display: none;
-    height: 100%;
-    margin-left: 30px;
-}
-
-.menu-icon img {
-    display: none;
-    margin-top: 50%;
-    transform: rotate(-90deg);
-    height: 40px;
-    width: 40px;
-}
 
 /*-------MEDIA"""--------------*/
 @media screen and (max-width: 1330px){
