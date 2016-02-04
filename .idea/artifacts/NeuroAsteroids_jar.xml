@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NeuroAsteroids:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NeuroAsteroids_jar</output-path>
+    <root id="archive" name="projekt.jar">
+      <element id="module-output" name="projekt" />
+      <element id="library" level="project" name="Maven: org.jfxtras:jfxtras-controls:8.0-r1-SNAPSHOT" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfxtras-labs-8.0-r4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfxtras-controls-8.0-r4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfxtras-fxml-8.0-r4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfxtras-common-8.0-r4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
